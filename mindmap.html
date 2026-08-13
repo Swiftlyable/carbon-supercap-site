@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>思维导图 · 碳网图谱 CarbonNet</title>
-  <meta name="description" content="碳材料超级电容器三维导电网络领域思维导图：储能机理、碳材料体系、导电网络维度工程、构建策略、性能指标、应用与前沿方向。">
+  <title>知识脉络 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络领域知识脉络：储能机理、碳材料体系、导电网络维度工程、构建策略、性能指标、应用与前沿方向，每个细分方向附代表论文。">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
 </head>
@@ -13,7 +13,7 @@
   <main class="container">
     <section class="section" style="padding-top:28px">
       <div class="section-head">
-        <h1 class="section-title" style="font-size:24px"><span class="kicker">Mind Map</span>领域思维导图</h1>
+        <h1 class="section-title" style="font-size:24px"><span class="kicker">Knowledge Atlas</span>领域知识脉络</h1>
         <div style="display:flex;gap:8px">
           <button class="btn" id="expand-all">展开全部</button>
           <button class="btn" id="collapse-all">收起</button>
@@ -21,11 +21,12 @@
       </div>
       <div class="mindmap-wrap">
         <div id="mindmap" class="chart"></div>
-        <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看详细解读</div>
+        <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看解读与代表论文</div>
         <div class="node-detail-panel" id="detail-panel">
           <h4 id="detail-name"></h4>
           <div class="en" id="detail-en"></div>
           <p id="detail-desc"></p>
+          <div class="detail-papers" id="detail-papers"></div>
         </div>
       </div>
     </section>
@@ -34,7 +35,7 @@
   <script src="assets/vendor/echarts.min.js"></script>
   <script src="assets/js/site.js"></script>
   <script>
-    let chart, treeData;
+    let chart, treeData, nodePapers = {};
 
     // 为每个节点标注其顶层分支（用于配色）
     function decorate(node, branchIdx, depth) {
@@ -98,6 +99,7 @@
           emphasis: {
             focus: "descendant",
             label: { color: t.ink, fontWeight: 700 },
+            itemStyle: { shadowBlur: 16, shadowColor: "rgba(0,0,0,0.35)" },
           },
           tooltip: { show: false }, // 详情走右侧面板
         }],
@@ -107,16 +109,51 @@
 
     function showDetail(data) {
       const panel = document.getElementById("detail-panel");
-      if (!data.desc && !data.en) { panel.style.display = "none"; return; }
+      const papersEl = document.getElementById("detail-papers");
+      papersEl.innerHTML = "";
+      const list = nodePapers[data.name] || [];
+      if (!data.desc && !data.en && !list.length) { panel.style.display = "none"; return; }
       document.getElementById("detail-name").textContent = data.name;
       document.getElementById("detail-en").textContent = data.en || "";
       document.getElementById("detail-desc").textContent = data.desc || "";
+      // 代表论文列表（标题来自 API 的不可信数据，一律 textContent）
+      if (list.length) {
+        const head = document.createElement("div");
+        head.className = "detail-heading";
+        head.textContent = `代表论文 · ${list.length}`;
+        papersEl.appendChild(head);
+        list.forEach((p) => {
+          const item = document.createElement("div");
+          item.className = "detail-paper";
+          const a = document.createElement("a");
+          a.href = p.url || "#";
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = p.zh_title || p.title;
+          a.title = p.zh_title ? p.title : "";
+          item.appendChild(a);
+          const meta = document.createElement("div");
+          meta.className = "detail-paper-meta";
+          meta.textContent = `${p.journal || ""} · ${p.year || ""} · 被引 ${fmtInt(p.cited_by_count)}`;
+          if (p.core_journal) {
+            const b = document.createElement("span");
+            b.className = "badge badge-q1";
+            b.textContent = "Q1";
+            b.style.cssText = "margin-left:6px;padding:0 6px;font-size:11px";
+            meta.appendChild(b);
+          }
+          item.appendChild(meta);
+          papersEl.appendChild(item);
+        });
+      }
       panel.style.display = "block";
     }
 
     (async () => {
       try {
-        treeData = prepare(await loadJSON("taxonomy"));
+        const [tax, mp] = await Promise.all([loadJSON("taxonomy"), loadJSON("mindmap_papers")]);
+        nodePapers = (mp && mp.papers) || {};
+        treeData = prepare(tax);
         chart = echarts.init(document.getElementById("mindmap"));
         render();
 

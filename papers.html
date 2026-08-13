@@ -92,8 +92,9 @@
         if (tag && !(p.tags || []).includes(tag)) return false;
         if (classic === "classic" && !p.classic) return false;
         if (q) {
-          const hay = [p.title, p.journal, (p.authors || []).join(" "),
-                       p.abstract || "", (p.tags || []).join(" ")].join(" ").toLowerCase();
+          const hay = [p.title, p.zh_title || "", p.journal, (p.authors || []).join(" "),
+                       p.abstract || "", p.zh_abstract || "", (p.tags || []).join(" ")]
+                      .join(" ").toLowerCase();
           if (!hay.includes(q)) return false;
         }
         return true;
@@ -124,15 +125,22 @@
       slice.forEach((p) => {
         const tr = document.createElement("tr");
 
-        // 标题（textContent 注入，防 XSS）
+        // 标题：中文为主（未翻译时回退英文），英文原题小字显示
         const tdTitle = document.createElement("td");
         const a = document.createElement("a");
         a.href = p.url || "#";
         a.target = "_blank";
         a.rel = "noopener";
-        a.textContent = p.title;
+        a.textContent = p.zh_title || p.title;
         a.style.fontWeight = "500";
         tdTitle.appendChild(a);
+        if (p.zh_title) {
+          const en = document.createElement("div");
+          en.textContent = p.title;
+          en.style.cssText = "font-size:12px;color:var(--muted);margin-top:2px";
+          en.title = "英文原标题";
+          tdTitle.appendChild(en);
+        }
         if (p.type === "review") {
           const b = document.createElement("span");
           b.className = "badge badge-review";
@@ -162,6 +170,73 @@
           b.style.marginLeft = "6px";
           tdTitle.appendChild(b);
         }
+        // 摘要详情按钮：展开中文摘要 + 英文原文（可折叠）
+        let detailRow = null;
+        const hasAbs = (p.abstract || "").trim().length >= 40;
+        const btn = document.createElement("button");
+        btn.className = "btn";
+        btn.textContent = "摘要";
+        btn.style.cssText = "margin-left:6px;padding:2px 10px;font-size:12px";
+        if (!hasAbs) {
+          btn.disabled = true;
+          btn.style.opacity = "0.4";
+          btn.title = "该文献无摘要（数据源未提供）";
+        }
+        btn.addEventListener("click", () => {
+          if (detailRow) {
+            detailRow.remove();
+            detailRow = null;
+            btn.textContent = "摘要";
+            return;
+          }
+          detailRow = document.createElement("tr");
+          const td = document.createElement("td");
+          td.colSpan = 6;
+          td.style.cssText = "background:var(--surface-2);font-size:13.5px;line-height:1.75;padding:14px 16px";
+          // 中文摘要（未翻译时提示）
+          if (p.zh_abstract) {
+            const zh = document.createElement("p");
+            zh.textContent = p.zh_abstract;
+            zh.style.margin = "0 0 8px";
+            td.appendChild(zh);
+          } else {
+            const hint = document.createElement("p");
+            hint.textContent = "中文摘要尚未生成（将在下次自动更新时补译）。";
+            hint.style.cssText = "color:var(--muted);margin:0 0 8px";
+            td.appendChild(hint);
+          }
+          // 英文原文（默认折叠，点击展开）
+          const det = document.createElement("details");
+          const sum = document.createElement("summary");
+          sum.textContent = "查看英文原文（English abstract）";
+          sum.style.cssText = "cursor:pointer;color:var(--s1);font-size:12.5px";
+          det.appendChild(sum);
+          const en = document.createElement("p");
+          en.textContent = p.abstract || "（无摘要）";
+          en.style.cssText = "margin:6px 0 0;color:var(--ink-2)";
+          det.appendChild(en);
+          td.appendChild(det);
+          // 作者 / 机构元信息
+          const meta = document.createElement("p");
+          meta.textContent = `作者：${(p.authors || []).join("; ") || "—"}`
+            + (p.institutions && p.institutions.length ? `　·　机构：${p.institutions.join("; ")}` : "");
+          meta.style.cssText = "margin:10px 0 0;color:var(--muted);font-size:12.5px";
+          td.appendChild(meta);
+          const doi = document.createElement("p");
+          const da = document.createElement("a");
+          da.href = p.url || "#";
+          da.target = "_blank";
+          da.rel = "noopener";
+          da.textContent = p.doi ? `DOI: ${p.doi}` : "查看原文链接";
+          da.style.cssText = "color:var(--s1);font-size:12.5px";
+          doi.appendChild(da);
+          doi.style.margin = "4px 0 0";
+          td.appendChild(doi);
+          detailRow.appendChild(td);
+          tr.after(detailRow);
+          btn.textContent = "收起";
+        });
+        tdTitle.appendChild(btn);
         tr.appendChild(tdTitle);
 
         // 期刊
@@ -221,12 +296,13 @@
 
     function exportCSV() {
       const rows = filtered();
-      const header = ["标题", "期刊", "年份", "类型", "被引", "Q1期刊", "经典文献", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
+      const header = ["中文标题", "英文标题", "中文摘要", "期刊", "年份", "类型", "被引", "Q1期刊", "经典文献", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
       const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
       const lines = [header.join(",")];
       rows.forEach((p) => {
         lines.push([
-          p.title, p.journal, p.year, p.type, p.cited_by_count,
+          p.zh_title || "", p.title, p.zh_abstract || "",
+          p.journal, p.year, p.type, p.cited_by_count,
           p.core_journal ? "是" : "否", p.classic ? "是" : "否", p.oa ? "是" : "否", p.doi,
           (p.tags || []).join(";"),
           p.metrics?.f_per_g ?? "", p.metrics?.wh_per_kg ?? "", p.metrics?.w_per_kg ?? "",

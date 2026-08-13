@@ -171,8 +171,9 @@
         return `<strong>${escapeHtml(d.name)}</strong><br><span style="color:${t.muted}">${meta.label} · 相关论文 ${fmtInt(d.value)} 篇</span>`;
       }
       const q1 = d.core_journal ? ` · <span style="color:${t.good}">Q1</span>` : "";
+      const zh = d.zh_title ? `<br><span style="line-height:1.5">${escapeHtml(d.zh_title)}</span>` : "";
       const parts = [
-        `<strong style="line-height:1.5">${escapeHtml(d.name)}</strong>`,
+        `<strong style="line-height:1.5">${escapeHtml(d.name)}</strong>${zh}`,
         `<span style="color:${t.muted}">${escapeHtml(d.journal || "")} · ${d.year || ""}${q1}</span>`,
         d.value ? `<span style="color:${t.muted}">被引 ${fmtInt(d.value)}</span>` : "",
         d.doi ? `<br><span style="color:${t.series[0]}">点击打开 DOI 原文</span>` : "",

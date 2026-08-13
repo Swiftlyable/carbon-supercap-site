@@ -1,8 +1,8 @@
 # 碳网图谱 CarbonNet
 
-碳材料超级电容器**三维导电网络**方向的文献知识站：领域思维导图、知识关系图、文献库与性能数据面板，**每周自动更新**。
+碳材料超级电容器**三维导电网络**方向的文献知识站：领域知识脉络、知识关系图、文献库与性能数据面板，**每周自动更新**。
 
-- 🌐 站点页面：首页 / 思维导图 / 文献库 / 关系图 / 数据面板 / 关于
+- 🌐 站点页面：首页 / 知识脉络 / 文献库 / 关系图 / 数据面板 / 关于
 - 📚 数据源：[OpenAlex](https://openalex.org)（开放学术索引，与 WoS 同源 DOI/引用数据），支持导入 Web of Science 导出文件
 - ⚙️ 零依赖：Python 仅用标准库，前端仅依赖本地 vendored ECharts
 
@@ -15,11 +15,13 @@ python -m http.server 8000
 
 # 抓取/更新文献数据（默认：核心 + 补充检索式 + 经典文献清单）
 python scripts/fetch_papers.py
+python scripts/translate_papers.py   # 标题/摘要中文化（Google 翻译 gtx 端点，幂等续传）
 python scripts/build_data.py
 # 也可单独运行某一部分：
 python scripts/fetch_papers.py --extra-only      # 仅补充检索式
 python scripts/fetch_papers.py --classics-only   # 仅经典文献匹配
 python scripts/fetch_papers.py --reclassify      # 仅重新分类综述
+python scripts/translate_papers.py --limit 50    # 只翻译前 50 项（测试用）
 
 # 导入 Web of Science 导出文件（可选）
 python scripts/import_wos.py 路径/savedrecs.txt
@@ -59,10 +61,11 @@ fetch_papers.py（OpenAlex 增量抓取）→ build_data.py（统计/关系图�
 |---|---|---|
 | `data/papers.json` | 文献元数据（含标签、性能数值、经典文献标记） | `fetch_papers.py` / `import_wos.py` |
 | `data/classics.json` | 领域经典文献（专家清单 + 中文点评） | `fetch_papers.py --classics-only` |
-| `data/taxonomy.json` | 领域思维导图（专家整理，手写） | 手动维护 |
+| `data/taxonomy.json` | 领域知识脉络（专家整理，手写） | 手动维护 |
 | `data/stats.json` | 聚合统计、性能分布、共现矩阵 | `build_data.py` |
 | `data/graph.json` | 知识关系图节点与边 | `build_data.py` |
 | `data/featured.json` | 首页精选文献 | `build_data.py` |
+| `data/mindmap_papers.json` | 知识脉络各细分方向的代表论文 | `build_data.py` |
 
 ## 免责声明
 

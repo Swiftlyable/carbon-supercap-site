@@ -440,7 +440,8 @@ def lookup_classics(by_id):
 
     out.sort(key=lambda p: (p.get("year") or 0, -(p.get("cited_by_count") or 0)))
     classic_json = [{
-        "id": p["id"], "title": p["title"], "journal": p["journal"],
+        "id": p["id"], "title": p["title"], "zh_title": p.get("zh_title") or "",
+        "journal": p["journal"],
         "year": p["year"], "doi": p["doi"], "url": p["url"],
         "cited_by_count": p["cited_by_count"], "first_author": (p["authors"] or ["—"])[0],
         "note": p["classic_note"], "core_journal": p["core_journal"],

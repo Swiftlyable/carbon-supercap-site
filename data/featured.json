@@ -17,6 +17,7 @@
   "tags": [],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.est.2024.110698",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -34,6 +35,7 @@
   "tags": [],
   "core_journal": false,
   "url": "https://doi.org/10.1016/j.jiec.2024.07.014",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -61,6 +63,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1002/adfm.202113082",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -85,6 +88,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.esci.2024.100249",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -106,6 +110,7 @@
   "tags": [],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.est.2024.113040",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -130,6 +135,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1007/s42114-023-00675-8",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -151,6 +157,7 @@
   "tags": [],
   "core_journal": false,
   "url": "https://doi.org/10.1016/j.ccr.2025.216497",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -174,6 +181,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.cej.2024.153311",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -199,6 +207,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1002/adfm.202205158",
+  "zh_title": "",
   "classic": false
  }
 ]

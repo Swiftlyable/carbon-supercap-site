@@ -17,7 +17,7 @@
 
         <p>
           <strong>碳网图谱 CarbonNet</strong> 是一个面向「碳材料超级电容器三维导电网络」方向的
-          文献知识站，提供领域思维导图、知识关系图、文献库与性能数据面板，
+          文献知识站，提供领域知识脉络、知识关系图、文献库与性能数据面板，
           并通过 GitHub Actions 每周自动抓取最新文献。
         </p>
 
@@ -60,7 +60,8 @@ python scripts/build_data.py</code></pre>
         <h2>自动更新机制</h2>
         <ul>
           <li><strong>每周一 02:30 UTC（北京时间 10:30）</strong>，GitHub Actions 工作流
-            <code>.github/workflows/update-papers.yml</code> 自动运行抓取与建库脚本；</li>
+            <code>.github/workflows/update-papers.yml</code> 自动运行「抓取 → 中文化翻译 → 建库」流水线；</li>
+          <li>标题与摘要由翻译步骤自动中文化（英文原文保留，可在文献库中展开查看），新入库文献自动获得中文；</li>
           <li>新数据提交到仓库后，GitHub Pages 自动重新部署站点（无需人工干预）；</li>
           <li>也可在 GitHub 仓库 Actions 页手动触发 <code>workflow_dispatch</code> 随时更新；</li>
           <li>本仓库无任何依赖：Python 脚本仅用标准库，前端仅依赖本地 vendored 的 ECharts。</li>
@@ -68,7 +69,7 @@ python scripts/build_data.py</code></pre>
 
         <h2>使用提示</h2>
         <ul>
-          <li>思维导图：点击节点展开/收起，点击带说明的节点查看解读；</li>
+          <li>知识脉络：点击节点展开/收起，点击带说明的节点查看解读，最细分方向附代表论文；</li>
           <li>关系图：拖拽节点、滚轮缩放，点击文献节点直达 DOI 原文；</li>
           <li>文献库：支持全文搜索、年份/期刊质量/类型/标签/经典文献筛选与 CSV 导出；</li>
           <li>所有图表适配深色/浅色两种主题（右上角切换）。</li>

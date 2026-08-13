@@ -33,7 +33,7 @@ function initTheme() {
 /* ---------- 页头/页脚注入（全站一致，便于维护） ---------- */
 const NAV_ITEMS = [
   ["home", "首页", "index.html"],
-  ["mindmap", "思维导图", "mindmap.html"],
+  ["mindmap", "知识脉络", "mindmap.html"],
   ["papers", "文献库", "papers.html"],
   ["graph", "关系图", "graph.html"],
   ["stats", "数据面板", "stats.html"],
@@ -152,8 +152,40 @@ function baseChartOptions() {
   };
 }
 
+/* ---------- 入场动效（尊重 prefers-reduced-motion） ---------- */
+function initEntrance() {
+  if (REDUCED_MOTION || !("IntersectionObserver" in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        en.target.classList.remove("io-hide");
+        en.target.classList.add("io-in");
+        observer.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+
+  const animate = (els, baseDelay) => {
+    els.forEach((el, i) => {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+        el.classList.add("fade-up");                       // 首屏内：错峰淡入
+        el.style.animationDelay = `${baseDelay + Math.min(i, 8) * 60}ms`;
+      } else {
+        el.classList.add("io-hide");                       // 首屏外：滚动进入时淡入
+        el.style.transitionDelay = `${Math.min(i, 4) * 50}ms`;
+        observer.observe(el);
+      }
+    });
+  };
+
+  // 排除 hero 画布：其自身有固定透明度，且无需入场动画
+  animate(Array.from(document.querySelectorAll(".hero > *:not(#hero-canvas)")), 0);
+  animate(Array.from(document.querySelectorAll("main .section")), 120);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderChrome();
   initTheme();
   initNav();
+  initEntrance();
 });

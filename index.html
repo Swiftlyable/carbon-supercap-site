@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>碳网图谱 CarbonNet · 碳材料超级电容器三维导电网络</title>
-  <meta name="description" content="碳材料超级电容器三维导电网络文献知识站：思维导图、知识关系图、文献库与性能数据面板，数据自动更新，来源 OpenAlex / Web of Science 权威索引。">
+  <meta name="description" content="碳材料超级电容器三维导电网络文献知识站：知识脉络、知识关系图、文献库与性能数据面板，数据自动更新，来源 OpenAlex / Web of Science 权威索引。">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
 </head>
@@ -14,15 +14,16 @@
 
     <!-- Hero -->
     <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <div class="hero-eyebrow">◈ 自动更新的领域知识站 · 数据源 OpenAlex / Web of Science</div>
       <h1>碳材料超级电容器<br><span class="accent">三维导电网络</span> 知识图谱</h1>
       <p class="hero-sub">
         围绕「如何构建高效三维互联导电网络」这一核心问题，系统梳理碳基电极的
         材料体系、构建策略、性能指标与应用方向；自动跟踪领域最新文献，
-        以思维导图与知识关系图呈现领域结构。
+        以知识脉络与知识关系图呈现领域结构。
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="mindmap.html">打开思维导图 →</a>
+        <a class="btn btn-primary" href="mindmap.html">打开知识脉络 →</a>
         <a class="btn" href="graph.html">探索知识关系图</a>
         <a class="btn" href="papers.html">浏览文献库</a>
       </div>
@@ -68,8 +69,8 @@
       </div>
       <div class="grid-2">
         <a class="card" href="mindmap.html">
-          <h3>🧠 思维导图 <span class="muted" style="font-weight:400;font-size:13px">Mind Map</span></h3>
-          <p>七大主题分支：储能机理 → 碳材料体系 → 导电网络维度工程 → 构建策略 → 性能指标 → 应用 → 前沿方向。节点可展开/收起，点击查看详细解读。</p>
+          <h3>🧠 知识脉络 <span class="muted" style="font-weight:400;font-size:13px">Knowledge Map</span></h3>
+          <p>七大主题分支：储能机理 → 碳材料体系 → 导电网络维度工程 → 构建策略 → 性能指标 → 应用 → 前沿方向。节点可展开/收起，点击查看解读与每个细分方向的代表论文。</p>
         </a>
         <a class="card" href="graph.html">
           <h3>🕸 知识关系图 <span class="muted" style="font-weight:400;font-size:13px">Knowledge Graph</span></h3>
@@ -101,20 +102,32 @@
         document.getElementById("updated-at").textContent =
           `数据更新于 ${fmtDate(stats.last_updated)} · 每周一自动同步最新文献`;
 
-        // KPI
+        // KPI（数字滚动动画，尊重 prefers-reduced-motion）
         const t = stats.totals;
         const kpis = document.querySelectorAll("#kpi-row .kpi-value");
-        kpis[0].textContent = fmtInt(t.papers);
-        kpis[1].textContent = Math.round((t.core_journal / t.papers) * 100) + "%";
-        kpis[2].textContent = fmtInt(t.cited_max);
+        const animateNum = (el, end, fmt, dur = 900) => {
+          if (REDUCED_MOTION) { el.textContent = fmt(end); return; }
+          const t0 = performance.now();
+          const ease = (x) => 1 - Math.pow(1 - x, 3);
+          const step = (now) => {
+            const k = Math.min(1, (now - t0) / dur);
+            el.textContent = fmt(Math.round(end * ease(k)));
+            if (k < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        };
+        animateNum(kpis[0], t.papers, fmtInt);
+        animateNum(kpis[1], Math.round((t.core_journal / t.papers) * 100), (n) => n + "%");
+        animateNum(kpis[2], t.cited_max, fmtInt);
         kpis[3].textContent = `${t.year_min}–${t.year_max}`;
 
         // 精选文献卡片（标题/作者等来自 API 的不可信数据一律用 textContent）
         const list = document.getElementById("featured-list");
         list.innerHTML = "";
-        featured.forEach((p) => {
+        featured.forEach((p, i) => {
           const el = document.createElement("article");
           el.className = "paper-card";
+          el.style.animationDelay = `${Math.min(i, 6) * 55}ms`;
 
           const title = document.createElement("h3");
           title.className = "paper-title";
@@ -122,9 +135,16 @@
           a.href = p.url || "#";
           a.target = "_blank";
           a.rel = "noopener";
-          a.textContent = p.title;
+          a.textContent = p.zh_title || p.title;
           title.appendChild(a);
           el.appendChild(title);
+          if (p.zh_title) {
+            const en = document.createElement("div");
+            en.textContent = p.title;
+            en.style.cssText = "font-size:12.5px;color:var(--muted);margin-top:3px";
+            en.title = "英文原标题";
+            el.appendChild(en);
+          }
 
           const meta = document.createElement("div");
           meta.className = "paper-meta";
@@ -181,9 +201,10 @@
         const clist = document.getElementById("classic-list");
         clist.innerHTML = "";
         const classicsDesc = [...(classics || [])].sort((a, b) => (a.year || 0) - (b.year || 0));
-        classicsDesc.forEach((c) => {
+        classicsDesc.forEach((c, i) => {
           const el = document.createElement("article");
           el.className = "classic-card";
+          el.style.animationDelay = `${Math.min(i, 6) * 55}ms`;
 
           const title = document.createElement("h3");
           title.className = "paper-title";
@@ -191,9 +212,16 @@
           a.href = c.url || "#";
           a.target = "_blank";
           a.rel = "noopener";
-          a.textContent = c.title;
+          a.textContent = c.zh_title || c.title;
           title.appendChild(a);
           el.appendChild(title);
+          if (c.zh_title) {
+            const en = document.createElement("div");
+            en.textContent = c.title;
+            en.style.cssText = "font-size:12.5px;color:var(--muted);margin-top:3px";
+            en.title = "英文原标题";
+            el.appendChild(en);
+          }
 
           const meta = document.createElement("div");
           meta.className = "paper-meta";
@@ -224,6 +252,98 @@
         document.getElementById("featured-list").innerHTML = msg;
         document.getElementById("classic-list").innerHTML = msg;
       }
+    })();
+  </script>
+  <script>
+    /* Hero 背景粒子网络：节点缓慢漂移 + 邻近连线（还原"碳网"意象）
+       尊重 prefers-reduced-motion：仅绘制一帧静态背景 */
+    (() => {
+      const canvas = document.getElementById("hero-canvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const hero = canvas.parentElement;
+      const t0 = chartTheme();
+      const COLORS = [t0.series[0], t0.series[2], t0.series[5], t0.series[6]];
+      const DPR = Math.min(2, window.devicePixelRatio || 1);
+      const LINK_DIST = 130;
+      let nodes = [], W = 0, H = 0, raf = 0, running = true;
+
+      function seed() {
+        const n = Math.min(56, Math.max(26, Math.floor(W / 26)));
+        nodes = Array.from({ length: n }, () => ({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: 1 + Math.random() * 1.8,
+          c: COLORS[Math.floor(Math.random() * COLORS.length)],
+        }));
+      }
+
+      function resize() {
+        W = hero.clientWidth; H = hero.clientHeight;
+        canvas.width = W * DPR; canvas.height = H * DPR;
+        canvas.style.width = W + "px"; canvas.style.height = H + "px";
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        seed();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < nodes.length; i++) {
+          const a = nodes[i];
+          for (let j = i + 1; j < nodes.length; j++) {
+            const b = nodes[j];
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const d2 = dx * dx + dy * dy;
+            if (d2 > 0 && d2 < LINK_DIST * LINK_DIST) {
+              const alpha = (1 - Math.sqrt(d2) / LINK_DIST) * 0.26;
+              ctx.strokeStyle = `rgba(140,160,190,${alpha.toFixed(3)})`;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+        }
+        for (const a of nodes) {
+          ctx.fillStyle = a.c;
+          ctx.beginPath();
+          ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function step() {
+        if (!running) return;
+        for (const a of nodes) {
+          a.x += a.vx; a.y += a.vy;
+          if (a.x < -20) a.x = W + 20; else if (a.x > W + 20) a.x = -20;
+          if (a.y < -20) a.y = H + 20; else if (a.y > H + 20) a.y = -20;
+        }
+        draw();
+        raf = requestAnimationFrame(step);
+      }
+
+      function start() {
+        cancelAnimationFrame(raf);
+        if (REDUCED_MOTION) { draw(); return; }
+        raf = requestAnimationFrame(step);
+      }
+
+      resize(); start();
+      window.addEventListener("resize", () => { resize(); start(); });
+      window.addEventListener("themechange", () => {
+        const t2 = chartTheme();
+        COLORS[0] = t2.series[0]; COLORS[1] = t2.series[2];
+        COLORS[2] = t2.series[5]; COLORS[3] = t2.series[6];
+        nodes.forEach((nd, i) => { nd.c = COLORS[i % COLORS.length]; });
+        draw();
+      });
+      document.addEventListener("visibilitychange", () => {
+        running = !document.hidden;
+        if (running) start();
+      });
     })();
   </script>
 </body>
