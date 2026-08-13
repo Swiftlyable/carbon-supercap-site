@@ -13,9 +13,13 @@
 python -m http.server 8000
 # 浏览器打开 http://localhost:8000
 
-# 抓取/更新文献数据
+# 抓取/更新文献数据（默认：核心 + 补充检索式 + 经典文献清单）
 python scripts/fetch_papers.py
 python scripts/build_data.py
+# 也可单独运行某一部分：
+python scripts/fetch_papers.py --extra-only      # 仅补充检索式
+python scripts/fetch_papers.py --classics-only   # 仅经典文献匹配
+python scripts/fetch_papers.py --reclassify      # 仅重新分类综述
 
 # 导入 Web of Science 导出文件（可选）
 python scripts/import_wos.py 路径/savedrecs.txt
@@ -53,7 +57,8 @@ fetch_papers.py（OpenAlex 增量抓取）→ build_data.py（统计/关系图�
 
 | 文件 | 内容 | 生成方式 |
 |---|---|---|
-| `data/papers.json` | 文献元数据（含标签、性能数值） | `fetch_papers.py` / `import_wos.py` |
+| `data/papers.json` | 文献元数据（含标签、性能数值、经典文献标记） | `fetch_papers.py` / `import_wos.py` |
+| `data/classics.json` | 领域经典文献（专家清单 + 中文点评） | `fetch_papers.py --classics-only` |
 | `data/taxonomy.json` | 领域思维导图（专家整理，手写） | 手动维护 |
 | `data/stats.json` | 聚合统计、性能分布、共现矩阵 | `build_data.py` |
 | `data/graph.json` | 知识关系图节点与边 | `build_data.py` |

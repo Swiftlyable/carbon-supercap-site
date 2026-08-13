@@ -274,6 +274,23 @@ table.data-table {
 }
 .paper-tags { margin-top: 10px; }
 
+/* ---------- 经典文献卡片 ---------- */
+.badge-classic { color: var(--s4); border-color: color-mix(in srgb, var(--s4) 40%, transparent); }
+.classic-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--s4);
+  border-radius: 10px; padding: 16px 18px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.classic-note {
+  color: var(--ink-2); font-size: 13px; line-height: 1.7;
+}
+.classic-note .cite {
+  color: var(--muted); font-size: 12.5px; margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
 /* 窄屏：导航可横向滚动，避免挤压溢出 */
 @media (max-width: 720px) {
   .header-inner { gap: 10px; }

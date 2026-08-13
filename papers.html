@@ -31,6 +31,10 @@
           <option value="review">仅综述</option>
         </select>
         <select id="f-tag" aria-label="标签筛选"></select>
+        <select id="f-classic" aria-label="经典文献筛选">
+          <option value="">全部文献</option>
+          <option value="classic">★ 仅经典文献</option>
+        </select>
         <select id="f-sort" aria-label="排序方式">
           <option value="citations">按被引排序</option>
           <option value="recent">按年份排序（新→旧）</option>
@@ -78,6 +82,7 @@
       const quality = document.getElementById("f-quality").value;
       const type = document.getElementById("f-type").value;
       const tag = document.getElementById("f-tag").value;
+      const classic = document.getElementById("f-classic").value;
       const sort = document.getElementById("f-sort").value;
 
       let out = papers.filter((p) => {
@@ -85,6 +90,7 @@
         if (quality === "q1" && !p.core_journal) return false;
         if (type && p.type !== type) return false;
         if (tag && !(p.tags || []).includes(tag)) return false;
+        if (classic === "classic" && !p.classic) return false;
         if (q) {
           const hay = [p.title, p.journal, (p.authors || []).join(" "),
                        p.abstract || "", (p.tags || []).join(" ")].join(" ").toLowerCase();
@@ -131,6 +137,14 @@
           const b = document.createElement("span");
           b.className = "badge badge-review";
           b.textContent = "综述";
+          b.style.marginLeft = "6px";
+          tdTitle.appendChild(b);
+        }
+        if (p.classic) {
+          const b = document.createElement("span");
+          b.className = "badge badge-classic";
+          b.textContent = "★ 经典";
+          b.title = "领域经典文献（见首页「领域经典文献」栏目点评）";
           b.style.marginLeft = "6px";
           tdTitle.appendChild(b);
         }
@@ -207,13 +221,13 @@
 
     function exportCSV() {
       const rows = filtered();
-      const header = ["标题", "期刊", "年份", "类型", "被引", "Q1期刊", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
+      const header = ["标题", "期刊", "年份", "类型", "被引", "Q1期刊", "经典文献", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
       const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
       const lines = [header.join(",")];
       rows.forEach((p) => {
         lines.push([
           p.title, p.journal, p.year, p.type, p.cited_by_count,
-          p.core_journal ? "是" : "否", p.oa ? "是" : "否", p.doi,
+          p.core_journal ? "是" : "否", p.classic ? "是" : "否", p.oa ? "是" : "否", p.doi,
           (p.tags || []).join(";"),
           p.metrics?.f_per_g ?? "", p.metrics?.wh_per_kg ?? "", p.metrics?.w_per_kg ?? "",
           (p.authors || []).join("; "),
@@ -260,7 +274,7 @@
           selTag.appendChild(o);
         });
 
-        ["f-search", "f-year", "f-quality", "f-type", "f-tag", "f-sort"].forEach((id) => {
+        ["f-search", "f-year", "f-quality", "f-type", "f-tag", "f-classic", "f-sort"].forEach((id) => {
           document.getElementById(id).addEventListener("input", () => { page = 1; renderTable(); });
           document.getElementById(id).addEventListener("change", () => { page = 1; renderTable(); });
         });

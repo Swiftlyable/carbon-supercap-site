@@ -83,6 +83,7 @@ def build_stats(papers):
             "oa": sum(1 for p in papers if p.get("oa")),
             "core_journal": sum(1 for p in papers if p.get("core_journal")),
             "tagged": sum(1 for p in papers if p.get("tags")),
+            "classics": sum(1 for p in papers if p.get("classic")),
             "cited_total": sum(cited),
             "cited_max": max(cited) if cited else 0,
             "cited_avg": round(sum(cited) / len(cited), 1) if cited else 0,
@@ -169,9 +170,11 @@ def build_featured(papers):
     picked = sorted(papers, key=paper_score, reverse=True)[:9]
     out = []
     for p in picked:
-        out.append({k: p[k] for k in ("id", "doi", "title", "journal", "year",
-                                      "cited_by_count", "authors", "type", "tags",
-                                      "core_journal", "url")})
+        entry = {k: p[k] for k in ("id", "doi", "title", "journal", "year",
+                                   "cited_by_count", "authors", "type", "tags",
+                                   "core_journal", "url")}
+        entry["classic"] = bool(p.get("classic"))
+        out.append(entry)
     return out
 
 

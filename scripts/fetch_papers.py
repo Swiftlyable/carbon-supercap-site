@@ -17,6 +17,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -27,11 +28,14 @@ if hasattr(sys.stdout, "reconfigure"):
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(BASE_DIR, "data", "papers.json")
+CLASSICS_FILE = os.path.join(BASE_DIR, "data", "classics.json")
 API = "https://api.openalex.org/works"
+CROSSREF_API = "https://api.crossref.org/works"
 MAILTO = os.environ.get("OPENALEX_MAILTO", "")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from vocab import VOCAB, CORE_JOURNALS  # noqa: E402
+from classics import CLASSICS  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # 检索式：每个查询单独请求（OpenAlex 过滤器内逗号 = OR，不适合拼多个搜索串）
@@ -49,6 +53,22 @@ QUERIES = [
     '"carbon fiber" supercapacitor flexible electrode',
     '"hierarchical porous carbon" supercapacitor',
     '"free-standing" carbon electrode supercapacitor',
+]
+
+# 补充检索式：覆盖三维导电网络的子领域与外延方向
+EXTRA_QUERIES = [
+    'supercapacitor "nitrogen-doped" porous carbon',
+    '"high mass loading" supercapacitor electrode',
+    '"graphene hydrogel" supercapacitor',
+    '"micro-supercapacitor" carbon electrode',
+    '"asymmetric supercapacitor" carbon electrode',
+    '"flexible supercapacitor" graphene network',
+    '"3D printing" supercapacitor electrode',
+    '"electrospun carbon nanofiber" supercapacitor',
+    '"MXene" supercapacitor carbon composite',
+    '"graphene foam" supercapacitor',
+    '"carbon nanotube sponge" supercapacitor',
+    '"compact capacitive energy storage" graphene',
 ]
 
 FROM_DATE = "2010-01-01"
@@ -73,9 +93,9 @@ def log(msg):
     print(msg, flush=True)
 
 
-def http_get_json(url):
+def http_get_json(url, headers=None):
     """带重试的 JSON GET 请求"""
-    headers = {"User-Agent": f"carbon-supercap-site/1.0 ({MAILTO or 'anonymous'})"}
+    headers = headers or {"User-Agent": f"carbon-supercap-site/1.0 ({MAILTO or 'anonymous'})"}
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
@@ -234,6 +254,210 @@ def load_existing():
     return []
 
 
+# ---------------------------------------------------------------------------
+# 经典文献：按特征子串 + 第一作者 + 年份从 OpenAlex 检索校验，
+# 命中的论文标记 classic=true 并写入 data/classics.json（首页专栏）
+# ---------------------------------------------------------------------------
+def normalize_title(s):
+    # OpenAlex 部分标题混入 <i>/<sub> 等 HTML 标签，先剥掉再归一化
+    s = re.sub(r"<[^>]+>", "", s or "")
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def strip_accents(s):
+    """去重音（NFKD 分解后丢弃组合字符）：Béguin → Beguin，保证作者姓氏可比"""
+    return "".join(c for c in unicodedata.normalize("NFKD", s)
+                   if not unicodedata.combining(c))
+
+
+def normalize_name(s):
+    """作者姓氏归一化：去重音 + 非字母数字全部替换为空格（兼容 ‐/– 等 Unicode 连字符）"""
+    return re.sub(r"[^a-z0-9]+", " ", strip_accents((s or "").lower())).strip()
+
+
+def first_author_surname(work):
+    authors = work.get("authorships") or []
+    if not authors:
+        return ""
+    name = (authors[0].get("author") or {}).get("display_name") or ""
+    # 取最后一段作为姓氏（多数作者格式为 "Given Family"）
+    return normalize_name(name.strip().split()[-1])
+
+
+def find_classic_match(work, c):
+    """校验候选文献是否与经典条目匹配（标题特征子串 + 第一作者 + 年份）"""
+    title = normalize_title(work.get("title"))
+    if normalize_title(c["match"]) not in title:
+        return False
+    if normalize_name(c["author"]) != first_author_surname(work):
+        return False
+    year = work.get("publication_year") or 0
+    if abs(year - c["year"]) > 1:
+        return False
+    return True
+
+
+# ---------------------------------------------------------------------------
+# Crossref 备用通道：OpenAlex 限流（429）时的题录检索
+# ---------------------------------------------------------------------------
+def crossref_lookup_classic(c):
+    """按题录检索 Crossref，返回与经典条目匹配的记录（或 None）"""
+    # query.title 按标题精确检索，排序更贴近题名匹配（bibliographic 模糊检索易漏）
+    params = {"query.title": c["match"], "rows": "10"}
+    headers = {"User-Agent": f"carbon-supercap-site/1.0 (mailto:{MAILTO or 'carbonnet@example.com'})"}
+    data = http_get_json(CROSSREF_API + "?" + urllib.parse.urlencode(params), headers=headers)
+    for item in data.get("message", {}).get("items", []):
+        title = " ".join(item.get("title") or [])
+        if normalize_title(c["match"]) not in normalize_title(title):
+            continue
+        family = (((item.get("author") or [{}])[0].get("family")) or "")
+        if normalize_name(c["author"]) != normalize_name(family):
+            continue
+        year = ((item.get("issued") or {}).get("date-parts") or [[None]])[0][0]
+        if abs((year or 0) - c["year"]) > 1:
+            continue
+        return item
+    return None
+
+
+def crossref_to_entry(item):
+    """Crossref 题录 → 与 OpenAlex 条目同构的字段"""
+    doi = item.get("DOI") or ""
+    authors = []
+    for a in item.get("author") or []:
+        name = " ".join(x for x in (a.get("given"), a.get("family")) if x)
+        if name and name not in authors and len(authors) < 6:
+            authors.append(name)
+    year = ((item.get("issued") or {}).get("date-parts") or [[None]])[0][0]
+    journal = (item.get("container-title") or ["Unknown"])[0]
+    title = " ".join(item.get("title") or []) or "(无标题)"
+    jnorm = journal.lower().strip()
+    core = any(jnorm == cj or jnorm.startswith(cj) for cj in CORE_JOURNALS)
+
+    abstract = re.sub(r"<[^>]+>", "", item.get("abstract") or "")
+    if len(abstract) > 1600:
+        abstract = abstract[:1600] + " …"
+    text = title + " " + abstract
+
+    return {
+        "id": "cr:" + doi.lower(),
+        "doi": doi,
+        "title": title,
+        "journal": journal,
+        "core_journal": core,
+        "year": year,
+        "date": "",
+        "cited_by_count": item.get("is-referenced-by-count") or 0,
+        "authors": authors,
+        "institutions": [],
+        "type": classify_type({"type": item.get("type"), "title": title}),
+        "oa": False,
+        "url": doi and f"https://doi.org/{doi}" or (item.get("URL") or ""),
+        "abstract": abstract,
+        "tags": tag_paper(text),
+        "metrics": extract_metrics(abstract),
+        "concepts": [],
+        "source": "Crossref",
+    }
+
+
+def lookup_classics(by_id):
+    """逐条检索经典文献：先在库中找，找不到再查 API（不受 2010 起止限制）"""
+    out, matched = [], 0
+    # 清空旧标记，保证重跑结果与当前清单一致
+    for p in by_id.values():
+        p.pop("classic", None)
+        p.pop("classic_note", None)
+
+    for c in CLASSICS:
+        # 1) 先在库中按标题+作者+年份匹配
+        hit = None
+        for p in by_id.values():
+            if normalize_title(c["match"]) in normalize_title(p.get("title")) \
+                    and normalize_name(c["author"]) == first_author_of_entry(p) \
+                    and abs((p.get("year") or 0) - c["year"]) <= 1:
+                hit = p
+                break
+        if hit:
+            hit["classic"] = True
+            hit["classic_note"] = c["note"]
+            out.append(hit)
+            matched += 1
+            log(f"  [库内命中] {hit['title'][:60]}")
+            continue
+
+        # 2) 查 API（按标题检索更精确，无日期限制；候选数放宽到 25）
+        params = {
+            "filter": f"title.search:{c['match']}",
+            "sort": "relevance_score:desc",
+            "per-page": "25",
+        }
+        if MAILTO:
+            params["mailto"] = MAILTO
+        try:
+            data = http_get_json(API + "?" + urllib.parse.urlencode(params))
+        except RuntimeError as e:
+            # 3) OpenAlex 限流/网络失败 → 备用通道 Crossref
+            log(f"  [OpenAlex失败，走Crossref] {c['match'][:50]}")
+            try:
+                item = crossref_lookup_classic(c)
+            except RuntimeError as e2:
+                log(f"  [Crossref也失败] {c['match'][:50]}: {e2}")
+                time.sleep(1)
+                continue
+            if not item:
+                log(f"  [未命中] {c['match'][:50]}")
+                time.sleep(0.5)
+                continue
+            entry = crossref_to_entry(item)
+            entry["classic"] = True
+            entry["classic_note"] = c["note"]
+            by_id[entry["id"]] = entry
+            out.append(entry)
+            matched += 1
+            log(f"  [Crossref命中] {entry['title'][:60]}")
+            time.sleep(0.5)
+            continue
+
+        hit = None
+        for w in data.get("results", []):
+            if find_classic_match(w, c):
+                hit = w
+                break
+        if not hit:
+            log(f"  [未命中] {c['match'][:50]}")
+            time.sleep(0.3)
+            continue
+
+        entry = work_to_entry(hit)
+        entry["classic"] = True
+        entry["classic_note"] = c["note"]
+        by_id[entry["id"]] = entry
+        out.append(entry)
+        matched += 1
+        log(f"  [API命中] {entry['title'][:60]}")
+        time.sleep(0.3)
+
+    out.sort(key=lambda p: (p.get("year") or 0, -(p.get("cited_by_count") or 0)))
+    classic_json = [{
+        "id": p["id"], "title": p["title"], "journal": p["journal"],
+        "year": p["year"], "doi": p["doi"], "url": p["url"],
+        "cited_by_count": p["cited_by_count"], "first_author": (p["authors"] or ["—"])[0],
+        "note": p["classic_note"], "core_journal": p["core_journal"],
+    } for p in out]
+    with open(CLASSICS_FILE, "w", encoding="utf-8") as f:
+        json.dump(classic_json, f, ensure_ascii=False, indent=1)
+    log(f"经典文献：匹配 {matched}/{len(CLASSICS)} 条，已写入 {CLASSICS_FILE}")
+    return out
+
+
+def first_author_of_entry(p):
+    """现有库条目的第一作者姓氏（与 API 侧校验口径一致）"""
+    if not p.get("authors"):
+        return ""
+    return normalize_name(p["authors"][0].strip().split()[-1])
+
+
 def reclassify():
     """仅重新分类现有数据的综述类型（标题启发式），不重新抓取"""
     with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -253,6 +477,15 @@ def main():
     if "--reclassify" in sys.argv:
         reclassify()
         return
+    # 运行模式：默认全部；--core-only / --extra-only / --classics-only 可组合
+    flags = {"--core-only", "--extra-only", "--classics-only"} & set(sys.argv)
+    if flags:
+        run_core = "--core-only" in flags
+        run_extra = "--extra-only" in flags
+        run_classics = "--classics-only" in flags
+    else:
+        run_core = run_extra = run_classics = True
+
     limit = None
     if "--limit" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--limit") + 1])
@@ -263,8 +496,14 @@ def main():
     by_id = {p["id"]: p for p in existing}
     log(f"已有文献 {len(existing)} 篇，开始增量抓取…")
 
-    for i, q in enumerate(QUERIES):
-        log(f"[{i + 1}/{len(QUERIES)}] 查询: {q}")
+    queries = []
+    if run_core:
+        queries += QUERIES
+    if run_extra:
+        queries += EXTRA_QUERIES
+
+    for i, q in enumerate(queries):
+        log(f"[{i + 1}/{len(queries)}] 查询: {q}")
         # 经典文献：按被引排序
         entries, n = fetch_query(q, "cited_by_count:desc", PER_PAGE, CLASSIC_PER_QUERY)
         log(f"   高被引: 取 {len(entries)} 篇 (命中 {n})")
@@ -281,6 +520,10 @@ def main():
             log("达到 --limit 上限，提前结束")
             break
 
+    if run_classics:
+        log("检索经典文献（专家整理清单）…")
+        lookup_classics(by_id)
+
     papers = list(by_id.values())
     # 主排序：核心期刊优先 → 被引降序
     papers.sort(key=lambda p: (not p["core_journal"], -(p["cited_by_count"] or 0), -(p["year"] or 0)))
@@ -291,7 +534,9 @@ def main():
     n_core = sum(1 for p in papers if p["core_journal"])
     n_rev = sum(1 for p in papers if p["type"] == "review")
     n_tags = sum(1 for p in papers if p["tags"])
-    log(f"完成：共 {len(papers)} 篇文献（核心期刊 {n_core}，综述 {n_rev}，已打标签 {n_tags}）")
+    n_classic = sum(1 for p in papers if p.get("classic"))
+    log(f"完成：共 {len(papers)} 篇文献（核心期刊 {n_core}，综述 {n_rev}，"
+        f"已打标签 {n_tags}，经典文献 {n_classic}）")
     log(f"数据文件: {DATA_FILE}")
 
 

@@ -1,5 +1,42 @@
 [
  {
+  "id": "W4391908136",
+  "doi": "10.1016/j.est.2024.110698",
+  "title": "Electrode materials for supercapacitors: A comprehensive review of advancements and performance",
+  "journal": "Journal of Energy Storage",
+  "year": 2024,
+  "cited_by_count": 385,
+  "authors": [
+   "Reenu Reenu",
+   "Sonia Sonia",
+   "Lakshita Phor",
+   "Ashok Kumar",
+   "Surjeet Chahal"
+  ],
+  "type": "review",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2024.110698",
+  "classic": false
+ },
+ {
+  "id": "W4400858737",
+  "doi": "10.1016/j.jiec.2024.07.014",
+  "title": "Supercapacitors: Overcoming current limitations and charting the course for next-generation energy storage",
+  "journal": "Journal of Industrial and Engineering Chemistry",
+  "year": 2024,
+  "cited_by_count": 275,
+  "authors": [
+   "Humaira Rashid Khan",
+   "Abdul Latif Ahmad"
+  ],
+  "type": "article",
+  "tags": [],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.jiec.2024.07.014",
+  "classic": false
+ },
+ {
   "id": "W4214911243",
   "doi": "10.1002/adfm.202113082",
   "title": "Multifunctional Superelastic, Superhydrophilic, and Ultralight Nanocellulose‐Based Composite Carbon Aerogels for Compressive Supercapacitor and Strain Sensor",
@@ -23,7 +60,8 @@
    "可穿戴"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1002/adfm.202113082"
+  "url": "https://doi.org/10.1002/adfm.202113082",
+  "classic": false
  },
  {
   "id": "W4392137229",
@@ -46,7 +84,74 @@
    "杂原子掺杂"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1016/j.esci.2024.100249"
+  "url": "https://doi.org/10.1016/j.esci.2024.100249",
+  "classic": false
+ },
+ {
+  "id": "W4401064899",
+  "doi": "10.1016/j.est.2024.113040",
+  "title": "Shaping the future of energy: The rise of supercapacitors progress in the last five years",
+  "journal": "Journal of Energy Storage",
+  "year": 2024,
+  "cited_by_count": 207,
+  "authors": [
+   "Yedluri Anil Kumar",
+   "Nipa Roy",
+   "Tholkappiyan Ramachandran",
+   "Mohamed Hussien",
+   "Md. Moniruzzaman",
+   "Sang Woo Joo"
+  ],
+  "type": "review",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2024.113040",
+  "classic": false
+ },
+ {
+  "id": "W4377138451",
+  "doi": "10.1007/s42114-023-00675-8",
+  "title": "Ultralight MXene/carbon nanotube composite aerogel for high-performance flexible supercapacitor",
+  "journal": "Advanced Composites and Hybrid Materials",
+  "year": 2023,
+  "cited_by_count": 304,
+  "authors": [
+   "Ting Xu",
+   "Yaxuan Wang",
+   "Kun Liu",
+   "Qingshuang Zhao",
+   "Qidi Liang",
+   "Meng Zhang"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT",
+   "柔性器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1007/s42114-023-00675-8",
+  "classic": false
+ },
+ {
+  "id": "W4407290122",
+  "doi": "10.1016/j.ccr.2025.216497",
+  "title": "Advanced strategies for enhancing electrochemical performance of NiAl LDH electrodes in supercapacitors",
+  "journal": "Coordination Chemistry Reviews",
+  "year": 2025,
+  "cited_by_count": 116,
+  "authors": [
+   "Yong Zhang",
+   "Shuo Hu",
+   "C. Li",
+   "Xin-hua Yan",
+   "Yuanyuan Zhang",
+   "Rong‐bi Yin"
+  ],
+  "type": "article",
+  "tags": [],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.ccr.2025.216497",
+  "classic": false
  },
  {
   "id": "W4399903006",
@@ -68,7 +173,8 @@
    "生物质碳"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1016/j.cej.2024.153311"
+  "url": "https://doi.org/10.1016/j.cej.2024.153311",
+  "classic": false
  },
  {
   "id": "W4290615267",
@@ -92,121 +198,7 @@
    "柔性器件"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1002/adfm.202205158"
- },
- {
-  "id": "W4390598048",
-  "doi": "10.1016/j.fuel.2023.130795",
-  "title": "Recent advances and challenges in biomass-derived carbon materials for supercapacitors: A review",
-  "journal": "Fuel",
-  "year": 2024,
-  "cited_by_count": 161,
-  "authors": [
-   "Chuan Yuan",
-   "Hao Xu",
-   "Sherif A. El‐Khodary",
-   "Guosong Ni",
-   "Sivakumar Esakkimuthu",
-   "Shan Zhong"
-  ],
-  "type": "review",
-  "tags": [
-   "生物质碳"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.fuel.2023.130795"
- },
- {
-  "id": "W4386269749",
-  "doi": "10.1016/j.cclet.2023.109007",
-  "title": "Activation of biomass-derived porous carbon for supercapacitors: A review",
-  "journal": "Chinese Chemical Letters",
-  "year": 2023,
-  "cited_by_count": 248,
-  "authors": [
-   "Zixuan Guo",
-   "Xiaoshuai Han",
-   "Chunmei Zhang",
-   "Shuijian He",
-   "Kunming Liu",
-   "Jiapeng Hu"
-  ],
-  "type": "review",
-  "tags": [
-   "多孔碳",
-   "生物质碳"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.cclet.2023.109007"
- },
- {
-  "id": "W3082721096",
-  "doi": "10.1007/s10853-020-05157-6",
-  "title": "Recent progress in carbon-based materials for supercapacitor electrodes: a review",
-  "journal": "Journal of Materials Science",
-  "year": 2020,
-  "cited_by_count": 896,
-  "authors": [
-   "Yifan Wang",
-   "Lin Zhang",
-   "Haoqing Hou",
-   "Wenhui Xu",
-   "Gaigai Duan",
-   "Shuijian He"
-  ],
-  "type": "review",
-  "tags": [],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s10853-020-05157-6"
- },
- {
-  "id": "W4396507278",
-  "doi": "10.1016/j.nanoen.2024.109690",
-  "title": "Doping effect and oxygen vacancy engineering in nickel-manganese layered double hydroxides for high-performance supercapacitors",
-  "journal": "Nano Energy",
-  "year": 2024,
-  "cited_by_count": 111,
-  "authors": [
-   "Tianpeng Li",
-   "Yuting Hu",
-   "Jingyuan Zhang",
-   "Huajian Li",
-   "Kun Fang",
-   "Jiawei Wang"
-  ],
-  "type": "article",
-  "tags": [
-   "活性炭 AC",
-   "石墨烯",
-   "泡沫碳",
-   "水热/溶剂热",
-   "杂原子掺杂",
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "倍率性能",
-   "非对称器件"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.nanoen.2024.109690"
- },
- {
-  "id": "W4285384230",
-  "doi": "10.1016/j.est.2022.105290",
-  "title": "Recent progress on biomass waste derived activated carbon electrode materials for supercapacitors applications—A review",
-  "journal": "Journal of Energy Storage",
-  "year": 2022,
-  "cited_by_count": 286,
-  "authors": [
-   "Pantrangi Manasa",
-   "Sambasivam Sangaraju",
-   "Fen Ran"
-  ],
-  "type": "review",
-  "tags": [
-   "活性炭 AC"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2022.105290"
+  "url": "https://doi.org/10.1002/adfm.202205158",
+  "classic": false
  }
 ]

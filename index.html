@@ -35,7 +35,7 @@
         <div class="kpi"><div class="kpi-label">收录文献</div><div class="kpi-value">—</div><div class="kpi-delta">文章 + 综述</div></div>
         <div class="kpi"><div class="kpi-label">WoS/JCR Q1 权威期刊占比</div><div class="kpi-value">—</div><div class="kpi-delta">核心期刊收录</div></div>
         <div class="kpi"><div class="kpi-label">最高单篇被引</div><div class="kpi-value">—</div><div class="kpi-delta">Web of Science 同源引用数据</div></div>
-        <div class="kpi"><div class="kpi-label">覆盖年份</div><div class="kpi-value">—</div><div class="kpi-delta">2010 年至今</div></div>
+        <div class="kpi"><div class="kpi-label">覆盖年份</div><div class="kpi-value">—</div><div class="kpi-delta">含 1997 年起的经典文献</div></div>
       </div>
     </section>
 
@@ -46,6 +46,17 @@
         <a class="section-note" href="papers.html">全部文献 →</a>
       </div>
       <div id="featured-list">
+        <div class="empty-state">加载中…</div>
+      </div>
+    </section>
+
+    <!-- 经典文献 -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="kicker">Milestones</span>领域经典文献</h2>
+        <span class="section-note">按时间线整理的奠基之作，附中文点评</span>
+      </div>
+      <div id="classic-list" class="grid-2">
         <div class="empty-state">加载中…</div>
       </div>
     </section>
@@ -82,8 +93,8 @@
   <script>
     (async () => {
       try {
-        const [stats, featured] = await Promise.all([
-          loadJSON("stats"), loadJSON("featured"),
+        const [stats, featured, classics] = await Promise.all([
+          loadJSON("stats"), loadJSON("featured"), loadJSON("classics"),
         ]);
 
         // 更新时间
@@ -143,6 +154,12 @@
             b.textContent = "开放获取";
             meta.appendChild(b);
           }
+          if (p.classic) {
+            const b = document.createElement("span");
+            b.className = "badge badge-classic";
+            b.textContent = "★ 经典";
+            meta.appendChild(b);
+          }
           el.appendChild(meta);
 
           const tags = (p.tags || []).slice(0, 5);
@@ -159,9 +176,53 @@
           }
           list.appendChild(el);
         });
+
+        // 经典文献（时间线整理 + 中文点评）
+        const clist = document.getElementById("classic-list");
+        clist.innerHTML = "";
+        const classicsDesc = [...(classics || [])].sort((a, b) => (a.year || 0) - (b.year || 0));
+        classicsDesc.forEach((c) => {
+          const el = document.createElement("article");
+          el.className = "classic-card";
+
+          const title = document.createElement("h3");
+          title.className = "paper-title";
+          const a = document.createElement("a");
+          a.href = c.url || "#";
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = c.title;
+          title.appendChild(a);
+          el.appendChild(title);
+
+          const meta = document.createElement("div");
+          meta.className = "paper-meta";
+          const span = (txt) => {
+            const s = document.createElement("span");
+            s.textContent = txt;
+            meta.appendChild(s);
+          };
+          span(`${c.first_author} 等`);
+          span(`${c.journal} · ${c.year}`);
+          span(`被引 ${fmtInt(c.cited_by_count)}`);
+          if (c.core_journal) {
+            const b = document.createElement("span");
+            b.className = "badge badge-q1";
+            b.textContent = "Q1 权威期刊";
+            meta.appendChild(b);
+          }
+          el.appendChild(meta);
+
+          const note = document.createElement("p");
+          note.className = "classic-note";
+          note.textContent = c.note;
+          el.appendChild(note);
+          clist.appendChild(el);
+        });
       } catch (e) {
-        document.getElementById("featured-list").innerHTML =
-          `<div class="empty-state">数据加载失败：${e.message}</div>`;
+        const msg = `<div class="empty-state">数据加载失败：${e.message}</div>`;
+        document.getElementById("featured-list").innerHTML = msg;
+        document.getElementById("classic-list").innerHTML = msg;
       }
     })();
   </script>
