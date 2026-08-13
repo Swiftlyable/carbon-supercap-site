@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文献库 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络文献库：可按关键词、年份、期刊质量、标签筛选，支持 CSV 导出。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="papers">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <div class="section-head">
+        <h1 class="section-title" style="font-size:24px"><span class="kicker">Paper Library</span>文献库</h1>
+        <button class="btn" id="export-csv">导出 CSV</button>
+      </div>
+
+      <!-- 筛选行 -->
+      <div class="filter-row">
+        <input type="search" id="f-search" placeholder="搜索标题 / 期刊 / 作者 / 摘要关键词…" aria-label="搜索文献">
+        <select id="f-year" aria-label="年份筛选"></select>
+        <select id="f-quality" aria-label="期刊质量筛选">
+          <option value="">全部期刊</option>
+          <option value="q1">仅 WoS/JCR Q1 权威期刊</option>
+        </select>
+        <select id="f-type" aria-label="文献类型筛选">
+          <option value="">文章 + 综述</option>
+          <option value="article">仅研究文章</option>
+          <option value="review">仅综述</option>
+        </select>
+        <select id="f-tag" aria-label="标签筛选"></select>
+        <select id="f-sort" aria-label="排序方式">
+          <option value="citations">按被引排序</option>
+          <option value="recent">按年份排序（新→旧）</option>
+        </select>
+        <span class="filter-count" id="filter-count"></span>
+      </div>
+
+      <!-- 结果表格 -->
+      <div class="card" style="padding:0 6px">
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:44%">标题</th>
+                <th>期刊</th>
+                <th class="num">年份</th>
+                <th class="num">被引</th>
+                <th class="num">比电容 (F/g)</th>
+                <th>标签</th>
+              </tr>
+            </thead>
+            <tbody id="paper-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="empty-state hidden" id="no-results">没有符合条件的文献，试试放宽筛选条件。</div>
+
+      <!-- 分页 -->
+      <div class="pagination" id="pagination"></div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    const PAGE_SIZE = 25;
+    let papers = [];
+    let page = 1;
+    const tagColors = {};
+    const TAG_SLOT = { material: 0, strategy: 1, application: 2, metric: 4 };
+
+    function filtered() {
+      const q = document.getElementById("f-search").value.trim().toLowerCase();
+      const year = document.getElementById("f-year").value;
+      const quality = document.getElementById("f-quality").value;
+      const type = document.getElementById("f-type").value;
+      const tag = document.getElementById("f-tag").value;
+      const sort = document.getElementById("f-sort").value;
+
+      let out = papers.filter((p) => {
+        if (year && String(p.year) !== year) return false;
+        if (quality === "q1" && !p.core_journal) return false;
+        if (type && p.type !== type) return false;
+        if (tag && !(p.tags || []).includes(tag)) return false;
+        if (q) {
+          const hay = [p.title, p.journal, (p.authors || []).join(" "),
+                       p.abstract || "", (p.tags || []).join(" ")].join(" ").toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      if (sort === "citations") out.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
+      else out.sort((a, b) => (b.year || 0) - (a.year || 0) || (b.cited_by_count || 0) - (a.cited_by_count || 0));
+      return out;
+    }
+
+    function tagDot(category) {
+      const t = chartTheme();
+      const slot = TAG_SLOT[category] ?? 0;
+      return `<span class="tag-dot" style="background:${t.series[slot]}"></span>`;
+    }
+
+    function renderTable() {
+      const rows = filtered();
+      const totalPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+      page = Math.min(page, totalPages);
+      const slice = rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+      document.getElementById("filter-count").textContent =
+        `显示 ${slice.length ? (page - 1) * PAGE_SIZE + 1 : 0}–${(page - 1) * PAGE_SIZE + slice.length} / 共 ${fmtInt(rows.length)} 篇`;
+
+      const tbody = document.getElementById("paper-tbody");
+      tbody.innerHTML = "";
+      slice.forEach((p) => {
+        const tr = document.createElement("tr");
+
+        // 标题（textContent 注入，防 XSS）
+        const tdTitle = document.createElement("td");
+        const a = document.createElement("a");
+        a.href = p.url || "#";
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = p.title;
+        a.style.fontWeight = "500";
+        tdTitle.appendChild(a);
+        if (p.type === "review") {
+          const b = document.createElement("span");
+          b.className = "badge badge-review";
+          b.textContent = "综述";
+          b.style.marginLeft = "6px";
+          tdTitle.appendChild(b);
+        }
+        if (p.core_journal) {
+          const b = document.createElement("span");
+          b.className = "badge badge-q1";
+          b.textContent = "Q1";
+          b.style.marginLeft = "6px";
+          tdTitle.appendChild(b);
+        }
+        if (p.oa) {
+          const b = document.createElement("span");
+          b.className = "badge badge-oa";
+          b.textContent = "OA";
+          b.style.marginLeft = "6px";
+          tdTitle.appendChild(b);
+        }
+        tr.appendChild(tdTitle);
+
+        // 期刊
+        const tdJ = document.createElement("td");
+        tdJ.textContent = p.journal;
+        tdJ.style.fontSize = "12.5px";
+        tdJ.style.color = "var(--ink-2)";
+        tr.appendChild(tdJ);
+
+        const tdNum = (v) => {
+          const td = document.createElement("td");
+          td.className = "num";
+          td.textContent = v;
+          return td;
+        };
+        tr.appendChild(tdNum(p.year ?? "—"));
+        tr.appendChild(tdNum(fmtInt(p.cited_by_count)));
+        tr.appendChild(tdNum(p.metrics && p.metrics.f_per_g ? p.metrics.f_per_g.toFixed(0) : "—"));
+
+        // 标签
+        const tdTags = document.createElement("td");
+        tdTags.style.maxWidth = "240px";
+        (p.tags || []).slice(0, 4).forEach((tag) => {
+          const s = document.createElement("span");
+          s.className = "tag";
+          s.style.fontSize = "11.5px";
+          s.style.padding = "1px 8px";
+          s.textContent = tag;
+          tdTags.appendChild(s);
+        });
+        tr.appendChild(tdTags);
+
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById("no-results").classList.toggle("hidden", rows.length > 0);
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const pg = document.getElementById("pagination");
+      pg.innerHTML = "";
+      const mk = (label, target, opts = {}) => {
+        const b = document.createElement("button");
+        b.textContent = label;
+        b.disabled = opts.disabled;
+        if (opts.active) b.className = "active";
+        b.addEventListener("click", () => { page = target; renderTable(); window.scrollTo({ top: 0 }); });
+        pg.appendChild(b);
+      };
+      mk("‹", page - 1, { disabled: page <= 1 });
+      const start = Math.max(1, page - 2);
+      const end = Math.min(totalPages, start + 4);
+      for (let i = start; i <= end; i++) mk(String(i), i, { active: i === page });
+      mk("›", page + 1, { disabled: page >= totalPages });
+    }
+
+    function exportCSV() {
+      const rows = filtered();
+      const header = ["标题", "期刊", "年份", "类型", "被引", "Q1期刊", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
+      const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+      const lines = [header.join(",")];
+      rows.forEach((p) => {
+        lines.push([
+          p.title, p.journal, p.year, p.type, p.cited_by_count,
+          p.core_journal ? "是" : "否", p.oa ? "是" : "否", p.doi,
+          (p.tags || []).join(";"),
+          p.metrics?.f_per_g ?? "", p.metrics?.wh_per_kg ?? "", p.metrics?.w_per_kg ?? "",
+          (p.authors || []).join("; "),
+        ].map(esc).join(","));
+      });
+      // BOM 保证 Excel 正确识别 UTF-8
+      const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "carbon-supercap-papers.csv";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    (async () => {
+      try {
+        const [ps, stats] = await Promise.all([loadJSON("papers"), loadJSON("stats")]);
+        papers = ps;
+
+        // 年份下拉（倒序）；先加"全部"作为默认值
+        const years = [...new Set(ps.map((p) => p.year).filter(Boolean))].sort((a, b) => b - a);
+        const selYear = document.getElementById("f-year");
+        const optAllYear = document.createElement("option");
+        optAllYear.value = "";
+        optAllYear.textContent = "全部年份";
+        selYear.appendChild(optAllYear);
+        years.forEach((y) => {
+          const o = document.createElement("option");
+          o.value = y;
+          o.textContent = y;
+          selYear.appendChild(o);
+        });
+
+        // 标签下拉（按论文数降序）；先加"全部"作为默认值
+        const selTag = document.getElementById("f-tag");
+        const optAllTag = document.createElement("option");
+        optAllTag.value = "";
+        optAllTag.textContent = "全部标签";
+        selTag.appendChild(optAllTag);
+        stats.tags.forEach((tg) => {
+          const o = document.createElement("option");
+          o.value = tg.name;
+          o.textContent = `${tg.name} (${tg.count})`;
+          selTag.appendChild(o);
+        });
+
+        ["f-search", "f-year", "f-quality", "f-type", "f-tag", "f-sort"].forEach((id) => {
+          document.getElementById(id).addEventListener("input", () => { page = 1; renderTable(); });
+          document.getElementById(id).addEventListener("change", () => { page = 1; renderTable(); });
+        });
+        document.getElementById("export-csv").addEventListener("click", exportCSV);
+
+        renderTable();
+      } catch (e) {
+        document.getElementById("paper-tbody").innerHTML =
+          `<tr><td colspan="6"><div class="empty-state">加载失败：${e.message}</div></td></tr>`;
+      }
+    })();
+  </script>
+</body>
+</html>

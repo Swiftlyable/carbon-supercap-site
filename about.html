@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳网图谱数据来源、文献筛选标准、Web of Science 导入方法与自动更新机制说明。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="about">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <div class="prose">
+        <h1 class="section-title" style="font-size:24px;margin-bottom:18px"><span class="kicker">About</span>关于本站</h1>
+
+        <p>
+          <strong>碳网图谱 CarbonNet</strong> 是一个面向「碳材料超级电容器三维导电网络」方向的
+          文献知识站，提供领域思维导图、知识关系图、文献库与性能数据面板，
+          并通过 GitHub Actions 每周自动抓取最新文献。
+        </p>
+
+        <h2>数据来源</h2>
+        <p>
+          文献元数据（标题、作者、期刊、年份、被引次数、摘要、研究概念）来自
+          <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>——
+          由非营利机构 OurResearch 维护的开放学术索引，以 DOI 为基准聚合了
+          Crossref、ORCID、机构库等来源，覆盖 Web of Science / Scopus 收录的期刊文献，
+          被引数据与 WoS 同源（引用关系均来自 Crossref/DOI 引用图）。
+        </p>
+        <div class="note">
+          Web of Science 官方 API 需机构订阅授权，不提供公开访问，因此本站以 OpenAlex 作为开放替代。
+          如需使用自己学校/单位的 WoS 数据，可将 WoS 导出的「制表符分隔 (Win/UTF-8)」文件
+          用本站脚本导入合并——见下方说明。
+        </div>
+
+        <h2>文献筛选标准</h2>
+        <ul>
+          <li><strong>检索范围</strong>：12 组定向检索式（如 "3D conductive network" supercapacitor 等），限定 2010 年以来的研究文章与综述；</li>
+          <li><strong>双通道收录</strong>：每组检索式按「被引降序」取经典文献 + 按「日期降序」取近三年新文献，兼顾经典性与前沿性；</li>
+          <li><strong>权威期刊标记</strong>：内置本领域 WoS/JCR Q1 主流期刊清单（Nature 系列、Advanced Materials、ACS Nano、Energy & Environmental Science、Carbon 等 70 余本），标记为「Q1 权威期刊」；</li>
+          <li><strong>自动标签</strong>：按受控词表（材料/策略/指标/应用四类共 36 个标签）对每篇论文的标题与摘要做正则匹配，支撑关系图与筛选；</li>
+          <li><strong>性能数据抽取</strong>：从摘要自动提取报道的最大比电容 (F/g)、能量密度 (Wh/kg)、功率密度 (W/kg)，用于性能分布统计（数值仅供参考，请以原文为准）。</li>
+        </ul>
+
+        <h2>Web of Science 导出文件导入</h2>
+        <p>
+          在 WoS 检索结果页选择「导出 → 制表符分隔文件 (Win, UTF-8) → 全记录与引用的参考文献」，
+          得到 <code>savedrecs.txt</code> 文件后运行：
+        </p>
+        <pre><code>python scripts/import_wos.py 路径/to/savedrecs.txt
+python scripts/build_data.py</code></pre>
+        <p>
+          导入的文献会标记 <code>source: "WoS"</code> 并与现有 OpenAlex 数据按 DOI 去重合并，
+          每周自动更新不会覆盖这些记录。
+        </p>
+
+        <h2>自动更新机制</h2>
+        <ul>
+          <li><strong>每周一 02:30 UTC（北京时间 10:30）</strong>，GitHub Actions 工作流
+            <code>.github/workflows/update-papers.yml</code> 自动运行抓取与建库脚本；</li>
+          <li>新数据提交到仓库后，GitHub Pages 自动重新部署站点（无需人工干预）；</li>
+          <li>也可在 GitHub 仓库 Actions 页手动触发 <code>workflow_dispatch</code> 随时更新；</li>
+          <li>本仓库无任何依赖：Python 脚本仅用标准库，前端仅依赖本地 vendored 的 ECharts。</li>
+        </ul>
+
+        <h2>使用提示</h2>
+        <ul>
+          <li>思维导图：点击节点展开/收起，点击带说明的节点查看解读；</li>
+          <li>关系图：拖拽节点、滚轮缩放，点击文献节点直达 DOI 原文；</li>
+          <li>文献库：支持全文搜索、年份/期刊质量/类型/标签筛选与 CSV 导出；</li>
+          <li>所有图表适配深色/浅色两种主题（右上角切换）。</li>
+        </ul>
+
+        <h2>免责声明</h2>
+        <p>
+          本站仅为文献信息服务。摘要性能数值由正则自动抽取，可能存在误报，引用与使用前请核对原文；
+          期刊 Q1 标记依据 JCR 分区整理，期刊分区可能随时间变动。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+[
+ {
+  "id": "W4214911243",
+  "doi": "10.1002/adfm.202113082",
+  "title": "Multifunctional Superelastic, Superhydrophilic, and Ultralight Nanocellulose‐Based Composite Carbon Aerogels for Compressive Supercapacitor and Strain Sensor",
+  "journal": "Advanced Functional Materials",
+  "year": 2022,
+  "cited_by_count": 570,
+  "authors": [
+   "Huayu Liu",
+   "Ting Xu",
+   "Chenyang Cai",
+   "Kun Liu",
+   "Wei Liu",
+   "Meng Zhang"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT",
+   "石墨烯",
+   "氧化石墨烯 GO/rGO",
+   "碳气凝胶",
+   "可穿戴"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1002/adfm.202113082"
+ },
+ {
+  "id": "W4392137229",
+  "doi": "10.1016/j.esci.2024.100249",
+  "title": "Versatile carbon-based materials from biomass for advanced electrochemical energy storage systems",
+  "journal": "eScience",
+  "year": 2024,
+  "cited_by_count": 215,
+  "authors": [
+   "Ziyi Zhu",
+   "Yongling Men",
+   "Wenjia Zhang",
+   "Wenhao Yang",
+   "Fei Wang",
+   "Yanjia Zhang"
+  ],
+  "type": "article",
+  "tags": [
+   "生物质碳",
+   "杂原子掺杂"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.esci.2024.100249"
+ },
+ {
+  "id": "W4399903006",
+  "doi": "10.1016/j.cej.2024.153311",
+  "title": "Biomass-derived carbon applications in the field of supercapacitors: Progress and prospects",
+  "journal": "Chemical Engineering Journal",
+  "year": 2024,
+  "cited_by_count": 175,
+  "authors": [
+   "Wenjie Lu",
+   "Youxin Si",
+   "Chongrui Zhao",
+   "Tianqi Chen",
+   "Chao Li",
+   "Cheng Zhang"
+  ],
+  "type": "review",
+  "tags": [
+   "生物质碳"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.cej.2024.153311"
+ },
+ {
+  "id": "W4290615267",
+  "doi": "10.1002/adfm.202205158",
+  "title": "Recent Advances in Laser‐Induced Graphene: Mechanism, Fabrication, Properties, and Applications in Flexible Electronics",
+  "journal": "Advanced Functional Materials",
+  "year": 2022,
+  "cited_by_count": 423,
+  "authors": [
+   "Truong‐Son Dinh Le",
+   "Hoang‐Phuong Phan",
+   "Soongeun Kwon",
+   "Sangbaek Park",
+   "Yeongju Jung",
+   "JinKi Min"
+  ],
+  "type": "review",
+  "tags": [
+   "石墨烯",
+   "杂原子掺杂",
+   "柔性器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1002/adfm.202205158"
+ },
+ {
+  "id": "W4390598048",
+  "doi": "10.1016/j.fuel.2023.130795",
+  "title": "Recent advances and challenges in biomass-derived carbon materials for supercapacitors: A review",
+  "journal": "Fuel",
+  "year": 2024,
+  "cited_by_count": 161,
+  "authors": [
+   "Chuan Yuan",
+   "Hao Xu",
+   "Sherif A. El‐Khodary",
+   "Guosong Ni",
+   "Sivakumar Esakkimuthu",
+   "Shan Zhong"
+  ],
+  "type": "review",
+  "tags": [
+   "生物质碳"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.fuel.2023.130795"
+ },
+ {
+  "id": "W4386269749",
+  "doi": "10.1016/j.cclet.2023.109007",
+  "title": "Activation of biomass-derived porous carbon for supercapacitors: A review",
+  "journal": "Chinese Chemical Letters",
+  "year": 2023,
+  "cited_by_count": 248,
+  "authors": [
+   "Zixuan Guo",
+   "Xiaoshuai Han",
+   "Chunmei Zhang",
+   "Shuijian He",
+   "Kunming Liu",
+   "Jiapeng Hu"
+  ],
+  "type": "review",
+  "tags": [
+   "多孔碳",
+   "生物质碳"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.cclet.2023.109007"
+ },
+ {
+  "id": "W3082721096",
+  "doi": "10.1007/s10853-020-05157-6",
+  "title": "Recent progress in carbon-based materials for supercapacitor electrodes: a review",
+  "journal": "Journal of Materials Science",
+  "year": 2020,
+  "cited_by_count": 896,
+  "authors": [
+   "Yifan Wang",
+   "Lin Zhang",
+   "Haoqing Hou",
+   "Wenhui Xu",
+   "Gaigai Duan",
+   "Shuijian He"
+  ],
+  "type": "review",
+  "tags": [],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s10853-020-05157-6"
+ },
+ {
+  "id": "W4396507278",
+  "doi": "10.1016/j.nanoen.2024.109690",
+  "title": "Doping effect and oxygen vacancy engineering in nickel-manganese layered double hydroxides for high-performance supercapacitors",
+  "journal": "Nano Energy",
+  "year": 2024,
+  "cited_by_count": 111,
+  "authors": [
+   "Tianpeng Li",
+   "Yuting Hu",
+   "Jingyuan Zhang",
+   "Huajian Li",
+   "Kun Fang",
+   "Jiawei Wang"
+  ],
+  "type": "article",
+  "tags": [
+   "活性炭 AC",
+   "石墨烯",
+   "泡沫碳",
+   "水热/溶剂热",
+   "杂原子掺杂",
+   "比电容",
+   "能量密度",
+   "功率密度",
+   "倍率性能",
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.nanoen.2024.109690"
+ },
+ {
+  "id": "W4285384230",
+  "doi": "10.1016/j.est.2022.105290",
+  "title": "Recent progress on biomass waste derived activated carbon electrode materials for supercapacitors applications—A review",
+  "journal": "Journal of Energy Storage",
+  "year": 2022,
+  "cited_by_count": 286,
+  "authors": [
+   "Pantrangi Manasa",
+   "Sambasivam Sangaraju",
+   "Fen Ran"
+  ],
+  "type": "review",
+  "tags": [
+   "活性炭 AC"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2022.105290"
+ }
+]

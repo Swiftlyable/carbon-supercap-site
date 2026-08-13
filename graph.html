@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识关系图 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络知识关系图：材料 × 构建策略 × 文献三层力导向网络。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="graph">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <div class="section-head">
+        <h1 class="section-title" style="font-size:24px"><span class="kicker">Knowledge Graph</span>知识关系图</h1>
+      </div>
+
+      <!-- 图例与筛选 -->
+      <div class="filter-row">
+        <span class="badge"><span class="tag-dot" style="background:var(--s1)"></span>材料</span>
+        <span class="badge"><span class="tag-dot" style="background:var(--s2)"></span>构建策略</span>
+        <span class="badge"><span class="tag-dot" style="background:var(--s3)"></span>应用</span>
+        <span class="badge"><span class="tag-dot" style="background:var(--s5)"></span>性能指标</span>
+        <span class="badge"><span class="tag-dot" style="background:var(--muted)"></span>文献（大小=被引）</span>
+        <span class="filter-count">连线：文献–标签（隶属）/ 标签–标签（共现 ≥5 篇）</span>
+        <label style="display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-2);cursor:pointer">
+          <input type="checkbox" id="show-papers" checked> 显示文献节点
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-2);cursor:pointer">
+          <input type="checkbox" id="show-cooccur" checked> 标签共现连线
+        </label>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">三层网络：材料 · 策略 · 文献</div>
+        <div class="chart-sub" id="graph-sub">加载中…</div>
+        <div id="graph" class="chart chart-lg"></div>
+        <div class="chart-note">🖱 拖拽节点调整布局 · 滚轮缩放 · 悬停查看详情 · 点击文献节点打开 DOI 原文</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    let chart, graphData;
+    const CATEGORY_META = {
+      material:    { label: "材料",     slot: 0, shape: "circle" },
+      strategy:    { label: "构建策略", slot: 1, shape: "rect" },
+      application: { label: "应用",     slot: 2, shape: "roundRect" },
+      metric:      { label: "性能指标", slot: 4, shape: "diamond" },
+    };
+    const TAG_CATEGORY = {}; // tag 名 → 类别（从 stats.json 读）
+
+    function buildSeries() {
+      const t = chartTheme();
+      const showPapers = document.getElementById("show-papers").checked;
+      const showCooccur = document.getElementById("show-cooccur").checked;
+
+      const nodeIds = new Set();
+      const nodes = [];
+      const links = [];
+
+      for (const n of graphData.nodes) {
+        if (n.type === "paper" && !showPapers) continue;
+        nodeIds.add(n.id);
+        if (n.type === "tag") {
+          const meta = CATEGORY_META[TAG_CATEGORY[n.name] || "material"];
+          nodes.push({
+            ...n,
+            symbol: meta.shape,
+            symbolSize: n.symbolSize,
+            category: meta.label,
+            itemStyle: { color: t.series[meta.slot] },
+            label: { show: true, fontSize: 12, color: t.ink },
+          });
+        } else {
+          nodes.push({
+            ...n,
+            symbol: "circle",
+            symbolSize: n.symbolSize,
+            category: "文献",
+            itemStyle: { color: t.muted, opacity: 0.85 },
+            label: { show: false },
+            emphasis: {
+              label: { show: true, fontSize: 11.5, color: t.ink, position: "top" },
+              itemStyle: { color: t.series[0] },
+            },
+          });
+        }
+      }
+
+      for (const l of graphData.links) {
+        if (!nodeIds.has(l.source) || !nodeIds.has(l.target)) continue;
+        const isCooccur = l.source.startsWith("t:") && l.target.startsWith("t:");
+        if (isCooccur && !showCooccur) continue;
+        links.push({
+          source: l.source, target: l.target,
+          lineStyle: {
+            color: isCooccur ? t.baseline : t.grid,
+            width: isCooccur ? Math.min(3, 0.8 + l.weight * 0.03) : 0.6,
+            opacity: isCooccur ? 0.7 : 0.45,
+            curveness: isCooccur ? 0.18 : 0,
+          },
+        });
+      }
+
+      return { nodes, links };
+    }
+
+    function render() {
+      const t = chartTheme();
+      const data = buildSeries();
+      const opt = baseChartOptions();
+      Object.assign(opt, {
+        legend: [{
+          data: ["材料", "构建策略", "应用", "性能指标", "文献"].map((name) => ({
+            name,
+            icon: name === "文献" ? "circle" : "circle",
+          })),
+          top: 0, left: "center",
+          textStyle: { color: t.ink2, fontSize: 12.5 },
+          itemWidth: 12, itemHeight: 12, itemGap: 18,
+        }],
+        tooltip: {
+          ...opt.tooltip,
+          formatter: (p) => tooltipHTML(p.data, t),
+        },
+        series: [{
+          type: "graph",
+          layout: "force",
+          data: data.nodes,
+          links: data.links,
+          categories: ["材料", "构建策略", "应用", "性能指标", "文献"].map((name, i) => ({
+            name,
+            itemStyle: {
+              color: name === "文献" ? t.muted
+                : t.series[Object.values(CATEGORY_META)[i].slot],
+            },
+          })),
+          roam: true,
+          draggable: true,
+          force: {
+            repulsion: 420,
+            edgeLength: [60, 150],
+            gravity: 0.08,
+            friction: 0.6,
+            layoutAnimation: false,
+          },
+          labelLayout: { hideOverlap: true },
+          lineStyle: { color: "source" },
+          emphasis: { scale: 1.5 },
+          top: 40, bottom: 20, left: 20, right: 20,
+          scaleLimit: { min: 0.3, max: 6 },
+        }],
+      });
+      chart.setOption(opt, true);
+
+      const np = graphData.nodes.filter((n) => n.type === "paper").length;
+      const nt = graphData.nodes.length - np;
+      document.getElementById("graph-sub").textContent =
+        `${nt} 个主题标签 × ${np} 篇代表文献 · ${graphData.links.length} 条关系连线`;
+    }
+
+    // 提示框：innerHTML 渲染，标题/期刊来自 API，必须先转义
+    function tooltipHTML(d, t) {
+      if (!d) return "";
+      if (d.type === "tag") {
+        const meta = CATEGORY_META[TAG_CATEGORY[d.name] || "material"];
+        return `<strong>${escapeHtml(d.name)}</strong><br><span style="color:${t.muted}">${meta.label} · 相关论文 ${fmtInt(d.value)} 篇</span>`;
+      }
+      const q1 = d.core_journal ? ` · <span style="color:${t.good}">Q1</span>` : "";
+      const parts = [
+        `<strong style="line-height:1.5">${escapeHtml(d.name)}</strong>`,
+        `<span style="color:${t.muted}">${escapeHtml(d.journal || "")} · ${d.year || ""}${q1}</span>`,
+        d.value ? `<span style="color:${t.muted}">被引 ${fmtInt(d.value)}</span>` : "",
+        d.doi ? `<br><span style="color:${t.series[0]}">点击打开 DOI 原文</span>` : "",
+      ];
+      return parts.join("<br>");
+    }
+
+    (async () => {
+      try {
+        const [g, stats] = await Promise.all([loadJSON("graph"), loadJSON("stats")]);
+        graphData = g;
+        stats.tags.forEach((tg) => { TAG_CATEGORY[tg.name] = tg.category; });
+        chart = echarts.init(document.getElementById("graph"));
+        render();
+
+        chart.on("click", (p) => {
+          if (p.data && p.data.type === "paper" && p.data.doi) {
+            window.open(`https://doi.org/${p.data.doi}`, "_blank", "noopener");
+          }
+        });
+        document.getElementById("show-papers").addEventListener("change", render);
+        document.getElementById("show-cooccur").addEventListener("change", render);
+        window.addEventListener("resize", () => chart.resize());
+        window.addEventListener("themechange", () => render());
+      } catch (e) {
+        document.getElementById("graph").innerHTML =
+          `<div class="empty-state">加载失败：${e.message}</div>`;
+      }
+    })();
+  </script>
+</body>
+</html>

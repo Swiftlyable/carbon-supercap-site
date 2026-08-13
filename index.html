@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>碳网图谱 CarbonNet · 碳材料超级电容器三维导电网络</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络文献知识站：思维导图、知识关系图、文献库与性能数据面板，数据自动更新，来源 OpenAlex / Web of Science 权威索引。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="home">
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-eyebrow">◈ 自动更新的领域知识站 · 数据源 OpenAlex / Web of Science</div>
+      <h1>碳材料超级电容器<br><span class="accent">三维导电网络</span> 知识图谱</h1>
+      <p class="hero-sub">
+        围绕「如何构建高效三维互联导电网络」这一核心问题，系统梳理碳基电极的
+        材料体系、构建策略、性能指标与应用方向；自动跟踪领域最新文献，
+        以思维导图与知识关系图呈现领域结构。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mindmap.html">打开思维导图 →</a>
+        <a class="btn" href="graph.html">探索知识关系图</a>
+        <a class="btn" href="papers.html">浏览文献库</a>
+      </div>
+      <div class="updated-at" id="updated-at">数据更新于 …</div>
+    </section>
+
+    <!-- KPI 数据一览 -->
+    <section class="section" style="padding-top:8px">
+      <div class="kpi-row" id="kpi-row">
+        <div class="kpi"><div class="kpi-label">收录文献</div><div class="kpi-value">—</div><div class="kpi-delta">文章 + 综述</div></div>
+        <div class="kpi"><div class="kpi-label">WoS/JCR Q1 权威期刊占比</div><div class="kpi-value">—</div><div class="kpi-delta">核心期刊收录</div></div>
+        <div class="kpi"><div class="kpi-label">最高单篇被引</div><div class="kpi-value">—</div><div class="kpi-delta">Web of Science 同源引用数据</div></div>
+        <div class="kpi"><div class="kpi-label">覆盖年份</div><div class="kpi-value">—</div><div class="kpi-delta">2010 年至今</div></div>
+      </div>
+    </section>
+
+    <!-- 精选文献 -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="kicker">Featured Papers</span>领域代表性文献</h2>
+        <a class="section-note" href="papers.html">全部文献 →</a>
+      </div>
+      <div id="featured-list">
+        <div class="empty-state">加载中…</div>
+      </div>
+    </section>
+
+    <!-- 知识体系入口 -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="kicker">Knowledge Map</span>领域知识体系</h2>
+      </div>
+      <div class="grid-2">
+        <a class="card" href="mindmap.html">
+          <h3>🧠 思维导图 <span class="muted" style="font-weight:400;font-size:13px">Mind Map</span></h3>
+          <p>七大主题分支：储能机理 → 碳材料体系 → 导电网络维度工程 → 构建策略 → 性能指标 → 应用 → 前沿方向。节点可展开/收起，点击查看详细解读。</p>
+        </a>
+        <a class="card" href="graph.html">
+          <h3>🕸 知识关系图 <span class="muted" style="font-weight:400;font-size:13px">Knowledge Graph</span></h3>
+          <p>材料（石墨烯/CNT/多孔碳…）× 策略（CVD/模板/自组装…）× 文献 三层力导向网络。从每篇文献的摘要自动提取标签，呈现「谁用什么方法做了什么」。</p>
+        </a>
+        <a class="card" href="stats.html">
+          <h3>📊 数据面板 <span class="muted" style="font-weight:400;font-size:13px">Analytics</span></h3>
+          <p>年度发文趋势、权威期刊分布、材料/策略热度，以及从数百篇文献摘要自动抽取的比电容/能量密度/功率密度分布。</p>
+        </a>
+        <a class="card" href="about.html">
+          <h3>⚙️ 数据与方法 <span class="muted" style="font-weight:400;font-size:13px">About</span></h3>
+          <p>数据来源与筛选标准、Web of Science 导出文件导入方法、每周自动更新机制说明。</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (async () => {
+      try {
+        const [stats, featured] = await Promise.all([
+          loadJSON("stats"), loadJSON("featured"),
+        ]);
+
+        // 更新时间
+        document.getElementById("updated-at").textContent =
+          `数据更新于 ${fmtDate(stats.last_updated)} · 每周一自动同步最新文献`;
+
+        // KPI
+        const t = stats.totals;
+        const kpis = document.querySelectorAll("#kpi-row .kpi-value");
+        kpis[0].textContent = fmtInt(t.papers);
+        kpis[1].textContent = Math.round((t.core_journal / t.papers) * 100) + "%";
+        kpis[2].textContent = fmtInt(t.cited_max);
+        kpis[3].textContent = `${t.year_min}–${t.year_max}`;
+
+        // 精选文献卡片（标题/作者等来自 API 的不可信数据一律用 textContent）
+        const list = document.getElementById("featured-list");
+        list.innerHTML = "";
+        featured.forEach((p) => {
+          const el = document.createElement("article");
+          el.className = "paper-card";
+
+          const title = document.createElement("h3");
+          title.className = "paper-title";
+          const a = document.createElement("a");
+          a.href = p.url || "#";
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = p.title;
+          title.appendChild(a);
+          el.appendChild(title);
+
+          const meta = document.createElement("div");
+          meta.className = "paper-meta";
+          const span = (txt) => {
+            const s = document.createElement("span");
+            s.textContent = txt;
+            meta.appendChild(s);
+          };
+          span(`${p.journal} · ${p.year}`);
+          span(`被引 ${fmtInt(p.cited_by_count)}`);
+          span(shortAuthors(p.authors));
+          if (p.core_journal) {
+            const b = document.createElement("span");
+            b.className = "badge badge-q1";
+            b.textContent = "Q1 权威期刊";
+            meta.appendChild(b);
+          }
+          if (p.type === "review") {
+            const b = document.createElement("span");
+            b.className = "badge badge-review";
+            b.textContent = "综述";
+            meta.appendChild(b);
+          }
+          if (p.oa) {
+            const b = document.createElement("span");
+            b.className = "badge badge-oa";
+            b.textContent = "开放获取";
+            meta.appendChild(b);
+          }
+          el.appendChild(meta);
+
+          const tags = (p.tags || []).slice(0, 5);
+          if (tags.length) {
+            const tw = document.createElement("div");
+            tw.className = "paper-tags";
+            tags.forEach((t) => {
+              const tg = document.createElement("span");
+              tg.className = "tag";
+              tg.textContent = t;
+              tw.appendChild(tg);
+            });
+            el.appendChild(tw);
+          }
+          list.appendChild(el);
+        });
+      } catch (e) {
+        document.getElementById("featured-list").innerHTML =
+          `<div class="empty-state">数据加载失败：${e.message}</div>`;
+      }
+    })();
+  </script>
+</body>
+</html>

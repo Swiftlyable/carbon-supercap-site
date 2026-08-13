@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据面板 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络领域数据面板：年度趋势、期刊分布、标签热度、性能参数分布与材料×策略共现分析。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="stats">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <div class="section-head">
+        <h1 class="section-title" style="font-size:24px"><span class="kicker">Analytics</span>数据面板</h1>
+        <span class="section-note" id="updated-note"></span>
+      </div>
+
+      <!-- 年度发文趋势 -->
+      <div class="chart-card mt-16">
+        <div class="chart-title">年度发文趋势</div>
+        <div class="chart-sub">研究文章 vs 综述（检索式覆盖 2010 年至今；最近一年数据仍在收录中）</div>
+        <div id="chart-year" class="chart chart-sm"></div>
+      </div>
+
+      <div class="grid-2 mt-16">
+        <!-- 期刊分布 -->
+        <div class="chart-card">
+          <div class="chart-title">期刊分布 Top 15</div>
+          <div class="chart-sub">蓝色 = WoS/JCR Q1 权威期刊 · 灰色 = 其他期刊</div>
+          <div id="chart-journal" class="chart chart-md"></div>
+        </div>
+
+        <!-- 概念分布 -->
+        <div class="chart-card">
+          <div class="chart-title">研究概念 Top 20</div>
+          <div class="chart-sub">来自 OpenAlex 概念标注（与 Web of Science 关键词体系同源）</div>
+          <div id="chart-concept" class="chart chart-md"></div>
+        </div>
+
+        <!-- 材料标签热度 -->
+        <div class="chart-card">
+          <div class="chart-title">碳材料热度</div>
+          <div class="chart-sub">按摘要受控词表匹配的论文数</div>
+          <div id="chart-material" class="chart chart-md"></div>
+        </div>
+
+        <!-- 策略标签热度 -->
+        <div class="chart-card">
+          <div class="chart-title">构建策略热度</div>
+          <div class="chart-sub">按摘要受控词表匹配的论文数</div>
+          <div id="chart-strategy" class="chart chart-md"></div>
+        </div>
+
+        <!-- 材料×策略共现热力图 -->
+        <div class="chart-card">
+          <div class="chart-title">材料 × 构建策略 共现热力图</div>
+          <div class="chart-sub">同一篇论文同时涉及某材料与某策略的论文数</div>
+          <div id="chart-heatmap" class="chart chart-md"></div>
+        </div>
+
+        <!-- 作者/机构 -->
+        <div class="chart-card">
+          <div class="chart-title">高产作者 Top 12</div>
+          <div class="chart-sub">按本库收录论文数统计</div>
+          <div class="table-wrap" style="max-height:380px;overflow-y:auto">
+            <table class="data-table" id="table-authors">
+              <thead><tr><th>作者</th><th class="num">论文数</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 性能：比电容分布 -->
+        <div class="chart-card">
+          <div class="chart-title">报道最大比电容分布</div>
+          <div class="chart-sub">从论文摘要自动抽取的 F/g 数值（n 见图中）</div>
+          <div id="chart-fg" class="chart chart-md"></div>
+        </div>
+
+        <!-- 性能：能量密度 -->
+        <div class="chart-card">
+          <div class="chart-title">报道最大能量密度分布</div>
+          <div class="chart-sub">从论文摘要自动抽取的 Wh/kg 数值</div>
+          <div id="chart-wh" class="chart chart-md"></div>
+        </div>
+
+        <!-- 性能：功率密度 -->
+        <div class="chart-card">
+          <div class="chart-title">报道最大功率密度分布</div>
+          <div class="chart-sub">从论文摘要自动抽取的 W/kg 数值（对数分箱）</div>
+          <div id="chart-w" class="chart chart-md"></div>
+        </div>
+
+        <!-- 机构 -->
+        <div class="chart-card">
+          <div class="chart-title">高产机构 Top 12</div>
+          <div class="chart-sub">按本库收录论文数统计</div>
+          <div class="table-wrap" style="max-height:380px;overflow-y:auto">
+            <table class="data-table" id="table-inst">
+              <thead><tr><th>机构</th><th class="num">论文数</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    let stats = null;
+    const charts = {};
+
+    // 每个容器只 init 一次；主题切换仅重新 setOption
+    // key 为 charts 中的注册名，domId 为页面元素 id（缺省与 key 相同）
+    function ensureChart(key, domId) {
+      if (!charts[key]) charts[key] = echarts.init(document.getElementById(domId || key));
+      return charts[key];
+    }
+
+    /* ---------- 图表构建 ---------- */
+
+    function yearChart() {
+      const t = chartTheme();
+      const years = stats.by_year_type.map((d) => d.year);
+      const articles = stats.by_year_type.map((d) => d.article);
+      const reviews = stats.by_year_type.map((d) => d.review);
+      charts.year.setOption({
+        ...baseChartOptions(),
+        tooltip: { ...baseChartOptions().tooltip, trigger: "axis" },
+        legend: {
+          data: ["研究文章", "综述"], top: 0, left: "center",
+          textStyle: { color: t.ink2, fontSize: 12.5 },
+          itemWidth: 12, itemHeight: 12, itemGap: 18,
+        },
+        grid: { left: 8, right: 8, top: 34, bottom: 4, containLabel: true },
+        xAxis: {
+          type: "category", data: years, boundaryGap: false,
+          axisLine: { lineStyle: { color: t.baseline } },
+          axisTick: { show: false },
+          axisLabel: { color: t.muted, fontSize: 11.5 },
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: { color: t.muted, fontSize: 11.5 },
+          splitLine: { lineStyle: { color: t.grid, width: 1 } },
+        },
+        series: [
+          {
+            name: "研究文章", type: "line", data: articles, smooth: true,
+            showSymbol: false, symbolSize: 8,
+            lineStyle: { width: 2, color: t.series[0] },
+            itemStyle: { color: t.series[0] },
+            areaStyle: { color: t.series[0], opacity: 0.1 },
+          },
+          {
+            name: "综述", type: "line", data: reviews, smooth: true,
+            showSymbol: false, symbolSize: 8,
+            lineStyle: { width: 2, color: t.series[1] },
+            itemStyle: { color: t.series[1] },
+            areaStyle: { color: t.series[1], opacity: 0.1 },
+          },
+        ],
+      });
+    }
+
+    function journalChart() {
+      const t = chartTheme();
+      const data = stats.journals.slice().reverse(); // 横向条形图自下而上
+      charts.journal.setOption({
+        ...baseChartOptions(),
+        grid: { left: 8, right: 48, top: 8, bottom: 4, containLabel: true },
+        xAxis: {
+          type: "value",
+          axisLabel: { color: t.muted, fontSize: 11 },
+          splitLine: { lineStyle: { color: t.grid, width: 1 } },
+        },
+        yAxis: {
+          type: "category",
+          data: data.map((d) => d.name),
+          axisLine: { show: false }, axisTick: { show: false },
+          axisLabel: { color: t.ink2, fontSize: 11.5, width: 150, overflow: "truncate" },
+        },
+        series: [{
+          type: "bar",
+          data: data.map((d) => ({
+            value: d.count,
+            itemStyle: { color: d.core ? t.series[0] : t.muted, borderRadius: [0, 4, 4, 0] },
+          })),
+          barMaxWidth: 18,
+          label: {
+            show: true, position: "right",
+            color: t.muted, fontSize: 11,
+          },
+        }],
+      });
+    }
+
+    function tagBars(chartId, category, colorIdx) {
+      const t = chartTheme();
+      const data = stats.tags.filter((d) => d.category === category).slice(0, 8).reverse();
+      ensureChart(chartId).setOption({
+        ...baseChartOptions(),
+        grid: { left: 8, right: 44, top: 8, bottom: 4, containLabel: true },
+        xAxis: {
+          type: "value",
+          axisLabel: { color: t.muted, fontSize: 11 },
+          splitLine: { lineStyle: { color: t.grid, width: 1 } },
+        },
+        yAxis: {
+          type: "category",
+          data: data.map((d) => d.name),
+          axisLine: { show: false }, axisTick: { show: false },
+          axisLabel: { color: t.ink2, fontSize: 11.5 },
+        },
+        series: [{
+          type: "bar",
+          data: data.map((d) => ({
+            value: d.count,
+            itemStyle: { color: t.series[colorIdx], borderRadius: [0, 4, 4, 0] },
+          })),
+          barMaxWidth: 16,
+          label: { show: true, position: "right", color: t.muted, fontSize: 11 },
+        }],
+      });
+    }
+
+    function conceptChart() {
+      const t = chartTheme();
+      const data = stats.concepts.slice(0, 15).reverse();
+      charts.concept.setOption({
+        ...baseChartOptions(),
+        grid: { left: 8, right: 48, top: 8, bottom: 4, containLabel: true },
+        xAxis: {
+          type: "value",
+          axisLabel: { color: t.muted, fontSize: 11 },
+          splitLine: { lineStyle: { color: t.grid, width: 1 } },
+        },
+        yAxis: {
+          type: "category",
+          data: data.map((d) => d.name),
+          axisLine: { show: false }, axisTick: { show: false },
+          axisLabel: { color: t.ink2, fontSize: 11.5, width: 150, overflow: "truncate" },
+        },
+        series: [{
+          type: "bar",
+          data: data.map((d) => ({
+            value: d.count,
+            itemStyle: { color: t.series[2], borderRadius: [0, 4, 4, 0] },
+          })),
+          barMaxWidth: 18,
+          label: { show: true, position: "right", color: t.muted, fontSize: 11 },
+        }],
+      });
+    }
+
+    function heatmapChart() {
+      const t = chartTheme();
+      const h = stats.heatmap;
+      const maxV = Math.max(...h.data.map((d) => d[2]));
+      charts.heatmap.setOption({
+        ...baseChartOptions(),
+        grid: { left: 8, right: 8, top: 8, bottom: 60, containLabel: true },
+        xAxis: {
+          type: "category", data: h.cols,
+          axisLabel: { color: t.ink2, fontSize: 10.5, rotate: 40, interval: 0 },
+          axisLine: { show: false }, axisTick: { show: false },
+          splitArea: { show: false },
+        },
+        yAxis: {
+          type: "category", data: h.rows,
+          axisLabel: { color: t.ink2, fontSize: 10.5 },
+          axisLine: { show: false }, axisTick: { show: false },
+          splitArea: { show: false },
+        },
+        visualMap: {
+          min: 0, max: maxV,
+          calculable: false,
+          orient: "horizontal", left: "center", bottom: 0,
+          itemWidth: 12, itemHeight: 90,
+          textStyle: { color: t.muted, fontSize: 10.5 },
+          // 顺序色阶：深色模式翻转锚点（小值=深、大值=浅）
+          inRange: { color: t.dark ? t.seq.slice(0, 5) : t.seqLightToDark.slice(0, 5) },
+        },
+        series: [{
+          type: "heatmap",
+          data: h.data,
+          label: {
+            show: true, fontSize: 10,
+            // 标签文字按填充亮度取反（大值格填充浅 → 深字；反之白字）
+            color: (p) => {
+              const big = p.value[2] > maxV * 0.55;
+              return (t.dark ? (big ? "#0b0b0b" : t.ink) : (big ? "#ffffff" : t.ink));
+            },
+          },
+          emphasis: { itemStyle: { borderColor: t.ink, borderWidth: 1 } },
+          itemStyle: { borderColor: t.surface, borderWidth: 2 },
+        }],
+      });
+    }
+
+    function histogram(chartId, values, bins, lo, hi, unit, logScale) {
+      const t = chartTheme();
+      const width = (hi - lo) / bins;
+      const counts = new Array(bins).fill(0);
+      values.forEach((v) => {
+        const i = Math.min(bins - 1, Math.max(0, Math.floor((v - lo) / width)));
+        counts[i]++;
+      });
+      const labels = Array.from({ length: bins }, (_, i) => {
+        const a = lo + i * width;
+        return logScale ? `${Math.round(Math.pow(10, a))}` : `${Math.round(a)}`;
+      });
+      ensureChart(chartId).setOption({
+        ...baseChartOptions(),
+        grid: { left: 8, right: 8, top: 8, bottom: 4, containLabel: true },
+        xAxis: {
+          type: "category", data: labels,
+          name: unit, nameLocation: "middle", nameGap: 26,
+          nameTextStyle: { color: t.muted, fontSize: 11 },
+          axisLabel: { color: t.muted, fontSize: 10.5, interval: 0, rotate: 30 },
+          axisLine: { show: false }, axisTick: { show: false },
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: { color: t.muted, fontSize: 11 },
+          splitLine: { lineStyle: { color: t.grid, width: 1 } },
+        },
+        series: [{
+          type: "bar",
+          data: counts.map((c) => ({ value: c, itemStyle: { color: t.series[0], borderRadius: [4, 4, 0, 0] } })),
+          barMaxWidth: 26,
+        }],
+      });
+    }
+
+    function fillTable(tableId, rows) {
+      const tbody = document.querySelector(`#${tableId} tbody`);
+      tbody.innerHTML = "";
+      rows.forEach((r) => {
+        const tr = document.createElement("tr");
+        const td1 = document.createElement("td");
+        td1.textContent = r.name;
+        const td2 = document.createElement("td");
+        td2.className = "num";
+        td2.textContent = fmtInt(r.count);
+        tr.append(td1, td2);
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* ---------- 加载与渲染 ---------- */
+    (async () => {
+      try {
+        stats = await loadJSON("stats");
+        document.getElementById("updated-note").textContent =
+          `数据更新于 ${fmtDate(stats.last_updated)}`;
+
+        ensureChart("year", "chart-year");
+        ensureChart("journal", "chart-journal");
+        ensureChart("concept", "chart-concept");
+        ensureChart("heatmap", "chart-heatmap");
+
+        const m = stats.metrics;
+        // 功率密度跨 3 个数量级，用对数分箱
+        const wlog = m.w_per_kg.map((v) => Math.log10(v));
+
+        const renderAll = () => {
+          yearChart();
+          journalChart();
+          conceptChart();
+          tagBars("chart-material", "material", 0);
+          tagBars("chart-strategy", "strategy", 1);
+          heatmapChart();
+          if (m.f_per_g.length) histogram("chart-fg", m.f_per_g, 11, 50, 600, "F/g", false);
+          if (m.wh_per_kg.length) histogram("chart-wh", m.wh_per_kg, 10, 0, 100, "Wh/kg", false);
+          if (wlog.length) histogram("chart-w", wlog, 9, 2, 5, "W/kg（对数）", true);
+        };
+        renderAll();
+
+        fillTable("table-authors", stats.authors_top);
+        fillTable("table-inst", stats.institutions_top);
+
+        window.addEventListener("resize", () =>
+          Object.values(charts).forEach((c) => c.resize()));
+        window.addEventListener("themechange", renderAll);
+      } catch (e) {
+        document.querySelector(".section").insertAdjacentHTML("beforeend",
+          `<div class="empty-state">加载失败：${escapeHtml(e.message)}</div>`);
+      }
+    })();
+  </script>
+</body>
+</html>

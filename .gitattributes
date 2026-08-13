@@ -1,0 +1,11 @@
+# 统一换行符：文本文件以 LF 入库（GitHub Actions 在 Linux 上执行 YAML/Python）
+* text=auto
+
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.py   text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf

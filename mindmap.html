@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思维导图 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络领域思维导图：储能机理、碳材料体系、导电网络维度工程、构建策略、性能指标、应用与前沿方向。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+</head>
+<body data-page="mindmap">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <div class="section-head">
+        <h1 class="section-title" style="font-size:24px"><span class="kicker">Mind Map</span>领域思维导图</h1>
+        <div style="display:flex;gap:8px">
+          <button class="btn" id="expand-all">展开全部</button>
+          <button class="btn" id="collapse-all">收起</button>
+        </div>
+      </div>
+      <div class="mindmap-wrap">
+        <div id="mindmap" class="chart"></div>
+        <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看详细解读</div>
+        <div class="node-detail-panel" id="detail-panel">
+          <h4 id="detail-name"></h4>
+          <div class="en" id="detail-en"></div>
+          <p id="detail-desc"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/echarts.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    let chart, treeData;
+
+    // 为每个节点标注其顶层分支（用于配色）
+    function decorate(node, branchIdx, depth) {
+      node._depth = depth;
+      node._branch = branchIdx;
+      (node.children || []).forEach((c) => decorate(c, branchIdx, depth + 1));
+    }
+    function prepare(data) {
+      decorate(data, -1, 0);
+      (data.children || []).forEach((c, i) => decorate(c, i, 1));
+      return data;
+    }
+
+    // 标签换行：中文名超过 11 字折行，并附英文小字
+    function labelFormatter(params) {
+      const name = params.data.name || "";
+      const en = params.data.en || "";
+      if (name.length <= 11) return name;
+      const mid = Math.ceil(name.length / 2);
+      return name.slice(0, mid) + "\n" + name.slice(mid);
+    }
+
+    function render() {
+      const t = chartTheme();
+      const opt = baseChartOptions();
+      Object.assign(opt, {
+        grid: { left: 20, right: 20, top: 20, bottom: 20 },
+        series: [{
+          type: "tree",
+          data: [treeData],
+          orient: "LR",
+          left: 30, right: 120, top: 24, bottom: 24,
+          roam: true,
+          expandAndCollapse: true,
+          initialTreeDepth: 2,
+          symbol: "circle",
+          symbolSize: (value, params) => {
+            const d = params.data._depth || 0;
+            return Math.max(6, 15 - d * 2.5);
+          },
+          label: {
+            position: "right",
+            verticalAlign: "middle",
+            align: "left",
+            fontSize: 13,
+            lineHeight: 17,
+            color: t.ink,
+            formatter: labelFormatter,
+          },
+          leaves: { label: { position: "right" } },
+          itemStyle: {
+            color: (params) => {
+              const d = params.data;
+              if (d._branch < 0) return t.series[0];
+              return t.series[d._branch % 8];
+            },
+            borderColor: t.surface,
+            borderWidth: 2,
+          },
+          lineStyle: { color: t.baseline, width: 1.4, curveness: 0.55 },
+          emphasis: {
+            focus: "descendant",
+            label: { color: t.ink, fontWeight: 700 },
+          },
+          tooltip: { show: false }, // 详情走右侧面板
+        }],
+      });
+      chart.setOption(opt, true);
+    }
+
+    function showDetail(data) {
+      const panel = document.getElementById("detail-panel");
+      if (!data.desc && !data.en) { panel.style.display = "none"; return; }
+      document.getElementById("detail-name").textContent = data.name;
+      document.getElementById("detail-en").textContent = data.en || "";
+      document.getElementById("detail-desc").textContent = data.desc || "";
+      panel.style.display = "block";
+    }
+
+    (async () => {
+      try {
+        treeData = prepare(await loadJSON("taxonomy"));
+        chart = echarts.init(document.getElementById("mindmap"));
+        render();
+
+        chart.on("click", (p) => {
+          if (p.data) showDetail(p.data);
+        });
+
+        document.getElementById("expand-all").addEventListener("click", () => {
+          chart.setOption({ series: [{ expandAndCollapse: true, initialTreeDepth: -1 }] });
+        });
+        document.getElementById("collapse-all").addEventListener("click", () => {
+          chart.setOption({ series: [{ expandAndCollapse: true, initialTreeDepth: 1 }] });
+        });
+
+        window.addEventListener("resize", () => chart.resize());
+        window.addEventListener("themechange", () => render());
+      } catch (e) {
+        document.getElementById("mindmap").innerHTML =
+          `<div class="empty-state">加载失败：${e.message}</div>`;
+      }
+    })();
+  </script>
+</body>
+</html>
