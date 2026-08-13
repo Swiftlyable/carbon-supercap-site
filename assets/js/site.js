@@ -47,7 +47,7 @@ function renderChrome() {
   header.className = "site-header";
   header.innerHTML =
     `<div class="header-inner">` +
-    `<a class="brand" href="index.html"><span class="brand-dot"></span>碳网图谱 CarbonNet</a>` +
+    `<a class="brand" href="index.html"><span class="brand-dot"></span><span class="brand-text">碳网图谱 CarbonNet</span></a>` +
     `<nav class="nav">` +
     NAV_ITEMS.map(([k, label, href]) =>
       `<a data-nav="${k}" href="${href}">${label}</a>`).join("") +
@@ -133,11 +133,14 @@ function chartTheme() {
 }
 
 /* 图表的公共基础配置 */
+const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 function baseChartOptions() {
   const t = chartTheme();
   return {
     backgroundColor: "transparent",
     textStyle: { color: t.ink2, fontFamily: "inherit" },
+    animation: !REDUCED_MOTION,
     animationDuration: 400,
     tooltip: {
       backgroundColor: t.surface,
