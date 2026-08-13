@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文献库 · 碳网图谱 CarbonNet</title>
-  <meta name="description" content="碳材料超级电容器三维导电网络文献库：可按关键词、年份、期刊质量、标签筛选，支持 CSV 导出。">
+  <meta name="description" content="碳材料超级电容器三维导电网络文献库：可按关键词、年份、期刊质量、标签筛选，支持 CSV 导出，内置 AI 文献助手（免费大模型 + 本地文献检索）。">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
 </head>
@@ -16,6 +16,41 @@
         <h1 class="section-title" style="font-size:24px"><span class="kicker">Paper Library</span>文献库</h1>
         <button class="btn" id="export-csv">导出 CSV</button>
       </div>
+
+      <!-- AI 文献助手 -->
+      <section class="ai-panel" id="ai-panel">
+        <div class="ai-head">
+          <span class="ai-title">🤖 AI 文献助手</span>
+          <span class="badge badge-oa" id="ai-count">基于文献库检索</span>
+          <span class="badge">硅基流动 · 免费大模型</span>
+          <span class="ai-status" id="ai-status">加载中…</span>
+          <button class="btn" id="ai-settings-btn" style="margin-left:auto;padding:5px 14px;font-size:13px">⚙ 设置</button>
+        </div>
+        <div class="ai-settings-box hidden" id="ai-settings">
+          <div class="ai-settings-row">
+            <label for="ai-key">API Key</label>
+            <input type="password" id="ai-key" placeholder="sk-…（粘贴硅基流动 API Key）" autocomplete="off" spellcheck="false">
+            <label for="ai-model">模型</label>
+            <select id="ai-model" aria-label="选择模型"></select>
+            <button class="btn btn-primary" id="ai-save" style="padding:7px 16px;font-size:13px">保存</button>
+            <button class="btn" id="ai-clear" style="padding:7px 14px;font-size:13px">清除密钥</button>
+          </div>
+          <p class="ai-note">🔒 安全说明：密钥仅保存在你的浏览器本地（localStorage），提问时由浏览器直连硅基流动官方接口 api.siliconflow.cn（HTTPS），不经任何中间服务器、不提交本站代码仓库，可随时在硅基流动控制台吊销。免费获取密钥：<a href="https://cloud.siliconflow.cn/account/ak" target="_blank" rel="noopener">cloud.siliconflow.cn/account/ak</a>（免费模型不扣费，付费模型按量计费）。</p>
+        </div>
+        <div class="ai-quick">
+          <button data-q="石墨烯如何构建三维导电网络？">石墨烯如何构建三维导电网络？</button>
+          <button data-q="如何提高超级电容器的倍率性能？">如何提高倍率性能？</button>
+          <button data-q="碳纳米管和石墨烯协同构建导电网络有哪些代表工作？">碳纳米管+石墨烯协同</button>
+          <button data-q="机器学习在电极材料设计中有哪些应用？">机器学习辅助设计</button>
+        </div>
+        <div class="ai-chat" id="ai-chat">
+          <div class="ai-msg ai-msg-ai">你好，我是 AI 文献助手 🤖<br>我会先在你的浏览器里从文献库检索相关内容，再交给大模型生成带编号引用的回答（点击 [1] 可跳转对应文献）。<br>请先点右上角「⚙ 设置」填入硅基流动 API Key（免费），即可开始提问。</div>
+        </div>
+        <div class="ai-input-row">
+          <input type="text" id="ai-input" class="ai-input" placeholder="用一句话提问，例如：如何构建高性能三维导电网络？" aria-label="向 AI 助手提问">
+          <button class="btn btn-primary" id="ai-send" style="padding:10px 22px;white-space:nowrap">提问</button>
+        </div>
+      </section>
 
       <!-- 筛选行 -->
       <div class="filter-row">
@@ -69,6 +104,7 @@
 
   <script src="assets/vendor/echarts.min.js"></script>
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/assistant.js"></script>
   <script>
     const PAGE_SIZE = 25;
     let papers = [];
@@ -322,6 +358,7 @@
       try {
         const [ps, stats] = await Promise.all([loadJSON("papers"), loadJSON("stats")]);
         papers = ps;
+        window.__papers = ps; // 供 AI 助手（assistant.js）复用，避免重复下载
 
         // 年份下拉（倒序）；先加"全部"作为默认值
         const years = [...new Set(ps.map((p) => p.year).filter(Boolean))].sort((a, b) => b - a);
