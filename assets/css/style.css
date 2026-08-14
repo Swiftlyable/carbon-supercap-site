@@ -658,18 +658,25 @@ table.data-table {
 
 /* ---------- Hero 标题流光（重点词流动渐变） ---------- */
 .hero h1 .accent {
-  background: linear-gradient(100deg,
-    var(--s1) 0%, var(--s7) 30%, var(--s5) 50%, var(--s1) 70%, var(--s7) 100%);
-  background-size: 220% 100%;
+  /* 色阶经过中间混色平滑过渡；alternate 往返流动，无循环跳变 */
+  background: linear-gradient(105deg,
+    var(--s1) 0%,
+    color-mix(in srgb, var(--s1) 55%, var(--s7)) 18%,
+    var(--s7) 34%,
+    color-mix(in srgb, var(--s7) 45%, var(--s5)) 50%,
+    var(--s5) 66%,
+    color-mix(in srgb, var(--s5) 45%, var(--s1)) 82%,
+    var(--s1) 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: fluid-text 8s linear infinite;
+  animation: fluid-text 9s ease-in-out infinite alternate;
 }
 @keyframes fluid-text {
   from { background-position: 0% 0; }
-  to   { background-position: -220% 0; }
+  to   { background-position: 100% 0; }
 }
 
 /* ---------- 卡片光泽扫过（hover 液体质感） ---------- */
