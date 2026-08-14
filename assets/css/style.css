@@ -594,3 +594,119 @@ table.data-table {
 @media (max-width: 720px) {
   .ai-msg { max-width: 96%; }
 }
+
+/* ============================================================
+   流体动效层
+   ------------------------------------------------------------
+   1) .fluid-bg        全站流体光晕背景（三个缓慢漂移旋转的色斑，
+                       仅 transform 动画，合成器友好；JS 注入）
+   2) hero 标题流光     重点词流动渐变文字
+   3) 卡片光泽扫过      hover 时一道光泽斜向划过（液体质感）
+   4) 导航下划线滑动 / 按钮按压回弹
+   ============================================================ */
+
+/* ---------- 全站流体光晕背景 ---------- */
+.fluid-bg {
+  position: fixed; inset: 0; z-index: -1;
+  overflow: hidden; pointer-events: none;
+}
+.fluid-bg i {
+  position: absolute; width: 58vmax; height: 58vmax;
+  left: 50%; top: 50%; margin: -29vmax 0 0 -29vmax;
+  border-radius: 46% 54% 58% 42% / 52% 44% 56% 48%;
+  filter: blur(64px);
+  will-change: transform;
+}
+.fluid-bg i:nth-child(1) {
+  background: radial-gradient(circle at 38% 38%, var(--s1) 0%, transparent 62%);
+  opacity: 0.15;
+  animation: fluid-drift-1 34s ease-in-out infinite alternate;
+}
+.fluid-bg i:nth-child(2) {
+  background: radial-gradient(circle at 62% 60%, var(--s5) 0%, transparent 58%);
+  opacity: 0.10;
+  border-radius: 55% 45% 42% 58% / 44% 56% 44% 56%;
+  animation: fluid-drift-2 46s ease-in-out infinite alternate;
+  animation-delay: -14s;
+}
+.fluid-bg i:nth-child(3) {
+  background: radial-gradient(circle at 50% 45%, var(--s3) 0%, transparent 60%);
+  opacity: 0.09;
+  border-radius: 42% 58% 55% 45% / 58% 42% 58% 42%;
+  animation: fluid-drift-3 58s ease-in-out infinite alternate;
+  animation-delay: -28s;
+}
+/* 深色下 screen 混合发光；浅色下普通混合、均匀弱化 */
+:root[data-theme="dark"] .fluid-bg i { mix-blend-mode: screen; }
+:root[data-theme="light"] .fluid-bg i { opacity: 0.18; }
+
+@keyframes fluid-drift-1 {
+  0%   { transform: translate3d(-8%, -6%, 0) rotate(0deg)   scale(1); }
+  50%  { transform: translate3d(7%, 5%, 0)   rotate(55deg)  scale(1.15); }
+  100% { transform: translate3d(-3%, 9%, 0)  rotate(110deg) scale(0.95); }
+}
+@keyframes fluid-drift-2 {
+  0%   { transform: translate3d(6%, 8%, 0)   rotate(0deg)    scale(1.05); }
+  50%  { transform: translate3d(-7%, -6%, 0) rotate(-60deg)  scale(0.92); }
+  100% { transform: translate3d(4%, -8%, 0)  rotate(-120deg) scale(1.12); }
+}
+@keyframes fluid-drift-3 {
+  0%   { transform: translate3d(-4%, 8%, 0)  rotate(0deg)   scale(0.9); }
+  50%  { transform: translate3d(6%, -7%, 0)  rotate(70deg)  scale(1.08); }
+  100% { transform: translate3d(-7%, -3%, 0) rotate(140deg) scale(1); }
+}
+
+/* ---------- Hero 标题流光（重点词流动渐变） ---------- */
+.hero h1 .accent {
+  background: linear-gradient(100deg,
+    var(--s1) 0%, var(--s7) 30%, var(--s5) 50%, var(--s1) 70%, var(--s7) 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fluid-text 8s linear infinite;
+}
+@keyframes fluid-text {
+  from { background-position: 0% 0; }
+  to   { background-position: -220% 0; }
+}
+
+/* ---------- 卡片光泽扫过（hover 液体质感） ---------- */
+a.card, .paper-card, .classic-card {
+  position: relative;
+  overflow: hidden;
+}
+a.card::after, .paper-card::after, .classic-card::after {
+  content: "";
+  position: absolute; inset: -2px;
+  background: linear-gradient(115deg,
+    transparent 32%,
+    color-mix(in srgb, var(--s1) 10%, transparent) 50%,
+    transparent 68%);
+  transform: translateX(-130%) skewX(-10deg);
+  pointer-events: none;
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+a.card:hover::after, .paper-card:hover::after, .classic-card:hover::after {
+  transform: translateX(130%) skewX(-10deg);
+}
+
+/* ---------- 导航下划线滑动 ---------- */
+.nav a { position: relative; }
+.nav a::after {
+  content: "";
+  position: absolute; left: 12px; right: 12px; bottom: 3px; height: 2px;
+  border-radius: 2px; background: var(--s1);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.nav a:hover::after, .nav a.active::after { transform: scaleX(1); }
+
+/* ---------- 按钮按压回弹 ---------- */
+.btn:active { transform: translateY(0) scale(0.96); }
+.btn-primary {
+  transition: background 0.15s ease, border-color 0.15s ease,
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+.btn-primary:active { transform: scale(0.96); }

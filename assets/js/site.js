@@ -184,9 +184,19 @@ function initEntrance() {
   animate(Array.from(document.querySelectorAll("main .section")), 120);
 }
 
+/* ---------- 流体背景层（全站氛围光晕，样式见 style.css 流体动效层） ---------- */
+function initFluidBackground() {
+  const bg = document.createElement("div");
+  bg.className = "fluid-bg";
+  bg.setAttribute("aria-hidden", "true");
+  bg.innerHTML = "<i></i><i></i><i></i>";
+  document.body.prepend(bg);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderChrome();
   initTheme();
   initNav();
   initEntrance();
+  initFluidBackground();
 });
