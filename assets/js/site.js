@@ -77,7 +77,8 @@ function initNav() {
 
 /* ---------- 数据加载（所有页面位于站点根目录） ---------- */
 async function loadJSON(name) {
-  const resp = await fetch(`data/${name}.json`);
+  // data/*.json 由工作流定期更新；禁用浏览器缓存，避免刷新后仍显示旧数据
+  const resp = await fetch(`data/${name}.json`, { cache: "no-store" });
   if (!resp.ok) throw new Error(`加载 ${name}.json 失败: ${resp.status}`);
   return resp.json();
 }
