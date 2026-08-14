@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知识关系图 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络知识关系图：材料 × 构建策略 × 文献三层力导向网络。">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
 </head>
 <body data-page="graph">
@@ -36,13 +36,13 @@
         <div class="chart-title">三层网络：材料 · 策略 · 文献</div>
         <div class="chart-sub" id="graph-sub">加载中…</div>
         <div id="graph" class="chart chart-lg"></div>
-        <div class="chart-note">🖱 拖拽节点调整布局 · 滚轮缩放 · 悬停查看详情 · 点击文献节点打开 DOI 原文</div>
+        <div class="chart-note">🖱 拖拽节点调整布局 · 滚轮缩放 · 悬停查看详情 · 点击文献节点进入站内详情页 · 点击标签查看主题文献</div>
       </div>
     </section>
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=8"></script>
+  <script src="assets/js/site.js?v=9"></script>
   <script>
     let chart, graphData;
     const CATEGORY_META = {
@@ -170,7 +170,7 @@
       if (!d) return "";
       if (d.type === "tag") {
         const meta = CATEGORY_META[TAG_CATEGORY[d.name] || "material"];
-        return `<strong>${escapeHtml(d.name)}</strong><br><span style="color:${t.muted}">${meta.label} · 相关论文 ${fmtInt(d.value)} 篇</span>`;
+        return `<strong>${escapeHtml(d.name)}</strong><br><span style="color:${t.muted}">${meta.label} · 相关论文 ${fmtInt(d.value)} 篇</span><br><span style="color:${t.series[0]}">点击查看该主题文献</span>`;
       }
       const q1 = d.core_journal ? ` · <span style="color:${t.good}">Q1</span>` : "";
       const zh = d.zh_title ? `<br><span style="line-height:1.5">${escapeHtml(d.zh_title)}</span>` : "";
@@ -178,7 +178,7 @@
         `<strong style="line-height:1.5">${escapeHtml(d.name)}</strong>${zh}`,
         `<span style="color:${t.muted}">${escapeHtml(d.journal || "")} · ${d.year || ""}${q1}</span>`,
         d.value ? `<span style="color:${t.muted}">被引 ${fmtInt(d.value)}</span>` : "",
-        d.doi ? `<br><span style="color:${t.series[0]}">点击打开 DOI 原文</span>` : "",
+        d.id ? `<br><span style="color:${t.series[0]}">点击进入站内详情页</span>` : "",
       ];
       return parts.join("<br>");
     }
@@ -209,8 +209,12 @@
         }));
 
         chart.on("click", (p) => {
-          if (p.data && p.data.type === "paper" && p.data.doi) {
-            window.open(`https://doi.org/${p.data.doi}`, "_blank", "noopener");
+          if (!p.data) return;
+          if (p.data.type === "paper" && p.data.id) {
+            // 图节点 id 形如 "p:W…"，去掉前缀后用站内详情页打开
+            location.href = `paper.html?id=${encodeURIComponent(String(p.data.id).replace(/^p:/, ""))}`;
+          } else if (p.data.type === "tag") {
+            location.href = `papers.html?tag=${encodeURIComponent(p.data.name)}`;
           }
         });
         document.getElementById("show-papers").addEventListener("change", render);

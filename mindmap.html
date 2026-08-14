@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知识脉络 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络领域知识脉络：储能机理、碳材料体系、导电网络维度工程、构建策略、性能指标、应用与前沿方向，每个细分方向附代表论文。">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
 </head>
 <body data-page="mindmap">
@@ -21,7 +21,7 @@
       </div>
       <div class="mindmap-wrap">
         <div id="mindmap" class="chart"></div>
-        <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看解读与代表论文</div>
+        <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看解读与代表论文（论文可进入站内详情页）</div>
         <div class="node-detail-panel" id="detail-panel">
           <h4 id="detail-name"></h4>
           <div class="en" id="detail-en"></div>
@@ -33,7 +33,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=8"></script>
+  <script src="assets/js/site.js?v=9"></script>
   <script>
     let chart, treeData, nodePapers = {};
 
@@ -126,15 +126,24 @@
           const item = document.createElement("div");
           item.className = "detail-paper";
           const a = document.createElement("a");
-          a.href = p.url || "#";
-          a.target = "_blank";
-          a.rel = "noopener";
+          // 优先站内详情页（paper.html）；无 doi 时回退原文外链
+          a.href = p.doi ? `paper.html?doi=${encodeURIComponent(p.doi)}` : p.url || "#";
           a.textContent = p.zh_title || p.title;
-          a.title = p.zh_title ? p.title : "";
+          a.title = p.doi ? "打开站内详情页" : (p.zh_title ? p.title : "");
+          if (!p.doi) { a.target = "_blank"; a.rel = "noopener"; }
           item.appendChild(a);
           const meta = document.createElement("div");
           meta.className = "detail-paper-meta";
           meta.textContent = `${p.journal || ""} · ${p.year || ""} · 被引 ${fmtInt(p.cited_by_count)}`;
+          if (p.doi) {
+            const ext = document.createElement("a");
+            ext.href = p.url || `https://doi.org/${p.doi}`;
+            ext.target = "_blank";
+            ext.rel = "noopener";
+            ext.textContent = "原文 ↗";
+            ext.style.cssText = "color:var(--accent);margin-left:8px";
+            meta.appendChild(ext);
+          }
           if (p.core_journal) {
             const b = document.createElement("span");
             b.className = "badge badge-q1";

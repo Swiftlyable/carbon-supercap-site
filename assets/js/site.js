@@ -65,6 +65,15 @@ function renderChrome() {
     `<span>自动更新：GitHub Actions 每周一运行</span>` +
     `</div>`;
   document.body.append(footer);
+
+  // 一键回到顶部（滚动超过一屏后浮现）
+  const backTop = document.createElement("button");
+  backTop.id = "back-top";
+  backTop.className = "back-top";
+  backTop.textContent = "↑";
+  backTop.title = "回到顶部";
+  backTop.setAttribute("aria-label", "回到顶部");
+  document.body.append(backTop);
 }
 
 /* ---------- 导航高亮 ---------- */
@@ -76,9 +85,11 @@ function initNav() {
 }
 
 /* ---------- 数据加载（所有页面位于站点根目录） ---------- */
-async function loadJSON(name) {
-  // data/*.json 由工作流定期更新；禁用浏览器缓存，避免刷新后仍显示旧数据
-  const resp = await fetch(`data/${name}.json`, { cache: "no-store" });
+async function loadJSON(name, cache = "no-store") {
+  // data/*.json 由工作流定期更新；默认禁用浏览器缓存，避免刷新后仍显示旧数据。
+  // 大文件页（如论文详情页）可传 cache = "default" 允许 HTTP 缓存加速回访
+  //（GH Pages 缓存上限 10 分钟，数据每周更新一次，可接受）
+  const resp = await fetch(`data/${name}.json`, { cache });
   if (!resp.ok) throw new Error(`加载 ${name}.json 失败: ${resp.status}`);
   return resp.json();
 }
@@ -182,13 +193,33 @@ function initEntrance() {
   // 排除 hero 画布：其自身有固定透明度，且无需入场动画
   animate(Array.from(document.querySelectorAll(".hero > *:not(#hero-canvas)")), 0);
   animate(Array.from(document.querySelectorAll("main .section, main .statement")), 120);
+  // 板块内部件：筛选行 / 图表卡 / AI 助手面板（fade-up 无模糊，不伤图表性能）
+  animate(Array.from(document.querySelectorAll("main .filter-row, main .chart-card, main .ai-panel")), 220);
 
   // 入场动画播完即永久退役（.entered → animation:none）：
   // 若动画一直挂在元素上，hover 移出时会重播，卡片闪没
   document.addEventListener("animationend", (e) => {
-    if (e.animationName === "fade-up" || e.animationName === "pop-in") {
+    if (e.animationName === "fade-up" || e.animationName === "pop-in" || e.animationName === "row-in") {
       e.target.classList.add("entered");
     }
+  });
+}
+
+/* ---------- 一键回到顶部 ---------- */
+function initBackTop() {
+  const btn = document.getElementById("back-top");
+  if (!btn) return;
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      btn.classList.toggle("show", window.scrollY > 420);
+      ticking = false;
+    });
+  }, { passive: true });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: REDUCED_MOTION ? "auto" : "smooth" });
   });
 }
 
@@ -253,4 +284,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initFluidBackground();
   initCardTilt();
   initSplitReveal();
+  initBackTop();
 });

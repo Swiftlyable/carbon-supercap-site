@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文献库 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络文献库：可按关键词、年份、期刊质量、标签筛选，支持 CSV 导出，内置 AI 文献助手（免费大模型 + 本地文献检索）。">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
 </head>
 <body data-page="papers">
@@ -104,7 +104,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=8"></script>
+  <script src="assets/js/site.js?v=9"></script>
   <script src="assets/js/assistant.js?v=3"></script>
   <script>
     const PAGE_SIZE = 25;
@@ -159,17 +159,19 @@
 
       const tbody = document.getElementById("paper-tbody");
       tbody.innerHTML = "";
-      slice.forEach((p) => {
+      slice.forEach((p, i) => {
         const tr = document.createElement("tr");
 
-        // 标题：中文为主（未翻译时回退英文），英文原题小字显示
+        // 标题：中文为主（未翻译时回退英文），英文原题小字显示。
+        // 优先跳站内详情页（paper.html）；无 id/doi 时回退原文外链
         const tdTitle = document.createElement("td");
         const a = document.createElement("a");
-        a.href = p.url || "#";
-        a.target = "_blank";
-        a.rel = "noopener";
+        a.href = p.id ? `paper.html?id=${encodeURIComponent(p.id)}`
+          : (p.doi ? `paper.html?doi=${encodeURIComponent(p.doi)}` : p.url || "#");
         a.textContent = p.zh_title || p.title;
+        a.title = p.id || p.doi ? "打开站内详情页" : "打开原文链接";
         a.style.fontWeight = "500";
+        if (!p.id && !p.doi) { a.target = "_blank"; a.rel = "noopener"; }
         tdTitle.appendChild(a);
         if (p.zh_title) {
           const en = document.createElement("div");
@@ -227,6 +229,7 @@
             return;
           }
           detailRow = document.createElement("tr");
+          detailRow.classList.add("row-in");        // 展开时弹入（播完自动退役）
           const td = document.createElement("td");
           td.colSpan = 6;
           td.style.cssText = "background:var(--surface-2);font-size:13.5px;line-height:1.75;padding:14px 16px";
@@ -312,6 +315,9 @@
         });
         tr.appendChild(tdTags);
 
+        // 行错峰弹入（筛选/搜索/翻页后同样生效；播完自动退役）
+        tr.classList.add("row-in");
+        tr.style.animationDelay = `${Math.min(i, 12) * 25}ms`;
         tbody.appendChild(tr);
       });
 

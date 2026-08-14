@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文献详情 · 碳网图谱 CarbonNet</title>
+  <meta name="description" content="碳材料超级电容器三维导电网络文献详情：完整元信息、中英摘要、主题标签与相似文献推荐。">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
+</head>
+<body data-page="paper">
+
+  <main class="container">
+    <section class="section" style="padding-top:28px">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="index.html">首页</a>
+        <a href="papers.html">文献库</a>
+        <a href="#" id="bc-back">← 返回上一页</a>
+      </nav>
+      <article id="paper-detail">
+        <div class="empty-state">加载中…</div>
+      </article>
+      <section id="similar-sec" class="hidden">
+        <div class="section-head">
+          <h2 class="section-title"><span class="kicker">Related Papers</span>相似文献</h2>
+          <span class="section-note">按主题标签与领域概念重合度推荐</span>
+        </div>
+        <div id="similar-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/js/site.js?v=9"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(location.search);
+      const id = params.get("id");
+      const doi = params.get("doi");
+      let papers = [];
+
+      const el = (tag, cls, txt) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (txt != null) n.textContent = txt;
+        return n;
+      };
+
+      // 站内详情页链接（有 id 优先，其次 doi；都没有则回退原文外链）
+      function detailHref(p) {
+        if (p.id) return `paper.html?id=${encodeURIComponent(p.id)}`;
+        if (p.doi) return `paper.html?doi=${encodeURIComponent(p.doi)}`;
+        return p.url || "#";
+      }
+
+      function badges(p) {
+        const wrap = el("div", "pd-badges");
+        const mk = (cls, txt, title) => {
+          const b = el("span", `badge ${cls}`, txt);
+          if (title) b.title = title;
+          wrap.appendChild(b);
+        };
+        if (p.core_journal) mk("badge-q1", "Q1 权威期刊");
+        if (p.jif) mk("badge-q1", `IF ${p.jif} · ${p.jcr_quartile || ""}`.trim(), "JCR 影响因子与分区（Web of Science）");
+        if (p.type === "review") mk("badge-review", "综述");
+        if (p.oa) mk("badge-oa", "开放获取");
+        if (p.classic) mk("badge-classic", "★ 经典");
+        return wrap;
+      }
+
+      function metaRow(p) {
+        const row = el("div", "pd-meta");
+        const cell = (k, vNode) => {
+          const d = el("div");
+          d.appendChild(el("span", "k", k));
+          d.appendChild(vNode);
+          row.appendChild(d);
+        };
+        cell("被引", el("span", "v", fmtInt(p.cited_by_count)));
+        cell("年份", el("span", "v", String(p.year ?? "—")));
+        cell("期刊", el("span", "v", p.journal || "—"));
+        if (p.doi) {
+          const a = el("a", "v", `DOI: ${p.doi}`);
+          a.href = `https://doi.org/${p.doi}`;
+          a.target = "_blank"; a.rel = "noopener";
+          cell("DOI 原文", a);
+        }
+        return row;
+      }
+
+      function renderSimilar(p) {
+        const mine = new Set([...(p.tags || []), ...(p.concepts || [])]);
+        if (!mine.size) return;
+        const scored = papers
+          .map((o) => {
+            if (o.id === p.id || (o.doi && p.doi && o.doi === p.doi)) return null;
+            let ov = 0;
+            (o.tags || []).forEach((t) => { if (mine.has(t)) ov += 10; });
+            (o.concepts || []).forEach((c) => { if (mine.has(c)) ov += 2; });
+            if (o.journal && o.journal === p.journal) ov += 1;
+            if (ov === 0) return null; // 无任何主题/概念重合的不算相似
+            return { o, s: ov + Math.min(3, Math.log10((o.cited_by_count || 0) + 1) * 0.8) };
+          })
+          .filter(Boolean)
+          .sort((a, b) => b.s - a.s)
+          .slice(0, 6);
+
+        const sec = document.getElementById("similar-sec");
+        const list = document.getElementById("similar-list");
+        list.innerHTML = "";
+        if (!scored.length) { sec.classList.add("hidden"); return; }
+        sec.classList.remove("hidden");
+        scored.forEach(({ o }, i) => {
+          const card = el("article", "paper-card");
+          card.style.animationDelay = `${Math.min(i, 6) * 55}ms`;
+          const h3 = el("h3", "paper-title");
+          const a = el("a", null, o.zh_title || o.title);
+          a.href = detailHref(o);
+          a.title = "打开站内详情页";
+          h3.appendChild(a);
+          card.appendChild(h3);
+          if (o.zh_title) {
+            const en = el("div", null, o.title);
+            en.style.cssText = "font-size:12.5px;color:var(--muted);margin-top:3px";
+            card.appendChild(en);
+          }
+          const meta = el("div", "paper-meta");
+          meta.appendChild(el("span", null, `${o.journal || ""} · ${o.year || ""}`));
+          meta.appendChild(el("span", null, `被引 ${fmtInt(o.cited_by_count)}`));
+          if (o.core_journal) {
+            const b = el("span", "badge badge-q1", "Q1");
+            meta.appendChild(b);
+          }
+          card.appendChild(meta);
+          list.appendChild(card);
+        });
+      }
+
+      function render(p) {
+        const detail = document.getElementById("paper-detail");
+        detail.innerHTML = "";
+        detail.className = "paper-detail";
+        document.title = `${p.zh_title || p.title} · 碳网图谱 CarbonNet`;
+
+        detail.appendChild(el("h1", null, p.zh_title || p.title));
+        if (p.zh_title) detail.appendChild(el("div", "pd-en", p.title));
+        detail.appendChild(badges(p));
+        detail.appendChild(metaRow(p));
+
+        // 作者与机构
+        const authors = el("p", "pd-authors");
+        authors.textContent = `作者：${(p.authors || []).join("; ") || "—"}`
+          + (p.institutions && p.institutions.length ? `　·　机构：${p.institutions.join("; ")}` : "");
+        detail.appendChild(authors);
+
+        // 经典文献点评
+        if (p.classic_note) {
+          const note = el("div", "pd-note");
+          note.appendChild(el("div", "pd-note-title", "领域经典点评"));
+          note.appendChild(el("p", null, p.classic_note));
+          detail.appendChild(note);
+        }
+
+        // 摘要（中文优先，英文原文折叠）
+        detail.appendChild(el("h2", "pd-sec", "摘要"));
+        const abs = el("div", "pd-abs");
+        if (p.zh_abstract) abs.appendChild(el("p", null, p.zh_abstract));
+        else abs.appendChild(el("p", "muted", "中文摘要尚未生成（将在下次自动更新时补译）。"));
+        if (p.abstract) {
+          const det = el("details");
+          det.appendChild(el("summary", null, "查看英文原文（English abstract）"));
+          det.appendChild(el("p", "pd-en-abs", p.abstract));
+          abs.appendChild(det);
+        } else {
+          abs.appendChild(el("p", "muted", "（数据源未提供英文摘要）"));
+        }
+        detail.appendChild(abs);
+
+        // 主题标签与领域概念（标签可跳转文献库筛选）
+        if ((p.tags || []).length) {
+          detail.appendChild(el("h2", "pd-sec", "主题标签"));
+          const tw = el("div", "pd-tags");
+          p.tags.forEach((tg) => {
+            const a = el("a", "tag", tg);
+            a.href = `papers.html?tag=${encodeURIComponent(tg)}`;
+            a.title = `在文献库中查看「${tg}」主题`;
+            tw.appendChild(a);
+          });
+          detail.appendChild(tw);
+        }
+        if ((p.concepts || []).length) {
+          detail.appendChild(el("h2", "pd-sec", "领域概念"));
+          const cw = el("div", "pd-tags");
+          p.concepts.forEach((c) => cw.appendChild(el("span", "tag", c)));
+          detail.appendChild(cw);
+        }
+
+        renderSimilar(p);
+      }
+
+      (async () => {
+        try {
+          // 详情页允许浏览器 HTTP 缓存：3MB 数据首次加载后回访几乎瞬时
+          papers = await loadJSON("papers", "default");
+          const p = papers.find((x) =>
+            (id && x.id === id) ||
+            (doi && x.doi && x.doi.toLowerCase() === doi.toLowerCase()));
+          if (!p) throw new Error(`未找到该文献（id=${id || ""} doi=${doi || ""}）。可能是链接过期或数据更新后 ID 变化。`);
+          render(p);
+        } catch (e) {
+          const d = document.getElementById("paper-detail");
+          d.innerHTML = "";
+          const s = el("div", "empty-state");
+          s.appendChild(el("p", null, "文献未找到或数据加载失败。"));
+          s.appendChild(el("p", "muted", e.message));
+          const a = el("a", null, "返回文献库 →");
+          a.href = "papers.html";
+          s.appendChild(a);
+          d.appendChild(s);
+        }
+      })();
+    })();
+  </script>
+</body>
+</html>

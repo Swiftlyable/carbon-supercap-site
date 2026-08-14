@@ -159,6 +159,27 @@ a:hover { text-decoration: underline; }
 .theme-btn:hover { border-color: var(--border-strong); color: var(--ink); }
 .theme-btn:active { transform: rotate(90deg) scale(0.92); }
 
+/* ---------- 一键回到顶部（site.js 注入） ---------- */
+.back-top {
+  position: fixed; right: 22px; bottom: 26px; z-index: 90;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface-1) 90%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--ink); font-size: 17px; line-height: 1;
+  cursor: pointer;
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .3s ease, transform .3s cubic-bezier(.3,1.4,.5,1),
+    background .15s ease, color .15s ease, border-color .15s ease, box-shadow .25s ease;
+}
+.back-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-top:hover {
+  background: var(--accent-fill); border-color: var(--accent-fill);
+  color: #f2f2f2; transform: translateY(-3px);
+  box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--accent-fill) 70%, transparent);
+}
+
 /* ---------- 页脚 ---------- */
 .site-footer {
   margin-top: 72px; padding: 28px 0 40px;
@@ -436,6 +457,63 @@ table.data-table {
 }
 .paper-tags { margin-top: 10px; }
 
+/* ---------- 论文详情页（paper.html） ---------- */
+.breadcrumb {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  margin-bottom: 20px; font-size: 13px;
+}
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--accent); }
+.paper-detail {
+  background: var(--surface-1);
+  border: 1px solid var(--border); border-radius: 16px;
+  padding: 32px 36px;
+  animation: pop-in .5s cubic-bezier(.17,1.25,.36,1) both;
+}
+@media (max-width: 720px) { .paper-detail { padding: 22px 20px; } }
+.paper-detail h1 {
+  font-size: clamp(23px, 3vw, 33px);
+  font-weight: 700; line-height: 1.32; letter-spacing: -0.015em;
+}
+.paper-detail .pd-en { color: var(--muted); font-size: 14.5px; margin-top: 8px; line-height: 1.6; }
+.pd-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.pd-badges .badge { padding: 3px 10px; }
+.pd-meta {
+  display: flex; flex-wrap: wrap; gap: 10px 36px;
+  margin-top: 20px; padding: 14px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 12px;
+  font-size: 14px;
+}
+.pd-meta .k {
+  display: block; font-family: var(--font-mono);
+  font-size: 11px; color: var(--muted);
+  letter-spacing: .05em; margin-bottom: 3px;
+}
+.pd-meta .v { color: var(--ink); font-variant-numeric: tabular-nums; }
+.pd-meta a.v { color: var(--accent); }
+.pd-authors { margin-top: 18px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.pd-sec {
+  margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--grid);
+  font-size: 15.5px; font-weight: 650; letter-spacing: -0.01em;
+}
+.pd-abs p { margin-top: 10px; color: var(--ink-2); font-size: 14.5px; line-height: 1.9; }
+.pd-abs details { margin-top: 10px; }
+.pd-abs summary { cursor: pointer; color: var(--accent); font-size: 13px; }
+.pd-abs .pd-en-abs { color: var(--ink-2); font-size: 13.5px; line-height: 1.85; margin-top: 8px; }
+.pd-tags { margin-top: 10px; }
+.pd-note {
+  border-left: 3px solid var(--accent-fill);
+  padding: 14px 18px; margin-top: 22px;
+  background: color-mix(in srgb, var(--accent-fill) 8%, transparent);
+  border-radius: 0 10px 10px 0;
+}
+.pd-note-title {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em;
+  color: var(--accent); margin-bottom: 8px;
+}
+.pd-note p { color: var(--ink-2); font-size: 14px; line-height: 1.85; }
+
 /* ---------- 经典文献卡片 ---------- */
 .classic-card {
   background: var(--surface-1);
@@ -477,6 +555,12 @@ table.data-table {
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 .fade-up { animation: fade-up .7s cubic-bezier(.17,1.25,.36,1) both; }
+/* 表格行级入场：轻微位移 + 淡入（Safari 对 tr 的 transform 支持差，自动退化为纯淡入） */
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+tr.row-in { animation: row-in .45s cubic-bezier(.17,1.25,.36,1) both; }
 /* 卡片/行级元素：弹性回弹 + 景深模糊渐清 */
 @keyframes pop-in {
   from { opacity: 0; transform: translateY(22px) scale(0.95); filter: blur(5px); }
