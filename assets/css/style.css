@@ -699,6 +699,33 @@ a.card:hover::after, .paper-card:hover::after, .classic-card:hover::after {
   transform: translateX(130%) skewX(-10deg);
 }
 
+/* ---------- 卡片悬浮跟随（光标聚光 + 3D 微倾斜） ---------- */
+/* --mx/--my/--rx/--ry 由 site.js 随光标写入；聚光跟随光标，卡片向光标方向微倾 */
+a.card, .paper-card, .classic-card, .kpi {
+  position: relative;
+  --mx: 50%; --my: 50%; --rx: 0deg; --ry: 0deg;
+}
+a.card::before, .paper-card::before, .classic-card::before, .kpi::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(240px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--s1) 13%, transparent), transparent 65%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+a.card:hover::before, .paper-card:hover::before,
+.classic-card:hover::before, .kpi:hover::before {
+  opacity: 1;
+}
+a.card:hover, .paper-card:hover, .classic-card:hover, .kpi:hover {
+  /* 保留抬升，叠加光标驱动的微倾斜；.18s 过渡形成流体跟随感 */
+  transform: perspective(720px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-3px);
+}
+/* 入场动画 fill-mode:both 会持续占住 transform，hover 时移除，倾斜才能生效 */
+.paper-card:hover, .classic-card:hover { animation: none; }
+
 /* ---------- 导航下划线滑动 ---------- */
 .nav a { position: relative; }
 .nav a::after {

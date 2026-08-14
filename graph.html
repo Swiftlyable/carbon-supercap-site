@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知识关系图 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络知识关系图：材料 × 构建策略 × 文献三层力导向网络。">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
 </head>
 <body data-page="graph">
@@ -42,7 +42,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=3"></script>
+  <script src="assets/js/site.js?v=4"></script>
   <script>
     let chart, graphData;
     const CATEGORY_META = {
@@ -141,6 +141,8 @@
           })),
           roam: true,
           draggable: true,
+          // 拖拽/更新不做过渡动画，节点直接跟手，消除"橡皮筋"迟滞感
+          animationDurationUpdate: 0,
           force: {
             repulsion: 420,
             edgeLength: [60, 150],
@@ -186,8 +188,25 @@
         const [g, stats] = await Promise.all([loadJSON("graph"), loadJSON("stats")]);
         graphData = g;
         stats.tags.forEach((tg) => { TAG_CATEGORY[tg.name] = tg.category; });
-        chart = echarts.init(document.getElementById("graph"));
+        chart = echarts.init(document.getElementById("graph"), null, {
+          // 高分屏限制渲染分辨率，拖拽时每帧重绘的像素量大幅减少
+          devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.75),
+        });
         render();
+
+        // 拖拽期间：暂停背景光斑动画（把合成器让给画布）、提高阻尼让
+        // 相邻节点快速安定，拖拽手感更轻快
+        const graphEl = document.getElementById("graph");
+        const setFluid = (v) => document.querySelectorAll(".fluid-bg i")
+          .forEach((el) => { el.style.animationPlayState = v; });
+        graphEl.addEventListener("pointerdown", () => {
+          setFluid("paused");
+          chart.setOption({ series: [{ force: { friction: 0.9 } }] });
+        });
+        ["pointerup", "pointercancel"].forEach((ev) => window.addEventListener(ev, () => {
+          setFluid("");
+          chart.setOption({ series: [{ force: { friction: 0.6 } }] });
+        }));
 
         chart.on("click", (p) => {
           if (p.data && p.data.type === "paper" && p.data.doi) {

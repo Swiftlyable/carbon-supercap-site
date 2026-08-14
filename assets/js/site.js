@@ -193,10 +193,29 @@ function initFluidBackground() {
   document.body.prepend(bg);
 }
 
+/* ---------- 卡片悬浮跟随（聚光 + 微倾斜，样式见 style.css） ---------- */
+function initCardTilt() {
+  // 仅鼠标类指针设备启用；触屏无 hover，reduce-motion 用户跳过
+  if (REDUCED_MOTION || !window.matchMedia("(pointer: fine)").matches) return;
+  const CARDS = "a.card, .paper-card, .classic-card, .kpi";
+  document.addEventListener("pointermove", (e) => {
+    const card = e.target.closest(CARDS);
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    card.style.setProperty("--mx", (x * 100).toFixed(1) + "%");
+    card.style.setProperty("--my", (y * 100).toFixed(1) + "%");
+    card.style.setProperty("--rx", ((0.5 - y) * 4).toFixed(2) + "deg");
+    card.style.setProperty("--ry", ((x - 0.5) * 4).toFixed(2) + "deg");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderChrome();
   initTheme();
   initNav();
   initEntrance();
   initFluidBackground();
+  initCardTilt();
 });
