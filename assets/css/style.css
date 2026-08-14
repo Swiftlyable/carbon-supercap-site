@@ -818,8 +818,10 @@ a.card:hover, .paper-card:hover, .classic-card:hover, .kpi:hover {
   /* 保留抬升，叠加光标驱动的微倾斜；.18s 过渡形成流体跟随感 */
   transform: perspective(720px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-3px);
 }
-/* 入场动画 fill-mode:both 会持续占住 transform，hover 时移除，倾斜才能生效 */
-.paper-card:hover, .classic-card:hover { animation: none; }
+/* 入场动画播完即永久退役（site.js 收到 animationend 后加 .entered）。
+   不能在 :hover 时移除动画——移出时动画会从头重播，fill-mode:both 令卡片
+   闪回 opacity:0（"鼠标移开卡片消失"）。 */
+.entered { animation: none !important; }
 
 /* ---------- 导航下划线滑动 ---------- */
 .nav a { position: relative; }

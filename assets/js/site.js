@@ -182,6 +182,12 @@ function initEntrance() {
   // 排除 hero 画布：其自身有固定透明度，且无需入场动画
   animate(Array.from(document.querySelectorAll(".hero > *:not(#hero-canvas)")), 0);
   animate(Array.from(document.querySelectorAll("main .section")), 120);
+
+  // 入场动画播完即永久退役（.entered → animation:none）：
+  // 若动画一直挂在元素上，hover 移出时会重播，卡片闪没
+  document.addEventListener("animationend", (e) => {
+    if (e.animationName === "fade-up") e.target.classList.add("entered");
+  });
 }
 
 /* ---------- 流体背景层（全站氛围光晕，样式见 style.css 流体动效层） ---------- */
