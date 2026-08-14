@@ -276,11 +276,17 @@
         tdTitle.appendChild(btn);
         tr.appendChild(tdTitle);
 
-        // 期刊
+        // 期刊（有 JCR 数据时附 IF 与分区）
         const tdJ = document.createElement("td");
         tdJ.textContent = p.journal;
-        tdJ.style.fontSize = "12.5px";
-        tdJ.style.color = "var(--ink-2)";
+        tdJ.style.cssText = "font-size:12.5px;color:var(--ink-2)";
+        if (p.jif || p.jcr_quartile) {
+          const d = document.createElement("div");
+          d.textContent = [p.jif ? `IF ${p.jif}` : "", p.jcr_quartile || ""].filter(Boolean).join(" · ");
+          d.style.cssText = "font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums";
+          d.title = "JCR 影响因子与分区（Web of Science）";
+          tdJ.appendChild(d);
+        }
         tr.appendChild(tdJ);
 
         const tdNum = (v) => {
@@ -333,13 +339,14 @@
 
     function exportCSV() {
       const rows = filtered();
-      const header = ["中文标题", "英文标题", "中文摘要", "期刊", "年份", "类型", "被引", "Q1期刊", "经典文献", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
+      const header = ["中文标题", "英文标题", "中文摘要", "期刊", "年份", "类型", "被引", "JCR分区", "影响因子", "Q1期刊", "经典文献", "开放获取", "DOI", "标签", "比电容(F/g)", "能量密度(Wh/kg)", "功率密度(W/kg)", "作者"];
       const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
       const lines = [header.join(",")];
       rows.forEach((p) => {
         lines.push([
           p.zh_title || "", p.title, p.zh_abstract || "",
           p.journal, p.year, p.type, p.cited_by_count,
+          p.jcr_quartile || "", p.jif ?? "",
           p.core_journal ? "是" : "否", p.classic ? "是" : "否", p.oa ? "是" : "否", p.doi,
           (p.tags || []).join(";"),
           p.metrics?.f_per_g ?? "", p.metrics?.wh_per_kg ?? "", p.metrics?.w_per_kg ?? "",

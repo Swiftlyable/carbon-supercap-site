@@ -27,6 +27,11 @@ jobs:
           # 可选：填入邮箱进入 polite pool 提高限流（未设置也不影响运行）
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
 
+      - name: 应用 WoS 校准覆盖层（被引次数 / JCR 分区）
+        # OpenAlex 每次会重写所抓取文献的字段，被 WoS 校准过的值会被冲掉；
+        # 此步骤用 data/wos_overlay.json（随仓库提交）恢复校准值
+        run: python scripts/import_wos.py --apply
+
       - name: 翻译标题与摘要（中文化）
         run: python scripts/translate_papers.py
 
