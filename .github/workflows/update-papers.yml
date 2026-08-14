@@ -37,6 +37,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 运行期间远程可能被其他提交推进：先同步到最新，再在其上提交，避免 push 被拒
+          # （checkout 是分离 HEAD，用 rebase 而非 pull；数据文件与代码提交不重叠，不会冲突）
+          git fetch origin main
+          git rebase --autostash origin/main
           git add data/
           if git diff --cached --quiet; then
             echo "无数据变更，跳过提交"
