@@ -1,8 +1,8 @@
 /* ============================================================
-   碳网图谱 CarbonNet · 设计系统（produx.design 风格版）
+   碳网图谱 CarbonNet · 设计系统（电光青蓝科技风）
    ------------------------------------------------------------
-   气质参照 produx.design：近黑编辑式暗色、超大号怪诞体标题、
-   灰阶 + 青铜棕 (#5F5136) + 鼠尾草绿 (#CDDBC0) 点缀、
+   蓝调近黑编辑式暗色、超大号怪诞体标题、
+   灰阶 + 电光青 (#7CC7FF) + 深蓝 (#125E9A) 点缀、
    逐词上浮 hero 入场、细边框、17px 毛玻璃顶栏。
    分类色（s1–s8）仅在图表/标签点中使用，保证数据可读性。
    字体：Space Grotesk（标题/数字）+ DM Mono（点缀），本地打包。
@@ -37,30 +37,30 @@
   --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI",
     "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
   --font-mono: "DM Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
-  /* 表面与墨水（produx 灰阶） */
-  --page: #0e0e0e;
-  --surface-1: #141414;
-  --surface-2: #1c1c1c;
-  --ink: #f2f2f2;
-  --ink-2: #c6c6c6;
-  --muted: #8a8a8a;
-  --grid: #242424;
-  --baseline: #303030;
-  --border: rgba(242, 242, 242, 0.09);
-  --border-strong: rgba(242, 242, 242, 0.17);
-  /* 强调：鼠尾草绿（文字/链接/下划线）+ 青铜棕（填充） */
-  --accent: #cddbc0;
-  --accent-fill: #5f5136;
-  --accent-fill-hover: #6f6040;
+  /* 表面与墨水（蓝调灰阶） */
+  --page: #0a0f14;
+  --surface-1: #10151b;
+  --surface-2: #171d25;
+  --ink: #eef4f8;
+  --ink-2: #b9c6d0;
+  --muted: #8294a3;
+  --grid: #1d252e;
+  --baseline: #26303a;
+  --border: rgba(238, 244, 248, 0.09);
+  --border-strong: rgba(238, 244, 248, 0.17);
+  /* 强调：电光青（文字/链接/下划线）+ 深蓝（填充） */
+  --accent: #7cc7ff;
+  --accent-fill: #125e9a;
+  --accent-fill-hover: #1772b8;
   /* 背景光斑色 */
-  --blob-1: #5f5136; --blob-2: #cddbc0; --blob-3: #6e6e6e;
+  --blob-1: #125e9a; --blob-2: #7cc7ff; --blob-3: #5a6a7a;
   /* 分类色（8 槽，低饱和，仅图表/标签点） */
   --s1: #6f9bd2; --s2: #cf8f5e; --s3: #5aa88a; --s4: #c8a860;
   --s5: #c07fa0; --s6: #8fa860; --s7: #918ac6; --s8: #c87f76;
-  /* 顺序色阶（青铜棕明度阶梯，浅=大值） */
-  --seq-100: #ece0c8; --seq-250: #d8c39b; --seq-300: #c6aa77;
-  --seq-350: #b1935c; --seq-400: #9a7c48; --seq-500: #7a6038;
-  --seq-600: #57452c; --seq-700: #372b1d;
+  /* 顺序色阶（蓝系明度阶梯，浅=大值） */
+  --seq-100: #e8f4ff; --seq-250: #c3e2ff; --seq-300: #9ccbff;
+  --seq-350: #74b1f5; --seq-400: #4f94e0; --seq-500: #3274bb;
+  --seq-600: #235489; --seq-700: #163a60;
   /* 状态色 */
   --good: #2fbf5f; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
   --delta-up: #2fbf5f;
@@ -68,27 +68,27 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --page: #f2f2f2;
-  --surface-1: #fafafa;
-  --surface-2: #e9e9e9;
-  --ink: #141414;
-  --ink-2: #3f3f3f;
-  --muted: #6a6a6a;
-  --grid: #dfdfdf;
-  --baseline: #c9c9c9;
-  --border: rgba(20, 20, 20, 0.10);
-  --border-strong: rgba(20, 20, 20, 0.20);
-  --accent: #55674a;           /* 加深保证浅底 AA */
-  --accent-fill: #5f5136;      /* 白字对比 6:1 达标 */
-  --accent-fill-hover: #4f432c;
-  --blob-1: #5f5136; --blob-2: #a7b896; --blob-3: #9a9a9a;
+  --page: #f4f7fa;
+  --surface-1: #fbfcfe;
+  --surface-2: #e9eef3;
+  --ink: #10161c;
+  --ink-2: #3c4854;
+  --muted: #64707c;
+  --grid: #dfe6ec;
+  --baseline: #ccd5dd;
+  --border: rgba(16, 22, 28, 0.10);
+  --border-strong: rgba(16, 22, 28, 0.20);
+  --accent: #0b6ab8;           /* 加深保证浅底 AA */
+  --accent-fill: #125e9a;      /* 白字对比 ~6:1 达标 */
+  --accent-fill-hover: #0e5686;
+  --blob-1: #125e9a; --blob-2: #8fc9ef; --blob-3: #8a98a5;
   /* 分类色（浅色列） */
   --s1: #3d6ea8; --s2: #b06a3c; --s3: #3d8a6b; --s4: #a88a3c;
   --s5: #a56282; --s6: #74883c; --s7: #6f66a8; --s8: #a8625a;
   /* 顺序色阶（浅色模式反向锚点由 JS 反转，此处与暗色同一色阶） */
-  --seq-100: #ece0c8; --seq-250: #d8c39b; --seq-300: #c6aa77;
-  --seq-350: #b1935c; --seq-400: #9a7c48; --seq-500: #7a6038;
-  --seq-600: #57452c; --seq-700: #372b1d;
+  --seq-100: #e8f4ff; --seq-250: #c3e2ff; --seq-300: #9ccbff;
+  --seq-350: #74b1f5; --seq-400: #4f94e0; --seq-500: #3274bb;
+  --seq-600: #235489; --seq-700: #163a60;
   /* 状态色（固定不换） */
   --good: #0ca30c; --warning: #b87800; --serious: #c85f33; --critical: #c22d2d;
   --delta-up: #006300;
@@ -106,7 +106,7 @@ body {
   line-height: 1.6;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
-  /* 顶部氛围光晕（青铜 + 鼠尾草绿，克制） */
+  /* 顶部氛围光晕（电光蓝 + 青，克制） */
   background-image: radial-gradient(1100px 480px at 50% -180px,
     color-mix(in srgb, var(--accent-fill) 9%, transparent),
     color-mix(in srgb, var(--accent) 4%, transparent) 55%,
@@ -731,9 +731,9 @@ table.data-table {
 /* ============================================================
    流体动效层（produx 克制版）
    ------------------------------------------------------------
-   1) .fluid-bg        全站流体光晕背景（青铜/鼠尾草绿/中性灰
+   1) .fluid-bg        全站流体光晕背景（电光蓝/青/灰蓝
                        三色斑缓慢漂移，仅 transform 动画）
-   2) 卡片光泽扫过      hover 时一道鼠尾草绿光泽斜向划过
+   2) 卡片光泽扫过      hover 时一道电光青光泽斜向划过
    3) 卡片悬浮跟随      光标聚光 + 3D 微倾斜（JS 写入 CSS 变量）
    4) 导航下划线滑动 / 按钮按压回弹
    ============================================================ */
@@ -789,7 +789,7 @@ table.data-table {
   100% { transform: translate3d(-7%, -3%, 0) rotate(140deg) scale(1); }
 }
 
-/* ---------- 卡片光泽扫过（hover 液体质感，鼠尾草绿） ---------- */
+/* ---------- 卡片光泽扫过（hover 液体质感，电光青） ---------- */
 a.card, .paper-card, .classic-card {
   position: relative;
   overflow: hidden;
