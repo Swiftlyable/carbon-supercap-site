@@ -630,7 +630,18 @@ tr.row-in { animation: row-in .45s cubic-bezier(.17,1.25,.36,1) both; }
   padding: 16px; font-size: 13.5px; display: none;
   animation: pop-in .4s cubic-bezier(.17,1.25,.36,1) both;
 }
-.node-detail-panel h4 { font-size: 15px; margin-bottom: 2px; }
+.node-detail-panel h4 { font-size: 15px; margin-bottom: 2px; padding-right: 30px; }
+/* 面板关闭按钮 */
+.panel-close {
+  position: absolute; top: 10px; right: 10px;
+  width: 26px; height: 26px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--ink-2); cursor: pointer; font-size: 15px; line-height: 1;
+  transition: background .15s ease, color .15s ease, border-color .15s ease,
+    transform .25s cubic-bezier(.3,1.4,.5,1);
+}
+.panel-close:hover { background: var(--accent-fill); border-color: var(--accent-fill); color: #f2f2f2; }
+.panel-close:active { transform: scale(0.9); }
 .node-detail-panel .en { color: var(--accent); font-family: var(--font-mono); font-size: 12px; margin-bottom: 8px; }
 .node-detail-panel p { color: var(--ink-2); }
 .detail-heading {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知识关系图 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络知识关系图：材料 × 构建策略 × 文献三层力导向网络。">
-  <link rel="stylesheet" href="assets/css/style.css?v=9">
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
 </head>
 <body data-page="graph">
@@ -42,7 +42,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=9"></script>
+  <script src="assets/js/site.js?v=10"></script>
   <script>
     let chart, graphData;
     const CATEGORY_META = {
@@ -79,7 +79,8 @@
           nodes.push({
             ...n,
             symbol: "circle",
-            symbolSize: n.symbolSize,
+            // 最小 14px 保证点击热区足够大（被引少的节点原来只有 ~8px，很难点中）
+            symbolSize: Math.max(n.symbolSize, 14),
             category: "文献",
             itemStyle: { color: t.muted, opacity: 0.85 },
             label: { show: false },
@@ -194,18 +195,31 @@
         });
         render();
 
-        // 拖拽期间：暂停背景光斑动画（把合成器让给画布）、提高阻尼让
-        // 相邻节点快速安定，拖拽手感更轻快
+        // 拖拽期间：暂停背景光斑动画（把合成器让给画布）。
+        // 只有真正拖动（位移 >6px）时才切换阻尼——若每次 pointerdown 都
+        // setOption，力导向布局会整体重启（节点跳动），并打断 ECharts 的
+        // click 命中判定，表现为"单击文献节点没反应、全网乱动"
         const graphEl = document.getElementById("graph");
         const setFluid = (v) => document.querySelectorAll(".fluid-bg i")
           .forEach((el) => { el.style.animationPlayState = v; });
-        graphEl.addEventListener("pointerdown", () => {
+        const dragState = { x: 0, y: 0, hiFriction: false };
+        graphEl.addEventListener("pointerdown", (e) => {
           setFluid("paused");
-          chart.setOption({ series: [{ force: { friction: 0.9 } }] });
+          dragState.x = e.clientX; dragState.y = e.clientY;
+        });
+        window.addEventListener("pointermove", (e) => {
+          if (dragState.hiFriction) return;
+          if (Math.hypot(e.clientX - dragState.x, e.clientY - dragState.y) > 6) {
+            dragState.hiFriction = true;
+            chart.setOption({ series: [{ force: { friction: 0.9 } }] });
+          }
         });
         ["pointerup", "pointercancel"].forEach((ev) => window.addEventListener(ev, () => {
           setFluid("");
-          chart.setOption({ series: [{ force: { friction: 0.6 } }] });
+          if (dragState.hiFriction) {
+            dragState.hiFriction = false;
+            chart.setOption({ series: [{ force: { friction: 0.6 } }] });
+          }
         }));
 
         chart.on("click", (p) => {

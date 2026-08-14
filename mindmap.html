@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知识脉络 · 碳网图谱 CarbonNet</title>
   <meta name="description" content="碳材料超级电容器三维导电网络领域知识脉络：储能机理、碳材料体系、导电网络维度工程、构建策略、性能指标、应用与前沿方向，每个细分方向附代表论文。">
-  <link rel="stylesheet" href="assets/css/style.css?v=9">
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23125E9A'/><circle cx='30' cy='38' r='10' fill='%237CC7FF'/><circle cx='62' cy='58' r='10' fill='%237CC7FF'/></svg>">
 </head>
 <body data-page="mindmap">
@@ -23,6 +23,7 @@
         <div id="mindmap" class="chart"></div>
         <div class="mindmap-hint">🖱 点击节点展开/收起 · 拖拽平移 · 滚轮缩放 · 点击节点文字查看解读与代表论文（论文可进入站内详情页）</div>
         <div class="node-detail-panel" id="detail-panel">
+          <button class="panel-close" id="panel-close" aria-label="关闭详情面板" title="关闭">×</button>
           <h4 id="detail-name"></h4>
           <div class="en" id="detail-en"></div>
           <p id="detail-desc"></p>
@@ -33,7 +34,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=9"></script>
+  <script src="assets/js/site.js?v=10"></script>
   <script>
     let chart, treeData, nodePapers = {};
 
@@ -168,6 +169,15 @@
 
         chart.on("click", (p) => {
           if (p.data) showDetail(p.data);
+          else document.getElementById("detail-panel").style.display = "none"; // 点图空白处关闭
+        });
+
+        // 关闭详情面板：× 按钮 / Esc 键
+        document.getElementById("panel-close").addEventListener("click", () => {
+          document.getElementById("detail-panel").style.display = "none";
+        });
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") document.getElementById("detail-panel").style.display = "none";
         });
 
         document.getElementById("expand-all").addEventListener("click", () => {
