@@ -15,11 +15,10 @@
 const AI_KEY = "scnet-ai-key";
 const AI_MODEL = "scnet-ai-model";
 const AI_API = "https://api.siliconflow.cn/v1/chat/completions";
-const AI_DEFAULT_MODEL = "THUDM/glm-4-9b-chat";
+const AI_DEFAULT_MODEL = "Qwen/Qwen3-8B";
 const AI_MODELS = [
-  ["THUDM/glm-4-9b-chat", "智谱 GLM-4-9B（免费，推荐）"],
+  ["Qwen/Qwen3-8B", "通义千问 Qwen3-8B（免费，推荐）"],
   ["Qwen/Qwen2.5-7B-Instruct", "通义千问 Qwen2.5-7B（免费）"],
-  ["deepseek-ai/DeepSeek-V3", "DeepSeek-V3（付费）"],
 ];
 
 const AI_SYSTEM = [
@@ -284,9 +283,16 @@ function maskKey(k) {
   return `${k.slice(0, 6)}…${k.slice(-4)}`;
 }
 
+// 已保存的模型可能被平台下线（如旧的 glm-4-9b-chat），自动回退到默认模型
+function currentModel() {
+  const saved = localStorage.getItem(AI_MODEL);
+  if (saved && AI_MODELS.some(([id]) => id === saved)) return saved;
+  return AI_DEFAULT_MODEL;
+}
+
 function refreshStatus() {
   const key = localStorage.getItem(AI_KEY);
-  const model = localStorage.getItem(AI_MODEL) || AI_DEFAULT_MODEL;
+  const model = currentModel();
   const st = document.getElementById("ai-status");
   if (st) {
     st.textContent = key
@@ -371,7 +377,7 @@ async function send(query) {
   body.className = "ai-body";
   aiEl.appendChild(body);
 
-  const model = localStorage.getItem(AI_MODEL) || AI_DEFAULT_MODEL;
+  const model = currentModel();
   let degenerate = false;
   const ctrl = new AbortController();
   try {
@@ -403,6 +409,9 @@ async function send(query) {
         const j = await resp.json();
         detail = j.message || (j.error && j.error.message) || detail;
       } catch { /* 保留默认 */ }
+      if (/disabled|not[\s-]?found|not exist|invalid model/i.test(detail)) {
+        throw new Error("该模型已被平台下线（Model disabled），请点「⚙ 设置」更换模型。");
+      }
       if (resp.status === 401) throw new Error("API Key 无效或已过期，请点击「⚙ 设置」检查密钥。");
       if (resp.status === 429) throw new Error("请求过于频繁，已触发硅基流动限速（免费额度），请稍等片刻再试。");
       throw new Error(`接口返回错误（${detail}）`);
@@ -471,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const o = document.createElement("option");
       o.value = id;
       o.textContent = label;
-      if (id === (localStorage.getItem(AI_MODEL) || AI_DEFAULT_MODEL)) o.selected = true;
+      if (id === currentModel()) o.selected = true;
       sel.appendChild(o);
     });
   }
