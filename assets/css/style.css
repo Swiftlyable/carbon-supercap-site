@@ -502,12 +502,13 @@ table.data-table {
 }
 .ai-settings-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 .ai-settings-box label { font-size: 13px; color: var(--ink-2); }
-.ai-settings-box input[type="password"], .ai-settings-box select {
+.ai-settings-box input[type="password"], .ai-settings-box input[type="text"], .ai-settings-box select {
   background: var(--surface-1); color: var(--ink);
   border: 1px solid var(--border); border-radius: 8px;
   padding: 8px 12px; font-size: 13.5px; font-family: inherit;
 }
 .ai-settings-box input[type="password"] { flex: 1; min-width: 260px; }
+.ai-settings-box input[type="text"] { flex: 1; min-width: 220px; }
 .ai-settings-box select { cursor: pointer; }
 .ai-settings-box input:focus, .ai-settings-box select:focus {
   outline: 2px solid color-mix(in srgb, var(--s1) 55%, transparent);

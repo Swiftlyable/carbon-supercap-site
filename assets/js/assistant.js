@@ -19,7 +19,10 @@ const AI_DEFAULT_MODEL = "Qwen/Qwen3-8B";
 const AI_MODELS = [
   ["Qwen/Qwen3-8B", "通义千问 Qwen3-8B（免费，推荐）"],
   ["Qwen/Qwen2.5-7B-Instruct", "通义千问 Qwen2.5-7B（免费）"],
+  ["__custom__", "自定义模型（手动输入 ID）"],
 ];
+// 已被平台下线/更名的旧模型 ID：保存了这些值就自动回退默认
+const AI_DEPRECATED = new Set(["THUDM/glm-4-9b-chat", "deepseek-ai/DeepSeek-V3"]);
 
 const AI_SYSTEM = [
   "你是「碳网图谱 CarbonNet」网站的 AI 文献助手，该站专注碳材料超级电容器三维导电网络研究。",
@@ -283,10 +286,11 @@ function maskKey(k) {
   return `${k.slice(0, 6)}…${k.slice(-4)}`;
 }
 
-// 已保存的模型可能被平台下线（如旧的 glm-4-9b-chat），自动回退到默认模型
+// 已保存的模型可能被平台下线（见 AI_DEPRECATED），自动回退到默认模型；
+// 列表外的自定义 ID 视为有效，原样使用
 function currentModel() {
   const saved = localStorage.getItem(AI_MODEL);
-  if (saved && AI_MODELS.some(([id]) => id === saved)) return saved;
+  if (saved && !AI_DEPRECATED.has(saved)) return saved;
   return AI_DEFAULT_MODEL;
 }
 
@@ -317,7 +321,10 @@ function openSettings(force) {
 
 function saveSettings() {
   const key = document.getElementById("ai-key").value.trim();
-  const model = document.getElementById("ai-model").value;
+  let model = document.getElementById("ai-model").value;
+  if (model === "__custom__") {
+    model = document.getElementById("ai-custom-model").value.trim();
+  }
   const prev = localStorage.getItem(AI_KEY) || "";
   if (key) localStorage.setItem(AI_KEY, key);
   if (model) localStorage.setItem(AI_MODEL, model);
@@ -340,13 +347,16 @@ function clearSettings() {
   }
 }
 
-// 检测模型输出陷入重复循环：压缩空白后，任意连续 40 字符窗口内仅出现 ≤2 种字符
+// 检测模型输出异常：
+// 1) 压缩空白后，任意连续 40 字符窗口内仅出现 ≤2 种字符（zzz / 等等等 循环）
+// 2) 字母沙拉：同一孤立字母以空格分隔重复 ≥3 次（如 "e e e e"）
 function looksDegenerate(s) {
+  if (s.length < 30) return false;
   const c = s.replace(/\s+/g, "");
-  if (c.length < 40) return false;
-  for (let i = 0; i + 40 <= c.length; i += 8) {
+  for (let i = 4; i + 40 <= c.length; i += 8) {
     if (new Set(c.slice(i, i + 40)).size <= 2) return true;
   }
+  if (/(?:^|\s)([a-z])(?:\s+\1){2,}(?=\s|$)/i.test(s)) return true;
   return false;
 }
 
@@ -396,11 +406,10 @@ async function send(query) {
           { role: "user", content: buildPrompt(q, top).user },
         ],
         stream: true,
-        temperature: 0.6,
+        // 注意：不要给硅基流动免费 Qwen 传 penalty 参数——
+        // 免费档在 penalty 采样下会产出 "e e e" 字母沙拉（已知故障）
+        temperature: 0.7,
         max_tokens: 800,
-        // 重复惩罚（OpenAI 兼容标准参数）：降低陷入重复输出循环的概率
-        frequency_penalty: 0.6,
-        presence_penalty: 0.3,
       }),
     });
     if (!resp.ok) {
@@ -475,6 +484,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 模型下拉（选项带免费/付费说明）
   const sel = document.getElementById("ai-model");
+  const customInput = document.getElementById("ai-custom-model");
+  const savedModel = localStorage.getItem(AI_MODEL);
   if (sel) {
     AI_MODELS.forEach(([id, label]) => {
       const o = document.createElement("option");
@@ -482,6 +493,17 @@ document.addEventListener("DOMContentLoaded", () => {
       o.textContent = label;
       if (id === currentModel()) o.selected = true;
       sel.appendChild(o);
+    });
+    // 自定义模型：回显 ID 并显示输入框
+    const isCustom = savedModel && !AI_MODELS.some(([id]) => id === savedModel)
+      && !AI_DEPRECATED.has(savedModel);
+    if (isCustom && customInput) {
+      customInput.value = savedModel;
+      sel.value = "__custom__";
+      customInput.classList.remove("hidden");
+    }
+    sel.addEventListener("change", () => {
+      if (customInput) customInput.classList.toggle("hidden", sel.value !== "__custom__");
     });
   }
 
