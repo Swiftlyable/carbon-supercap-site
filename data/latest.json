@@ -1,0 +1,148 @@
+[
+ {
+  "id": "W7202251718",
+  "doi": "10.1080/00405000.2026.2713390",
+  "title": "Structural and material optimization approaches for nanofiber separators in all-textile supercapacitors",
+  "journal": "Journal of the Textile Institute",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Hyukjoo Yang",
+   "Seungsin Lee",
+   "Torsten Textor",
+   "Tino Zillger"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纤维/织物",
+   "柔性器件",
+   "可穿戴"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1080/00405000.2026.2713390",
+  "zh_title": "全纺织超级电容器中纳米纤维隔膜的结构和材料优化方法",
+  "classic": false
+ },
+ {
+  "id": "W7202261477",
+  "doi": "10.1149/1945-7111/ae98bd",
+  "title": "N/O-Codoped Hierarchically Porous Carbon Enables High-Energy-Density and Self-Discharge-Resistant Zinc-Ion Hybrid Supercapacitors",
+  "journal": "Journal of The Electrochemical Society",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Yingquan Jiang",
+   "Qinghai Ma",
+   "Zhijun Qiao",
+   "Dianbo Ruan",
+   "Jianfei Tu"
+  ],
+  "type": "article",
+  "tags": [
+   "活性炭 AC",
+   "多孔碳",
+   "杂原子掺杂",
+   "能量密度"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1149/1945-7111/ae98bd",
+  "zh_title": "N/O共掺杂分级多孔碳可实现高能量密度和抗自放电锌离子混合超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7202120288",
+  "doi": "10.1016/j.jpowsour.2026.241082",
+  "title": "Binder-free CuCo2O4@Polypyrrole core-shell nanoarrays with redox-additive electrolyte for high-performance asymmetric supercapacitor devices",
+  "journal": "Journal of Power Sources",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Teja M. Patil",
+   "Aravind H. Patil",
+   "Dhananjay Mishra",
+   "Changhyun Chung",
+   "Joohan Lee",
+   "Krishnaiah Mokurala"
+  ],
+  "type": "article",
+  "tags": [
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.jpowsour.2026.241082",
+  "zh_title": "无粘合剂CuCo2O4@聚吡咯核壳纳米阵列，具有氧化还原添加剂电解质，用于高性能不对称超级电容器器件",
+  "classic": false
+ },
+ {
+  "id": "W7202071660",
+  "doi": "10.1007/s10853-026-13518-w",
+  "title": "High-capacity ternary NiSe2/MoSe2/CNTs anode enables asymmetric supercapacitors with high energy and power densities",
+  "journal": "Journal of Materials Science",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Jiao Liu",
+   "DuQiang Xin",
+   "Min Ren",
+   "Bo Gao",
+   "Dongmei Zhang",
+   "Jingzhi Zhang"
+  ],
+  "type": "article",
+  "tags": [
+   "非对称器件"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s10853-026-13518-w",
+  "zh_title": "高容量三元 NiSe2/MoSe2/CNTs 阳极使非对称超级电容器具有高能量和功率密度",
+  "classic": false
+ },
+ {
+  "id": "W7201842389",
+  "doi": "10.1016/j.jpowsour.2026.241203",
+  "title": "Engineering bamboo-leaf-derived hierarchical porous carbon for high-performance solid-state supercapacitors",
+  "journal": "Journal of Power Sources",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Daoxun Wang",
+   "Suqiang Wang",
+   "Yikun Luo",
+   "Jiali Li",
+   "Jiawen Yang",
+   "Shuqi Xie"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "固态电解质"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.jpowsour.2026.241203",
+  "zh_title": "用于高性能固态超级电容器的工程竹叶衍生分级多孔碳",
+  "classic": false
+ },
+ {
+  "id": "W7196985866",
+  "doi": "10.1007/s11696-026-05360-w",
+  "title": "Correlation of electrochemical behavior and electronic structure of NiCo2S4 nanoparticles for asymmetric supercapacitors: experimental and DFT study",
+  "journal": "Chemical Papers",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "S.R. Usharani",
+   "R. Hari Krishna",
+   "M. N. Chandraprabha",
+   "Santosh Behara",
+   "S. Girish Kumar"
+  ],
+  "type": "article",
+  "tags": [
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1007/s11696-026-05360-w",
+  "zh_title": "用于非对称超级电容器的 NiCo2S4 纳米粒子的电化学行为和电子结构的相关性：实验和 DFT 研究",
+  "classic": false
+ }
+]

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>碳网图谱 CarbonNet · 碳材料超级电容器三维导电网络</title>
   <meta name="description" content="碳材料超级电容器三维导电网络文献知识站：知识脉络、知识关系图、文献库与性能数据面板，数据自动更新，来源 OpenAlex / Web of Science 权威索引。">
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%233987e5'/><circle cx='30' cy='38' r='10' fill='%23fff'/><circle cx='62' cy='58' r='10' fill='%23fff'/></svg>">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%235F5136'/><circle cx='30' cy='38' r='10' fill='%23CDDBC0'/><circle cx='62' cy='58' r='10' fill='%23CDDBC0'/></svg>">
 </head>
 <body data-page="home">
 
@@ -30,14 +30,46 @@
       <div class="updated-at" id="updated-at">数据更新于 …</div>
     </section>
 
+    <!-- 大字标语带 -->
+    <section class="statement">
+      <h2>从二维碳片<br><span class="st-accent">到三维网络</span></h2>
+      <div class="st-sub">THE CARBON NETWORK — FROM SHEETS TO SCAFFOLDS</div>
+      <div class="st-nums" id="st-nums">
+        <div class="st-num"><div class="v">—</div><div class="l">收录文献</div></div>
+        <div class="st-num"><div class="v">—</div><div class="l">受控标签</div></div>
+        <div class="st-num"><div class="v">—</div><div class="l">Q1 权威期刊</div></div>
+        <div class="st-num"><div class="v">—</div><div class="l">总被引次数</div></div>
+      </div>
+    </section>
+
     <!-- KPI 数据一览 -->
-    <section class="section" style="padding-top:8px">
+    <section class="section" style="padding-top:40px">
       <div class="kpi-row" id="kpi-row">
         <div class="kpi"><div class="kpi-label">收录文献</div><div class="kpi-value">—</div><div class="kpi-delta">文章 + 综述</div></div>
         <div class="kpi"><div class="kpi-label">WoS/JCR Q1 权威期刊占比</div><div class="kpi-value">—</div><div class="kpi-delta">核心期刊收录</div></div>
         <div class="kpi"><div class="kpi-label">最高单篇被引</div><div class="kpi-value">—</div><div class="kpi-delta">Web of Science 同源引用数据</div></div>
         <div class="kpi"><div class="kpi-label">覆盖年份</div><div class="kpi-value">—</div><div class="kpi-delta">含 1997 年起的经典文献</div></div>
       </div>
+    </section>
+
+    <!-- 最新文献 -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="kicker">Latest</span>最新文献</h2>
+        <a class="section-note" href="papers.html">全部文献 →</a>
+      </div>
+      <div id="latest-list">
+        <div class="empty-state">加载中…</div>
+      </div>
+    </section>
+
+    <!-- 热门主题标签云 -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="kicker">Topics</span>热门主题标签</h2>
+        <span class="section-note">点击标签直达文献库筛选</span>
+      </div>
+      <div class="tag-cloud" id="tag-cloud"></div>
     </section>
 
     <!-- 精选文献 -->
@@ -90,20 +122,100 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=4"></script>
+  <script src="assets/js/site.js?v=5"></script>
   <script>
+    // 论文卡片构建（精选/最新共用；标题等来自 API 的不可信数据一律用 textContent）
+    function buildPaperCard(p) {
+      const el = document.createElement("article");
+      el.className = "paper-card";
+
+      const title = document.createElement("h3");
+      title.className = "paper-title";
+      const a = document.createElement("a");
+      a.href = p.url || "#";
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = p.zh_title || p.title;
+      title.appendChild(a);
+      el.appendChild(title);
+      if (p.zh_title) {
+        const en = document.createElement("div");
+        en.textContent = p.title;
+        en.style.cssText = "font-size:12.5px;color:var(--muted);margin-top:3px";
+        en.title = "英文原标题";
+        el.appendChild(en);
+      }
+
+      const meta = document.createElement("div");
+      meta.className = "paper-meta";
+      const span = (txt) => {
+        const s = document.createElement("span");
+        s.textContent = txt;
+        meta.appendChild(s);
+      };
+      span(`${p.journal} · ${p.year}`);
+      span(`被引 ${fmtInt(p.cited_by_count)}`);
+      span(shortAuthors(p.authors));
+      if (p.core_journal) {
+        const b = document.createElement("span");
+        b.className = "badge badge-q1";
+        b.textContent = "Q1 权威期刊";
+        meta.appendChild(b);
+      }
+      if (p.type === "review") {
+        const b = document.createElement("span");
+        b.className = "badge badge-review";
+        b.textContent = "综述";
+        meta.appendChild(b);
+      }
+      if (p.oa) {
+        const b = document.createElement("span");
+        b.className = "badge badge-oa";
+        b.textContent = "开放获取";
+        meta.appendChild(b);
+      }
+      if (p.classic) {
+        const b = document.createElement("span");
+        b.className = "badge badge-classic";
+        b.textContent = "★ 经典";
+        meta.appendChild(b);
+      }
+      el.appendChild(meta);
+
+      const tags = (p.tags || []).slice(0, 5);
+      if (tags.length) {
+        const tw = document.createElement("div");
+        tw.className = "paper-tags";
+        tags.forEach((t) => {
+          const tg = document.createElement("span");
+          tg.className = "tag";
+          tg.textContent = t;
+          tw.appendChild(tg);
+        });
+        el.appendChild(tw);
+      }
+      return el;
+    }
+
     (async () => {
       try {
-        const [stats, featured, classics] = await Promise.all([
-          loadJSON("stats"), loadJSON("featured"), loadJSON("classics"),
+        const [stats, featured, classics, latest] = await Promise.all([
+          loadJSON("stats"), loadJSON("featured"), loadJSON("classics"), loadJSON("latest"),
         ]);
 
         // 更新时间
         document.getElementById("updated-at").textContent =
           `数据更新于 ${fmtDate(stats.last_updated)} · 每周一自动同步最新文献`;
 
-        // KPI（数字滚动动画，尊重 prefers-reduced-motion）
+        // 大字标语带核心数字
         const t = stats.totals;
+        const stNums = document.querySelectorAll("#st-nums .v");
+        stNums[0].textContent = fmtInt(t.papers);
+        stNums[1].textContent = fmtInt(stats.tags.length);
+        stNums[2].textContent = `${t.core_journals_n}+`;
+        stNums[3].textContent = fmtInt(t.cited_total);
+
+        // KPI（数字滚动动画，尊重 prefers-reduced-motion）
         const kpis = document.querySelectorAll("#kpi-row .kpi-value");
         const animateNum = (el, end, fmt, dur = 900) => {
           if (REDUCED_MOTION) { el.textContent = fmt(end); return; }
@@ -121,79 +233,40 @@
         animateNum(kpis[2], t.cited_max, fmtInt);
         kpis[3].textContent = `${t.year_min}–${t.year_max}`;
 
-        // 精选文献卡片（标题/作者等来自 API 的不可信数据一律用 textContent）
+        // 最新文献
+        const llist = document.getElementById("latest-list");
+        llist.innerHTML = "";
+        latest.forEach((p, i) => {
+          const el = buildPaperCard(p);
+          el.style.animationDelay = `${Math.min(i, 6) * 55}ms`;
+          llist.appendChild(el);
+        });
+
+        // 热门主题标签云（字号按论文数分档，颜色按类别，点击跳文献库筛选）
+        const TAG_SLOT = { material: 0, strategy: 1, application: 2, metric: 4 };
+        const tc = document.getElementById("tag-cloud");
+        tc.innerHTML = "";
+        const theme = chartTheme();
+        [...stats.tags].sort((a, b) => b.count - a.count).forEach((tg) => {
+          const a = document.createElement("a");
+          a.href = `papers.html?tag=${encodeURIComponent(tg.name)}`;
+          const size = tg.count >= 400 ? 21 : tg.count >= 200 ? 17.5 : tg.count >= 100 ? 14.5 : 12.5;
+          a.style.fontSize = `${size}px`;
+          a.title = `${tg.name} · ${fmtInt(tg.count)} 篇`;
+          const dot = document.createElement("span");
+          dot.className = "tc-dot";
+          dot.style.setProperty("--tc-color", theme.series[TAG_SLOT[tg.category] || 0]);
+          a.appendChild(dot);
+          a.appendChild(document.createTextNode(tg.name));
+          tc.appendChild(a);
+        });
+
+        // 精选文献卡片
         const list = document.getElementById("featured-list");
         list.innerHTML = "";
         featured.forEach((p, i) => {
-          const el = document.createElement("article");
-          el.className = "paper-card";
+          const el = buildPaperCard(p);
           el.style.animationDelay = `${Math.min(i, 6) * 55}ms`;
-
-          const title = document.createElement("h3");
-          title.className = "paper-title";
-          const a = document.createElement("a");
-          a.href = p.url || "#";
-          a.target = "_blank";
-          a.rel = "noopener";
-          a.textContent = p.zh_title || p.title;
-          title.appendChild(a);
-          el.appendChild(title);
-          if (p.zh_title) {
-            const en = document.createElement("div");
-            en.textContent = p.title;
-            en.style.cssText = "font-size:12.5px;color:var(--muted);margin-top:3px";
-            en.title = "英文原标题";
-            el.appendChild(en);
-          }
-
-          const meta = document.createElement("div");
-          meta.className = "paper-meta";
-          const span = (txt) => {
-            const s = document.createElement("span");
-            s.textContent = txt;
-            meta.appendChild(s);
-          };
-          span(`${p.journal} · ${p.year}`);
-          span(`被引 ${fmtInt(p.cited_by_count)}`);
-          span(shortAuthors(p.authors));
-          if (p.core_journal) {
-            const b = document.createElement("span");
-            b.className = "badge badge-q1";
-            b.textContent = "Q1 权威期刊";
-            meta.appendChild(b);
-          }
-          if (p.type === "review") {
-            const b = document.createElement("span");
-            b.className = "badge badge-review";
-            b.textContent = "综述";
-            meta.appendChild(b);
-          }
-          if (p.oa) {
-            const b = document.createElement("span");
-            b.className = "badge badge-oa";
-            b.textContent = "开放获取";
-            meta.appendChild(b);
-          }
-          if (p.classic) {
-            const b = document.createElement("span");
-            b.className = "badge badge-classic";
-            b.textContent = "★ 经典";
-            meta.appendChild(b);
-          }
-          el.appendChild(meta);
-
-          const tags = (p.tags || []).slice(0, 5);
-          if (tags.length) {
-            const tw = document.createElement("div");
-            tw.className = "paper-tags";
-            tags.forEach((t) => {
-              const tg = document.createElement("span");
-              tg.className = "tag";
-              tg.textContent = t;
-              tw.appendChild(tg);
-            });
-            el.appendChild(tw);
-          }
           list.appendChild(el);
         });
 
@@ -263,7 +336,9 @@
       const ctx = canvas.getContext("2d");
       const hero = canvas.parentElement;
       const t0 = chartTheme();
-      const COLORS = [t0.series[0], t0.series[2], t0.series[5], t0.series[6]];
+      // 灰 + 青铜 + 鼠尾草绿 + 低饱和蓝（produx 克制配色）
+      const COLORS = [readToken("--accent"), readToken("--accent-fill"),
+        readToken("--muted"), t0.series[0]];
       const DPR = Math.min(2, window.devicePixelRatio || 1);
       const LINK_DIST = 130;
       let nodes = [], W = 0, H = 0, raf = 0, running = true;
@@ -297,8 +372,8 @@
             const dx = a.x - b.x, dy = a.y - b.y;
             const d2 = dx * dx + dy * dy;
             if (d2 > 0 && d2 < LINK_DIST * LINK_DIST) {
-              const alpha = (1 - Math.sqrt(d2) / LINK_DIST) * 0.26;
-              ctx.strokeStyle = `rgba(140,160,190,${alpha.toFixed(3)})`;
+              const alpha = (1 - Math.sqrt(d2) / LINK_DIST) * 0.2;
+              ctx.strokeStyle = `rgba(140,150,140,${alpha.toFixed(3)})`;
               ctx.beginPath();
               ctx.moveTo(a.x, a.y);
               ctx.lineTo(b.x, b.y);
@@ -335,8 +410,10 @@
       window.addEventListener("resize", () => { resize(); start(); });
       window.addEventListener("themechange", () => {
         const t2 = chartTheme();
-        COLORS[0] = t2.series[0]; COLORS[1] = t2.series[2];
-        COLORS[2] = t2.series[5]; COLORS[3] = t2.series[6];
+        COLORS[0] = readToken("--accent");
+        COLORS[1] = readToken("--accent-fill");
+        COLORS[2] = readToken("--muted");
+        COLORS[3] = t2.series[0];
         nodes.forEach((nd, i) => { nd.c = COLORS[i % COLORS.length]; });
         draw();
       });

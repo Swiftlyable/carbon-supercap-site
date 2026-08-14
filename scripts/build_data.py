@@ -181,6 +181,22 @@ def build_featured(papers):
     return out
 
 
+def build_latest(papers):
+    """首页「最新文献」板块：按发表日期倒序取前 6 篇"""
+    picked = sorted(papers,
+                    key=lambda p: (p.get("date") or "", p.get("year") or 0),
+                    reverse=True)[:6]
+    out = []
+    for p in picked:
+        entry = {k: p[k] for k in ("id", "doi", "title", "journal", "year",
+                                   "cited_by_count", "authors", "type", "tags",
+                                   "core_journal", "url")}
+        entry["zh_title"] = p.get("zh_title") or ""
+        entry["classic"] = bool(p.get("classic"))
+        out.append(entry)
+    return out
+
+
 # ---------------------------------------------------------------------------
 # 知识脉络叶子节点 → 代表论文匹配规则
 # 每个叶子节点给出「受控词表标签 + 英文正则（检索标题+摘要）」，
@@ -307,6 +323,10 @@ def main():
     with open(os.path.join(DATA_DIR, "featured.json"), "w", encoding="utf-8") as f:
         json.dump(featured, f, ensure_ascii=False, indent=1)
 
+    latest = build_latest(papers)
+    with open(os.path.join(DATA_DIR, "latest.json"), "w", encoding="utf-8") as f:
+        json.dump(latest, f, ensure_ascii=False, indent=1)
+
     mindmap = build_mindmap_papers(papers)
     with open(os.path.join(DATA_DIR, "mindmap_papers.json"), "w", encoding="utf-8") as f:
         json.dump({"last_updated": stats["last_updated"], "papers": mindmap},
@@ -316,6 +336,7 @@ def main():
     print(f"graph.json:  {len(graph['nodes'])} 节点 ({graph['paper_nodes']} 论文 + {graph['tag_nodes']} 标签), "
           f"{len(graph['links'])} 条边")
     print(f"featured.json: {len(featured)} 篇精选")
+    print(f"latest.json: {len(latest)} 篇最新")
     n_papers = sum(len(v) for v in mindmap.values())
     print(f"mindmap_papers.json: {len(mindmap)} 个叶子节点, 共 {n_papers} 篇代表论文")
     print("完成")

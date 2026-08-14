@@ -211,6 +211,32 @@ function initCardTilt() {
   });
 }
 
+/* ---------- Hero 逐词上浮入场（produx 同款遮罩滑出） ---------- */
+function initSplitReveal() {
+  if (REDUCED_MOTION) return;
+  const h1 = document.querySelector(".hero h1");
+  if (!h1) return;
+  let inAccent = false, n = 0;
+  const out = [];
+  const pushWord = (word) => {
+    const cls = inAccent ? "wi accent" : "wi";
+    out.push(`<span class="w"><span class="${cls}" style="animation-delay:${n * 70}ms">${word}</span></span>`);
+    n += 1;
+  };
+  // 按标签切分：<br> 保留；span.accent 内文字带上 accent 类；其余文本按空格分词
+  h1.innerHTML.split(/(<[^>]+>)/).forEach((part) => {
+    if (!part) return;
+    if (part.startsWith("<")) {
+      if (/^<br\s*\/?>/i.test(part)) out.push("<br>");
+      else if (/class="[^"]*\baccent\b/i.test(part)) inAccent = true;
+      else if (/^<\//.test(part)) inAccent = false;
+      return;
+    }
+    part.split(/\s+/).forEach((w) => { if (w) { pushWord(w); out.push(" "); } });
+  });
+  h1.innerHTML = out.join(" ");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderChrome();
   initTheme();
@@ -218,4 +244,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initEntrance();
   initFluidBackground();
   initCardTilt();
+  initSplitReveal();
 });
