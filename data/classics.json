@@ -2,6 +2,7 @@
  {
   "id": "W2015338034",
   "title": "High power electrochemical capacitors based on carbon nanotube electrodes",
+  "zh_title": "",
   "journal": "Applied Physics Letters",
   "year": 1997,
   "doi": "10.1063/1.118568",
@@ -14,6 +15,7 @@
  {
   "id": "W2163585067",
   "title": "Shape-engineerable and highly densely packed single-walled carbon nanotubes and their application as super-capacitor electrodes",
+  "zh_title": "",
   "journal": "Nature Materials",
   "year": 2006,
   "doi": "10.1038/nmat1782",
@@ -26,6 +28,7 @@
  {
   "id": "cr:10.1002/adma.200501905",
   "title": "A High‐Performance Carbon for Supercapacitors Obtained by Carbonization of a Seaweed Biopolymer",
+  "zh_title": "",
   "journal": "Advanced Materials",
   "year": 2006,
   "doi": "10.1002/adma.200501905",
@@ -38,6 +41,7 @@
  {
   "id": "W2053328406",
   "title": "Materials for electrochemical capacitors",
+  "zh_title": "",
   "journal": "Nature Materials",
   "year": 2008,
   "doi": "10.1038/nmat2297",
@@ -50,6 +54,7 @@
  {
   "id": "W2150673614",
   "title": "Carbon-based materials as supercapacitor electrodes",
+  "zh_title": "",
   "journal": "Chemical Society Reviews",
   "year": 2009,
   "doi": "10.1039/b813846j",
@@ -62,6 +67,7 @@
  {
   "id": "W2009074647",
   "title": "Printable Thin Film Supercapacitors Using Single-Walled Carbon Nanotubes",
+  "zh_title": "",
   "journal": "Nano Letters",
   "year": 2009,
   "doi": "10.1021/nl8038579",
@@ -74,11 +80,12 @@
  {
   "id": "W2029066016",
   "title": "Self-Assembled Graphene Hydrogel <i>via</i> a One-Step Hydrothermal Process",
+  "zh_title": "",
   "journal": "ACS Nano",
   "year": 2010,
   "doi": "10.1021/nn101187z",
   "url": "https://doi.org/10.1021/nn101187z",
-  "cited_by_count": 3237,
+  "cited_by_count": 3238,
   "first_author": "Yuxi Xu",
   "note": "水热自组装一步制备石墨烯 3D 水凝胶，开创了自组装策略构建三维石墨烯网络的主流路线。",
   "core_journal": true
@@ -86,6 +93,7 @@
  {
   "id": "W2003408860",
   "title": "Graphene-Based Supercapacitor with an Ultrahigh Energy Density",
+  "zh_title": "",
   "journal": "Nano Letters",
   "year": 2010,
   "doi": "10.1021/nl102661q",
@@ -98,6 +106,7 @@
  {
   "id": "cr:10.1038/nnano.2010.162",
   "title": "Ultrahigh-power micrometre-sized supercapacitors based on onion-like carbon",
+  "zh_title": "",
   "journal": "Nature Nanotechnology",
   "year": 2010,
   "doi": "10.1038/nnano.2010.162",
@@ -110,6 +119,7 @@
  {
   "id": "W2026346936",
   "title": "Graphene Double-Layer Capacitor with ac Line-Filtering Performance",
+  "zh_title": "",
   "journal": "Science",
   "year": 2010,
   "doi": "10.1126/science.1194372",
@@ -122,6 +132,7 @@
  {
   "id": "W2052319966",
   "title": "Carbon-Based Supercapacitors Produced by Activation of Graphene",
+  "zh_title": "",
   "journal": "Science",
   "year": 2011,
   "doi": "10.1126/science.1200770",
@@ -134,6 +145,7 @@
  {
   "id": "W2141101385",
   "title": "Three-dimensional flexible and conductive interconnected graphene networks grown by chemical vapour deposition",
+  "zh_title": "",
   "journal": "Nature Materials",
   "year": 2011,
   "doi": "10.1038/nmat3001",
@@ -146,6 +158,7 @@
  {
   "id": "W2000320449",
   "title": "True Performance Metrics in Electrochemical Energy Storage",
+  "zh_title": "",
   "journal": "Science",
   "year": 2011,
   "doi": "10.1126/science.1213003",
@@ -158,6 +171,7 @@
  {
   "id": "cr:10.1126/science.1216744",
   "title": "Laser Scribing of High-Performance and Flexible Graphene-Based Electrochemical Capacitors",
+  "zh_title": "",
   "journal": "Science",
   "year": 2012,
   "doi": "10.1126/science.1216744",
@@ -170,6 +184,7 @@
  {
   "id": "W2278346516",
   "title": "Freestanding Three-Dimensional Graphene/MnO<sub>2</sub> Composite Networks As Ultralight and Flexible Supercapacitor Electrodes",
+  "zh_title": "",
   "journal": "ACS Nano",
   "year": 2012,
   "doi": "10.1021/nn304833s",
@@ -182,6 +197,7 @@
  {
   "id": "W1991084225",
   "title": "Biomimetic superelastic graphene-based cellular monoliths",
+  "zh_title": "",
   "journal": "Nature Communications",
   "year": 2012,
   "doi": "10.1038/ncomms2251",
@@ -194,6 +210,7 @@
  {
   "id": "W2004512852",
   "title": "Highly Compression‐Tolerant Supercapacitor Based on Polypyrrole‐mediated Graphene Foam Electrodes",
+  "zh_title": "",
   "journal": "Advanced Materials",
   "year": 2012,
   "doi": "10.1002/adma.201203578",
@@ -206,6 +223,7 @@
  {
   "id": "cr:10.1021/nl3034976",
   "title": "3-Dimensional Graphene Carbon Nanotube Carpet-Based Microsupercapacitors with High Electrochemical Performance",
+  "zh_title": "",
   "journal": "Nano Letters",
   "year": 2012,
   "doi": "10.1021/nl3034976",
@@ -218,11 +236,12 @@
  {
   "id": "W2020017918",
   "title": "Liquid-Mediated Dense Integration of Graphene Materials for Compact Capacitive Energy Storage",
+  "zh_title": "",
   "journal": "Science",
   "year": 2013,
   "doi": "10.1126/science.1239089",
   "url": "https://doi.org/10.1126/science.1239089",
-  "cited_by_count": 1830,
+  "cited_by_count": 1832,
   "first_author": "Xiaowei Yang",
   "note": "液相致密化集成石墨烯：兼顾密度与导电网络的高体积性能电极，回应了 3D 多孔网络振实密度低的工程矛盾。",
   "core_journal": true
@@ -230,6 +249,7 @@
  {
   "id": "W2148634271",
   "title": "Ultralight and Highly Compressible Graphene Aerogels",
+  "zh_title": "",
   "journal": "Advanced Materials",
   "year": 2013,
   "doi": "10.1002/adma.201204530",
@@ -242,11 +262,12 @@
  {
   "id": "W2326865086",
   "title": "Flexible Solid-State Supercapacitors Based on Three-Dimensional Graphene Hydrogel Films",
+  "zh_title": "",
   "journal": "ACS Nano",
   "year": 2013,
   "doi": "10.1021/nn4000836",
   "url": "https://doi.org/10.1021/nn4000836",
-  "cited_by_count": 1116,
+  "cited_by_count": 1117,
   "first_author": "Yuxi Xu",
   "note": "3D 石墨烯水凝胶膜固态柔性器件：自支撑网络走向全固态柔性应用的关键一步。",
   "core_journal": true
@@ -254,6 +275,7 @@
  {
   "id": "W1978126078",
   "title": "Carbons and Electrolytes for Advanced Supercapacitors",
+  "zh_title": "",
   "journal": "Advanced Materials",
   "year": 2014,
   "doi": "10.1002/adma.201304137",
@@ -266,6 +288,7 @@
  {
   "id": "W2152754138",
   "title": "Supercapacitor electrode materials: nanostructures from 0 to 3 dimensions",
+  "zh_title": "",
   "journal": "Energy & Environmental Science",
   "year": 2014,
   "doi": "10.1039/c4ee03229b",
@@ -278,6 +301,7 @@
  {
   "id": "cr:10.1002/smll.201303202",
   "title": "Graphene and Graphene‐Based Materials for Energy Storage Applications",
+  "zh_title": "",
   "journal": "Small",
   "year": 2014,
   "doi": "10.1002/smll.201303202",
@@ -290,11 +314,12 @@
  {
   "id": "W2531080479",
   "title": "Conductive MOF electrodes for stable supercapacitors with high areal capacitance",
+  "zh_title": "",
   "journal": "Nature Materials",
   "year": 2016,
   "doi": "10.1038/nmat4766",
   "url": "https://doi.org/10.1038/nmat4766",
-  "cited_by_count": 2382,
+  "cited_by_count": 2385,
   "first_author": "Dennis Sheberla",
   "note": "导电 MOF 电极：本征导电骨架实现高面电容的范例，为三维导电网络设计提供了碳之外的思路参照。",
   "core_journal": true

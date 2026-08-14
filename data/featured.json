@@ -5,7 +5,7 @@
   "title": "Electrode materials for supercapacitors: A comprehensive review of advancements and performance",
   "journal": "Journal of Energy Storage",
   "year": 2024,
-  "cited_by_count": 385,
+  "cited_by_count": 386,
   "authors": [
    "Reenu Reenu",
    "Sonia Sonia",
@@ -17,7 +17,7 @@
   "tags": [],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.est.2024.110698",
-  "zh_title": "",
+  "zh_title": "超级电容器电极材料：进展和性能的全面回顾",
   "classic": false
  },
  {
@@ -26,7 +26,7 @@
   "title": "Supercapacitors: Overcoming current limitations and charting the course for next-generation energy storage",
   "journal": "Journal of Industrial and Engineering Chemistry",
   "year": 2024,
-  "cited_by_count": 275,
+  "cited_by_count": 277,
   "authors": [
    "Humaira Rashid Khan",
    "Abdul Latif Ahmad"
@@ -35,7 +35,7 @@
   "tags": [],
   "core_journal": false,
   "url": "https://doi.org/10.1016/j.jiec.2024.07.014",
-  "zh_title": "",
+  "zh_title": "超级电容器：克服当前限制并为下一代储能指明方向",
   "classic": false
  },
  {
@@ -44,7 +44,7 @@
   "title": "Multifunctional Superelastic, Superhydrophilic, and Ultralight Nanocellulose‐Based Composite Carbon Aerogels for Compressive Supercapacitor and Strain Sensor",
   "journal": "Advanced Functional Materials",
   "year": 2022,
-  "cited_by_count": 570,
+  "cited_by_count": 571,
   "authors": [
    "Huayu Liu",
    "Ting Xu",
@@ -63,7 +63,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1002/adfm.202113082",
-  "zh_title": "",
+  "zh_title": "用于压缩超级电容器和应变传感器的多功能超弹性、超亲水和超轻纳米纤维素基复合碳气凝胶",
   "classic": false
  },
  {
@@ -88,7 +88,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.esci.2024.100249",
-  "zh_title": "",
+  "zh_title": "用于先进电化学储能系统的多功能碳基生物质材料",
   "classic": false
  },
  {
@@ -97,7 +97,7 @@
   "title": "Shaping the future of energy: The rise of supercapacitors progress in the last five years",
   "journal": "Journal of Energy Storage",
   "year": 2024,
-  "cited_by_count": 207,
+  "cited_by_count": 208,
   "authors": [
    "Yedluri Anil Kumar",
    "Nipa Roy",
@@ -110,7 +110,7 @@
   "tags": [],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.est.2024.113040",
-  "zh_title": "",
+  "zh_title": "塑造能源的未来：过去五年超级电容器的崛起和进展",
   "classic": false
  },
  {
@@ -135,7 +135,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1007/s42114-023-00675-8",
-  "zh_title": "",
+  "zh_title": "用于高性能柔性超级电容器的超轻MXene/碳纳米管复合气凝胶",
   "classic": false
  },
  {
@@ -157,7 +157,7 @@
   "tags": [],
   "core_journal": false,
   "url": "https://doi.org/10.1016/j.ccr.2025.216497",
-  "zh_title": "",
+  "zh_title": "增强超级电容器中 NiAl LDH 电极电化学性能的先进策略",
   "classic": false
  },
  {
@@ -181,7 +181,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1016/j.cej.2024.153311",
-  "zh_title": "",
+  "zh_title": "生物质碳在超级电容器领域的应用：进展与展望",
   "classic": false
  },
  {
@@ -190,7 +190,7 @@
   "title": "Recent Advances in Laser‐Induced Graphene: Mechanism, Fabrication, Properties, and Applications in Flexible Electronics",
   "journal": "Advanced Functional Materials",
   "year": 2022,
-  "cited_by_count": 423,
+  "cited_by_count": 424,
   "authors": [
    "Truong‐Son Dinh Le",
    "Hoang‐Phuong Phan",
@@ -207,7 +207,7 @@
   ],
   "core_journal": true,
   "url": "https://doi.org/10.1002/adfm.202205158",
-  "zh_title": "",
+  "zh_title": "激光诱导石墨烯的最新进展：机理、制造、性能及其在柔性电子产品中的应用",
   "classic": false
  }
 ]

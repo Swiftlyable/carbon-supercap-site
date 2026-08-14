@@ -1,19 +1,19 @@
 {
- "last_updated": "2026-08-13T23:42:39+08:00",
+ "last_updated": "2026-08-14T01:32:32+00:00",
  "totals": {
-  "papers": 1380,
+  "papers": 1385,
   "reviews": 84,
-  "oa": 292,
+  "oa": 293,
   "core_journal": 893,
-  "tagged": 1232,
+  "tagged": 1237,
   "classics": 25,
-  "cited_total": 297960,
+  "cited_total": 298215,
   "cited_max": 16239,
-  "cited_avg": 281.9,
+  "cited_avg": 281.3,
   "year_min": 1997,
   "year_max": 2026,
-  "n_authors": 5719,
-  "n_institutions": 1136,
+  "n_authors": 5743,
+  "n_institutions": 1141,
   "core_journals_n": 70
  },
  "by_year": [
@@ -63,7 +63,7 @@
   },
   {
    "year": 2017,
-   "count": 99
+   "count": 100
   },
   {
    "year": 2018,
@@ -99,7 +99,7 @@
   },
   {
    "year": 2026,
-   "count": 363
+   "count": 367
   }
  ],
  "by_year_type": [
@@ -160,7 +160,7 @@
   },
   {
    "year": 2017,
-   "article": 98,
+   "article": 99,
    "review": 1
   },
   {
@@ -205,7 +205,7 @@
   },
   {
    "year": 2026,
-   "article": 337,
+   "article": 341,
    "review": 26
   }
  ],
@@ -276,12 +276,12 @@
    "core": true
   },
   {
-   "name": "Scientific Reports",
-   "count": 26,
+   "name": "Diamond and Related Materials",
+   "count": 27,
    "core": false
   },
   {
-   "name": "Diamond and Related Materials",
+   "name": "Scientific Reports",
    "count": 26,
    "core": false
   }
@@ -289,15 +289,15 @@
  "concepts": [
   {
    "name": "Materials science",
-   "count": 1284
+   "count": 1288
   },
   {
    "name": "Supercapacitor",
-   "count": 1217
+   "count": 1222
   },
   {
    "name": "Capacitance",
-   "count": 494
+   "count": 495
   },
   {
    "name": "Electrode",
@@ -309,27 +309,27 @@
   },
   {
    "name": "Nanotechnology",
-   "count": 360
+   "count": 361
   },
   {
    "name": "Carbon fibers",
-   "count": 237
+   "count": 240
   },
   {
    "name": "Chemical engineering",
-   "count": 190
+   "count": 192
   },
   {
    "name": "Energy storage",
-   "count": 175
+   "count": 176
   },
   {
    "name": "Electrolyte",
-   "count": 168
+   "count": 169
   },
   {
    "name": "Electrochemistry",
-   "count": 146
+   "count": 148
   },
   {
    "name": "Carbon nanotube",
@@ -341,11 +341,11 @@
   },
   {
    "name": "Porosity",
-   "count": 95
+   "count": 96
   },
   {
    "name": "Carbonization",
-   "count": 72
+   "count": 73
   },
   {
    "name": "Aerogel",
@@ -477,27 +477,27 @@
   {
    "name": "柔性器件",
    "category": "application",
-   "count": 349
+   "count": 350
   },
   {
    "name": "能量密度",
    "category": "metric",
-   "count": 310
+   "count": 312
   },
   {
    "name": "比电容",
    "category": "metric",
-   "count": 301
+   "count": 302
   },
   {
    "name": "多孔碳",
    "category": "material",
-   "count": 281
+   "count": 284
   },
   {
    "name": "循环稳定性",
    "category": "metric",
-   "count": 249
+   "count": 250
   },
   {
    "name": "非对称器件",
@@ -507,12 +507,12 @@
   {
    "name": "碳纤维/织物",
    "category": "material",
-   "count": 204
+   "count": 205
   },
   {
    "name": "功率密度",
    "category": "metric",
-   "count": 195
+   "count": 196
   },
   {
    "name": "碳纳米管 CNT",
@@ -527,7 +527,7 @@
   {
    "name": "杂原子掺杂",
    "category": "strategy",
-   "count": 147
+   "count": 149
   },
   {
    "name": "氧化石墨烯 GO/rGO",
@@ -542,7 +542,7 @@
   {
    "name": "活性炭 AC",
    "category": "material",
-   "count": 112
+   "count": 114
   },
   {
    "name": "碳化",
@@ -550,19 +550,19 @@
    "count": 107
   },
   {
+   "name": "可穿戴",
+   "category": "application",
+   "count": 98
+  },
+  {
    "name": "水热/溶剂热",
    "category": "strategy",
    "count": 97
   },
   {
-   "name": "可穿戴",
-   "category": "application",
-   "count": 97
-  },
-  {
    "name": "生物质碳",
    "category": "material",
-   "count": 81
+   "count": 82
   },
   {
    "name": "碳气凝胶",
@@ -715,8 +715,8 @@
    828.0,
    144.4,
    785.0,
-   82.1,
    1575.0,
+   82.1,
    503.0,
    381.2,
    270.0,
@@ -822,8 +822,8 @@
    213.7,
    180.0,
    120.0,
-   78.1,
    1618.0,
+   78.1,
    257.2,
    1050.0,
    982.0,
@@ -876,6 +876,8 @@
    192.0,
    1047.2,
    632.0,
+   600.0,
+   540.5,
    430.0,
    740.0,
    372.0,
@@ -1000,6 +1002,7 @@
    11.0,
    25.2,
    28.0,
+   160.0,
    14.6,
    29.1,
    60.0,
@@ -1118,6 +1121,7 @@
    250.0,
    745.0,
    382.0,
+   192.18,
    174.6,
    275.0,
    800.0,
@@ -1200,7 +1204,7 @@
    [
     0,
     11,
-    13
+    15
    ],
    [
     1,
@@ -1465,7 +1469,7 @@
    [
     5,
     11,
-    64
+    65
    ],
    [
     6,
@@ -1495,7 +1499,7 @@
    [
     6,
     11,
-    19
+    20
    ],
    [
     7,
