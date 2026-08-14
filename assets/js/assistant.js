@@ -15,10 +15,10 @@
 const AI_KEY = "scnet-ai-key";
 const AI_MODEL = "scnet-ai-model";
 const AI_API = "https://api.siliconflow.cn/v1/chat/completions";
-const AI_DEFAULT_MODEL = "Qwen/Qwen2.5-7B-Instruct";
+const AI_DEFAULT_MODEL = "THUDM/glm-4-9b-chat";
 const AI_MODELS = [
+  ["THUDM/glm-4-9b-chat", "智谱 GLM-4-9B（免费，推荐）"],
   ["Qwen/Qwen2.5-7B-Instruct", "通义千问 Qwen2.5-7B（免费）"],
-  ["THUDM/glm-4-9b-chat", "智谱 GLM-4-9B（免费）"],
   ["deepseek-ai/DeepSeek-V3", "DeepSeek-V3（付费）"],
 ];
 
@@ -334,6 +334,16 @@ function clearSettings() {
   }
 }
 
+// 检测模型输出陷入重复循环：压缩空白后，任意连续 40 字符窗口内仅出现 ≤2 种字符
+function looksDegenerate(s) {
+  const c = s.replace(/\s+/g, "");
+  if (c.length < 40) return false;
+  for (let i = 0; i + 40 <= c.length; i += 8) {
+    if (new Set(c.slice(i, i + 40)).size <= 2) return true;
+  }
+  return false;
+}
+
 let busy = false;
 
 async function send(query) {
@@ -362,10 +372,13 @@ async function send(query) {
   aiEl.appendChild(body);
 
   const model = localStorage.getItem(AI_MODEL) || AI_DEFAULT_MODEL;
+  let degenerate = false;
+  const ctrl = new AbortController();
   try {
     const resp = await fetch(AI_API, {
       method: "POST",
       cache: "no-store",
+      signal: ctrl.signal,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${key}`,
@@ -377,9 +390,9 @@ async function send(query) {
           { role: "user", content: buildPrompt(q, top).user },
         ],
         stream: true,
-        temperature: 0.3,
+        temperature: 0.6,
         max_tokens: 800,
-        // 重复惩罚（OpenAI 兼容标准参数）：防止小模型陷入重复输出循环
+        // 重复惩罚（OpenAI 兼容标准参数）：降低陷入重复输出循环的概率
         frequency_penalty: 0.6,
         presence_penalty: 0.3,
       }),
@@ -418,6 +431,11 @@ async function send(query) {
           chat().scrollTop = chat().scrollHeight;
         }
       }
+      // 输出陷入重复循环：立即中止，避免刷屏
+      if (looksDegenerate(text)) {
+        degenerate = true;
+        ctrl.abort();
+      }
     }
     think.textContent = "";
     if (!text) {
@@ -427,9 +445,11 @@ async function send(query) {
   } catch (e) {
     think.textContent = "";
     body.innerHTML = renderMarkdown(
-      e instanceof TypeError
-        ? "无法连接硅基流动接口（网络错误或浏览器跨域限制）。请确认网络正常后重试。"
-        : `⚠ 请求失败：${(e && e.message) || "未知错误"}`);
+      degenerate
+        ? "⚠ 模型输出出现异常重复，已自动停止。请重试一次，或点「⚙ 设置」把模型换成 智谱 GLM-4-9B（免费，更稳定）。"
+        : e instanceof TypeError
+          ? "无法连接硅基流动接口（网络错误或浏览器跨域限制）。请确认网络正常后重试。"
+          : `⚠ 请求失败：${(e && e.message) || "未知错误"}`);
   } finally {
     busy = false;
     setSendEnabled(true);
