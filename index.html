@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>碳网图谱 CarbonNet · 碳材料超级电容器三维导电网络</title>
   <meta name="description" content="碳材料超级电容器三维导电网络文献知识站：知识脉络、知识关系图、文献库与性能数据面板，数据自动更新，来源 OpenAlex / Web of Science 权威索引。">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%235F5136'/><circle cx='30' cy='38' r='10' fill='%23CDDBC0'/><circle cx='62' cy='58' r='10' fill='%23CDDBC0'/></svg>">
 </head>
 <body data-page="home">
@@ -122,7 +122,7 @@
   </main>
 
   <script src="assets/vendor/echarts.min.js"></script>
-  <script src="assets/js/site.js?v=6"></script>
+  <script src="assets/js/site.js?v=7"></script>
   <script>
     // 论文卡片构建（精选/最新共用；标题等来自 API 的不可信数据一律用 textContent）
     function buildPaperCard(p) {
@@ -207,31 +207,35 @@
         document.getElementById("updated-at").textContent =
           `数据更新于 ${fmtDate(stats.last_updated)} · 每周一自动同步最新文献`;
 
-        // 大字标语带核心数字
         const t = stats.totals;
-        const stNums = document.querySelectorAll("#st-nums .v");
-        stNums[0].textContent = fmtInt(t.papers);
-        stNums[1].textContent = fmtInt(stats.tags.length);
-        stNums[2].textContent = `${t.core_journals_n}+`;
-        stNums[3].textContent = fmtInt(t.cited_total);
 
-        // KPI（数字滚动动画，尊重 prefers-reduced-motion）
-        const kpis = document.querySelectorAll("#kpi-row .kpi-value");
-        const animateNum = (el, end, fmt, dur = 900) => {
+        // 数字滚动动画（KPI 与标语带共用，尊重 prefers-reduced-motion）
+        const animateNum = (el, end, fmt, dur = 900, delay = 0) => {
           if (REDUCED_MOTION) { el.textContent = fmt(end); return; }
           const t0 = performance.now();
           const ease = (x) => 1 - Math.pow(1 - x, 3);
           const step = (now) => {
-            const k = Math.min(1, (now - t0) / dur);
+            const k = Math.min(1, (now - t0 - delay) / dur);
+            if (k < 0) { requestAnimationFrame(step); return; }
             el.textContent = fmt(Math.round(end * ease(k)));
             if (k < 1) requestAnimationFrame(step);
           };
           requestAnimationFrame(step);
         };
+
+        // KPI
+        const kpis = document.querySelectorAll("#kpi-row .kpi-value");
         animateNum(kpis[0], t.papers, fmtInt);
         animateNum(kpis[1], Math.round((t.core_journal / t.papers) * 100), (n) => n + "%");
         animateNum(kpis[2], t.cited_max, fmtInt);
         kpis[3].textContent = `${t.year_min}–${t.year_max}`;
+
+        // 大字标语带核心数字（错峰滚动，动感更强）
+        const stNums = document.querySelectorAll("#st-nums .v");
+        animateNum(stNums[0], t.papers, fmtInt, 1000, 0);
+        animateNum(stNums[1], stats.tags.length, fmtInt, 1000, 120);
+        animateNum(stNums[2], t.core_journals_n, (n) => `${n}+`, 1000, 240);
+        animateNum(stNums[3], t.cited_total, fmtInt, 1100, 360);
 
         // 最新文献
         const llist = document.getElementById("latest-list");
@@ -247,9 +251,11 @@
         const tc = document.getElementById("tag-cloud");
         tc.innerHTML = "";
         const theme = chartTheme();
-        [...stats.tags].sort((a, b) => b.count - a.count).forEach((tg) => {
+        [...stats.tags].sort((a, b) => b.count - a.count).forEach((tg, i) => {
           const a = document.createElement("a");
           a.href = `papers.html?tag=${encodeURIComponent(tg.name)}`;
+          a.classList.add("fade-up");                          // 错峰弹入（播完自动退役）
+          a.style.animationDelay = `${Math.min(i, 12) * 35}ms`;
           const size = tg.count >= 400 ? 21 : tg.count >= 200 ? 17.5 : tg.count >= 100 ? 14.5 : 12.5;
           a.style.fontSize = `${size}px`;
           a.title = `${tg.name} · ${fmtInt(tg.count)} 篇`;

@@ -193,14 +193,19 @@ a:hover { text-decoration: underline; }
 /* 逐词上浮入场（site.js 注入 .w/.wi，produx 同款遮罩滑出） */
 .hero h1 .w {
   display: inline-block; overflow: hidden; vertical-align: top;
+  padding-top: 0.05em; margin-top: -0.05em;      /* 给弹性上冲留出裁剪余量 */
   padding-bottom: 0.06em; margin-bottom: -0.06em;
 }
 .hero h1 .wi {
   display: inline-block;
   transform: translateY(115%);
-  animation: word-up 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  animation: word-up 0.95s cubic-bezier(0.2, 0.9, 0.3, 1.12) forwards;
 }
-@keyframes word-up { to { transform: translateY(0); } }
+/* 上浮 + 景深模糊渐清，结尾轻微上冲（弹性落定） */
+@keyframes word-up {
+  from { transform: translateY(115%); filter: blur(5px); }
+  to   { transform: translateY(0); filter: blur(0); }
+}
 .hero-sub {
   margin-top: 20px; max-width: 720px;
   color: var(--ink-2); font-size: 16px;
@@ -245,9 +250,13 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--baseline); background: var(--surface-1);
   color: var(--ink); cursor: pointer;
   transition: background .15s ease, border-color .15s ease,
-    transform .15s ease, box-shadow .2s ease;
+    transform .25s cubic-bezier(.3,1.4,.5,1), box-shadow .2s ease;
 }
-.btn:hover { background: var(--surface-2); text-decoration: none; transform: translateY(-1px); border-color: var(--border-strong); }
+.btn:hover {
+  background: var(--surface-2); text-decoration: none;
+  transform: translateY(-2px) scale(1.02); border-color: var(--border-strong);
+  box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.4);
+}
 .btn:active { transform: translateY(0); }
 .btn-primary { background: var(--accent-fill); border-color: var(--accent-fill); color: #f2f2f2; }
 .btn-primary:hover {
@@ -346,7 +355,7 @@ a:hover { text-decoration: underline; }
   color: var(--ink-2); text-decoration: none; line-height: 1.4;
   transition: color .18s ease, transform .18s ease;
 }
-.tag-cloud a:hover { color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.tag-cloud a:hover { color: var(--accent); transform: translateY(-3px) scale(1.06); text-decoration: none; }
 .tag-cloud .tc-dot {
   width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
   background: var(--tc-color, var(--muted));
@@ -402,13 +411,13 @@ table.data-table {
   background: var(--surface-1);
   border: 1px solid var(--border);
   border-radius: 14px; padding: 18px 20px;
-  animation: fade-up .5s cubic-bezier(.22,.61,.36,1) both;
+  animation: pop-in .55s cubic-bezier(.17,1.25,.36,1) both;
   transition: transform .18s ease, border-color .18s ease, box-shadow .22s ease;
 }
 .paper-card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px -16px rgba(0, 0, 0, 0.55);
 }
 :root[data-theme="light"] .paper-card:hover {
   box-shadow: 0 10px 28px -16px rgba(11, 11, 11, 0.2);
@@ -434,13 +443,13 @@ table.data-table {
   border-left: 3px solid var(--accent-fill);
   border-radius: 14px; padding: 16px 18px;
   display: flex; flex-direction: column; gap: 8px;
-  animation: fade-up .5s cubic-bezier(.22,.61,.36,1) both;
+  animation: pop-in .55s cubic-bezier(.17,1.25,.36,1) both;
   transition: transform .18s ease, border-color .18s ease, box-shadow .22s ease;
 }
 .classic-card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px -16px rgba(0, 0, 0, 0.55);
 }
 :root[data-theme="light"] .classic-card:hover {
   box-shadow: 0 10px 28px -16px rgba(11, 11, 11, 0.2);
@@ -462,17 +471,23 @@ table.data-table {
 }
 
 /* ---------- 入场动效（site.js 按视口位置添加对应类） ---------- */
+/* 板块级：行程加大 + 弹簧缓动（结尾轻微上冲），有"弹出来"的动感 */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(28px) scale(0.99); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
-.fade-up { animation: fade-up .6s cubic-bezier(.22,.61,.36,1) both; }
-/* 首屏外元素：滚动进入时淡入 */
-.io-hide { opacity: 0; transform: translateY(16px); }
+.fade-up { animation: fade-up .7s cubic-bezier(.17,1.25,.36,1) both; }
+/* 卡片/行级元素：弹性回弹 + 景深模糊渐清 */
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(22px) scale(0.95); filter: blur(5px); }
+  to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+/* 首屏外元素：滚动进入时淡入（弹簧缓动） */
+.io-hide { opacity: 0; transform: translateY(28px) scale(0.985); }
 .io-in {
-  opacity: 1; transform: translateY(0);
+  opacity: 1; transform: translateY(0) scale(1);
   transition: opacity .55s cubic-bezier(.22,.61,.36,1),
-              transform .55s cubic-bezier(.22,.61,.36,1);
+              transform .7s cubic-bezier(.17,1.25,.36,1);
 }
 /* 品牌圆点呼吸光晕 */
 @keyframes brand-pulse {
@@ -529,7 +544,7 @@ table.data-table {
   backdrop-filter: blur(8px);
   border: 1px solid var(--border-strong); border-radius: 14px;
   padding: 16px; font-size: 13.5px; display: none;
-  animation: fade-up .28s cubic-bezier(.22,.61,.36,1) both;
+  animation: pop-in .4s cubic-bezier(.17,1.25,.36,1) both;
 }
 .node-detail-panel h4 { font-size: 15px; margin-bottom: 2px; }
 .node-detail-panel .en { color: var(--accent); font-family: var(--font-mono); font-size: 12px; margin-bottom: 8px; }
@@ -784,7 +799,7 @@ a.card::after, .paper-card::after, .classic-card::after {
   position: absolute; inset: -2px;
   background: linear-gradient(115deg,
     transparent 32%,
-    color-mix(in srgb, var(--accent) 8%, transparent) 50%,
+    color-mix(in srgb, var(--accent) 12%, transparent) 50%,
     transparent 68%);
   transform: translateX(-130%) skewX(-10deg);
   pointer-events: none;
@@ -805,7 +820,7 @@ a.card::before, .paper-card::before, .classic-card::before, .kpi::before {
   position: absolute; inset: 0;
   border-radius: inherit;
   background: radial-gradient(240px circle at var(--mx) var(--my),
-    color-mix(in srgb, var(--accent) 12%, transparent), transparent 65%);
+    color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -816,7 +831,7 @@ a.card:hover::before, .paper-card:hover::before,
 }
 a.card:hover, .paper-card:hover, .classic-card:hover, .kpi:hover {
   /* 保留抬升，叠加光标驱动的微倾斜；.18s 过渡形成流体跟随感 */
-  transform: perspective(720px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-3px);
+  transform: perspective(720px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-4px) scale(1.015);
 }
 /* 入场动画播完即永久退役（site.js 收到 animationend 后加 .entered）。
    不能在 :hover 时移除动画——移出时动画会从头重播，fill-mode:both 令卡片
