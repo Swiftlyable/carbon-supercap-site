@@ -4,7 +4,7 @@
    检索（RAG）：在浏览器本地对文献库（标题/摘要/标签）加权打分，
               取最相关 5 篇作为上下文 —— 文献数据不出你的浏览器。
    生成（LLM）：硅基流动 SiliconFlow（OpenAI 兼容接口），
-              默认免费模型 Qwen2.5-7B / GLM-4-9B。
+              默认免费模型 Qwen3-8B；输出退化时自动换模型/参数重试。
    安全（BYOK）：API Key 仅保存在浏览器 localStorage，
               提问时由浏览器直连 api.siliconflow.cn（HTTPS），
               不经任何中间服务器、不提交代码仓库；
@@ -348,19 +348,120 @@ function clearSettings() {
 }
 
 // 检测模型输出异常：
-// 1) 压缩空白后，任意连续 40 字符窗口内仅出现 ≤2 种字符（zzz / 等等等 循环）
-// 2) 字母沙拉：同一孤立字母以空格分隔重复 ≥3 次（如 "e e e e"）
+// 1) 字母沙拉：同一孤立字母以空格分隔重复 ≥3 次（如 "e e e e"）
+// 2) 短文本整体几乎无多样性（压缩空白后仅 ≤2 种字符，如 建议建议建议…）
+// 3) 压缩空白后，任意连续 40 字符窗口内仅出现 ≤2 种字符（zzz / 等等等 循环）
 function looksDegenerate(s) {
-  if (s.length < 30) return false;
+  if (s.length < 12) return false;
+  if (/(?:^|\s)([a-z])(?:\s+\1){2,}(?=\s|$)/i.test(s)) return true;
   const c = s.replace(/\s+/g, "");
+  if (c.length >= 12 && new Set(c).size <= 2) return true;
+  if (c.length < 40) return false;
   for (let i = 4; i + 40 <= c.length; i += 8) {
     if (new Set(c.slice(i, i + 40)).size <= 2) return true;
   }
-  if (/(?:^|\s)([a-z])(?:\s+\1){2,}(?=\s|$)/i.test(s)) return true;
   return false;
 }
 
 let busy = false;
+
+// 免费 Qwen 模型偶发输出退化（字母沙拉/重复循环），自动重试方案：
+// 第 1 次流式常规参数；失败则换另一个免费模型 + 非流式 + 低温再试一次；
+// 自定义/付费模型保持原模型，仅改用非流式 + 低温重试
+function retryPlan(model) {
+  const plan = [{ model, stream: true, temperature: 0.7 }];
+  if (model === "Qwen/Qwen3-8B") {
+    plan.push({ model: "Qwen/Qwen2.5-7B-Instruct", stream: false, temperature: 0.3 });
+  } else if (model === "Qwen/Qwen2.5-7B-Instruct") {
+    plan.push({ model: "Qwen/Qwen3-8B", stream: false, temperature: 0.3 });
+  } else {
+    plan.push({ model, stream: false, temperature: 0.3 });
+  }
+  return plan;
+}
+
+// 单次调用硅基流动接口（流式或非流式），输出经 onDelta 逐段回传；
+// 流式过程中发现输出退化会中止并返回已生成文本（由调用方判断是否重试）
+async function askOnce({ key, model, userPrompt, stream, temperature, onDelta }) {
+  const ctrl = new AbortController();
+  const resp = await fetch(AI_API, {
+    method: "POST",
+    cache: "no-store",
+    signal: ctrl.signal,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${key}`,
+    },
+    body: JSON.stringify({
+      model,
+      messages: [
+        { role: "system", content: AI_SYSTEM },
+        { role: "user", content: userPrompt },
+      ],
+      stream,
+      // 注意：不要给硅基流动免费 Qwen 传 penalty 参数——
+      // 免费档在 penalty 采样下会产出 "e e e" 字母沙拉（已知故障）
+      temperature,
+      max_tokens: 800,
+    }),
+  });
+  if (!resp.ok) {
+    let detail = `HTTP ${resp.status}`;
+    try {
+      const j = await resp.json();
+      detail = j.message || (j.error && j.error.message) || detail;
+    } catch { /* 保留默认 */ }
+    if (/disabled|not[\s-]?found|not exist|invalid model/i.test(detail)) {
+      throw new Error("该模型已被平台下线（Model disabled），请点「⚙ 设置」更换模型。");
+    }
+    if (resp.status === 401) throw new Error("API Key 无效或已过期，请点击「⚙ 设置」检查密钥。");
+    if (resp.status === 429) throw new Error("请求过于频繁，已触发硅基流动限速（免费额度），请稍等片刻再试。");
+    throw new Error(`接口返回错误（${detail}）`);
+  }
+
+  if (!stream) {
+    const j = await resp.json();
+    const text = (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || "";
+    onDelta(text);
+    return text;
+  }
+
+  const reader = resp.body.getReader();
+  const dec = new TextDecoder();
+  let buf = "", text = "";
+  for (;;) {
+    let chunk;
+    try {
+      chunk = await reader.read();
+    } catch {
+      break; // 检测到退化时主动 abort
+    }
+    const { done, value } = chunk;
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let idx;
+    while ((idx = buf.indexOf("\n")) >= 0) {
+      const line = buf.slice(0, idx).trim();
+      buf = buf.slice(idx + 1);
+      if (!line.startsWith("data:")) continue;
+      const data = line.slice(5).trim();
+      if (data === "[DONE]") continue;
+      let j;
+      try { j = JSON.parse(data); } catch { continue; }
+      const d = j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content;
+      if (d) {
+        text += d;
+        onDelta(text);
+      }
+    }
+    // 输出陷入重复循环：立即中止，由调用方换模型重试
+    if (looksDegenerate(text)) {
+      ctrl.abort();
+      break;
+    }
+  }
+  return text;
+}
 
 async function send(query) {
   const q = (query || "").trim();
@@ -387,93 +488,61 @@ async function send(query) {
   body.className = "ai-body";
   aiEl.appendChild(body);
 
+  // 免费模型输出退化时按 retryPlan 自动重试（换模型 / 降随机性 / 非流式）
   const model = currentModel();
-  let degenerate = false;
-  const ctrl = new AbortController();
-  try {
-    const resp = await fetch(AI_API, {
-      method: "POST",
-      cache: "no-store",
-      signal: ctrl.signal,
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
-      },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: "system", content: AI_SYSTEM },
-          { role: "user", content: buildPrompt(q, top).user },
-        ],
-        stream: true,
-        // 注意：不要给硅基流动免费 Qwen 传 penalty 参数——
-        // 免费档在 penalty 采样下会产出 "e e e" 字母沙拉（已知故障）
-        temperature: 0.7,
-        max_tokens: 800,
-      }),
-    });
-    if (!resp.ok) {
-      let detail = `HTTP ${resp.status}`;
-      try {
-        const j = await resp.json();
-        detail = j.message || (j.error && j.error.message) || detail;
-      } catch { /* 保留默认 */ }
-      if (/disabled|not[\s-]?found|not exist|invalid model/i.test(detail)) {
-        throw new Error("该模型已被平台下线（Model disabled），请点「⚙ 设置」更换模型。");
-      }
-      if (resp.status === 401) throw new Error("API Key 无效或已过期，请点击「⚙ 设置」检查密钥。");
-      if (resp.status === 429) throw new Error("请求过于频繁，已触发硅基流动限速（免费额度），请稍等片刻再试。");
-      throw new Error(`接口返回错误（${detail}）`);
+  const plan = retryPlan(model);
+  let text = "", degenerate = false, lastErr = null;
+
+  for (let i = 0; i < plan.length; i++) {
+    const cfg = plan[i];
+    if (i > 0) {
+      body.innerHTML = "";
+      think.textContent = cfg.model !== model
+        ? "检测到输出异常，已自动更换模型并重试…"
+        : "检测到输出异常，正在以更稳定参数重试…";
     }
-    think.textContent = "生成中…";
-    const reader = resp.body.getReader();
-    const dec = new TextDecoder();
-    let buf = "", text = "";
-    for (;;) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      buf += dec.decode(value, { stream: true });
-      let idx;
-      while ((idx = buf.indexOf("\n")) >= 0) {
-        const line = buf.slice(0, idx).trim();
-        buf = buf.slice(idx + 1);
-        if (!line.startsWith("data:")) continue;
-        const data = line.slice(5).trim();
-        if (data === "[DONE]") continue;
-        let j;
-        try { j = JSON.parse(data); } catch { continue; }
-        const d = j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content;
-        if (d) {
-          text += d;
-          body.innerHTML = renderMarkdown(text);
+    try {
+      text = await askOnce({
+        key,
+        model: cfg.model,
+        userPrompt: buildPrompt(q, top).user,
+        stream: cfg.stream,
+        temperature: cfg.temperature,
+        onDelta: (t) => {
+          body.innerHTML = renderMarkdown(t);
           chat().scrollTop = chat().scrollHeight;
-        }
-      }
-      // 输出陷入重复循环：立即中止，避免刷屏
-      if (looksDegenerate(text)) {
-        degenerate = true;
-        ctrl.abort();
-      }
+        },
+      });
+      if (looksDegenerate(text)) { degenerate = true; continue; }
+      degenerate = false;
+      break;
+    } catch (e) {
+      lastErr = e;
+      break;
     }
-    think.textContent = "";
-    if (!text) {
-      body.innerHTML = renderMarkdown(
-        "模型未返回内容。免费模型可能因并发过高临时不可用，请稍后重试，或在「⚙ 设置」中更换模型。");
-    }
-  } catch (e) {
-    think.textContent = "";
-    body.innerHTML = renderMarkdown(
-      degenerate
-        ? "⚠ 模型输出出现异常重复，已自动停止。请重试一次，或点「⚙ 设置」把模型换成 智谱 GLM-4-9B（免费，更稳定）。"
-        : e instanceof TypeError
-          ? "无法连接硅基流动接口（网络错误或浏览器跨域限制）。请确认网络正常后重试。"
-          : `⚠ 请求失败：${(e && e.message) || "未知错误"}`);
-  } finally {
-    busy = false;
-    setSendEnabled(true);
-    const inp = document.getElementById("ai-input");
-    if (inp) { inp.value = ""; inp.focus(); }
   }
+
+  think.textContent = "";
+  if (degenerate) {
+    body.innerHTML = renderMarkdown(
+      "⚠ 模型连续输出异常重复内容（已自动换模型重试过）。免费模型当前不稳定，建议：\n" +
+      "1. 稍后重试，或点「⚙ 设置」换另一个免费模型；\n" +
+      "2. 换付费模型（更稳定，用注册赠送的 14 元体验金即可）：⚙ 设置 → 模型选「自定义模型」，" +
+      "填 deepseek-ai/DeepSeek-V3.1-Terminus（一次提问约 0.01 元，14 元可用上千次）。");
+  } else if (lastErr) {
+    body.innerHTML = renderMarkdown(
+      lastErr instanceof TypeError
+        ? "无法连接硅基流动接口（网络错误或浏览器跨域限制）。请确认网络正常后重试。"
+        : `⚠ 请求失败：${(lastErr && lastErr.message) || "未知错误"}`);
+  } else if (!text) {
+    body.innerHTML = renderMarkdown(
+      "模型未返回内容。免费模型可能因并发过高临时不可用，请稍后重试，或在「⚙ 设置」中更换模型。");
+  }
+
+  busy = false;
+  setSendEnabled(true);
+  const inp = document.getElementById("ai-input");
+  if (inp) { inp.value = ""; inp.focus(); }
 }
 
 /* ---------- 初始化 ---------- */
