@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-08-14T01:32:32+00:00",
+ "last_updated": "2026-08-17T05:01:28+00:00",
  "papers": {
   "双电层电容 (EDLC)": [
    {
@@ -123,7 +123,7 @@
     "zh_title": "纳米结构碳电解质系统中的电容储能",
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1464,
+    "cited_by_count": 1465,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -155,7 +155,7 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -219,7 +219,7 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -231,7 +231,7 @@
     "zh_title": "MXene 粘合活性炭作为高性能超级电容器的柔性电极",
     "journal": "ACS Energy Letters",
     "year": 2018,
-    "cited_by_count": 533,
+    "cited_by_count": 534,
     "core_journal": true,
     "doi": "10.1021/acsenergylett.8b00718",
     "url": "https://doi.org/10.1021/acsenergylett.8b00718"
@@ -283,7 +283,7 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -376,10 +376,10 @@
    },
    {
     "title": "Hierarchical Porous Nitrogen-Doped Carbon Nanosheets Derived from Silk for Ultrahigh-Capacity Battery Anodes and Supercapacitors",
-    "zh_title": "用于超高容量电池阳极和超级电容器的丝衍生的分层多孔氮掺杂碳纳米片",
+    "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1530,
+    "cited_by_count": 1531,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -423,7 +423,7 @@
     "zh_title": "用于具有高面积电容的稳定超级电容器的导电 MOF 电极",
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2385,
+    "cited_by_count": 2388,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -475,7 +475,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3238,
+    "cited_by_count": 3240,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -507,7 +507,7 @@
     "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 777,
+    "cited_by_count": 781,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"
@@ -519,7 +519,7 @@
     "zh_title": "纳米结构碳电解质系统中的电容储能",
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1464,
+    "cited_by_count": 1465,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -551,7 +551,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3238,
+    "cited_by_count": 3240,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -561,7 +561,7 @@
     "zh_title": "用于紧凑电容储能的液体介导石墨烯材料密集集成",
     "journal": "Science",
     "year": 2013,
-    "cited_by_count": 1832,
+    "cited_by_count": 1834,
     "core_journal": true,
     "doi": "10.1126/science.1239089",
     "url": "https://doi.org/10.1126/science.1239089"
@@ -583,7 +583,7 @@
     "zh_title": "静电纺MXene/碳纳米纤维作为超级电容器电极",
     "journal": "Journal of Materials Chemistry A",
     "year": 2018,
-    "cited_by_count": 671,
+    "cited_by_count": 673,
     "core_journal": true,
     "doi": "10.1039/c8ta09810g",
     "url": "https://doi.org/10.1039/c8ta09810g"
@@ -689,17 +689,17 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
    },
    {
     "title": "Hierarchical Porous Nitrogen-Doped Carbon Nanosheets Derived from Silk for Ultrahigh-Capacity Battery Anodes and Supercapacitors",
-    "zh_title": "用于超高容量电池阳极和超级电容器的丝衍生的分层多孔氮掺杂碳纳米片",
+    "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1530,
+    "cited_by_count": 1531,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -721,7 +721,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3238,
+    "cited_by_count": 3240,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -763,7 +763,7 @@
     "zh_title": "具有高体积电容的柔性 MXene/碳纳米管复合纸",
     "journal": "Advanced Materials",
     "year": 2014,
-    "cited_by_count": 1419,
+    "cited_by_count": 1420,
     "core_journal": true,
     "doi": "10.1002/adma.201404140",
     "url": "https://doi.org/10.1002/adma.201404140"
@@ -785,7 +785,7 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -839,7 +839,7 @@
     "zh_title": "用于具有高面积电容的稳定超级电容器的导电 MOF 电极",
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2385,
+    "cited_by_count": 2388,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -913,7 +913,7 @@
     "zh_title": "用于微型超级电容器的单片碳化物衍生碳膜",
     "journal": "Science",
     "year": 2010,
-    "cited_by_count": 1310,
+    "cited_by_count": 1311,
     "core_journal": true,
     "doi": "10.1126/science.1184126",
     "url": "https://doi.org/10.1126/science.1184126"
@@ -999,7 +999,7 @@
     "zh_title": "用于高性能超级电容器的生物炭衍生功能材料的工程：设计原理、机制和可扩展策略",
     "journal": "Carbon Energy",
     "year": 2026,
-    "cited_by_count": 3,
+    "cited_by_count": 4,
     "core_journal": true,
     "doi": "10.1002/cey2.70178",
     "url": "https://doi.org/10.1002/cey2.70178"
@@ -1031,17 +1031,17 @@
     "zh_title": "氮掺杂多孔碳纳米纤维作为超级电容器高效电极材料的合成",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1704,
+    "cited_by_count": 1705,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
    },
    {
     "title": "Hierarchical Porous Nitrogen-Doped Carbon Nanosheets Derived from Silk for Ultrahigh-Capacity Battery Anodes and Supercapacitors",
-    "zh_title": "用于超高容量电池阳极和超级电容器的丝衍生的分层多孔氮掺杂碳纳米片",
+    "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1530,
+    "cited_by_count": 1531,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -1063,7 +1063,7 @@
     "zh_title": "碳纳米管薄膜柔性电子器件的制备及应用综述",
     "journal": "Nanoscale",
     "year": 2013,
-    "cited_by_count": 1184,
+    "cited_by_count": 1185,
     "core_journal": true,
     "doi": "10.1039/c3nr33560g",
     "url": "https://doi.org/10.1039/c3nr33560g"
@@ -1073,7 +1073,7 @@
     "zh_title": "具有高体积电容的透明、柔性、导电 2D 碳化钛 (MXene) 薄膜",
     "journal": "Advanced Materials",
     "year": 2017,
-    "cited_by_count": 1150,
+    "cited_by_count": 1151,
     "core_journal": true,
     "doi": "10.1002/adma.201702678",
     "url": "https://doi.org/10.1002/adma.201702678"
@@ -1095,7 +1095,7 @@
     "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 777,
+    "cited_by_count": 781,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"

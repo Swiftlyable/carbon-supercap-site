@@ -1,19 +1,19 @@
 {
- "last_updated": "2026-08-14T01:32:32+00:00",
+ "last_updated": "2026-08-17T05:01:28+00:00",
  "totals": {
-  "papers": 1385,
+  "papers": 1396,
   "reviews": 84,
-  "oa": 293,
-  "core_journal": 893,
-  "tagged": 1237,
+  "oa": 294,
+  "core_journal": 896,
+  "tagged": 1246,
   "classics": 25,
-  "cited_total": 298215,
+  "cited_total": 298349,
   "cited_max": 16239,
-  "cited_avg": 281.3,
+  "cited_avg": 281.5,
   "year_min": 1997,
   "year_max": 2026,
-  "n_authors": 5743,
-  "n_institutions": 1141,
+  "n_authors": 5785,
+  "n_institutions": 1147,
   "core_journals_n": 70
  },
  "by_year": [
@@ -99,7 +99,7 @@
   },
   {
    "year": 2026,
-   "count": 367
+   "count": 378
   }
  ],
  "by_year_type": [
@@ -205,24 +205,24 @@
   },
   {
    "year": 2026,
-   "article": 341,
+   "article": 352,
    "review": 26
   }
  ],
  "journals": [
   {
    "name": "Journal of Energy Storage",
-   "count": 87,
+   "count": 88,
    "core": true
   },
   {
    "name": "Journal of Power Sources",
-   "count": 84,
+   "count": 85,
    "core": true
   },
   {
    "name": "Chemical Engineering Journal",
-   "count": 71,
+   "count": 72,
    "core": true
   },
   {
@@ -289,19 +289,19 @@
  "concepts": [
   {
    "name": "Materials science",
-   "count": 1288
+   "count": 1299
   },
   {
    "name": "Supercapacitor",
-   "count": 1222
+   "count": 1232
   },
   {
    "name": "Capacitance",
-   "count": 495
+   "count": 500
   },
   {
    "name": "Electrode",
-   "count": 443
+   "count": 448
   },
   {
    "name": "Graphene",
@@ -309,19 +309,19 @@
   },
   {
    "name": "Nanotechnology",
-   "count": 361
+   "count": 363
   },
   {
    "name": "Carbon fibers",
-   "count": 240
+   "count": 245
   },
   {
    "name": "Chemical engineering",
-   "count": 192
+   "count": 196
   },
   {
    "name": "Energy storage",
-   "count": 176
+   "count": 177
   },
   {
    "name": "Electrolyte",
@@ -329,19 +329,19 @@
   },
   {
    "name": "Electrochemistry",
-   "count": 148
+   "count": 150
   },
   {
    "name": "Carbon nanotube",
-   "count": 144
+   "count": 145
   },
   {
    "name": "Composite number",
-   "count": 121
+   "count": 124
   },
   {
    "name": "Porosity",
-   "count": 96
+   "count": 97
   },
   {
    "name": "Carbonization",
@@ -353,7 +353,7 @@
   },
   {
    "name": "Oxide",
-   "count": 67
+   "count": 68
   },
   {
    "name": "Polyaniline",
@@ -364,7 +364,7 @@
    "count": 64
   },
   {
-   "name": "Power density",
+   "name": "Composite material",
    "count": 58
   }
  ],
@@ -477,47 +477,47 @@
   {
    "name": "柔性器件",
    "category": "application",
-   "count": 350
+   "count": 351
   },
   {
    "name": "能量密度",
    "category": "metric",
-   "count": 312
+   "count": 314
   },
   {
    "name": "比电容",
    "category": "metric",
-   "count": 302
+   "count": 306
   },
   {
    "name": "多孔碳",
    "category": "material",
-   "count": 284
+   "count": 287
   },
   {
    "name": "循环稳定性",
    "category": "metric",
-   "count": 250
+   "count": 253
   },
   {
    "name": "非对称器件",
    "category": "application",
-   "count": 214
+   "count": 220
   },
   {
    "name": "碳纤维/织物",
    "category": "material",
-   "count": 205
+   "count": 206
   },
   {
    "name": "功率密度",
    "category": "metric",
-   "count": 196
+   "count": 198
   },
   {
    "name": "碳纳米管 CNT",
    "category": "material",
-   "count": 189
+   "count": 190
   },
   {
    "name": "倍率性能",
@@ -537,12 +537,12 @@
   {
    "name": "固态电解质",
    "category": "application",
-   "count": 116
+   "count": 117
   },
   {
    "name": "活性炭 AC",
    "category": "material",
-   "count": 114
+   "count": 116
   },
   {
    "name": "碳化",
@@ -550,19 +550,19 @@
    "count": 107
   },
   {
-   "name": "可穿戴",
-   "category": "application",
-   "count": 98
-  },
-  {
    "name": "水热/溶剂热",
    "category": "strategy",
-   "count": 97
+   "count": 99
+  },
+  {
+   "name": "可穿戴",
+   "category": "application",
+   "count": 99
   },
   {
    "name": "生物质碳",
    "category": "material",
-   "count": 82
+   "count": 84
   },
   {
    "name": "碳气凝胶",
@@ -708,8 +708,8 @@
    293.4,
    1096.2,
    281.0,
-   3762.0,
    115.1,
+   3762.0,
    426.0,
    2364.0,
    828.0,
@@ -837,11 +837,11 @@
    148.0,
    512.0,
    361.2,
+   66.0,
    431.5,
    1364.3,
    265.7,
    1100.2,
-   66.0,
    204.5,
    1168.79,
    356.0,
@@ -878,6 +878,8 @@
    632.0,
    600.0,
    540.5,
+   725.0,
+   220.0,
    430.0,
    740.0,
    372.0,
@@ -908,8 +910,8 @@
    9.2,
    60.3,
    24.8,
-   65.9,
    114.2,
+   65.9,
    43.7,
    50.8,
    187.0,
@@ -921,8 +923,8 @@
    128.0,
    138.0,
    93.6,
-   17.0,
    98.6,
+   17.0,
    37.7,
    47.0,
    92.0,
@@ -1003,6 +1005,8 @@
    25.2,
    28.0,
    160.0,
+   28.45,
+   20.0,
    14.6,
    29.1,
    60.0,
@@ -1029,8 +1033,8 @@
    1400.0,
    18000.0,
    62500.0,
-   8320.0,
    8203.0,
+   8320.0,
    197300.0,
    5136.0,
    9300.0,
@@ -1042,8 +1046,8 @@
    5250.0,
    820.0,
    1600.0,
-   3100.0,
    2480.6,
+   3100.0,
    16100.0,
    10000.0,
    9000.0,
@@ -1122,6 +1126,8 @@
    745.0,
    382.0,
    192.18,
+   1600.0,
+   916.0,
    174.6,
    275.0,
    800.0,
@@ -1174,7 +1180,7 @@
    [
     0,
     3,
-    25
+    26
    ],
    [
     0,
@@ -1429,7 +1435,7 @@
    [
     5,
     3,
-    13
+    14
    ],
    [
     5,
@@ -1479,7 +1485,7 @@
    [
     6,
     3,
-    5
+    6
    ],
    [
     6,

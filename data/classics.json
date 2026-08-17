@@ -2,7 +2,7 @@
  {
   "id": "W2015338034",
   "title": "High power electrochemical capacitors based on carbon nanotube electrodes",
-  "zh_title": "",
+  "zh_title": "基于碳纳米管电极的高功率电化学电容器",
   "journal": "Applied Physics Letters",
   "year": 1997,
   "doi": "10.1063/1.118568",
@@ -15,7 +15,7 @@
  {
   "id": "W2163585067",
   "title": "Shape-engineerable and highly densely packed single-walled carbon nanotubes and their application as super-capacitor electrodes",
-  "zh_title": "",
+  "zh_title": "形状工程和高密度堆积的单壁碳纳米管及其作为超级电容器电极的应用",
   "journal": "Nature Materials",
   "year": 2006,
   "doi": "10.1038/nmat1782",
@@ -28,7 +28,7 @@
  {
   "id": "cr:10.1002/adma.200501905",
   "title": "A High‐Performance Carbon for Supercapacitors Obtained by Carbonization of a Seaweed Biopolymer",
-  "zh_title": "",
+  "zh_title": "通过海藻生物聚合物碳化获得的用于超级电容器的高性能碳",
   "journal": "Advanced Materials",
   "year": 2006,
   "doi": "10.1002/adma.200501905",
@@ -41,7 +41,7 @@
  {
   "id": "W2053328406",
   "title": "Materials for electrochemical capacitors",
-  "zh_title": "",
+  "zh_title": "电化学电容器材料",
   "journal": "Nature Materials",
   "year": 2008,
   "doi": "10.1038/nmat2297",
@@ -54,7 +54,7 @@
  {
   "id": "W2150673614",
   "title": "Carbon-based materials as supercapacitor electrodes",
-  "zh_title": "",
+  "zh_title": "碳基材料作为超级电容器电极",
   "journal": "Chemical Society Reviews",
   "year": 2009,
   "doi": "10.1039/b813846j",
@@ -67,7 +67,7 @@
  {
   "id": "W2009074647",
   "title": "Printable Thin Film Supercapacitors Using Single-Walled Carbon Nanotubes",
-  "zh_title": "",
+  "zh_title": "使用单壁碳纳米管的可印刷薄膜超级电容器",
   "journal": "Nano Letters",
   "year": 2009,
   "doi": "10.1021/nl8038579",
@@ -85,7 +85,7 @@
   "year": 2010,
   "doi": "10.1021/nn101187z",
   "url": "https://doi.org/10.1021/nn101187z",
-  "cited_by_count": 3238,
+  "cited_by_count": 3240,
   "first_author": "Yuxi Xu",
   "note": "水热自组装一步制备石墨烯 3D 水凝胶，开创了自组装策略构建三维石墨烯网络的主流路线。",
   "core_journal": true
@@ -93,7 +93,7 @@
  {
   "id": "W2003408860",
   "title": "Graphene-Based Supercapacitor with an Ultrahigh Energy Density",
-  "zh_title": "",
+  "zh_title": "具有超高能量密度的石墨烯超级电容器",
   "journal": "Nano Letters",
   "year": 2010,
   "doi": "10.1021/nl102661q",
@@ -106,7 +106,7 @@
  {
   "id": "cr:10.1038/nnano.2010.162",
   "title": "Ultrahigh-power micrometre-sized supercapacitors based on onion-like carbon",
-  "zh_title": "",
+  "zh_title": "基于洋葱状碳的超高功率微米级超级电容器",
   "journal": "Nature Nanotechnology",
   "year": 2010,
   "doi": "10.1038/nnano.2010.162",
@@ -119,7 +119,7 @@
  {
   "id": "W2026346936",
   "title": "Graphene Double-Layer Capacitor with ac Line-Filtering Performance",
-  "zh_title": "",
+  "zh_title": "具有交流线路滤波性能的石墨烯双层电容器",
   "journal": "Science",
   "year": 2010,
   "doi": "10.1126/science.1194372",
@@ -132,7 +132,7 @@
  {
   "id": "W2052319966",
   "title": "Carbon-Based Supercapacitors Produced by Activation of Graphene",
-  "zh_title": "",
+  "zh_title": "通过石墨烯活化生产碳基超级电容器",
   "journal": "Science",
   "year": 2011,
   "doi": "10.1126/science.1200770",
@@ -145,7 +145,7 @@
  {
   "id": "W2141101385",
   "title": "Three-dimensional flexible and conductive interconnected graphene networks grown by chemical vapour deposition",
-  "zh_title": "",
+  "zh_title": "通过化学气相沉积生长的三维柔性导电互连石墨烯网络",
   "journal": "Nature Materials",
   "year": 2011,
   "doi": "10.1038/nmat3001",
@@ -158,7 +158,7 @@
  {
   "id": "W2000320449",
   "title": "True Performance Metrics in Electrochemical Energy Storage",
-  "zh_title": "",
+  "zh_title": "电化学储能的真实性能指标",
   "journal": "Science",
   "year": 2011,
   "doi": "10.1126/science.1213003",
@@ -171,7 +171,7 @@
  {
   "id": "cr:10.1126/science.1216744",
   "title": "Laser Scribing of High-Performance and Flexible Graphene-Based Electrochemical Capacitors",
-  "zh_title": "",
+  "zh_title": "高性能柔性石墨烯电化学电容器的激光划片",
   "journal": "Science",
   "year": 2012,
   "doi": "10.1126/science.1216744",
@@ -197,7 +197,7 @@
  {
   "id": "W1991084225",
   "title": "Biomimetic superelastic graphene-based cellular monoliths",
-  "zh_title": "",
+  "zh_title": "仿生超弹性石墨烯基细胞整体材料",
   "journal": "Nature Communications",
   "year": 2012,
   "doi": "10.1038/ncomms2251",
@@ -223,7 +223,7 @@
  {
   "id": "cr:10.1021/nl3034976",
   "title": "3-Dimensional Graphene Carbon Nanotube Carpet-Based Microsupercapacitors with High Electrochemical Performance",
-  "zh_title": "",
+  "zh_title": "具有高电化学性能的三维石墨烯碳纳米管地毯微型超级电容器",
   "journal": "Nano Letters",
   "year": 2012,
   "doi": "10.1021/nl3034976",
@@ -241,7 +241,7 @@
   "year": 2013,
   "doi": "10.1126/science.1239089",
   "url": "https://doi.org/10.1126/science.1239089",
-  "cited_by_count": 1832,
+  "cited_by_count": 1834,
   "first_author": "Xiaowei Yang",
   "note": "液相致密化集成石墨烯：兼顾密度与导电网络的高体积性能电极，回应了 3D 多孔网络振实密度低的工程矛盾。",
   "core_journal": true
@@ -249,7 +249,7 @@
  {
   "id": "W2148634271",
   "title": "Ultralight and Highly Compressible Graphene Aerogels",
-  "zh_title": "",
+  "zh_title": "超轻且高度可压缩的石墨烯气凝胶",
   "journal": "Advanced Materials",
   "year": 2013,
   "doi": "10.1002/adma.201204530",
@@ -275,7 +275,7 @@
  {
   "id": "W1978126078",
   "title": "Carbons and Electrolytes for Advanced Supercapacitors",
-  "zh_title": "",
+  "zh_title": "用于先进超级电容器的碳和电解质",
   "journal": "Advanced Materials",
   "year": 2014,
   "doi": "10.1002/adma.201304137",
@@ -288,7 +288,7 @@
  {
   "id": "W2152754138",
   "title": "Supercapacitor electrode materials: nanostructures from 0 to 3 dimensions",
-  "zh_title": "",
+  "zh_title": "超级电容器电极材料：0 到 3 维的纳米结构",
   "journal": "Energy & Environmental Science",
   "year": 2014,
   "doi": "10.1039/c4ee03229b",
@@ -301,7 +301,7 @@
  {
   "id": "cr:10.1002/smll.201303202",
   "title": "Graphene and Graphene‐Based Materials for Energy Storage Applications",
-  "zh_title": "",
+  "zh_title": "用于储能应用的石墨烯和石墨烯基材料",
   "journal": "Small",
   "year": 2014,
   "doi": "10.1002/smll.201303202",
@@ -319,7 +319,7 @@
   "year": 2016,
   "doi": "10.1038/nmat4766",
   "url": "https://doi.org/10.1038/nmat4766",
-  "cited_by_count": 2385,
+  "cited_by_count": 2388,
   "first_author": "Dennis Sheberla",
   "note": "导电 MOF 电极：本征导电骨架实现高面电容的范例，为三维导电网络设计提供了碳之外的思路参照。",
   "core_journal": true
