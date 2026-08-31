@@ -79,13 +79,13 @@
  },
  {
   "id": "W2029066016",
-  "title": "Self-Assembled Graphene Hydrogel <i>via</i> a One-Step Hydrothermal Process",
+  "title": "Self-Assembled Graphene Hydrogel via a One-Step Hydrothermal Process",
   "zh_title": "",
   "journal": "ACS Nano",
   "year": 2010,
   "doi": "10.1021/nn101187z",
   "url": "https://doi.org/10.1021/nn101187z",
-  "cited_by_count": 3240,
+  "cited_by_count": 3241,
   "first_author": "Yuxi Xu",
   "note": "水热自组装一步制备石墨烯 3D 水凝胶，开创了自组装策略构建三维石墨烯网络的主流路线。",
   "core_journal": true
@@ -182,19 +182,6 @@
   "core_journal": true
  },
  {
-  "id": "W2278346516",
-  "title": "Freestanding Three-Dimensional Graphene/MnO<sub>2</sub> Composite Networks As Ultralight and Flexible Supercapacitor Electrodes",
-  "zh_title": "",
-  "journal": "ACS Nano",
-  "year": 2012,
-  "doi": "10.1021/nn304833s",
-  "url": "https://doi.org/10.1021/nn304833s",
-  "cited_by_count": 1426,
-  "first_author": "Yongmin He",
-  "note": "3D 石墨烯/MnO₂ 超轻自支撑复合电极：导电网络骨架担载赝电容材料的范式性工作。",
-  "core_journal": true
- },
- {
   "id": "W1991084225",
   "title": "Biomimetic superelastic graphene-based cellular monoliths",
   "zh_title": "仿生超弹性石墨烯基细胞整体材料",
@@ -241,7 +228,7 @@
   "year": 2013,
   "doi": "10.1126/science.1239089",
   "url": "https://doi.org/10.1126/science.1239089",
-  "cited_by_count": 1834,
+  "cited_by_count": 1836,
   "first_author": "Xiaowei Yang",
   "note": "液相致密化集成石墨烯：兼顾密度与导电网络的高体积性能电极，回应了 3D 多孔网络振实密度低的工程矛盾。",
   "core_journal": true
@@ -319,7 +306,7 @@
   "year": 2016,
   "doi": "10.1038/nmat4766",
   "url": "https://doi.org/10.1038/nmat4766",
-  "cited_by_count": 2388,
+  "cited_by_count": 2392,
   "first_author": "Dennis Sheberla",
   "note": "导电 MOF 电极：本征导电骨架实现高面电容的范例，为三维导电网络设计提供了碳之外的思路参照。",
   "core_journal": true

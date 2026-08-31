@@ -1,149 +1,137 @@
 [
  {
-  "id": "W7203554524",
-  "doi": "10.1021/acs.energyfuels.6c01648",
-  "title": "HKUST-1Metal–Organic Frameworks-DerivedCuO and Activated Candle Soot Carbon Nano-Onions for Highly DurableAsymmetric Supercapacitors: A Synergistic Contribution for Diffusionand Surface Controlled Charge Storage",
-  "journal": "Energy & Fuels",
+  "id": "W7204539347",
+  "doi": "10.1016/j.est.2026.124149",
+  "title": "Exploration of the structural, electrochemical, and electrocatalytic properties of 2D-hBN-modified CaFeXCo1-XO3-δ perovskite: Light-enhanced asymmetric supercapacitor performance and hydrogen evolution catalysis applications",
+  "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Aisha Siddiqa",
-   "Chandra Shekhar Sharma"
-  ],
-  "type": "article",
-  "tags": [
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "循环稳定性",
-   "非对称器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1021/acs.energyfuels.6c01648",
-  "zh_title": "HKUST-1金属有机框架衍生的CuO和活性蜡烛烟灰碳纳米洋葱用于高度耐用的不对称超级电容器：对扩散和表面控制电荷存储的协同贡献",
-  "classic": false
- },
- {
-  "id": "W7203476348",
-  "doi": "10.1016/j.jpowsour.2026.241224",
-  "title": "CuNiCo3O4 anchored on graphitic carbon nitride nanosheets as asymmetric supercapacitor electrodes",
-  "journal": "Journal of Power Sources",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Bhaskar Jyoti Borah",
-   "A. K. Nath",
-   "M. Deka",
-   "Jnanendra Upadhyay"
+   "Muhammad Imran",
+   "Amir Muhammad Afzal",
+   "Amjad A. Almunyif",
+   "Abhinav Kumar",
+   "Muhammad Arshad Kamran",
+   "Sohail Mumtaz"
   ],
   "type": "article",
   "tags": [
    "非对称器件"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1016/j.jpowsour.2026.241224",
-  "zh_title": "CuNiCo3O4 锚定在石墨氮化碳纳米片上作为不对称超级电容器电极",
+  "url": "https://doi.org/10.1016/j.est.2026.124149",
+  "zh_title": "2D-hBN修饰CaFeXCo1-XO3-δ钙钛矿的结构、电化学和电催化性能探索：光增强不对称超级电容器性能和析氢催化​​应用",
   "classic": false
  },
  {
-  "id": "W7203471700",
-  "doi": "10.1021/acs.iecr.6c01112",
-  "title": "Tailoring Nb2O5@α-Fe2O3 NanocompositeHeterostructures for a WearableQuasi-Solid-State Asymmetric Supercapacitor",
-  "journal": "Industrial & Engineering Chemistry Research",
+  "id": "W7204564665",
+  "doi": "10.1016/j.mseb.2026.119818",
+  "title": "Constructing a MIL-125(Ti)@MoS₂ heterojunction using titanium-based metal-organic framework and molybdenum disulfide for durable, high-performance supercapacitors",
+  "journal": "Materials Science and Engineering B",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Lekshmi Sunil",
-   "Manik Clinton Franklin",
-   "Akshaya Sisubalan",
-   "Hemalatha Kuzhandaivel",
-   "Vijayakumar Elayappan",
-   "Karthick Sivalingam Nallathambi"
+   "Majed Y. Almashnowi"
   ],
   "type": "article",
   "tags": [
-   "活性炭 AC",
-   "碳纤维/织物",
-   "比电容",
-   "循环稳定性",
-   "柔性器件",
-   "可穿戴",
-   "固态电解质",
-   "非对称器件"
+   "MOF 衍生碳"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1021/acs.iecr.6c01112",
-  "zh_title": "用于可穿戴准固态不对称超级电容器的定制Nb2O5@α-Fe2O3纳米复合异质结构",
+  "url": "https://doi.org/10.1016/j.mseb.2026.119818",
+  "zh_title": "",
   "classic": false
  },
  {
-  "id": "W7202406285",
-  "doi": "10.1007/s10853-026-13519-9",
-  "title": "Two-step KOH-activated peanut shell-derived porous carbon for high-performance supercapacitors",
-  "journal": "Journal of Materials Science",
+  "id": "W7204525332",
+  "doi": "10.1016/j.est.2026.124388",
+  "title": "Synergistic co-deposition of tannic acid and polydopamine on bacterial cellulose-derived carbon aerogels for high-performance supercapacitors",
+  "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Chenglong Jing",
-   "Zilong Zhou",
-   "Fanen Zeng",
-   "Xiuna Xue",
-   "Zhidong Sun",
-   "Liping Pei"
+   "Liping Li",
+   "Chao Gu",
+   "Zhongpu Ding",
+   "Yang Xia",
+   "Yunfeng Wang",
+   "Xu Xiang"
+  ],
+  "type": "article",
+  "tags": [
+   "碳气凝胶"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.124388",
+  "zh_title": "单宁酸和聚多巴胺在细菌纤维素衍生碳气凝胶上的协同共沉积用于高性能超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7204498192",
+  "doi": "10.1007/s12034-026-03677-6",
+  "title": "Dielectric behavior and electrical conductivity of lead (II) tetraphenylporphyrin (PbTPP) nanocomposite with carbon nanotubes (CNTs) and polyaniline (PANI)",
+  "journal": "Bulletin of Materials Science",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "C. Majumder",
+   "Prankrishna Pal",
+   "Shilpa Maity",
+   "Chiranjib Bhowmik",
+   "Sudip Kumar Ghosh",
+   "Arpan Kool"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s12034-026-03677-6",
+  "zh_title": "",
+  "classic": false
+ },
+ {
+  "id": "W7204498952",
+  "doi": "10.1007/s11581-026-07476-1",
+  "title": "Multiwalled-carbon nanotube network assisted vanadium hexacyanoferrate-polypyrrole composite for advanced supercapacitor application",
+  "journal": "Ionics",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Jasi Akal Sugapriya Sathaiah",
+   "Julie Charles",
+   "Dhakshinamurthy Divya"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s11581-026-07476-1",
+  "zh_title": "",
+  "classic": false
+ },
+ {
+  "id": "W7204257027",
+  "doi": "10.1016/j.est.2026.124373",
+  "title": "Recycling photovoltaic backsheet into porous carbon for supercapacitor applications",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Zijun Zhang",
+   "Jiacheng Li",
+   "Haifeng Li",
+   "Feihong Guo",
+   "Xiaoxiang Jiang"
   ],
   "type": "article",
   "tags": [
    "多孔碳"
   ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s10853-026-13519-9",
-  "zh_title": "用于高性能超级电容器的两步KOH活化花生壳衍生多孔碳",
-  "classic": false
- },
- {
-  "id": "W7202366086",
-  "doi": "10.1088/1402-4896/ae999d",
-  "title": "Source-aware materials informatics for biomass-derived carbon electrodes: Predicting supercapacitor capacitance from precursor and process descriptors",
-  "journal": "Physica Scripta",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Ferhat Uçar",
-   "Nida Katı",
-   "Mohammed Abduljalil Saeed Ahmed"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳",
-   "生物质碳",
-   "比电容"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1088/1402-4896/ae999d",
-  "zh_title": "生物质衍生碳电极的源感知材料信息学：根据前体和过程描述符预测超级电容器电容",
-  "classic": false
- },
- {
-  "id": "W7202360865",
-  "doi": "10.1007/s11664-026-13100-9",
-  "title": "A Dual-Metal Oxide Strategy: Enhanced Electrochemical Performance of Cu2O-MnO Composite for Asymmetric Supercapacitor",
-  "journal": "Journal of Electronic Materials",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Junaid Riaz",
-   "Johar Zeb",
-   "Salah Knani",
-   "Samia Elattar",
-   "Muhammad Arif"
-  ],
-  "type": "article",
-  "tags": [
-   "非对称器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s11664-026-13100-9",
-  "zh_title": "双金属氧化物策略：增强非对称超级电容器 Cu2O-MnO 复合材料的电化学性能",
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.124373",
+  "zh_title": "将光伏背板回收成多孔碳用于超级电容器应用",
   "classic": false
  }
 ]

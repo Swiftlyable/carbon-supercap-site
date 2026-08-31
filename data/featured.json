@@ -5,7 +5,7 @@
   "title": "Electrode materials for supercapacitors: A comprehensive review of advancements and performance",
   "journal": "Journal of Energy Storage",
   "year": 2024,
-  "cited_by_count": 390,
+  "cited_by_count": 395,
   "authors": [
    "Reenu Reenu",
    "Sonia Sonia",
@@ -26,7 +26,7 @@
   "title": "Supercapacitors: Overcoming current limitations and charting the course for next-generation energy storage",
   "journal": "Journal of Industrial and Engineering Chemistry",
   "year": 2024,
-  "cited_by_count": 280,
+  "cited_by_count": 291,
   "authors": [
    "Humaira Rashid Khan",
    "Abdul Latif Ahmad"
@@ -44,7 +44,7 @@
   "title": "Multifunctional Superelastic, Superhydrophilic, and Ultralight Nanocellulose‐Based Composite Carbon Aerogels for Compressive Supercapacitor and Strain Sensor",
   "journal": "Advanced Functional Materials",
   "year": 2022,
-  "cited_by_count": 571,
+  "cited_by_count": 574,
   "authors": [
    "Huayu Liu",
    "Ting Xu",
@@ -67,12 +67,34 @@
   "classic": false
  },
  {
+  "id": "W4401064899",
+  "doi": "10.1016/j.est.2024.113040",
+  "title": "Shaping the future of energy: The rise of supercapacitors progress in the last five years",
+  "journal": "Journal of Energy Storage",
+  "year": 2024,
+  "cited_by_count": 221,
+  "authors": [
+   "Yedluri Anil Kumar",
+   "Nipa Roy",
+   "Tholkappiyan Ramachandran",
+   "Mohamed Hussien",
+   "Md. Moniruzzaman",
+   "Sang Woo Joo"
+  ],
+  "type": "review",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2024.113040",
+  "zh_title": "塑造能源的未来：过去五年超级电容器的崛起和进展",
+  "classic": false
+ },
+ {
   "id": "W4392137229",
   "doi": "10.1016/j.esci.2024.100249",
   "title": "Versatile carbon-based materials from biomass for advanced electrochemical energy storage systems",
   "journal": "eScience",
   "year": 2024,
-  "cited_by_count": 216,
+  "cited_by_count": 220,
   "authors": [
    "Ziyi Zhu",
    "Yongling Men",
@@ -92,25 +114,25 @@
   "classic": false
  },
  {
-  "id": "W4401064899",
-  "doi": "10.1016/j.est.2024.113040",
-  "title": "Shaping the future of energy: The rise of supercapacitors progress in the last five years",
-  "journal": "Journal of Energy Storage",
-  "year": 2024,
-  "cited_by_count": 210,
+  "id": "W4407290122",
+  "doi": "10.1016/j.ccr.2025.216497",
+  "title": "Advanced strategies for enhancing electrochemical performance of NiAl LDH electrodes in supercapacitors",
+  "journal": "Coordination Chemistry Reviews",
+  "year": 2025,
+  "cited_by_count": 122,
   "authors": [
-   "Yedluri Anil Kumar",
-   "Nipa Roy",
-   "Tholkappiyan Ramachandran",
-   "Mohamed Hussien",
-   "Md. Moniruzzaman",
-   "Sang Woo Joo"
+   "Yong Zhang",
+   "Shuo Hu",
+   "C. Li",
+   "Xin-hua Yan",
+   "Yuanyuan Zhang",
+   "Rong‐bi Yin"
   ],
-  "type": "review",
+  "type": "article",
   "tags": [],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2024.113040",
-  "zh_title": "塑造能源的未来：过去五年超级电容器的崛起和进展",
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.ccr.2025.216497",
+  "zh_title": "",
   "classic": false
  },
  {
@@ -119,7 +141,7 @@
   "title": "Ultralight MXene/carbon nanotube composite aerogel for high-performance flexible supercapacitor",
   "journal": "Advanced Composites and Hybrid Materials",
   "year": 2023,
-  "cited_by_count": 305,
+  "cited_by_count": 306,
   "authors": [
    "Ting Xu",
    "Yaxuan Wang",
@@ -139,34 +161,12 @@
   "classic": false
  },
  {
-  "id": "W4407290122",
-  "doi": "10.1016/j.ccr.2025.216497",
-  "title": "Advanced strategies for enhancing electrochemical performance of NiAl LDH electrodes in supercapacitors",
-  "journal": "Coordination Chemistry Reviews",
-  "year": 2025,
-  "cited_by_count": 118,
-  "authors": [
-   "Yong Zhang",
-   "Shuo Hu",
-   "C. Li",
-   "Xin-hua Yan",
-   "Yuanyuan Zhang",
-   "Rong‐bi Yin"
-  ],
-  "type": "article",
-  "tags": [],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.ccr.2025.216497",
-  "zh_title": "增强超级电容器中 NiAl LDH 电极电化学性能的先进策略",
-  "classic": false
- },
- {
   "id": "W4399903006",
   "doi": "10.1016/j.cej.2024.153311",
   "title": "Biomass-derived carbon applications in the field of supercapacitors: Progress and prospects",
   "journal": "Chemical Engineering Journal",
   "year": 2024,
-  "cited_by_count": 175,
+  "cited_by_count": 180,
   "authors": [
    "Wenjie Lu",
    "Youxin Si",
@@ -190,7 +190,7 @@
   "title": "Recent Advances in Laser‐Induced Graphene: Mechanism, Fabrication, Properties, and Applications in Flexible Electronics",
   "journal": "Advanced Functional Materials",
   "year": 2022,
-  "cited_by_count": 425,
+  "cited_by_count": 430,
   "authors": [
    "Truong‐Son Dinh Le",
    "Hoang‐Phuong Phan",
