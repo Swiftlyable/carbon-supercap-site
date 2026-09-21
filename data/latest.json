@@ -1,144 +1,173 @@
 [
  {
-  "id": "W7208783204",
-  "doi": "10.1016/j.biombioe.2026.110061",
-  "title": "Carbon nanoarchitectonics: Valorization of industrial silver birch charcoal into high-performance activated carbon for supercapacitor electrodes",
-  "journal": "Biomass and Bioenergy",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "R. Shahin",
-   "Alexey Rodin"
-  ],
-  "type": "article",
-  "tags": [
-   "活性炭 AC"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.biombioe.2026.110061",
-  "zh_title": "碳纳米结构：将工业银桦木炭转化为超级电容器电极用高性能活性炭",
-  "classic": false
- },
- {
-  "id": "W7207805979",
-  "doi": "10.1016/j.est.2026.124474",
-  "title": "Nanoconfinement engineering of carbon cathodes for high-performance zinc-ion hybrid supercapacitors",
+  "id": "W7213537780",
+  "doi": "10.1016/j.est.2026.124561",
+  "title": "Layered double hydroxides and metal–organic frameworks aided preparation of polymetallic sulfide electrode for efficient supercapacitor",
   "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Cunjing Wang",
-   "Xinzhong Yuan",
-   "Wenbo Li",
-   "Junqi Wang",
-   "Zhihua Ma",
-   "Huijun Liang"
-  ],
-  "type": "article",
-  "tags": [],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.124474",
-  "zh_title": "高性能锌离子混合超级电容器碳阴极的纳米约束工程",
-  "classic": false
- },
- {
-  "id": "W7207776030",
-  "doi": "10.3390/ma19173741",
-  "title": "Biomass-Derived Carbon Electrodes with Defects and Porosity Prepared via Regulated Carbonization Temperature for Supercapacitors",
-  "journal": "Materials",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Tserenlkham Byambadorj",
-   "Jiawei Zhang",
-   "Xuzhen Lu",
-   "Yuehui Wang",
-   "Fan Wang",
-   "Qian Liu"
+   "Cunxi Cheng",
+   "Kang Ni",
+   "Zhe He",
+   "Gentian Yue",
+   "Qinghua Li",
+   "Jinghao Huo"
   ],
   "type": "article",
   "tags": [
-   "生物质碳",
-   "碳化",
+   "活性炭 AC",
+   "模板法",
+   "水热/溶剂热",
    "比电容",
    "能量密度",
    "功率密度",
+   "循环稳定性",
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.124561",
+  "zh_title": "层状双氢氧化物和金属有机框架辅助制备高效超级电容器多金属硫化物电极",
+  "classic": false
+ },
+ {
+  "id": "W7213560033",
+  "doi": "10.1016/j.est.2026.124605",
+  "title": "Strategic electrode engineering of bimetallic ZIF-8 frameworks: Tuning Mn, Ce, Al, and Fe with Zn for asymmetric supercapacitor",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Abdul Mannan",
+   "Muhammad Noman",
+   "Sourabh B. Ghode",
+   "Chandrashekhar S. Patil",
+   "Jaydip Sawant",
+   "Sihyun Sung"
+  ],
+  "type": "article",
+  "tags": [
+   "活性炭 AC",
+   "比电容",
+   "能量密度",
+   "功率密度",
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.124605",
+  "zh_title": "双金属 ZIF-8 框架的战略电极工程：用 Zn 调节 Mn、Ce、Al 和 Fe，用于不对称超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7213527938",
+  "doi": "10.1016/j.ccr.2026.218545",
+  "title": "Nickel-cobalt based nanostructures for supercapacitor electrodes: From hydroxides, oxides to sulfides and phosphides",
+  "journal": "Coordination Chemistry Reviews",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Bei Cheng",
+   "Dianyu Jiang",
+   "Kun Xiang",
+   "Mingjiang Xie"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT",
+   "石墨烯",
+   "模板法",
+   "水热/溶剂热",
+   "比电容",
    "倍率性能",
    "循环稳定性"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.3390/ma19173741",
-  "zh_title": "通过调节碳化温度制备具有缺陷和孔隙的生物质碳电极用于超级电容器",
+  "url": "https://doi.org/10.1016/j.ccr.2026.218545",
+  "zh_title": "用于超级电容器电极的镍钴基纳米结构：从氢氧化物、氧化物到硫化物和磷化物",
   "classic": false
  },
  {
-  "id": "W7207635972",
-  "doi": "10.1007/s10853-026-13647-2",
-  "title": "Mixed-mode charge storage in 445 nm laser-induced graphene supercapacitors",
+  "id": "W7213447862",
+  "doi": "10.1021/acs.langmuir.6c04418",
+  "title": "Upcycling Waste Fruit Bags into Hierarchical Porous Carbon for High-Performance Zinc-Ion Hybrid Supercapacitors",
+  "journal": "Langmuir",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Ruiheng Jia",
+   "Wang Song",
+   "Xiangfei Wang",
+   "Guoxiu Xing",
+   "Shili Liu",
+   "Shihao Pei"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "碳化",
+   "杂原子掺杂",
+   "能量密度",
+   "倍率性能",
+   "循环稳定性",
+   "柔性器件",
+   "固态电解质"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1021/acs.langmuir.6c04418",
+  "zh_title": "将废果袋升级改造为分级多孔碳，用于高性能锌离子混合超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7213531447",
+  "doi": "10.1007/s10853-026-13737-1",
+  "title": "Engineering MXene/MnO2 heterojunctions on biomass-derived carbon for enhanced capacitive performance",
   "journal": "Journal of Materials Science",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Hedieh Pazokian",
-   "Reza Ghanbari",
-   "Amir Soleimani",
-   "Leila Irannezhad"
+   "Yanqing Cai",
+   "Yinyin Jin",
+   "Yalin Zhang",
+   "Xiaosong Wei",
+   "Xinggang Chen",
+   "Ying Xu"
   ],
   "type": "article",
   "tags": [
-   "石墨烯",
-   "激光加工"
+   "生物质碳"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1007/s10853-026-13647-2",
-  "zh_title": "445 nm 激光诱导石墨烯超级电容器中的混合模式电荷存储",
+  "url": "https://doi.org/10.1007/s10853-026-13737-1",
+  "zh_title": "在生物质衍生碳上设计 MXene/MnO2 异质结以增强电容性能",
   "classic": false
  },
  {
-  "id": "W7206152164",
-  "doi": "10.1007/s11581-026-07486-z",
-  "title": "Preparation of CoS2/Nd2O3 composites and S-CNTs and their electrochemical performance in asymmetric supercapacitors",
-  "journal": "Ionics",
+  "id": "W7213441794",
+  "doi": "10.1021/acsaelm.6c00962",
+  "title": "Scalable Semi-Automatic Screen-Printing of Redox-Enhanced PANI–Carbon Inks for Flexible Micro-Supercapacitors",
+  "journal": "ACS Applied Electronic Materials",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Wei Zhang",
-   "Yunfei Lan",
-   "Xueliang Zheng",
-   "Yu Zhang",
-   "Wei Shen"
+   "Nahid Islam",
+   "Bashir Ahmed Johan",
+   "Abdulmajid A. Mirghni",
+   "Fatima Omar Al‐Qwairi",
+   "Yuda Prima Hardianto",
+   "Amatullah H. Shabi"
   ],
   "type": "article",
   "tags": [
-   "非对称器件"
+   "能量密度",
+   "循环稳定性",
+   "面电容",
+   "柔性器件",
+   "可穿戴",
+   "微型超级电容器 MSC"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1007/s11581-026-07486-z",
-  "zh_title": "CoS2/Nd2O3复合材料和S-CNT的制备及其在非对称超级电容器中的电化学性能",
-  "classic": false
- },
- {
-  "id": "W7205010057",
-  "doi": "10.1016/j.biombioe.2026.110028",
-  "title": "Furfural residue-derived N-doped porous carbon/MnO2 composites for supercapacitors",
-  "journal": "Biomass and Bioenergy",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Mengying Wang",
-   "Li Wang",
-   "Zongmu Xiao",
-   "Gongguo Zhang",
-   "Fanhui Guo",
-   "Jianjun Wu"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.biombioe.2026.110028",
-  "zh_title": "用于超级电容器的糠醛渣衍生的氮掺杂多孔碳/MnO2复合材料",
+  "url": "https://doi.org/10.1021/acsaelm.6c00962",
+  "zh_title": "用于柔性微型超级电容器的氧化还原增强型聚苯胺碳油墨的可扩展半自动丝网印刷",
   "classic": false
  }
 ]

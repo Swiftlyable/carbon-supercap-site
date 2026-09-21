@@ -1,19 +1,19 @@
 {
- "last_updated": "2026-09-07T03:15:36+00:00",
+ "last_updated": "2026-09-21T09:29:21+00:00",
  "totals": {
-  "papers": 1501,
-  "reviews": 92,
-  "oa": 315,
-  "core_journal": 945,
-  "tagged": 1332,
+  "papers": 1548,
+  "reviews": 95,
+  "oa": 333,
+  "core_journal": 956,
+  "tagged": 1376,
   "classics": 24,
-  "cited_total": 299757,
+  "cited_total": 300288,
   "cited_max": 16239,
-  "cited_avg": 276.0,
+  "cited_avg": 273.0,
   "year_min": 1997,
   "year_max": 2026,
-  "n_authors": 6196,
-  "n_institutions": 1236,
+  "n_authors": 6374,
+  "n_institutions": 1259,
   "core_journals_n": 70
  },
  "by_year": [
@@ -99,7 +99,7 @@
   },
   {
    "year": 2026,
-   "count": 477
+   "count": 524
   }
  ],
  "by_year_type": [
@@ -150,8 +150,8 @@
   },
   {
    "year": 2015,
-   "article": 77,
-   "review": 2
+   "article": 76,
+   "review": 3
   },
   {
    "year": 2016,
@@ -180,8 +180,8 @@
   },
   {
    "year": 2021,
-   "article": 41,
-   "review": 8
+   "article": 40,
+   "review": 9
   },
   {
    "year": 2022,
@@ -205,34 +205,34 @@
   },
   {
    "year": 2026,
-   "article": 444,
-   "review": 33
+   "article": 490,
+   "review": 34
   }
  ],
  "journals": [
   {
    "name": "Journal of Energy Storage",
-   "count": 105,
+   "count": 108,
    "core": true
   },
   {
    "name": "Journal of Power Sources",
-   "count": 88,
+   "count": 91,
    "core": true
   },
   {
    "name": "Chemical Engineering Journal",
-   "count": 81,
+   "count": 82,
+   "core": true
+  },
+  {
+   "name": "Electrochimica Acta",
+   "count": 63,
    "core": true
   },
   {
    "name": "ACS Applied Materials & Interfaces",
    "count": 62,
-   "core": true
-  },
-  {
-   "name": "Electrochimica Acta",
-   "count": 61,
    "core": true
   },
   {
@@ -256,6 +256,11 @@
    "core": true
   },
   {
+   "name": "Journal of Alloys and Compounds",
+   "count": 36,
+   "core": false
+  },
+  {
    "name": "Advanced Materials",
    "count": 35,
    "core": true
@@ -266,13 +271,8 @@
    "core": true
   },
   {
-   "name": "Journal of Alloys and Compounds",
-   "count": 33,
-   "core": false
-  },
-  {
    "name": "Diamond and Related Materials",
-   "count": 28,
+   "count": 30,
    "core": false
   },
   {
@@ -289,83 +289,83 @@
  "concepts": [
   {
    "name": "Materials science",
-   "count": 1398
+   "count": 1443
   },
   {
    "name": "Supercapacitor",
-   "count": 1324
+   "count": 1362
   },
   {
    "name": "Capacitance",
-   "count": 543
+   "count": 562
   },
   {
    "name": "Electrode",
-   "count": 483
+   "count": 503
   },
   {
    "name": "Graphene",
-   "count": 427
+   "count": 429
   },
   {
    "name": "Nanotechnology",
-   "count": 390
+   "count": 396
   },
   {
    "name": "Carbon fibers",
-   "count": 267
+   "count": 279
   },
   {
    "name": "Chemical engineering",
-   "count": 226
+   "count": 243
   },
   {
    "name": "Energy storage",
-   "count": 185
+   "count": 194
   },
   {
    "name": "Electrolyte",
-   "count": 178
+   "count": 182
   },
   {
    "name": "Electrochemistry",
-   "count": 163
+   "count": 173
   },
   {
    "name": "Carbon nanotube",
-   "count": 150
+   "count": 152
   },
   {
    "name": "Composite number",
-   "count": 137
+   "count": 140
   },
   {
    "name": "Porosity",
-   "count": 103
+   "count": 109
   },
   {
    "name": "Carbonization",
-   "count": 76
+   "count": 83
+  },
+  {
+   "name": "Aerogel",
+   "count": 73
   },
   {
    "name": "Oxide",
    "count": 73
   },
   {
-   "name": "Aerogel",
-   "count": 72
+   "name": "Carbon nanofiber",
+   "count": 71
   },
   {
-   "name": "Carbon nanofiber",
-   "count": 67
+   "name": "Anode",
+   "count": 68
   },
   {
    "name": "Polyaniline",
    "count": 66
-  },
-  {
-   "name": "Anode",
-   "count": 64
   }
  ],
  "authors_top": [
@@ -437,11 +437,11 @@
   },
   {
    "name": "Harbin Institute of Technology",
-   "count": 26
+   "count": 27
   },
   {
    "name": "Donghua University",
-   "count": 25
+   "count": 26
   },
   {
    "name": "Beijing University of Chemical Technology",
@@ -456,15 +456,15 @@
    "count": 19
   },
   {
+   "name": "Ministry of Education of the People's Republic of China",
+   "count": 19
+  },
+  {
    "name": "Harbin Engineering University",
    "count": 18
   },
   {
    "name": "Jilin University",
-   "count": 18
-  },
-  {
-   "name": "Ministry of Education of the People's Republic of China",
    "count": 18
   }
  ],
@@ -472,117 +472,117 @@
   {
    "name": "石墨烯",
    "category": "material",
-   "count": 465
+   "count": 469
   },
   {
    "name": "柔性器件",
    "category": "application",
-   "count": 366
+   "count": 373
   },
   {
    "name": "能量密度",
    "category": "metric",
-   "count": 334
+   "count": 350
   },
   {
    "name": "比电容",
    "category": "metric",
-   "count": 324
+   "count": 336
   },
   {
    "name": "多孔碳",
    "category": "material",
-   "count": 309
+   "count": 323
   },
   {
    "name": "循环稳定性",
    "category": "metric",
-   "count": 266
+   "count": 279
   },
   {
    "name": "非对称器件",
    "category": "application",
-   "count": 244
+   "count": 259
   },
   {
    "name": "碳纤维/织物",
    "category": "material",
-   "count": 216
+   "count": 224
   },
   {
    "name": "功率密度",
    "category": "metric",
-   "count": 207
+   "count": 217
   },
   {
    "name": "碳纳米管 CNT",
    "category": "material",
-   "count": 198
+   "count": 205
   },
   {
    "name": "倍率性能",
    "category": "metric",
-   "count": 179
+   "count": 184
   },
   {
    "name": "杂原子掺杂",
    "category": "strategy",
-   "count": 159
+   "count": 167
   },
   {
    "name": "氧化石墨烯 GO/rGO",
    "category": "material",
-   "count": 143
-  },
-  {
-   "name": "固态电解质",
-   "category": "application",
-   "count": 126
+   "count": 144
   },
   {
    "name": "活性炭 AC",
    "category": "material",
-   "count": 123
+   "count": 130
+  },
+  {
+   "name": "固态电解质",
+   "category": "application",
+   "count": 130
   },
   {
    "name": "碳化",
    "category": "strategy",
-   "count": 116
+   "count": 125
   },
   {
    "name": "水热/溶剂热",
    "category": "strategy",
-   "count": 110
+   "count": 121
   },
   {
    "name": "可穿戴",
    "category": "application",
-   "count": 100
+   "count": 103
   },
   {
    "name": "生物质碳",
    "category": "material",
-   "count": 92
+   "count": 97
   },
   {
    "name": "碳气凝胶",
    "category": "material",
-   "count": 84
+   "count": 85
   },
   {
    "name": "模板法",
    "category": "strategy",
-   "count": 71
+   "count": 76
   },
   {
    "name": "面电容",
    "category": "metric",
-   "count": 70
+   "count": 74
   },
   {
    "name": "微型超级电容器 MSC",
    "category": "application",
-   "count": 55
+   "count": 58
   },
   {
    "name": "泡沫碳",
@@ -597,7 +597,7 @@
   {
    "name": "化学活化",
    "category": "strategy",
-   "count": 24
+   "count": 26
   },
   {
    "name": "激光加工",
@@ -607,7 +607,7 @@
   {
    "name": "冷冻干燥/冰模板",
    "category": "strategy",
-   "count": 19
+   "count": 20
   },
   {
    "name": "MOF 衍生碳",
@@ -617,7 +617,7 @@
   {
    "name": "静电纺丝",
    "category": "strategy",
-   "count": 15
+   "count": 17
   },
   {
    "name": "CVD 生长",
@@ -637,7 +637,7 @@
   {
    "name": "碳点",
    "category": "material",
-   "count": 11
+   "count": 12
   },
   {
    "name": "纤维状器件",
@@ -652,7 +652,7 @@
   {
    "name": "炭黑 CB",
    "category": "material",
-   "count": 4
+   "count": 5
   }
  ],
  "metrics": {
@@ -667,8 +667,8 @@
    184.0,
    2960.0,
    366.0,
-   2435.0,
    226.0,
+   2435.0,
    388.0,
    304.0,
    1202.1,
@@ -706,17 +706,17 @@
    232.0,
    2584.0,
    293.4,
+   281.0,
    1096.2,
    115.1,
-   281.0,
    3762.0,
    426.0,
    2364.0,
    828.0,
    144.4,
    785.0,
-   82.1,
    1575.0,
+   82.1,
    270.0,
    503.0,
    381.2,
@@ -761,22 +761,22 @@
    1337.44,
    2092.0,
    169.5,
+   152.9,
    1632.8,
    86.0,
    295.0,
-   152.9,
+   192.0,
    97.2,
    1440.0,
-   192.0,
    465.87,
    165.0,
    186.7,
    443.63,
+   293.1,
    389.0,
    264.5,
    213.1,
    964.0,
-   293.1,
    376.0,
    824.0,
    107.0,
@@ -791,6 +791,7 @@
    2725.0,
    157.0,
    2536.0,
+   520.88,
    141.41,
    220.0,
    385.0,
@@ -852,6 +853,9 @@
    1100.2,
    204.5,
    132.0,
+   320.0,
+   192.0,
+   330.0,
    356.0,
    372.0,
    1068.3,
@@ -865,7 +869,6 @@
    1203.0,
    214.0,
    311.66,
-   320.0,
    484.8,
    129.03,
    332.0,
@@ -883,7 +886,6 @@
    287.0,
    3550.0,
    192.0,
-   192.0,
    1047.2,
    1047.2,
    632.0,
@@ -893,7 +895,6 @@
    220.0,
    477.0,
    1420.0,
-   330.0,
    362.18,
    249.4,
    197.0,
@@ -906,6 +907,11 @@
    53.8,
    806.0,
    251.1,
+   74.88,
+   340.0,
+   275.0,
+   1007.3,
+   1931.3,
    342.8,
    982.0,
    430.0,
@@ -1001,6 +1007,9 @@
    66.3,
    10.5,
    70.91,
+   56.3,
+   40.625,
+   58.8,
    53.94,
    22.1,
    32.6,
@@ -1019,6 +1028,7 @@
    69.46,
    18.75,
    31.3,
+   22.0,
    29.1,
    37.0,
    35.57,
@@ -1042,12 +1052,15 @@
    28.45,
    20.0,
    41.6,
-   22.0,
    8.6,
    44.7,
    16.9,
    5.8,
    26.0,
+   108.2,
+   34.0,
+   78.3,
+   49.6,
    31.3,
    29.44,
    14.6,
@@ -1136,6 +1149,8 @@
    1500.0,
    500.0,
    848.67,
+   108.26,
+   1250.0,
    500.0,
    8000.0,
    7000.0,
@@ -1156,6 +1171,7 @@
    905.0,
    1425.0,
    399.99,
+   900.0,
    275.0,
    16000.0,
    800.0,
@@ -1176,11 +1192,13 @@
    192.18,
    1600.0,
    916.0,
-   900.0,
    225.0,
    250.0,
    750.0,
    511.4,
+   1000.0,
+   4072.0,
+   727.27,
    2000.0,
    174.6,
    800.0,
@@ -1223,7 +1241,7 @@
    [
     0,
     1,
-    7
+    8
    ],
    [
     0,
@@ -1233,7 +1251,7 @@
    [
     0,
     3,
-    29
+    32
    ],
    [
     0,
@@ -1248,12 +1266,12 @@
    [
     0,
     7,
-    5
+    6
    ],
    [
     0,
     8,
-    19
+    20
    ],
    [
     0,
@@ -1263,7 +1281,7 @@
    [
     0,
     11,
-    16
+    18
    ],
    [
     1,
@@ -1273,7 +1291,7 @@
    [
     1,
     1,
-    10
+    11
    ],
    [
     1,
@@ -1283,7 +1301,7 @@
    [
     1,
     3,
-    12
+    16
    ],
    [
     1,
@@ -1298,12 +1316,12 @@
    [
     1,
     7,
-    1
+    2
    ],
    [
     1,
     8,
-    6
+    7
    ],
    [
     1,
@@ -1313,7 +1331,7 @@
    [
     1,
     11,
-    14
+    15
    ],
    [
     2,
@@ -1323,7 +1341,7 @@
    [
     2,
     1,
-    23
+    24
    ],
    [
     2,
@@ -1333,7 +1351,7 @@
    [
     2,
     3,
-    46
+    48
    ],
    [
     2,
@@ -1348,12 +1366,12 @@
    [
     2,
     7,
-    4
+    5
    ],
    [
     2,
     8,
-    10
+    11
    ],
    [
     2,
@@ -1368,7 +1386,7 @@
    [
     2,
     11,
-    36
+    37
    ],
    [
     3,
@@ -1438,12 +1456,12 @@
    [
     4,
     3,
-    4
+    5
    ],
    [
     4,
     4,
-    6
+    7
    ],
    [
     4,
@@ -1458,7 +1476,7 @@
    [
     4,
     8,
-    11
+    12
    ],
    [
     4,
@@ -1478,7 +1496,7 @@
    [
     5,
     1,
-    33
+    36
    ],
    [
     5,
@@ -1488,17 +1506,17 @@
    [
     5,
     3,
-    16
+    19
    ],
    [
     5,
     4,
-    4
+    5
    ],
    [
     5,
     5,
-    2
+    4
    ],
    [
     5,
@@ -1508,12 +1526,12 @@
    [
     5,
     7,
-    17
+    18
    ],
    [
     5,
     8,
-    62
+    68
    ],
    [
     5,
@@ -1528,7 +1546,7 @@
    [
     5,
     11,
-    71
+    76
    ],
    [
     6,
@@ -1538,7 +1556,7 @@
    [
     6,
     3,
-    6
+    7
    ],
    [
     6,
@@ -1548,22 +1566,22 @@
    [
     6,
     7,
-    8
+    9
    ],
    [
     6,
     8,
-    26
+    27
    ],
    [
     6,
     11,
-    22
+    23
    ],
    [
     7,
     1,
-    6
+    8
    ],
    [
     7,
@@ -1573,7 +1591,7 @@
    [
     7,
     3,
-    16
+    17
    ],
    [
     7,
@@ -1583,7 +1601,7 @@
    [
     7,
     5,
-    12
+    14
    ],
    [
     7,
@@ -1593,7 +1611,7 @@
    [
     7,
     8,
-    23
+    24
    ],
    [
     7,
@@ -1608,7 +1626,7 @@
    [
     7,
     11,
-    20
+    21
    ],
    [
     8,
@@ -1698,17 +1716,22 @@
    [
     13,
     3,
-    2
+    3
    ],
    [
     13,
-    8,
+    7,
     1
    ],
    [
     13,
-    11,
+    8,
     2
+   ],
+   [
+    13,
+    11,
+    3
    ]
   ]
  }
