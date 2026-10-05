@@ -1,161 +1,150 @@
 [
  {
-  "id": "W7214451901",
-  "doi": "10.1016/j.fuel.2026.141504",
-  "title": "Rice Straw-derived Phosphorus/Boron co-doped hierarchical porous carbon with optimized structure–property Characteristics for high-performance supercapacitors",
-  "journal": "Fuel",
+  "id": "W7216096183",
+  "doi": "10.1021/acsomega.6c05731",
+  "title": "Porous Carbon Prepared from Coal Tar Pitch was Doped with N/S to Prepare Supercapacitors",
+  "journal": "ACS Omega",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Yuxin Lu",
-   "Yirui Yang",
-   "Wanting Zeng",
-   "Sen Hu",
-   "Manman Zhang",
-   "袁文骏 Yuan Wenjun"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1016/j.fuel.2026.141504",
-  "zh_title": "稻草源磷/硼共掺杂分级多孔碳，具有优化的结构性能特性，用于高性能超级电容器",
-  "classic": false
- },
- {
-  "id": "W7214298446",
-  "doi": "10.1016/j.est.2026.124775",
-  "title": "Boosting the supercapacitive performance of NiCo metal-organic frameworks via the synergistic effect of oxygen vacancies and bismuth decoration",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Zhipeng Xing",
-   "Junling Fu",
-   "Ziyu Wang",
-   "Can Yang",
-   "Songtao Lin",
-   "Xiaodong Li"
-  ],
-  "type": "article",
-  "tags": [
-   "活性炭 AC",
-   "MOF 衍生碳",
-   "水热/溶剂热",
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "倍率性能",
-   "非对称器件"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.124775",
-  "zh_title": "通过氧空位和铋装饰的协同作用提高NiCo金属有机框架的超级电容性能",
-  "classic": false
- },
- {
-  "id": "W7214340974",
-  "doi": "10.56201/rjpst.vol.8.no6.2025.pg154.163",
-  "title": "Flexible and Sustainable Electrode Architecture Based on Prussian Blue Analogue-Decorated Carbon Nanofiber Aerogel on Biomass-Derived Porous Carbon for High-Performance Supercapacitors",
-  "journal": "RESEARCH JOURNAL OF PURE SCIENCE AND TECHNOLOGY",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Michael Abraham Beke"
+   "Renjie Jia",
+   "Chen Yang",
+   "Tong Li",
+   "Cuiying Lu",
+   "Yan Zhang",
+   "Ting Su"
   ],
   "type": "article",
   "tags": [
    "多孔碳",
-   "生物质碳",
-   "碳纤维/织物",
-   "碳化",
-   "比电容",
-   "倍率性能",
-   "循环稳定性",
-   "柔性器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.56201/rjpst.vol.8.no6.2025.pg154.163",
-  "zh_title": "用于高性能超级电容器的基于生物质衍生多孔碳上普鲁士蓝类似物装饰的碳纳米纤维气凝胶的灵活且可持续的电极架构",
-  "classic": false
- },
- {
-  "id": "W7214389345",
-  "doi": "10.48175/ijarsct-38452",
-  "title": "Spinel Ferrite-Based Electrode Materials for Supercapacitors: A Review",
-  "journal": "International Journal of Advanced Research in Science Communication and Technology",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Anand B. Wadhave and Praful D. Shirbhate"
-  ],
-  "type": "review",
-  "tags": [
    "水热/溶剂热",
-   "非对称器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.48175/ijarsct-38452",
-  "zh_title": "用于超级电容器的尖晶石铁氧体电极材料：综述",
-  "classic": false
- },
- {
-  "id": "W7214292003",
-  "doi": "10.3126/bibechana.v23i3.91135",
-  "title": "MXene/Zn-graphene oxide hydrogels for enhanced energy storage and rate performance in pseudocapacitors",
-  "journal": "BIBECHANA",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Maya Das",
-   "Anju Kumari Das",
-   "Shubha Sharma",
-   "Shova Neupane",
-   "Dipak Kumar Gupta",
-   "Amar Prasad Yadav"
-  ],
-  "type": "article",
-  "tags": [
-   "石墨烯",
-   "氧化石墨烯 GO/rGO",
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "倍率性能",
-   "循环稳定性"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.3126/bibechana.v23i3.91135",
-  "zh_title": "MXene/Zn-氧化石墨烯水凝胶可增强赝电容器的能量存储和倍率性能",
-  "classic": false
- },
- {
-  "id": "W7214154589",
-  "doi": "10.1021/acsaenm.6c00940",
-  "title": "Waste Textile-Derived Carbon Integrated with Mixed Metal Oxides for Flexible Supercapacitor Electrodes",
-  "journal": "ACS Applied Engineering Materials",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Ekta Vashishth",
-   "Avinash Raulo",
-   "Rajiv K. Srivastava",
-   "Bhanu Nandan"
-  ],
-  "type": "article",
-  "tags": [
-   "碳纤维/织物",
+   "碳化",
    "杂原子掺杂",
    "比电容",
    "能量密度",
-   "循环稳定性",
-   "柔性器件",
-   "可穿戴"
+   "循环稳定性"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1021/acsaenm.6c00940",
-  "zh_title": "废纺织品衍生碳与混合金属氧化物集成用于柔性超级电容器电极",
+  "url": "https://doi.org/10.1021/acsomega.6c05731",
+  "zh_title": "煤焦油沥青制备多孔碳掺杂N/S制备超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7216460035",
+  "doi": "10.1007/s11664-026-13225-x",
+  "title": "Rational Design of Rice Husk-Derived N, P Co-Doped Carbon/Mn-Prussian Blue Analogue Hybrid Electrodes for Advanced Supercapacitor Applications",
+  "journal": "Journal of Electronic Materials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "T. V. Ambuli",
+   "Kabirdoss Devi",
+   "Ashpin Pabi",
+   "F Max Savio",
+   "S. Asha",
+   "Kumaran Subramanian"
+  ],
+  "type": "article",
+  "tags": [],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s11664-026-13225-x",
+  "zh_title": "用于先进超级电容器应用的稻壳衍生 N、P 共掺杂碳/锰-普鲁士蓝模拟混合电极的合理设计",
+  "classic": false
+ },
+ {
+  "id": "W7215124947",
+  "doi": "10.1016/j.electacta.2026.150113",
+  "title": "MoS2 reinforced high–entropy sulfide heterostructures for high–performance supercapacitors",
+  "journal": "Electrochimica Acta",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Fanen Zeng",
+   "Zilong Zhou",
+   "Guojun Li",
+   "Bing Xu",
+   "Jun Shi",
+   "Chunyang Li"
+  ],
+  "type": "article",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.electacta.2026.150113",
+  "zh_title": "用于高性能超级电容器的MoS2增强高熵硫化物异质结构",
+  "classic": false
+ },
+ {
+  "id": "W7215908023",
+  "doi": "10.1016/j.diamond.2026.114252",
+  "title": "Synthesis of metal/metal oxide-carbon aerogel composites derived from water hyacinth for high-performance supercapacitor electrodes",
+  "journal": "Diamond and Related Materials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Linh Hue Nguyen",
+   "Nhi Dieu Y. Nguyen",
+   "Nhu Ngoc Quynh Nguyen",
+   "Phuoc Thi Ngoc Nguyen",
+   "Thoa Thi Thanh Le",
+   "Kien Trung Do"
+  ],
+  "type": "article",
+  "tags": [
+   "碳气凝胶"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.diamond.2026.114252",
+  "zh_title": "用于高性能超级电容器电极的水葫芦金属/金属氧化物-碳气凝胶复合材料的合成",
+  "classic": false
+ },
+ {
+  "id": "W7215041529",
+  "doi": "10.1016/j.esi.2026.09.004",
+  "title": "From Trial-and-Error to Closed-Loop Design: A Data-Driven Review on Biomass-Derived Carbon for Supercapacitors",
+  "journal": "Environmental Surfaces and Interfaces",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Xin Ning",
+   "Honghui Wang",
+   "Yunping Chen",
+   "Cheng Chen",
+   "Haofeng Lu",
+   "LeXing You"
+  ],
+  "type": "review",
+  "tags": [
+   "生物质碳",
+   "模板法",
+   "碳化",
+   "杂原子掺杂"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.esi.2026.09.004",
+  "zh_title": "从试错到闭环设计：对超级电容器用生物质衍生碳的数据驱动审查",
+  "classic": false
+ },
+ {
+  "id": "W7215054059",
+  "doi": "10.1007/s11581-026-07549-1",
+  "title": "Precipitant-dosage regulation of spinel-type (FeCoMnCuZn)3O4 high-entropy oxide for high-performance asymmetric supercapacitors",
+  "journal": "Ionics",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Zijing Tian",
+   "Fanen Zeng",
+   "Yuhan Liang",
+   "Zilong Zhou",
+   "Bing She Xu"
+  ],
+  "type": "article",
+  "tags": [
+   "非对称器件"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s11581-026-07549-1",
+  "zh_title": "高性能非对称超级电容器用尖晶石型(FeCoMnCuZn)3O4高熵氧化物的沉淀剂用量调节",
   "classic": false
  }
 ]

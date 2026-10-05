@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-09-28T09:30:37+00:00",
+ "last_updated": "2026-10-05T10:06:18+00:00",
  "papers": {
   "双电层电容 (EDLC)": [
    {
@@ -27,7 +27,7 @@
     "zh_title": "基于超高能量密度石墨烯增强电极材料的高性能超级电容器-电池混合储能装置",
     "journal": "Energy & Environmental Science",
     "year": 2013,
-    "cited_by_count": 1045,
+    "cited_by_count": 1044,
     "core_journal": true,
     "doi": "10.1039/c3ee40509e",
     "url": "https://doi.org/10.1039/c3ee40509e"
@@ -49,7 +49,7 @@
     "zh_title": "用于水性不对称超级电容器的高电容3D CoO@聚吡咯纳米线阵列电极的构建",
     "journal": "Nano Letters",
     "year": 2013,
-    "cited_by_count": 1346,
+    "cited_by_count": 1347,
     "core_journal": true,
     "doi": "10.1021/nl400378j",
     "url": "https://doi.org/10.1021/nl400378j"
@@ -81,7 +81,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -91,7 +91,7 @@
     "zh_title": "基于超高能量密度石墨烯增强电极材料的高性能超级电容器-电池混合储能装置",
     "journal": "Energy & Environmental Science",
     "year": 2013,
-    "cited_by_count": 1045,
+    "cited_by_count": 1044,
     "core_journal": true,
     "doi": "10.1039/c3ee40509e",
     "url": "https://doi.org/10.1039/c3ee40509e"
@@ -113,7 +113,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -123,7 +123,7 @@
     "zh_title": "纳米结构碳电解质系统中的电容储能",
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1492,
+    "cited_by_count": 1494,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -135,7 +135,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -263,7 +263,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -337,7 +337,7 @@
     "zh_title": "基于三维石墨烯水凝胶薄膜的柔性固态超级电容器",
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 1119,
+    "cited_by_count": 1120,
     "core_journal": true,
     "doi": "10.1021/nn4000836",
     "url": "https://doi.org/10.1021/nn4000836"
@@ -347,7 +347,7 @@
     "zh_title": "用于高性能不对称超级电容器的一步电沉积镍钴硫化物纳米片阵列",
     "journal": "ACS Nano",
     "year": 2014,
-    "cited_by_count": 758,
+    "cited_by_count": 759,
     "core_journal": true,
     "doi": "10.1021/nn503814y",
     "url": "https://doi.org/10.1021/nn503814y"
@@ -379,7 +379,7 @@
     "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1536,
+    "cited_by_count": 1537,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -423,7 +423,7 @@
     "zh_title": "用于具有高面积电容的稳定超级电容器的导电 MOF 电极",
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2405,
+    "cited_by_count": 2411,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -433,7 +433,7 @@
     "zh_title": "基于三维石墨烯水凝胶薄膜的柔性固态超级电容器",
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 1119,
+    "cited_by_count": 1120,
     "core_journal": true,
     "doi": "10.1021/nn4000836",
     "url": "https://doi.org/10.1021/nn4000836"
@@ -443,7 +443,7 @@
     "zh_title": "独立式三维石墨烯/MnO 2 复合网络作为超轻柔性超级电容器电极",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1433,
+    "cited_by_count": 1432,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -475,7 +475,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3253,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -507,7 +507,7 @@
     "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 797,
+    "cited_by_count": 801,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"
@@ -519,7 +519,7 @@
     "zh_title": "纳米结构碳电解质系统中的电容储能",
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1492,
+    "cited_by_count": 1494,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -539,7 +539,7 @@
     "zh_title": "用于超级电容器的生物质海绵状碳质水凝胶和气凝胶",
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 630,
+    "cited_by_count": 632,
     "core_journal": true,
     "doi": "10.1021/nn400566d",
     "url": "https://doi.org/10.1021/nn400566d"
@@ -551,7 +551,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3253,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -603,7 +603,7 @@
     "zh_title": "原位封装 Co 3 O 4 纳米粒子的电纺碳纳米纤维作为高性能超级电容器的电极",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2015,
-    "cited_by_count": 229,
+    "cited_by_count": 230,
     "core_journal": true,
     "doi": "10.1021/acsami.5b02787",
     "url": "https://doi.org/10.1021/acsami.5b02787"
@@ -647,7 +647,7 @@
     "zh_title": "用于三维结构的温和化学还原石墨烯的原位自组装",
     "journal": "Nanoscale",
     "year": 2011,
-    "cited_by_count": 717,
+    "cited_by_count": 718,
     "core_journal": true,
     "doi": "10.1039/c1nr10355e",
     "url": "https://doi.org/10.1039/c1nr10355e"
@@ -657,7 +657,7 @@
     "zh_title": "自组装三维石墨烯宏观结构：合成及其在超级电容器中的应用",
     "journal": "Accounts of Chemical Research",
     "year": 2015,
-    "cited_by_count": 503,
+    "cited_by_count": 504,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.5b00117",
     "url": "https://doi.org/10.1021/acs.accounts.5b00117"
@@ -699,7 +699,7 @@
     "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1536,
+    "cited_by_count": 1537,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -721,7 +721,7 @@
     "zh_title": "通过一步水热过程自组装石墨烯水凝胶",
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3253,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -731,7 +731,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -743,7 +743,7 @@
     "zh_title": "基于石墨烯/MnO 2 和活性碳纳米纤维电极的高功率和能量密度非对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 1998,
+    "cited_by_count": 1997,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -753,7 +753,7 @@
     "zh_title": "用于具有出色体积电容的超快超级电容器的柔性 MXene/石墨烯薄膜",
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1895,
+    "cited_by_count": 1898,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -763,7 +763,7 @@
     "zh_title": "具有高体积电容的柔性 MXene/碳纳米管复合纸",
     "journal": "Advanced Materials",
     "year": 2014,
-    "cited_by_count": 1430,
+    "cited_by_count": 1432,
     "core_journal": true,
     "doi": "10.1002/adma.201404140",
     "url": "https://doi.org/10.1002/adma.201404140"
@@ -775,7 +775,7 @@
     "zh_title": "用于具有出色体积电容的超快超级电容器的柔性 MXene/石墨烯薄膜",
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1895,
+    "cited_by_count": 1898,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -839,7 +839,7 @@
     "zh_title": "用于具有高面积电容的稳定超级电容器的导电 MOF 电极",
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2405,
+    "cited_by_count": 2411,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -849,7 +849,7 @@
     "zh_title": "独立式三维石墨烯/MnO 2 复合网络作为超轻柔性超级电容器电极",
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1433,
+    "cited_by_count": 1432,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -859,7 +859,7 @@
     "zh_title": "纳米结构 Ni(OH) 2 /碳纳米管电极的高能量密度不对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2012,
-    "cited_by_count": 866,
+    "cited_by_count": 867,
     "core_journal": true,
     "doi": "10.1002/adfm.201102796",
     "url": "https://doi.org/10.1002/adfm.201102796"
@@ -891,7 +891,7 @@
     "zh_title": "用于具有出色体积电容的超快超级电容器的柔性 MXene/石墨烯薄膜",
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1895,
+    "cited_by_count": 1898,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -903,7 +903,7 @@
     "zh_title": "在水合氧化石墨薄膜上直接激光写入微型超级电容器",
     "journal": "Nature Nanotechnology",
     "year": 2011,
-    "cited_by_count": 1469,
+    "cited_by_count": 1470,
     "core_journal": true,
     "doi": "10.1038/nnano.2011.110",
     "url": "https://doi.org/10.1038/nnano.2011.110"
@@ -913,7 +913,7 @@
     "zh_title": "用于微型超级电容器的单片碳化物衍生碳膜",
     "journal": "Science",
     "year": 2010,
-    "cited_by_count": 1325,
+    "cited_by_count": 1328,
     "core_journal": true,
     "doi": "10.1126/science.1184126",
     "url": "https://doi.org/10.1126/science.1184126"
@@ -923,7 +923,7 @@
     "zh_title": "用于制造超高能量密度微型超级电容器的无添加剂 2D Ti3C2TX (MXene) 墨水 3D 打印",
     "journal": "ACS Nano",
     "year": 2019,
-    "cited_by_count": 442,
+    "cited_by_count": 443,
     "core_journal": true,
     "doi": "10.1021/acsnano.9b07325",
     "url": "https://doi.org/10.1021/acsnano.9b07325"
@@ -1041,7 +1041,7 @@
     "zh_title": "用于超高容量电池阳极和超级电容器的源自丝的分层多孔氮掺杂碳纳米片",
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1536,
+    "cited_by_count": 1537,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -1051,7 +1051,7 @@
     "zh_title": "用于超级电容器的由柳絮衍生的氮和硫共掺杂多孔碳纳米片",
     "journal": "Nano Energy",
     "year": 2015,
-    "cited_by_count": 1237,
+    "cited_by_count": 1239,
     "core_journal": true,
     "doi": "10.1016/j.nanoen.2015.10.038",
     "url": "https://doi.org/10.1016/j.nanoen.2015.10.038"
@@ -1063,7 +1063,7 @@
     "zh_title": "碳纳米管薄膜柔性电子器件的制备及应用综述",
     "journal": "Nanoscale",
     "year": 2013,
-    "cited_by_count": 1194,
+    "cited_by_count": 1193,
     "core_journal": true,
     "doi": "10.1039/c3nr33560g",
     "url": "https://doi.org/10.1039/c3nr33560g"
@@ -1073,7 +1073,7 @@
     "zh_title": "具有高体积电容的透明、柔性、导电 2D 碳化钛 (MXene) 薄膜",
     "journal": "Advanced Materials",
     "year": 2017,
-    "cited_by_count": 1168,
+    "cited_by_count": 1170,
     "core_journal": true,
     "doi": "10.1002/adma.201702678",
     "url": "https://doi.org/10.1002/adma.201702678"
@@ -1095,7 +1095,7 @@
     "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 797,
+    "cited_by_count": 801,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"
@@ -1105,7 +1105,7 @@
     "zh_title": "基于功能化石墨烯水凝胶的高性能超级电容器",
     "journal": "Advanced Materials",
     "year": 2013,
-    "cited_by_count": 635,
+    "cited_by_count": 636,
     "core_journal": true,
     "doi": "10.1002/adma.201301928",
     "url": "https://doi.org/10.1002/adma.201301928"
