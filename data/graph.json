@@ -4,368 +4,368 @@
    "id": "t:石墨烯",
    "name": "石墨烯",
    "type": "tag",
-   "value": 476,
+   "value": 483,
    "symbolSize": 24.0
   },
   {
    "id": "t:多孔碳",
    "name": "多孔碳",
    "type": "tag",
-   "value": 341,
-   "symbolSize": 22.463962160961312
+   "value": 350,
+   "symbolSize": 22.512565307587487
   },
   {
    "id": "t:化学活化",
    "name": "化学活化",
    "type": "tag",
-   "value": 28,
-   "symbolSize": 16.42535625036333
+   "value": 29,
+   "symbolSize": 16.450334831558635
   },
   {
    "id": "t:比电容",
    "name": "比电容",
    "type": "tag",
-   "value": 363,
-   "symbolSize": 22.73272604641189
+   "value": 381,
+   "symbolSize": 22.881553218758516
   },
   {
    "id": "t:能量密度",
    "name": "能量密度",
    "type": "tag",
-   "value": 372,
-   "symbolSize": 22.840320158467208
+   "value": 387,
+   "symbolSize": 22.951213526806544
   },
   {
    "id": "t:柔性器件",
    "name": "柔性器件",
    "type": "tag",
-   "value": 383,
-   "symbolSize": 22.970071620335567
+   "value": 388,
+   "symbolSize": 22.962770940951163
   },
   {
    "id": "t:活性炭 AC",
    "name": "活性炭 AC",
    "type": "tag",
-   "value": 138,
-   "symbolSize": 19.384384518090762
+   "value": 145,
+   "symbolSize": 19.479115251000604
   },
   {
    "id": "t:激光加工",
    "name": "激光加工",
    "type": "tag",
    "value": 24,
-   "symbolSize": 16.24544356569536
+   "symbolSize": 16.229112850301412
   },
   {
    "id": "t:自组装",
    "name": "自组装",
    "type": "tag",
-   "value": 45,
-   "symbolSize": 17.074700231340454
+   "value": 47,
+   "symbolSize": 17.119430855345833
   },
   {
    "id": "t:水热/溶剂热",
    "name": "水热/溶剂热",
    "type": "tag",
-   "value": 128,
-   "symbolSize": 19.185629788417316
+   "value": 133,
+   "symbolSize": 19.24749767832802
   },
   {
    "id": "t:非对称器件",
    "name": "非对称器件",
    "type": "tag",
-   "value": 272,
-   "symbolSize": 21.559289460184544
+   "value": 281,
+   "symbolSize": 21.627453954644874
   },
   {
    "id": "t:面电容",
    "name": "面电容",
    "type": "tag",
-   "value": 78,
-   "symbolSize": 18.048030956137655
+   "value": 80,
+   "symbolSize": 18.069784637782398
   },
   {
    "id": "t:碳纤维/织物",
    "name": "碳纤维/织物",
    "type": "tag",
-   "value": 229,
-   "symbolSize": 20.936082734330597
+   "value": 233,
+   "symbolSize": 20.945514065313667
   },
   {
    "id": "t:倍率性能",
    "name": "倍率性能",
    "type": "tag",
-   "value": 193,
-   "symbolSize": 20.367591262588622
+   "value": 198,
+   "symbolSize": 20.402639207379703
   },
   {
    "id": "t:碳纳米管 CNT",
    "name": "碳纳米管 CNT",
    "type": "tag",
-   "value": 209,
-   "symbolSize": 20.626278218216473
+   "value": 217,
+   "symbolSize": 20.702800625998364
   },
   {
    "id": "t:氧化石墨烯 GO/rGO",
    "name": "氧化石墨烯 GO/rGO",
    "type": "tag",
-   "value": 147,
-   "symbolSize": 19.557189302262113
+   "value": 148,
+   "symbolSize": 19.535505572770184
   },
   {
    "id": "t:循环稳定性",
    "name": "循环稳定性",
    "type": "tag",
-   "value": 300,
-   "symbolSize": 21.938841860374446
+   "value": 311,
+   "symbolSize": 22.024290246149583
   },
   {
    "id": "t:碳化",
    "name": "碳化",
    "type": "tag",
-   "value": 138,
-   "symbolSize": 19.384384518090762
+   "value": 144,
+   "symbolSize": 19.46018906231948
   },
   {
    "id": "t:杂原子掺杂",
    "name": "杂原子掺杂",
    "type": "tag",
-   "value": 179,
-   "symbolSize": 20.13229500405898
+   "value": 184,
+   "symbolSize": 20.172133998483677
   },
   {
    "id": "t:功率密度",
    "name": "功率密度",
    "type": "tag",
-   "value": 234,
-   "symbolSize": 21.011395286642042
+   "value": 244,
+   "symbolSize": 21.10757330906163
   },
   {
    "id": "t:泡沫碳",
    "name": "泡沫碳",
    "type": "tag",
-   "value": 54,
-   "symbolSize": 17.368165348543037
+   "value": 55,
+   "symbolSize": 17.37448715526917
   },
   {
    "id": "t:CVD 生长",
    "name": "CVD 生长",
    "type": "tag",
    "value": 13,
-   "symbolSize": 15.652601717587995
+   "symbolSize": 15.640582636493377
   },
   {
    "id": "t:生物质碳",
    "name": "生物质碳",
    "type": "tag",
-   "value": 105,
-   "symbolSize": 18.69668218313862
+   "value": 111,
+   "symbolSize": 18.79388844880931
   },
   {
    "id": "t:碳化物衍生碳 CDC",
    "name": "碳化物衍生碳 CDC",
    "type": "tag",
    "value": 6,
-   "symbolSize": 15.12272178284768
+   "symbolSize": 15.114556425150706
   },
   {
    "id": "t:模板法",
    "name": "模板法",
    "type": "tag",
-   "value": 83,
-   "symbolSize": 18.175760384638465
+   "value": 84,
+   "symbolSize": 18.170288281141495
   },
   {
    "id": "t:微型超级电容器 MSC",
    "name": "微型超级电容器 MSC",
    "type": "tag",
    "value": 59,
-   "symbolSize": 17.520647381262894
+   "symbolSize": 17.495042333216162
   },
   {
    "id": "t:碳气凝胶",
    "name": "碳气凝胶",
    "type": "tag",
-   "value": 87,
-   "symbolSize": 18.27519717958947
+   "value": 90,
+   "symbolSize": 18.316658473017156
   },
   {
    "id": "t:可穿戴",
    "name": "可穿戴",
    "type": "tag",
-   "value": 106,
-   "symbolSize": 18.71899433810057
+   "value": 109,
+   "symbolSize": 18.750503950601356
   },
   {
    "id": "t:固态电解质",
    "name": "固态电解质",
    "type": "tag",
-   "value": 132,
-   "symbolSize": 19.266031944165814
+   "value": 135,
+   "symbolSize": 19.28680532637681
   },
   {
    "id": "t:MOF 衍生碳",
    "name": "MOF 衍生碳",
    "type": "tag",
-   "value": 19,
-   "symbolSize": 15.997898055120796
+   "value": 21,
+   "symbolSize": 16.085144140570748
   },
   {
    "id": "t:焊接/交联",
    "name": "焊接/交联",
    "type": "tag",
-   "value": 13,
-   "symbolSize": 15.652601717587995
+   "value": 14,
+   "symbolSize": 15.702513061517497
   },
   {
    "id": "t:静电纺丝",
    "name": "静电纺丝",
    "type": "tag",
    "value": 18,
-   "symbolSize": 15.944611170656493
+   "symbolSize": 15.930468356263361
   },
   {
    "id": "t:冷冻干燥/冰模板",
    "name": "冷冻干燥/冰模板",
    "type": "tag",
    "value": 21,
-   "symbolSize": 16.100420126042014
+   "symbolSize": 16.085144140570748
   },
   {
    "id": "t:3D 打印",
    "name": "3D 打印",
    "type": "tag",
    "value": 12,
-   "symbolSize": 15.587768372074889
+   "symbolSize": 15.576220812478201
   },
   {
    "id": "t:纤维状器件",
    "name": "纤维状器件",
    "type": "tag",
    "value": 8,
-   "symbolSize": 15.296407447104329
+   "symbolSize": 15.286978904175573
   },
   {
    "id": "t:碳点",
    "name": "碳点",
    "type": "tag",
    "value": 12,
-   "symbolSize": 15.587768372074889
+   "symbolSize": 15.576220812478201
   },
   {
    "id": "t:炭黑 CB",
    "name": "炭黑 CB",
    "type": "tag",
    "value": 5,
-   "symbolSize": 15.024900077113484
+   "symbolSize": 15.0174461594456
   },
   {
    "id": "p:W4391908136",
    "name": "Electrode materials for supercapacitors: A co",
-   "zh_title": "超级电容器电极材料：进展和性能的全面回顾",
+   "zh_title": "",
    "type": "paper",
-   "value": 416,
+   "value": 417,
    "year": 2024,
    "doi": "10.1016/j.est.2024.110698",
    "journal": "Journal of Energy Storage",
    "core_journal": true,
-   "symbolSize": 12.84286621396151
+   "symbolSize": 12.844391879936719
   },
   {
    "id": "p:W4400858737",
    "name": "Supercapacitors: Overcoming current limitatio",
    "zh_title": "超级电容器：克服当前限制并为下一代储能指明方向",
    "type": "paper",
-   "value": 309,
+   "value": 311,
    "year": 2024,
    "doi": "10.1016/j.jiec.2024.07.014",
    "journal": "Journal of Industrial and Engineering Chemistry",
    "core_journal": false,
-   "symbolSize": 12.653997150956933
+   "symbolSize": 12.658093404560383
   },
   {
    "id": "p:W4401064899",
    "name": "Shaping the future of energy: The rise of sup",
-   "zh_title": "塑造能源的未来：过去五年超级电容器的崛起和进展",
+   "zh_title": "",
    "type": "paper",
-   "value": 233,
+   "value": 235,
    "year": 2024,
    "doi": "10.1016/j.est.2024.113040",
    "journal": "Journal of Energy Storage",
    "core_journal": true,
-   "symbolSize": 12.474849924201543
+   "symbolSize": 12.48027093768949
   },
   {
    "id": "p:W4392137229",
    "name": "Versatile carbon-based materials from biomass",
-   "zh_title": "用于先进电化学储能系统的多功能碳基生物质材料",
+   "zh_title": "",
    "type": "paper",
-   "value": 228,
+   "value": 233,
    "year": 2024,
    "doi": "10.1016/j.esci.2024.100249",
    "journal": "eScience",
    "core_journal": true,
-   "symbolSize": 12.46109204076517
+   "symbolSize": 12.474849924201543
   },
   {
    "id": "p:W4214911243",
    "name": "Multifunctional Superelastic, Superhydrophili",
-   "zh_title": "用于压缩超级电容器和应变传感器的多功能超弹性、超亲水和超轻纳米纤维素基复合碳气凝胶",
+   "zh_title": "",
    "type": "paper",
-   "value": 579,
+   "value": 577,
    "year": 2022,
    "doi": "10.1002/adfm.202113082",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 12.453027723892308
+   "symbolSize": 12.45082749635011
   },
   {
    "id": "p:W4407290122",
    "name": "Advanced strategies for enhancing electrochem",
    "zh_title": "增强超级电容器中 NiAl LDH 电极电化学性能的先进策略",
    "type": "paper",
-   "value": 137,
+   "value": 139,
    "year": 2025,
    "doi": "10.1016/j.ccr.2025.216497",
    "journal": "Coordination Chemistry Reviews",
    "core_journal": false,
-   "symbolSize": 12.438489326721813
+   "symbolSize": 12.447654452328083
   },
   {
    "id": "p:W4377138451",
    "name": "Ultralight MXene/carbon nanotube composite ae",
-   "zh_title": "用于高性能柔性超级电容器的超轻MXene/碳纳米管复合气凝胶",
+   "zh_title": "",
    "type": "paper",
-   "value": 312,
+   "value": 310,
    "year": 2023,
    "doi": "10.1007/s42114-023-00675-8",
    "journal": "Advanced Composites and Hybrid Materials",
    "core_journal": true,
-   "symbolSize": 12.360131695068125
+   "symbolSize": 12.356048570572696
   },
   {
    "id": "p:W4399903006",
    "name": "Biomass-derived carbon applications in the fi",
-   "zh_title": "生物质碳在超级电容器领域的应用：进展与展望",
+   "zh_title": "",
    "type": "paper",
-   "value": 193,
+   "value": 192,
    "year": 2024,
    "doi": "10.1016/j.cej.2024.153311",
    "journal": "Chemical Engineering Journal",
    "core_journal": true,
-   "symbolSize": 12.355442537231
+   "symbolSize": 12.352150719878068
   },
   {
    "id": "p:W4403267714",
    "name": "Supercapacitors for energy storage applicatio",
    "zh_title": "用于储能应用的超级电容器：材料、器件和未来方向：全面综述",
    "type": "paper",
-   "value": 176,
+   "value": 179,
    "year": 2024,
    "doi": "10.1016/j.jallcom.2024.176924",
    "journal": "Journal of Alloys and Compounds",
    "core_journal": false,
-   "symbolSize": 12.29702745733065
+   "symbolSize": 12.307733007484849
   },
   {
    "id": "p:W4390598048",
@@ -380,105 +380,105 @@
    "symbolSize": 12.286138897481147
   },
   {
-   "id": "p:W4290615267",
-   "name": "Recent Advances in Laser‐Induced Graphene: Me",
-   "zh_title": "激光诱导石墨烯的最新进展：机理、制造、性能及其在柔性电子产品中的应用",
-   "type": "paper",
-   "value": 443,
-   "year": 2022,
-   "doi": "10.1002/adfm.202205158",
-   "journal": "Advanced Functional Materials",
-   "core_journal": true,
-   "symbolSize": 12.28282835616811
-  },
-  {
    "id": "p:W4408260458",
    "name": "Biomass‐Derived Carbon and Their Composites f",
    "zh_title": "用于超级电容器应用的生物质衍生碳及其复合材料：来源、功能和机制",
    "type": "paper",
-   "value": 104,
+   "value": 107,
    "year": 2025,
    "doi": "10.1002/ece2.70000",
    "journal": "EcoEnergy",
    "core_journal": false,
-   "symbolSize": 12.264410971969243
+   "symbolSize": 12.28235484138086
   },
   {
-   "id": "p:W4386269749",
-   "name": "Activation of biomass-derived porous carbon f",
-   "zh_title": "用于超级电容器的生物质衍生多孔碳的活化：综述",
+   "id": "p:W4290615267",
+   "name": "Recent Advances in Laser‐Induced Graphene: Me",
+   "zh_title": "",
    "type": "paper",
-   "value": 264,
-   "year": 2023,
-   "doi": "10.1016/j.cclet.2023.109007",
-   "journal": "Chinese Chemical Letters",
-   "core_journal": false,
-   "symbolSize": 12.254093948440651
+   "value": 440,
+   "year": 2022,
+   "doi": "10.1002/adfm.202205158",
+   "journal": "Advanced Functional Materials",
+   "core_journal": true,
+   "symbolSize": 12.278509931219498
   },
   {
    "id": "p:W4407272469",
    "name": "MXene/Biomass-derived activated carbon compos",
    "zh_title": "用于超级电容器应用的 MXene/生物质衍生活性炭复合材料",
    "type": "paper",
-   "value": 102,
+   "value": 103,
    "year": 2025,
    "doi": "10.1016/j.carbon.2025.120101",
    "journal": "Carbon",
    "core_journal": true,
-   "symbolSize": 12.25216126290092
+   "symbolSize": 12.258315564304878
+  },
+  {
+   "id": "p:W4386269749",
+   "name": "Activation of biomass-derived porous carbon f",
+   "zh_title": "用于超级电容器的生物质衍生多孔碳的活化：综述",
+   "type": "paper",
+   "value": 265,
+   "year": 2023,
+   "doi": "10.1016/j.cclet.2023.109007",
+   "journal": "Chinese Chemical Letters",
+   "core_journal": false,
+   "symbolSize": 12.256493067058898
   },
   {
    "id": "p:W4391646396",
    "name": "Ti 3 C 2 T x MXene/carbon composites for adva",
-   "zh_title": "用于先进超级电容器的 Ti 3 C 2 T x MXene/碳复合材料：合成、进展和前景",
+   "zh_title": "",
    "type": "paper",
-   "value": 159,
+   "value": 160,
    "year": 2024,
    "doi": "10.1002/cey2.501",
    "journal": "Carbon Energy",
    "core_journal": true,
-   "symbolSize": 12.232709307895357
+   "symbolSize": 12.23667795151338
   },
   {
    "id": "p:W4385368229",
    "name": "Lignins as Promising Renewable Biopolymers an",
-   "zh_title": "木质素作为高性能材料的有前景的可再生生物聚合物和生物活性化合物",
+   "zh_title": "木质素作为高性能材料的有前途的可再生生物聚合物和生物活性化合物",
    "type": "paper",
-   "value": 248,
+   "value": 250,
    "year": 2023,
    "doi": "10.3390/polym15153177",
    "journal": "Polymers",
    "core_journal": false,
-   "symbolSize": 12.214425709073748
+   "symbolSize": 12.219521458172188
   },
   {
    "id": "p:W4367597068",
    "name": "Inspired by Wood: Thick Electrodes for Superc",
-   "zh_title": "受木材启发：超级电容器的厚电极",
+   "zh_title": "",
    "type": "paper",
-   "value": 241,
+   "value": 242,
    "year": 2023,
    "doi": "10.1021/acsnano.3c01241",
    "journal": "ACS Nano",
    "core_journal": true,
-   "symbolSize": 12.1962625367713
+   "symbolSize": 12.198889201277526
   },
   {
    "id": "p:W3082721096",
    "name": "Recent progress in carbon-based materials for",
    "zh_title": "超级电容器电极用碳基材料的最新进展：综述",
    "type": "paper",
-   "value": 920,
+   "value": 926,
    "year": 2020,
    "doi": "10.1007/s10853-020-05157-6",
    "journal": "Journal of Materials Science",
    "core_journal": false,
-   "symbolSize": 12.147580790955379
+   "symbolSize": 12.15171694341193
   },
   {
    "id": "p:W4285384230",
    "name": "Recent progress on biomass waste derived acti",
-   "zh_title": "生物质废弃物衍生活性炭电极材料用于超级电容器的最新进展——综述",
+   "zh_title": "",
    "type": "paper",
    "value": 301,
    "year": 2022,
@@ -492,41 +492,41 @@
    "name": "Doping effect and oxygen vacancy engineering ",
    "zh_title": "高性能超级电容器用镍锰层状双氢氧化物的掺杂效应和氧空位工程",
    "type": "paper",
-   "value": 115,
+   "value": 116,
    "year": 2024,
    "doi": "10.1016/j.nanoen.2024.109690",
    "journal": "Nano Energy",
    "core_journal": true,
-   "symbolSize": 12.027871717532815
+   "symbolSize": 12.033339263894371
   },
   {
    "id": "p:W4401658876",
    "name": "Two-dimensional MXene based innovative electr",
    "zh_title": "用于超级电容器的二维MXene基创新电极材料：最新进展和前景",
    "type": "paper",
-   "value": 111,
+   "value": 112,
    "year": 2024,
    "doi": "10.1016/j.fuel.2024.132783",
    "journal": "Fuel",
    "core_journal": false,
-   "symbolSize": 12.005519766582932
+   "symbolSize": 12.011181717109016
   },
   {
    "id": "p:W3162109060",
    "name": "Biomass derived carbon for supercapacitor app",
-   "zh_title": "用于超级电容器应用的生物质衍生碳：综述",
+   "zh_title": "",
    "type": "paper",
-   "value": 456,
+   "value": 458,
    "year": 2021,
    "doi": "10.1016/j.est.2021.102646",
    "journal": "Journal of Energy Storage",
    "core_journal": true,
-   "symbolSize": 12.001210426769113
+   "symbolSize": 12.003991938787983
   },
   {
    "id": "p:W4296838023",
    "name": "Honeycomb-like nitrogen-doped porous carbon d",
-   "zh_title": "Co3O4纳米粒子装饰的蜂窝状氮掺杂多孔碳具有优异的电化学性能赝电容锂存储和超级电容器",
+   "zh_title": "",
    "type": "paper",
    "value": 279,
    "year": 2022,
@@ -538,7 +538,7 @@
   {
    "id": "p:W4384563372",
    "name": "Trehalose-enhanced ionic conductive hydrogels",
-   "zh_title": "海藻糖增强离子导电水凝胶具有极高的拉伸性、自粘性和抗冻能力，适用于柔性应变传感器和全固态超级电容器",
+   "zh_title": "",
    "type": "paper",
    "value": 167,
    "year": 2023,
@@ -550,55 +550,55 @@
   {
    "id": "p:W4286449004",
    "name": "Heterostructured bimetallic–sulfide@layered T",
-   "zh_title": "异质结构双金属硫化物@层状Ti3C2TX-MXene作为协同电极实现高能量密度水混合超级电容器",
+   "zh_title": "",
    "type": "paper",
-   "value": 267,
+   "value": 268,
    "year": 2022,
    "doi": "10.1016/j.nanoen.2022.107624",
    "journal": "Nano Energy",
    "core_journal": true,
-   "symbolSize": 11.961264364575557
+   "symbolSize": 11.963636677336865
   },
   {
    "id": "p:W4321997083",
    "name": "High Mass‐Loading Biomass‐Based Porous Carbon",
-   "zh_title": "用于超级电容器的高质量负载生物质基多孔碳电极：回顾与展望",
+   "zh_title": "",
    "type": "paper",
-   "value": 161,
+   "value": 164,
    "year": 2023,
    "doi": "10.1002/smll.202300336",
    "journal": "Small",
    "core_journal": true,
-   "symbolSize": 11.940622021329192
+   "symbolSize": 11.952309784847063
   },
   {
    "id": "p:W4407206055",
    "name": "Electrospun Carbon Nanofibers for Clean Energ",
-   "zh_title": "用于清洁能源应用的静电纺碳纳米纤维：全面综述",
+   "zh_title": "用于清洁能源应用的静电纺碳纳米纤维：综合综述",
    "type": "paper",
-   "value": 62,
+   "value": 63,
    "year": 2025,
    "doi": "10.1002/eom2.12517",
    "journal": "EcoMat",
    "core_journal": false,
-   "symbolSize": 11.939032805865253
+   "symbolSize": 11.949063961843034
   },
   {
    "id": "p:W3008309809",
    "name": "Porous Carbons: Structure‐Oriented Design and",
-   "zh_title": "多孔碳：面向结构的设计和多功能应用",
+   "zh_title": "",
    "type": "paper",
-   "value": 657,
+   "value": 659,
    "year": 2020,
    "doi": "10.1002/adfm.201909265",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 11.93339797730047
+   "symbolSize": 11.935331105461408
   },
   {
    "id": "p:W4311207356",
    "name": "Fundamentals and Scientific Challenges in Str",
-   "zh_title": "锌离子混合超级电容器正极材料结构设计的基础和科学挑战",
+   "zh_title": "",
    "type": "paper",
    "value": 251,
    "year": 2022,
@@ -612,19 +612,19 @@
    "name": "Recent advances in functional materials and d",
    "zh_title": "锌离子混合超级电容器功能材料和器件的最新进展",
    "type": "paper",
-   "value": 94,
+   "value": 97,
    "year": 2024,
    "doi": "10.1038/s41427-024-00537-9",
    "journal": "NPG Asia Materials",
    "core_journal": false,
-   "symbolSize": 11.900661287756977
+   "symbolSize": 11.92046491101566
   },
   {
    "id": "p:W2914972337",
    "name": "Review of supercapacitors: Materials and devi",
-   "zh_title": "超级电容器综述：材料与器件",
+   "zh_title": "",
    "type": "paper",
-   "value": 2097,
+   "value": 2090,
    "year": 2019,
    "doi": "10.1016/j.est.2019.01.010",
    "journal": "Journal of Energy Storage",
@@ -634,62 +634,62 @@
   {
    "id": "p:W3006609207",
    "name": "Tuning the interlayer spacing of graphene lam",
-   "zh_title": "调整石墨烯层压薄膜的层间距，以有效利用孔隙，实现紧凑的电容储能",
+   "zh_title": "",
    "type": "paper",
-   "value": 604,
+   "value": 603,
    "year": 2020,
    "doi": "10.1038/s41560-020-0560-6",
    "journal": "Nature Energy",
    "core_journal": true,
-   "symbolSize": 11.879907882823622
+   "symbolSize": 11.878854176644326
   },
   {
    "id": "p:W4388572919",
    "name": "Ultrahigh surface area hierarchical porous ca",
    "zh_title": "通过新型 KOH 活化策略从生物质中提取超高表面积分级多孔碳，用于高性能超级电容器",
    "type": "paper",
-   "value": 144,
+   "value": 145,
    "year": 2023,
    "doi": "10.1016/j.ijhydene.2023.10.319",
    "journal": "International Journal of Hydrogen Energy",
    "core_journal": false,
-   "symbolSize": 11.870006403277964
+   "symbolSize": 11.874384188483841
   },
   {
    "id": "p:W3084241778",
    "name": "Effect of self-doped heteroatoms on the perfo",
-   "zh_title": "自掺杂杂原子对超级电容器应用生物质衍生碳性能的影响",
+   "zh_title": "",
    "type": "paper",
-   "value": 590,
+   "value": 591,
    "year": 2020,
    "doi": "10.1016/j.jpowsour.2020.228830",
    "journal": "Journal of Power Sources",
    "core_journal": true,
-   "symbolSize": 11.864994971959174
+   "symbolSize": 11.866071836526949
   },
   {
    "id": "p:W4206544829",
    "name": "Carbon material/MnO2 as conductive skeleton f",
-   "zh_title": "碳材料/MnO2作为超级电容器电极材料导电骨架：综述",
+   "zh_title": "",
    "type": "paper",
-   "value": 221,
+   "value": 218,
    "year": 2022,
    "doi": "10.1016/j.rser.2022.112131",
    "journal": "Renewable and Sustainable Energy Reviews",
    "core_journal": true,
-   "symbolSize": 11.841317695860937
+   "symbolSize": 11.832651368432174
   },
   {
    "id": "p:W4213343283",
    "name": "Compressible cellulose nanofibrils/reduced gr",
-   "zh_title": "用于固态超级电容器的可压缩纤维素纳米纤丝/还原氧化石墨烯复合碳气凝胶",
+   "zh_title": "",
    "type": "paper",
-   "value": 212,
+   "value": 209,
    "year": 2022,
    "doi": "10.1007/s42114-022-00427-0",
    "journal": "Advanced Composites and Hybrid Materials",
    "core_journal": true,
-   "symbolSize": 11.814956751710149
+   "symbolSize": 11.805921632276416
   },
   {
    "id": "p:W4320737504",
@@ -706,7 +706,7 @@
   {
    "id": "p:W3126739725",
    "name": "Green activation of sustainable resources to ",
-   "zh_title": "绿色活化可持续资源合成氮掺杂富氧多孔碳纳米片用于高性能超级电容器",
+   "zh_title": "",
    "type": "paper",
    "value": 312,
    "year": 2021,
@@ -718,38 +718,26 @@
   {
    "id": "p:W3136529912",
    "name": "3D Porous Oxidation‐Resistant MXene/Graphene ",
-   "zh_title": "原位锌模板诱导的 3D 多孔抗氧化 MXene/石墨烯结构用于高性能超级电容器",
+   "zh_title": "",
    "type": "paper",
-   "value": 308,
+   "value": 309,
    "year": 2021,
    "doi": "10.1002/adfm.202101087",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 11.751939103156424
+   "symbolSize": 11.753997150956934
   },
   {
    "id": "p:W3194868426",
    "name": "Biomass derived functional carbon materials f",
-   "zh_title": "用于超级电容器应用的生物质衍生功能碳材料",
+   "zh_title": "",
    "type": "paper",
-   "value": 298,
+   "value": 299,
    "year": 2021,
    "doi": "10.1016/j.chemosphere.2021.131961",
    "journal": "Chemosphere",
    "core_journal": true,
-   "symbolSize": 11.730984409542497
-  },
-  {
-   "id": "p:W3006269673",
-   "name": "Recent progress of biomass-derived carbon mat",
-   "zh_title": "超级电容器用生物质碳材料的最新进展",
-   "type": "paper",
-   "value": 468,
-   "year": 2020,
-   "doi": "10.1016/j.jpowsour.2020.227794",
-   "journal": "Journal of Power Sources",
-   "core_journal": true,
-   "symbolSize": 11.717720169315456
+   "symbolSize": 11.733111173588838
   },
   {
    "id": "p:W4316467794",
@@ -764,9 +752,21 @@
    "symbolSize": 11.71679378196016
   },
   {
+   "id": "p:W3006269673",
+   "name": "Recent progress of biomass-derived carbon mat",
+   "zh_title": "",
+   "type": "paper",
+   "value": 464,
+   "year": 2020,
+   "doi": "10.1016/j.jpowsour.2020.227794",
+   "journal": "Journal of Power Sources",
+   "core_journal": true,
+   "symbolSize": 11.712264330905267
+  },
+  {
    "id": "p:W3141736526",
    "name": "High-Mass-Loading Electrodes for Advanced Sec",
-   "zh_title": "用于先进二次电池和超级电容器的高质量负载电极",
+   "zh_title": "",
    "type": "paper",
    "value": 289,
    "year": 2021,
@@ -776,9 +776,21 @@
    "symbolSize": 11.711517063585136
   },
   {
+   "id": "p:W2999459485",
+   "name": "Houttuynia-derived nitrogen-doped hierarchica",
+   "zh_title": "",
+   "type": "paper",
+   "value": 442,
+   "year": 2020,
+   "doi": "10.1016/j.carbon.2020.01.020",
+   "journal": "Carbon",
+   "core_journal": true,
+   "symbolSize": 11.681392131793835
+  },
+  {
    "id": "p:W3158592189",
    "name": "High mass-loading NiCo-LDH nanosheet arrays g",
-   "zh_title": "通过电沉积在碳布上生长的高质量负载 NiCo-LDH 纳米片阵列，具有出色的电化学能量存储能力",
+   "zh_title": "",
    "type": "paper",
    "value": 275,
    "year": 2021,
@@ -788,21 +800,9 @@
    "symbolSize": 11.679999987028985
   },
   {
-   "id": "p:W2999459485",
-   "name": "Houttuynia-derived nitrogen-doped hierarchica",
-   "zh_title": "鱼腥草衍生的氮掺杂分级多孔碳用于高性能超级电容器",
-   "type": "paper",
-   "value": 438,
-   "year": 2020,
-   "doi": "10.1016/j.carbon.2020.01.020",
-   "journal": "Carbon",
-   "core_journal": true,
-   "symbolSize": 11.675614629688445
-  },
-  {
    "id": "p:W3198203382",
    "name": "KOH-Activated Hollow ZIF-8 Derived Porous Car",
-   "zh_title": "KOH 激活的中空 ZIF-8 衍生多孔碳：用于升级电容去离子和超级电容器的纳米结构控制",
+   "zh_title": "",
    "type": "paper",
    "value": 271,
    "year": 2021,
@@ -814,19 +814,19 @@
   {
    "id": "p:W3177411920",
    "name": "In situ polymerized polyaniline/MXene (V2C) a",
-   "zh_title": "原位聚合聚苯胺/MXene (V2C) 作为超级电容器和氨传感器的构建块，由电磁摩擦电混合发电机自供电",
+   "zh_title": "",
    "type": "paper",
-   "value": 267,
+   "value": 268,
    "year": 2021,
    "doi": "10.1016/j.nanoen.2021.106242",
    "journal": "Nano Energy",
    "core_journal": true,
-   "symbolSize": 11.661264364575556
+   "symbolSize": 11.663636677336864
   },
   {
    "id": "p:W4224249721",
    "name": "Direct-ink writing 3D printed energy storage ",
-   "zh_title": "直接墨水书写3D打印储能装置：从材料选择性、设计和优化策略到多样化应用",
+   "zh_title": "",
    "type": "paper",
    "value": 165,
    "year": 2022,
@@ -834,6 +834,18 @@
    "journal": "Materials Today",
    "core_journal": true,
    "symbolSize": 11.656158529125415
+  },
+  {
+   "id": "p:W4414396404",
+   "name": "Enhancing zinc ion hybrid supercapacitors via",
+   "zh_title": "通过多孔碳的结构膨胀和N、S共掺杂增强锌离子混合超级电容器",
+   "type": "paper",
+   "value": 38,
+   "year": 2025,
+   "doi": "10.1016/j.jpowsour.2025.238440",
+   "journal": "Journal of Power Sources",
+   "core_journal": true,
+   "symbolSize": 11.633561423638865
   },
   {
    "id": "p:W3139434491",
@@ -850,7 +862,7 @@
   {
    "id": "p:W3208083492",
    "name": "Evolution and recent developments of high per",
-   "zh_title": "超级电容器高性能电极材料的演变和最新进展：综述",
+   "zh_title": "",
    "type": "paper",
    "value": 251,
    "year": 2021,
@@ -864,43 +876,31 @@
    "name": "Wood-derived biochar as thick electrodes for ",
    "zh_title": "木质生物炭作为高性能超级电容器的厚电极",
    "type": "paper",
-   "value": 155,
+   "value": 156,
    "year": 2022,
    "doi": "10.1007/s42773-022-00176-9",
    "journal": "Biochar",
    "core_journal": false,
-   "symbolSize": 11.616582744253211
+   "symbolSize": 11.620652823533543
   },
   {
    "id": "p:W3127915119",
    "name": "Biomass-Derived Carbon Materials for High-Per",
-   "zh_title": "用于高性能超级电容器的生物质衍生碳材料：现状与前景",
+   "zh_title": "",
    "type": "paper",
-   "value": 245,
+   "value": 244,
    "year": 2021,
    "doi": "10.1007/s41918-020-00090-3",
    "journal": "Electrochemical Energy Reviews",
    "core_journal": true,
-   "symbolSize": 11.606704823751622
-  },
-  {
-   "id": "p:W4414396404",
-   "name": "Enhancing zinc ion hybrid supercapacitors via",
-   "zh_title": "通过多孔碳的结构膨胀和N、S共掺杂增强锌离子混合超级电容器",
-   "type": "paper",
-   "value": 36,
-   "year": 2025,
-   "doi": "10.1016/j.jpowsour.2025.238440",
-   "journal": "Journal of Power Sources",
-   "core_journal": true,
-   "symbolSize": 11.600029195298259
+   "symbolSize": 11.604110257067981
   },
   {
    "id": "p:W2793212697",
    "name": "All Pseudocapacitive MXene‐RuO 2 Asymmetric S",
-   "zh_title": "所有赝电容 MXene-RuO 2 非对称超级电容器",
+   "zh_title": "",
    "type": "paper",
-   "value": 1036,
+   "value": 1040,
    "year": 2018,
    "doi": "10.1002/aenm.201703043",
    "journal": "Advanced Energy Materials",
@@ -912,17 +912,29 @@
    "name": "Human motion-driven self-powered stretchable ",
    "zh_title": "基于激光诱导石墨烯泡沫的人体运动驱动自供电可拉伸传感平台",
    "type": "paper",
-   "value": 147,
+   "value": 148,
    "year": 2022,
    "doi": "10.1063/5.0077667",
    "journal": "Applied Physics Reviews",
    "core_journal": false,
-   "symbolSize": 11.583050515912605
+   "symbolSize": 11.587339860338002
+  },
+  {
+   "id": "p:W2973069917",
+   "name": "Fast Gelation of Ti3C2Tx MXene Initiated by M",
+   "zh_title": "",
+   "type": "paper",
+   "value": 607,
+   "year": 2019,
+   "doi": "10.1002/adma.201902432",
+   "journal": "Advanced Materials",
+   "core_journal": true,
+   "symbolSize": 11.583058582933345
   },
   {
    "id": "p:W3127485585",
    "name": "Phosphorus-doped thick carbon electrode for h",
-   "zh_title": "用于高能量密度和长寿命超级电容器的磷掺杂厚碳电极",
+   "zh_title": "",
    "type": "paper",
    "value": 236,
    "year": 2021,
@@ -944,28 +956,16 @@
    "symbolSize": 11.580222146773481
   },
   {
-   "id": "p:W2973069917",
-   "name": "Fast Gelation of Ti3C2Tx MXene Initiated by M",
-   "zh_title": "金属离子引发 Ti3C2TX MXene 的快速凝胶化",
+   "id": "p:W3110234190",
+   "name": "Maximizing ion accessibility in MXene-knotted",
+   "zh_title": "",
    "type": "paper",
-   "value": 604,
-   "year": 2019,
-   "doi": "10.1002/adma.201902432",
-   "journal": "Advanced Materials",
+   "value": 373,
+   "year": 2020,
+   "doi": "10.1038/s41467-020-19992-3",
+   "journal": "Nature Communications",
    "core_journal": true,
-   "symbolSize": 11.579907882823623
-  },
-  {
-   "id": "p:W2965636877",
-   "name": "Recent progress in metal-organic frameworks-b",
-   "zh_title": "金属有机骨架水凝胶和气凝胶及其应用的最新进展",
-   "type": "paper",
-   "value": 600,
-   "year": 2019,
-   "doi": "10.1016/j.ccr.2019.213016",
-   "journal": "Coordination Chemistry Reviews",
-   "core_journal": false,
-   "symbolSize": 11.575682558937352
+   "symbolSize": 11.573545016560704
   },
   {
    "id": "p:W4316591931",
@@ -980,21 +980,21 @@
    "symbolSize": 11.573260708737605
   },
   {
-   "id": "p:W3110234190",
-   "name": "Maximizing ion accessibility in MXene-knotted",
-   "zh_title": "最大化 MXene 结碳纳米管复合电极中的离子可及性，用于高速电化学储能",
+   "id": "p:W2965636877",
+   "name": "Recent progress in metal-organic frameworks-b",
+   "zh_title": "金属有机骨架水凝胶和气凝胶及其应用的最新进展",
    "type": "paper",
-   "value": 372,
-   "year": 2020,
-   "doi": "10.1038/s41467-020-19992-3",
-   "journal": "Nature Communications",
-   "core_journal": true,
-   "symbolSize": 11.571839619986076
+   "value": 597,
+   "year": 2019,
+   "doi": "10.1016/j.ccr.2019.213016",
+   "journal": "Coordination Chemistry Reviews",
+   "core_journal": false,
+   "symbolSize": 11.57249506984967
   },
   {
    "id": "p:W4291289956",
    "name": "Highly conductive, stretchable, durable, brea",
-   "zh_title": "基于电纺聚氨酯垫的高导电性、可拉伸、耐用、透气电极，表面饰有碳纳米管，用于多功能可穿戴电子产品",
+   "zh_title": "",
    "type": "paper",
    "value": 140,
    "year": 2022,
@@ -1004,45 +1004,45 @@
    "symbolSize": 11.552188031894557
   },
   {
-   "id": "p:W3208319302",
-   "name": "Sandwich-like chitosan porous carbon Spheres/",
-   "zh_title": "具有高比电容和倍率性能的三明治状壳聚糖多孔碳球/MXene复合材料用于超级电容器",
-   "type": "paper",
-   "value": 139,
-   "year": 2022,
-   "doi": "10.1016/j.jobab.2021.10.001",
-   "journal": "Journal of Bioresources and Bioproducts",
-   "core_journal": false,
-   "symbolSize": 11.547654452328082
-  },
-  {
    "id": "p:W3017409572",
    "name": "In Situ Ice Template Approach to Fabricate 3D",
-   "zh_title": "原位冰模板法制造用于高性能超级电容器的 3D 柔性 MXene 薄膜电极",
+   "zh_title": "",
    "type": "paper",
-   "value": 358,
+   "value": 357,
    "year": 2020,
    "doi": "10.1002/adfm.202000922",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 11.547471857914868
+   "symbolSize": 11.54569510574435
+  },
+  {
+   "id": "p:W3208319302",
+   "name": "Sandwich-like chitosan porous carbon Spheres/",
+   "zh_title": "具有高比电容和倍率性能的三明治状壳聚糖多孔碳球/MXene复合材料用于超级电容器",
+   "type": "paper",
+   "value": 138,
+   "year": 2022,
+   "doi": "10.1016/j.jobab.2021.10.001",
+   "journal": "Journal of Bioresources and Bioproducts",
+   "core_journal": false,
+   "symbolSize": 11.543088373706006
   },
   {
    "id": "p:W4308116012",
    "name": "3D Printed Supercapacitor: Techniques, Materi",
-   "zh_title": "3D 打印超级电容器：技术、材料、设计和应用",
+   "zh_title": "",
    "type": "paper",
-   "value": 135,
+   "value": 134,
    "year": 2022,
    "doi": "10.1002/adfm.202208034",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 11.529190398942987
+   "symbolSize": 11.52448952712601
   },
   {
    "id": "p:W2923123397",
    "name": "Biomass derived interconnected hierarchical m",
-   "zh_title": "用于超级电容器的具有超高电容的生物质衍生的互连分层微介观宏孔碳",
+   "zh_title": "",
    "type": "paper",
    "value": 542,
    "year": 2019,
@@ -1052,28 +1052,40 @@
    "symbolSize": 11.511039750063642
   },
   {
-   "id": "p:W2974725236",
-   "name": "Boosting Zn‐Ion Energy Storage Capability of ",
-   "zh_title": "通过促进化学吸附提高多级孔碳的锌离子储能能力",
-   "type": "paper",
-   "value": 541,
-   "year": 2019,
-   "doi": "10.1002/adma.201904948",
-   "journal": "Advanced Materials",
-   "core_journal": true,
-   "symbolSize": 11.509865620256303
-  },
-  {
    "id": "p:W2917921311",
    "name": "Ultrathin NiCo-MOF Nanosheets for High-Perfor",
-   "zh_title": "用于高性能超级电容器电极的超薄 NiCo-MOF 纳米片",
+   "zh_title": "",
    "type": "paper",
-   "value": 540,
+   "value": 541,
    "year": 2019,
    "doi": "10.1021/acsaem.8b02128",
    "journal": "ACS Applied Energy Materials",
    "core_journal": true,
+   "symbolSize": 11.509865620256303
+  },
+  {
+   "id": "p:W2974725236",
+   "name": "Boosting Zn‐Ion Energy Storage Capability of ",
+   "zh_title": "",
+   "type": "paper",
+   "value": 540,
+   "year": 2019,
+   "doi": "10.1002/adma.201904948",
+   "journal": "Advanced Materials",
+   "core_journal": true,
    "symbolSize": 11.508689322156302
+  },
+  {
+   "id": "p:W4413107780",
+   "name": "Sustainable MXene/Conductive Cellulose Hetero",
+   "zh_title": "用于 3D 打印高面能量密度微型超级电容器和自供电集成系统的可持续 MXene/导电纤维素异质油墨",
+   "type": "paper",
+   "value": 31,
+   "year": 2025,
+   "doi": "10.1002/advs.202511439",
+   "journal": "Advanced Science",
+   "core_journal": true,
+   "symbolSize": 11.507553301535863
   },
   {
    "id": "p:W3127767413",
@@ -1090,31 +1102,19 @@
   {
    "id": "p:W3009923537",
    "name": "Wood‐Derived Lightweight and Elastic Carbon A",
-   "zh_title": "用于压力传感和能量存储的木材衍生轻质弹性碳气凝胶",
+   "zh_title": "",
    "type": "paper",
-   "value": 328,
+   "value": 327,
    "year": 2020,
    "doi": "10.1002/adfm.201910292",
    "journal": "Advanced Functional Materials",
    "core_journal": true,
-   "symbolSize": 11.491887316993296
-  },
-  {
-   "id": "p:W4413107780",
-   "name": "Sustainable MXene/Conductive Cellulose Hetero",
-   "zh_title": "用于 3D 打印高面能量密度微型超级电容器和自供电集成系统的可持续 MXene/导电纤维素异质油墨",
-   "type": "paper",
-   "value": 30,
-   "year": 2025,
-   "doi": "10.1002/advs.202511439",
-   "journal": "Advanced Science",
-   "core_journal": true,
-   "symbolSize": 11.487330484290267
+   "symbolSize": 11.489948304110463
   },
   {
    "id": "p:W3200691453",
    "name": "Confinement of Zn-Mg-Al-layered double hydrox",
-   "zh_title": "将 Zn-Mg-Al 层状双氢氧化物和 α-Fe2O3 纳米棒限制在中空多孔碳纳米纤维上：用于固态对称超级电容器的独立式电极",
+   "zh_title": "",
    "type": "paper",
    "value": 202,
    "year": 2021,
@@ -1126,26 +1126,14 @@
   {
    "id": "p:W3003999636",
    "name": "3D‐Printed Stretchable Micro‐Supercapacitor w",
-   "zh_title": "具有卓越面积性能的 3D 打印可拉伸微型超级电容器",
+   "zh_title": "",
    "type": "paper",
-   "value": 323,
+   "value": 324,
    "year": 2020,
    "doi": "10.1002/aenm.201903794",
    "journal": "Advanced Energy Materials",
    "core_journal": true,
-   "symbolSize": 11.482132681636365
-  },
-  {
-   "id": "p:W2953124245",
-   "name": "3D Macroscopic Architectures from Self‐Assemb",
-   "zh_title": "自组装 MXene 水凝胶的 3D 宏观结构",
-   "type": "paper",
-   "value": 513,
-   "year": 2019,
-   "doi": "10.1002/adfm.201903960",
-   "journal": "Advanced Functional Materials",
-   "core_journal": true,
-   "symbolSize": 11.476079241193071
+   "symbolSize": 11.48409559610235
   },
   {
    "id": "p:W4213022385",
@@ -1160,33 +1148,45 @@
    "symbolSize": 11.475468019078484
   },
   {
+   "id": "p:W2953124245",
+   "name": "3D Macroscopic Architectures from Self‐Assemb",
+   "zh_title": "",
+   "type": "paper",
+   "value": 511,
+   "year": 2019,
+   "doi": "10.1002/adfm.201903960",
+   "journal": "Advanced Functional Materials",
+   "core_journal": true,
+   "symbolSize": 11.473595942764552
+  },
+  {
    "id": "p:W3040759955",
    "name": "Green synthesis of nitrogen, sulfur-co-doped ",
-   "zh_title": "绿色合成源自生姜的氮、硫共掺杂蠕虫状分级多孔碳，具有出色的超级电容器性能",
+   "zh_title": "",
    "type": "paper",
-   "value": 317,
+   "value": 316,
    "year": 2020,
    "doi": "10.1016/j.carbon.2020.07.017",
    "journal": "Carbon",
    "core_journal": true,
-   "symbolSize": 11.470226442643835
+   "symbolSize": 11.468220251252703
   },
   {
    "id": "p:W4236825273",
    "name": "Laser-Induced Graphene",
-   "zh_title": "激光诱导石墨烯",
+   "zh_title": "",
    "type": "paper",
-   "value": 801,
+   "value": 802,
    "year": 2018,
    "doi": "10.1021/acs.accounts.8b00084",
    "journal": "Accounts of Chemical Research",
    "core_journal": true,
-   "symbolSize": 11.459455740150107
+   "symbolSize": 11.460249466408733
   },
   {
    "id": "p:W3000466069",
    "name": "3D‐Printed Structure Boosts the Kinetics and ",
-   "zh_title": "3D 打印结构增强赝电容石墨烯气凝胶的动力学和本征电容",
+   "zh_title": "",
    "type": "paper",
    "value": 309,
    "year": 2020,
@@ -1198,55 +1198,55 @@
   {
    "id": "p:W3018725144",
    "name": "Co-ZIF derived porous NiCo-LDH nanosheets/N d",
-   "zh_title": "用于高性能超级电容器的Co-ZIF衍生多孔NiCo-LDH纳米片/氮掺杂碳泡沫",
+   "zh_title": "",
    "type": "paper",
-   "value": 304,
+   "value": 305,
    "year": 2020,
    "doi": "10.1016/j.carbon.2020.04.084",
    "journal": "Carbon",
    "core_journal": true,
-   "symbolSize": 11.443639764375286
+   "symbolSize": 11.445724758839651
   },
   {
    "id": "p:W3212256940",
    "name": "Conducting polymer hydrogel based electrode m",
-   "zh_title": "用于超级电容器应用的导电聚合物水凝胶基电极材料",
+   "zh_title": "",
    "type": "paper",
-   "value": 188,
+   "value": 187,
    "year": 2021,
    "doi": "10.1016/j.est.2021.103510",
    "journal": "Journal of Energy Storage",
    "core_journal": true,
-   "symbolSize": 11.438810646120759
-  },
-  {
-   "id": "p:W3137789900",
-   "name": "Biomass-derived, multifunctional and wave-lay",
-   "zh_title": "生物质衍生的多功能波层碳气凝胶用于可穿戴压力传感器、超级电容器和摩擦纳米发电机",
-   "type": "paper",
-   "value": 181,
-   "year": 2021,
-   "doi": "10.1016/j.nanoen.2021.105973",
-   "journal": "Nano Energy",
-   "core_journal": true,
-   "symbolSize": 11.414771369044775
+   "symbolSize": 11.435431512253398
   },
   {
    "id": "p:W4391972394",
    "name": "Integration of Polymorphic CoxSey on MXene-In",
    "zh_title": "将多晶型 CoxSey 集成到 MXene 自模板化三维石墨烯泡沫上，通过成分和结构修改来增强超级电容器性能",
    "type": "paper",
-   "value": 43,
+   "value": 44,
    "year": 2024,
    "doi": "10.1021/acsaem.3c02808",
    "journal": "ACS Applied Energy Materials",
    "core_journal": true,
-   "symbolSize": 11.410397258846409
+   "symbolSize": 11.424711686870504
+  },
+  {
+   "id": "p:W3137789900",
+   "name": "Biomass-derived, multifunctional and wave-lay",
+   "zh_title": "",
+   "type": "paper",
+   "value": 180,
+   "year": 2021,
+   "doi": "10.1016/j.nanoen.2021.105973",
+   "journal": "Nano Energy",
+   "core_journal": true,
+   "symbolSize": 11.411261909808138
   },
   {
    "id": "p:W3097831447",
    "name": "Combustion conversion of wood to N, O co-dope",
-   "zh_title": "木材燃烧转化为 N、O 共掺杂二维碳纳米片，用于锌离子混合超级电容器",
+   "zh_title": "",
    "type": "paper",
    "value": 283,
    "year": 2020,
@@ -1256,9 +1256,21 @@
    "symbolSize": 11.398200232068989
   },
   {
+   "id": "p:W4401252462",
+   "name": "Microdrop InkJet printed supercapacitors of g",
+   "zh_title": "用于柔性电子产品的 Microdrop 喷墨印刷石墨烯/氧化石墨烯墨水超级电容器",
+   "type": "paper",
+   "value": 42,
+   "year": 2024,
+   "doi": "10.1016/j.jpowsour.2024.235145",
+   "journal": "Journal of Power Sources",
+   "core_journal": true,
+   "symbolSize": 11.39575373485006
+  },
+  {
    "id": "p:W3133561221",
    "name": "Printing Porous Carbon Aerogels for Low Tempe",
-   "zh_title": "打印用于低温超级电容器的多孔碳气凝胶",
+   "zh_title": "",
    "type": "paper",
    "value": 175,
    "year": 2021,
@@ -1270,7 +1282,7 @@
   {
    "id": "p:W3118619094",
    "name": "Large-surface-area activated carbon with high",
-   "zh_title": "用于超级电容器电极的静电致密化高密度大表面积活性炭",
+   "zh_title": "",
    "type": "paper",
    "value": 174,
    "year": 2021,
@@ -1282,7 +1294,7 @@
   {
    "id": "p:W2997898516",
    "name": "3D Printing of Additive-Free 2D Ti3C2Tx (MXen",
-   "zh_title": "用于制造超高能量密度微型超级电容器的无添加剂 2D Ti3C2TX (MXene) 墨水 3D 打印",
+   "zh_title": "",
    "type": "paper",
    "value": 443,
    "year": 2019,
@@ -1294,7 +1306,7 @@
   {
    "id": "p:W3114694474",
    "name": "Ultrahigh surface area biomass derived 3D hie",
-   "zh_title": "用于高能量密度超级电容器的超高表面积生物质衍生的3D分级多孔碳纳米片电极",
+   "zh_title": "",
    "type": "paper",
    "value": 276,
    "year": 2020,
@@ -1304,33 +1316,21 @@
    "symbolSize": 11.382303661294525
   },
   {
-   "id": "p:W4401252462",
-   "name": "Microdrop InkJet printed supercapacitors of g",
-   "zh_title": "用于柔性电子产品的 Microdrop 喷墨印刷石墨烯/氧化石墨烯墨水超级电容器",
-   "type": "paper",
-   "value": 41,
-   "year": 2024,
-   "doi": "10.1016/j.jpowsour.2024.235145",
-   "journal": "Journal of Power Sources",
-   "core_journal": true,
-   "symbolSize": 11.380765625916922
-  },
-  {
    "id": "p:W3105281094",
    "name": "Synthesis of reduced graphene oxide supported",
-   "zh_title": "用于超级电容器的还原氧化石墨烯负载镍钴层状双氢氧化物纳米片的合成",
+   "zh_title": "",
    "type": "paper",
-   "value": 266,
+   "value": 265,
    "year": 2020,
    "doi": "10.1016/j.jcis.2020.11.056",
    "journal": "Journal of Colloid and Interface Science",
    "core_journal": true,
-   "symbolSize": 11.358883183334711
+   "symbolSize": 11.3564930670589
   },
   {
    "id": "p:W2902710277",
    "name": "Electrospun MXene/carbon nanofibers as superc",
-   "zh_title": "静电纺MXene/碳纳米纤维作为超级电容器电极",
+   "zh_title": "",
    "type": "paper",
    "value": 675,
    "year": 2018,
@@ -1366,19 +1366,19 @@
   {
    "id": "p:W3082370397",
    "name": "The rational design of biomass-derived carbon",
-   "zh_title": "面向下一代储能的生物质衍生碳材料的合理设计：综述",
+   "zh_title": "",
    "type": "paper",
-   "value": 256,
+   "value": 255,
    "year": 2020,
    "doi": "10.1016/j.rser.2020.110308",
    "journal": "Renewable and Sustainable Energy Reviews",
    "core_journal": true,
-   "symbolSize": 11.3345685808859
+   "symbolSize": 11.33208528245738
   },
   {
    "id": "p:W2797124276",
    "name": "One-step production of O-N-S co-doped three-d",
-   "zh_title": "一步制备高性能超级电容器用O-N-S共掺杂三维分级多孔碳",
+   "zh_title": "",
    "type": "paper",
    "value": 649,
    "year": 2018,
@@ -1386,6 +1386,18 @@
    "journal": "Nano Energy",
    "core_journal": true,
    "symbolSize": 11.325606256409522
+  },
+  {
+   "id": "p:W4281692901",
+   "name": "Enhanced electrochemical performance of vanad",
+   "zh_title": "用于超级电容器的碳化钒MXene复合材料增强电化学性能",
+   "type": "paper",
+   "value": 97,
+   "year": 2022,
+   "doi": "10.1063/5.0087457",
+   "journal": "APL Materials",
+   "core_journal": false,
+   "symbolSize": 11.320464911015659
   },
   {
    "id": "p:W4280623661",
@@ -1400,28 +1412,28 @@
    "symbolSize": 11.307331141791368
   },
   {
-   "id": "p:W4281692901",
-   "name": "Enhanced electrochemical performance of vanad",
-   "zh_title": "用于超级电容器的碳化钒MXene复合材料增强电化学性能",
-   "type": "paper",
-   "value": 94,
-   "year": 2022,
-   "doi": "10.1063/5.0087457",
-   "journal": "APL Materials",
-   "core_journal": false,
-   "symbolSize": 11.300661287756977
-  },
-  {
    "id": "p:W2926906524",
    "name": "Recent advancements of polyaniline-based nano",
-   "zh_title": "用于超级电容器的聚苯胺基纳米复合材料的最新进展",
+   "zh_title": "",
    "type": "paper",
-   "value": 389,
+   "value": 392,
    "year": 2019,
    "doi": "10.1016/j.jpowsour.2019.03.094",
    "journal": "Journal of Power Sources",
    "core_journal": true,
-   "symbolSize": 11.300228090305533
+   "symbolSize": 11.305109073883958
+  },
+  {
+   "id": "p:W4214887148",
+   "name": "Compressible and Lightweight MXene/Carbon Nan",
+   "zh_title": "可压缩、轻质 MXene/碳纳米纤维气凝胶，具有“层支柱”支撑微观结构，可实现高效能量存储",
+   "type": "paper",
+   "value": 94,
+   "year": 2022,
+   "doi": "10.1007/s42765-022-00140-z",
+   "journal": "Advanced Fiber Materials",
+   "core_journal": false,
+   "symbolSize": 11.300661287756977
   },
   {
    "id": "p:W3215658691",
@@ -1438,9 +1450,9 @@
   {
    "id": "p:W2726710569",
    "name": "Flexible MXene/Graphene Films for Ultrafast S",
-   "zh_title": "用于具有出色体积电容的超快超级电容器的柔性 MXene/石墨烯薄膜",
+   "zh_title": "",
    "type": "paper",
-   "value": 1898,
+   "value": 1900,
    "year": 2017,
    "doi": "10.1002/adfm.201701264",
    "journal": "Advanced Functional Materials",
@@ -1450,9 +1462,9 @@
   {
    "id": "p:W2739141426",
    "name": "Transparent, Flexible, and Conductive 2D Tita",
-   "zh_title": "具有高体积电容的透明、柔性、导电 2D 碳化钛 (MXene) 薄膜",
+   "zh_title": "",
    "type": "paper",
-   "value": 1170,
+   "value": 1161,
    "year": 2017,
    "doi": "10.1002/adma.201702678",
    "journal": "Advanced Materials",
@@ -1462,9 +1474,9 @@
   {
    "id": "p:W2738858711",
    "name": "Highly porous graphitic biomass carbon as adv",
-   "zh_title": "高多孔石墨生物质碳作为超级电容器的先进电极材料",
+   "zh_title": "",
    "type": "paper",
-   "value": 1132,
+   "value": 1133,
    "year": 2017,
    "doi": "10.1039/c7gc01681f",
    "journal": "Green Chemistry",
@@ -1484,6 +1496,18 @@
    "symbolSize": 11.297200826159136
   },
   {
+   "id": "p:W4414354285",
+   "name": "MXene‐Supported Vanadium Sulfide Composites R",
+   "zh_title": "定制碳纳米管网络增强 MXene 支撑的硫化钒复合材料，用于高性能超级电池",
+   "type": "paper",
+   "value": 22,
+   "year": 2025,
+   "doi": "10.1002/smll.202507971",
+   "journal": "Small",
+   "core_journal": true,
+   "symbolSize": 11.297200826159136
+  },
+  {
    "id": "p:W4415711681",
    "name": "Progress in preparation strategies for lignin",
    "zh_title": "木质素碳气凝胶制备策略及其超级电容器性能调控研究进展",
@@ -1496,21 +1520,9 @@
    "symbolSize": 11.297200826159136
   },
   {
-   "id": "p:W4214887148",
-   "name": "Compressible and Lightweight MXene/Carbon Nan",
-   "zh_title": "可压缩、轻质 MXene/碳纳米纤维气凝胶，具有“层支柱”支撑微观结构，可实现高效能量存储",
-   "type": "paper",
-   "value": 93,
-   "year": 2022,
-   "doi": "10.1007/s42765-022-00140-z",
-   "journal": "Advanced Fiber Materials",
-   "core_journal": false,
-   "symbolSize": 11.293920851946226
-  },
-  {
    "id": "p:W3157516635",
    "name": "3D Porous Honeycomb‐Like CoN‐Ni3N/N‐C Nanoshe",
-   "zh_title": "用于高能量密度柔性超级电容器的3D多孔蜂窝状CoN-Ni3N/N-C纳米片集成电极",
+   "zh_title": "",
    "type": "paper",
    "value": 148,
    "year": 2021,
@@ -1532,16 +1544,28 @@
    "symbolSize": 11.287108324545772
   },
   {
-   "id": "p:W3033958802",
-   "name": "Evolution of 3D Printing Methods and Material",
-   "zh_title": "电化学储能3D打印方法和材料的演变",
+   "id": "p:W4401119946",
+   "name": "3D graphene oxide/nickel ferrite aerogel for ",
+   "zh_title": "用于高性能超级电容器应用的3D氧化石墨烯/镍铁氧体气凝胶",
    "type": "paper",
-   "value": 236,
-   "year": 2020,
-   "doi": "10.1002/adma.202000556",
-   "journal": "Advanced Materials",
+   "value": 35,
+   "year": 2024,
+   "doi": "10.1016/j.est.2024.112797",
+   "journal": "Journal of Energy Storage",
    "core_journal": true,
-   "symbolSize": 11.28296424081482
+   "symbolSize": 11.282577001125356
+  },
+  {
+   "id": "p:W7140441203",
+   "name": "Progress and challenges in carbon nanomateria",
+   "zh_title": "碳纳米材料超级电容器的进展与挑战：迈向可持续高能量存储",
+   "type": "paper",
+   "value": 13,
+   "year": 2026,
+   "doi": "10.1016/j.rser.2026.116930",
+   "journal": "Renewable and Sustainable Energy Reviews",
+   "core_journal": true,
+   "symbolSize": 11.280987785661416
   },
   {
    "id": "p:W3185779693",
@@ -1554,30 +1578,6 @@
    "journal": "International Journal of Energy Research",
    "core_journal": false,
    "symbolSize": 11.278732090963992
-  },
-  {
-   "id": "p:W2937175219",
-   "name": "Nitrogen, oxygen and sulfur co-doped hierarch",
-   "zh_title": "通过直接热解硫酸盐木质素制备氮、氧和硫共掺杂分级多孔碳制备高性能超级电容器",
-   "type": "paper",
-   "value": 375,
-   "year": 2019,
-   "doi": "10.1016/j.carbon.2019.04.023",
-   "journal": "Carbon",
-   "core_journal": true,
-   "symbolSize": 11.27694217256057
-  },
-  {
-   "id": "p:W2971503066",
-   "name": "Biomass derived carbon as binder-free electro",
-   "zh_title": "生物质衍生碳作为超级电容器的无粘合剂电极材料",
-   "type": "paper",
-   "value": 374,
-   "year": 2019,
-   "doi": "10.1016/j.carbon.2019.09.018",
-   "journal": "Carbon",
-   "core_journal": true,
-   "symbolSize": 11.275245859333989
   }
  ],
  "links": [
@@ -1637,6 +1637,21 @@
    "weight": 1
   },
   {
+   "source": "p:W4408260458",
+   "target": "t:石墨烯",
+   "weight": 1
+  },
+  {
+   "source": "p:W4408260458",
+   "target": "t:生物质碳",
+   "weight": 1
+  },
+  {
+   "source": "p:W4408260458",
+   "target": "t:杂原子掺杂",
+   "weight": 1
+  },
+  {
    "source": "p:W4290615267",
    "target": "t:石墨烯",
    "weight": 1
@@ -1652,18 +1667,13 @@
    "weight": 1
   },
   {
-   "source": "p:W4408260458",
-   "target": "t:石墨烯",
+   "source": "p:W4407272469",
+   "target": "t:活性炭 AC",
    "weight": 1
   },
   {
-   "source": "p:W4408260458",
+   "source": "p:W4407272469",
    "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W4408260458",
-   "target": "t:杂原子掺杂",
    "weight": 1
   },
   {
@@ -1673,16 +1683,6 @@
   },
   {
    "source": "p:W4386269749",
-   "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W4407272469",
-   "target": "t:活性炭 AC",
-   "weight": 1
-  },
-  {
-   "source": "p:W4407272469",
    "target": "t:生物质碳",
    "weight": 1
   },
@@ -1952,18 +1952,13 @@
    "weight": 1
   },
   {
-   "source": "p:W3006269673",
-   "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
    "source": "p:W4316467794",
    "target": "t:碳纳米管 CNT",
    "weight": 1
   },
   {
-   "source": "p:W3158592189",
-   "target": "t:碳纤维/织物",
+   "source": "p:W3006269673",
+   "target": "t:生物质碳",
    "weight": 1
   },
   {
@@ -1974,6 +1969,11 @@
   {
    "source": "p:W2999459485",
    "target": "t:杂原子掺杂",
+   "weight": 1
+  },
+  {
+   "source": "p:W3158592189",
+   "target": "t:碳纤维/织物",
    "weight": 1
   },
   {
@@ -2002,6 +2002,16 @@
    "weight": 1
   },
   {
+   "source": "p:W4414396404",
+   "target": "t:多孔碳",
+   "weight": 1
+  },
+  {
+   "source": "p:W4414396404",
+   "target": "t:杂原子掺杂",
+   "weight": 1
+  },
+  {
    "source": "p:W3139434491",
    "target": "t:多孔碳",
    "weight": 1
@@ -2024,16 +2034,6 @@
   {
    "source": "p:W3127915119",
    "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W4414396404",
-   "target": "t:多孔碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W4414396404",
-   "target": "t:杂原子掺杂",
    "weight": 1
   },
   {
@@ -2087,6 +2087,21 @@
    "weight": 1
   },
   {
+   "source": "p:W2973069917",
+   "target": "t:石墨烯",
+   "weight": 1
+  },
+  {
+   "source": "p:W2973069917",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 1
+  },
+  {
+   "source": "p:W2973069917",
+   "target": "t:倍率性能",
+   "weight": 1
+  },
+  {
    "source": "p:W3127485585",
    "target": "t:能量密度",
    "weight": 1
@@ -2112,23 +2127,18 @@
    "weight": 1
   },
   {
-   "source": "p:W2973069917",
-   "target": "t:石墨烯",
+   "source": "p:W3110234190",
+   "target": "t:碳纳米管 CNT",
    "weight": 1
   },
   {
-   "source": "p:W2973069917",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 1
-  },
-  {
-   "source": "p:W2973069917",
+   "source": "p:W3110234190",
    "target": "t:倍率性能",
    "weight": 1
   },
   {
-   "source": "p:W2965636877",
-   "target": "t:MOF 衍生碳",
+   "source": "p:W3110234190",
+   "target": "t:循环稳定性",
    "weight": 1
   },
   {
@@ -2157,18 +2167,8 @@
    "weight": 1
   },
   {
-   "source": "p:W3110234190",
-   "target": "t:碳纳米管 CNT",
-   "weight": 1
-  },
-  {
-   "source": "p:W3110234190",
-   "target": "t:倍率性能",
-   "weight": 1
-  },
-  {
-   "source": "p:W3110234190",
-   "target": "t:循环稳定性",
+   "source": "p:W2965636877",
+   "target": "t:MOF 衍生碳",
    "weight": 1
   },
   {
@@ -2179,36 +2179,6 @@
   {
    "source": "p:W4291289956",
    "target": "t:可穿戴",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:多孔碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:比电容",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:能量密度",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:功率密度",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:倍率性能",
-   "weight": 1
-  },
-  {
-   "source": "p:W3208319302",
-   "target": "t:循环稳定性",
    "weight": 1
   },
   {
@@ -2242,6 +2212,36 @@
    "weight": 1
   },
   {
+   "source": "p:W3208319302",
+   "target": "t:多孔碳",
+   "weight": 1
+  },
+  {
+   "source": "p:W3208319302",
+   "target": "t:比电容",
+   "weight": 1
+  },
+  {
+   "source": "p:W3208319302",
+   "target": "t:能量密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W3208319302",
+   "target": "t:功率密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W3208319302",
+   "target": "t:倍率性能",
+   "weight": 1
+  },
+  {
+   "source": "p:W3208319302",
+   "target": "t:循环稳定性",
+   "weight": 1
+  },
+  {
    "source": "p:W4308116012",
    "target": "t:功率密度",
    "weight": 1
@@ -2254,26 +2254,6 @@
   {
    "source": "p:W2923123397",
    "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W2974725236",
-   "target": "t:多孔碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W2974725236",
-   "target": "t:杂原子掺杂",
-   "weight": 1
-  },
-  {
-   "source": "p:W2974725236",
-   "target": "t:能量密度",
-   "weight": 1
-  },
-  {
-   "source": "p:W2974725236",
-   "target": "t:功率密度",
    "weight": 1
   },
   {
@@ -2302,23 +2282,23 @@
    "weight": 1
   },
   {
-   "source": "p:W3127767413",
+   "source": "p:W2974725236",
    "target": "t:多孔碳",
    "weight": 1
   },
   {
-   "source": "p:W3009923537",
-   "target": "t:碳气凝胶",
+   "source": "p:W2974725236",
+   "target": "t:杂原子掺杂",
    "weight": 1
   },
   {
-   "source": "p:W3009923537",
-   "target": "t:柔性器件",
+   "source": "p:W2974725236",
+   "target": "t:能量密度",
    "weight": 1
   },
   {
-   "source": "p:W3009923537",
-   "target": "t:可穿戴",
+   "source": "p:W2974725236",
+   "target": "t:功率密度",
    "weight": 1
   },
   {
@@ -2343,6 +2323,26 @@
   },
   {
    "source": "p:W4413107780",
+   "target": "t:可穿戴",
+   "weight": 1
+  },
+  {
+   "source": "p:W3127767413",
+   "target": "t:多孔碳",
+   "weight": 1
+  },
+  {
+   "source": "p:W3009923537",
+   "target": "t:碳气凝胶",
+   "weight": 1
+  },
+  {
+   "source": "p:W3009923537",
+   "target": "t:柔性器件",
+   "weight": 1
+  },
+  {
+   "source": "p:W3009923537",
    "target": "t:可穿戴",
    "weight": 1
   },
@@ -2382,6 +2382,11 @@
    "weight": 1
   },
   {
+   "source": "p:W4213022385",
+   "target": "t:活性炭 AC",
+   "weight": 1
+  },
+  {
    "source": "p:W2953124245",
    "target": "t:石墨烯",
    "weight": 1
@@ -2394,11 +2399,6 @@
   {
    "source": "p:W2953124245",
    "target": "t:倍率性能",
-   "weight": 1
-  },
-  {
-   "source": "p:W4213022385",
-   "target": "t:活性炭 AC",
    "weight": 1
   },
   {
@@ -2462,21 +2462,6 @@
    "weight": 1
   },
   {
-   "source": "p:W3137789900",
-   "target": "t:碳气凝胶",
-   "weight": 1
-  },
-  {
-   "source": "p:W3137789900",
-   "target": "t:生物质碳",
-   "weight": 1
-  },
-  {
-   "source": "p:W3137789900",
-   "target": "t:可穿戴",
-   "weight": 1
-  },
-  {
    "source": "p:W4391972394",
    "target": "t:石墨烯",
    "weight": 1
@@ -2494,6 +2479,36 @@
   {
    "source": "p:W4391972394",
    "target": "t:水热/溶剂热",
+   "weight": 1
+  },
+  {
+   "source": "p:W3137789900",
+   "target": "t:碳气凝胶",
+   "weight": 1
+  },
+  {
+   "source": "p:W3137789900",
+   "target": "t:生物质碳",
+   "weight": 1
+  },
+  {
+   "source": "p:W3137789900",
+   "target": "t:可穿戴",
+   "weight": 1
+  },
+  {
+   "source": "p:W4401252462",
+   "target": "t:石墨烯",
+   "weight": 1
+  },
+  {
+   "source": "p:W4401252462",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 1
+  },
+  {
+   "source": "p:W4401252462",
+   "target": "t:柔性器件",
    "weight": 1
   },
   {
@@ -2549,21 +2564,6 @@
   {
    "source": "p:W3114694474",
    "target": "t:能量密度",
-   "weight": 1
-  },
-  {
-   "source": "p:W4401252462",
-   "target": "t:石墨烯",
-   "weight": 1
-  },
-  {
-   "source": "p:W4401252462",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 1
-  },
-  {
-   "source": "p:W4401252462",
-   "target": "t:柔性器件",
    "weight": 1
   },
   {
@@ -2627,6 +2627,21 @@
    "weight": 1
   },
   {
+   "source": "p:W4281692901",
+   "target": "t:碳纳米管 CNT",
+   "weight": 1
+  },
+  {
+   "source": "p:W4281692901",
+   "target": "t:比电容",
+   "weight": 1
+  },
+  {
+   "source": "p:W4281692901",
+   "target": "t:倍率性能",
+   "weight": 1
+  },
+  {
    "source": "p:W4280623661",
    "target": "t:石墨烯",
    "weight": 1
@@ -2647,18 +2662,8 @@
    "weight": 1
   },
   {
-   "source": "p:W4281692901",
-   "target": "t:碳纳米管 CNT",
-   "weight": 1
-  },
-  {
-   "source": "p:W4281692901",
-   "target": "t:比电容",
-   "weight": 1
-  },
-  {
-   "source": "p:W4281692901",
-   "target": "t:倍率性能",
+   "source": "p:W4214887148",
+   "target": "t:碳纤维/织物",
    "weight": 1
   },
   {
@@ -2752,13 +2757,38 @@
    "weight": 1
   },
   {
-   "source": "p:W4415711681",
-   "target": "t:碳气凝胶",
+   "source": "p:W4414354285",
+   "target": "t:碳纳米管 CNT",
    "weight": 1
   },
   {
-   "source": "p:W4214887148",
-   "target": "t:碳纤维/织物",
+   "source": "p:W4414354285",
+   "target": "t:水热/溶剂热",
+   "weight": 1
+  },
+  {
+   "source": "p:W4414354285",
+   "target": "t:能量密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W4414354285",
+   "target": "t:功率密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W4414354285",
+   "target": "t:循环稳定性",
+   "weight": 1
+  },
+  {
+   "source": "p:W4414354285",
+   "target": "t:非对称器件",
+   "weight": 1
+  },
+  {
+   "source": "p:W4415711681",
+   "target": "t:碳气凝胶",
    "weight": 1
   },
   {
@@ -2807,6 +2837,51 @@
    "weight": 1
   },
   {
+   "source": "p:W4401119946",
+   "target": "t:石墨烯",
+   "weight": 1
+  },
+  {
+   "source": "p:W4401119946",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:石墨烯",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:杂原子掺杂",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:能量密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:功率密度",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:倍率性能",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:循环稳定性",
+   "weight": 1
+  },
+  {
+   "source": "p:W7140441203",
+   "target": "t:柔性器件",
+   "weight": 1
+  },
+  {
    "source": "p:W3185779693",
    "target": "t:能量密度",
    "weight": 1
@@ -2817,24 +2892,34 @@
    "weight": 1
   },
   {
-   "source": "p:W2937175219",
-   "target": "t:多孔碳",
-   "weight": 1
+   "source": "t:比电容",
+   "target": "t:石墨烯",
+   "weight": 128
   },
   {
-   "source": "p:W2937175219",
-   "target": "t:碳化",
-   "weight": 1
-  },
-  {
-   "source": "p:W2971503066",
-   "target": "t:生物质碳",
-   "weight": 1
+   "source": "t:多孔碳",
+   "target": "t:比电容",
+   "weight": 102
   },
   {
    "source": "t:比电容",
+   "target": "t:能量密度",
+   "weight": 193
+  },
+  {
+   "source": "t:化学活化",
+   "target": "t:比电容",
+   "weight": 16
+  },
+  {
+   "source": "t:多孔碳",
    "target": "t:石墨烯",
-   "weight": 126
+   "weight": 51
+  },
+  {
+   "source": "t:石墨烯",
+   "target": "t:能量密度",
+   "weight": 131
   },
   {
    "source": "t:化学活化",
@@ -2843,33 +2928,13 @@
   },
   {
    "source": "t:多孔碳",
-   "target": "t:石墨烯",
-   "weight": 50
-  },
-  {
-   "source": "t:石墨烯",
    "target": "t:能量密度",
-   "weight": 128
-  },
-  {
-   "source": "t:化学活化",
-   "target": "t:比电容",
-   "weight": 15
-  },
-  {
-   "source": "t:多孔碳",
-   "target": "t:比电容",
-   "weight": 93
-  },
-  {
-   "source": "t:比电容",
-   "target": "t:能量密度",
-   "weight": 180
+   "weight": 99
   },
   {
    "source": "t:化学活化",
    "target": "t:多孔碳",
-   "weight": 19
+   "weight": 20
   },
   {
    "source": "t:化学活化",
@@ -2877,24 +2942,14 @@
    "weight": 11
   },
   {
-   "source": "t:多孔碳",
-   "target": "t:能量密度",
-   "weight": 92
+   "source": "t:柔性器件",
+   "target": "t:石墨烯",
+   "weight": 152
   },
   {
    "source": "t:柔性器件",
-   "target": "t:石墨烯",
-   "weight": 149
-  },
-  {
-   "source": "t:活性炭 AC",
-   "target": "t:石墨烯",
-   "weight": 29
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:活性炭 AC",
-   "weight": 29
+   "target": "t:激光加工",
+   "weight": 12
   },
   {
    "source": "t:激光加工",
@@ -2903,23 +2958,28 @@
   },
   {
    "source": "t:柔性器件",
-   "target": "t:激光加工",
-   "weight": 12
+   "target": "t:活性炭 AC",
+   "weight": 30
+  },
+  {
+   "source": "t:活性炭 AC",
+   "target": "t:石墨烯",
+   "weight": 30
   },
   {
    "source": "t:比电容",
    "target": "t:水热/溶剂热",
-   "weight": 70
+   "weight": 74
   },
   {
    "source": "t:比电容",
    "target": "t:自组装",
-   "weight": 13
+   "weight": 14
   },
   {
    "source": "t:水热/溶剂热",
    "target": "t:自组装",
-   "weight": 9
+   "weight": 10
   },
   {
    "source": "t:水热/溶剂热",
@@ -2932,34 +2992,34 @@
    "weight": 26
   },
   {
-   "source": "t:能量密度",
-   "target": "t:非对称器件",
-   "weight": 147
-  },
-  {
    "source": "t:多孔碳",
    "target": "t:非对称器件",
-   "weight": 31
+   "weight": 33
   },
   {
-   "source": "t:活性炭 AC",
+   "source": "t:能量密度",
    "target": "t:非对称器件",
-   "weight": 55
+   "weight": 151
   },
   {
    "source": "t:比电容",
    "target": "t:活性炭 AC",
-   "weight": 66
+   "weight": 68
+  },
+  {
+   "source": "t:比电容",
+   "target": "t:碳纤维/织物",
+   "weight": 71
   },
   {
    "source": "t:倍率性能",
-   "target": "t:活性炭 AC",
-   "weight": 27
+   "target": "t:比电容",
+   "weight": 106
   },
   {
-   "source": "t:活性炭 AC",
-   "target": "t:能量密度",
-   "weight": 68
+   "source": "t:比电容",
+   "target": "t:非对称器件",
+   "weight": 117
   },
   {
    "source": "t:活性炭 AC",
@@ -2967,9 +3027,24 @@
    "weight": 24
   },
   {
-   "source": "t:石墨烯",
+   "source": "t:活性炭 AC",
+   "target": "t:能量密度",
+   "weight": 69
+  },
+  {
+   "source": "t:倍率性能",
+   "target": "t:活性炭 AC",
+   "weight": 30
+  },
+  {
+   "source": "t:活性炭 AC",
    "target": "t:非对称器件",
-   "weight": 76
+   "weight": 57
+  },
+  {
+   "source": "t:石墨烯",
+   "target": "t:碳纤维/织物",
+   "weight": 36
   },
   {
    "source": "t:倍率性能",
@@ -2978,38 +3053,13 @@
   },
   {
    "source": "t:石墨烯",
-   "target": "t:碳纤维/织物",
-   "weight": 34
-  },
-  {
-   "source": "t:比电容",
    "target": "t:非对称器件",
-   "weight": 112
-  },
-  {
-   "source": "t:倍率性能",
-   "target": "t:非对称器件",
-   "weight": 54
+   "weight": 76
   },
   {
    "source": "t:碳纤维/织物",
-   "target": "t:非对称器件",
-   "weight": 56
-  },
-  {
-   "source": "t:倍率性能",
-   "target": "t:比电容",
-   "weight": 104
-  },
-  {
-   "source": "t:比电容",
-   "target": "t:碳纤维/织物",
-   "weight": 70
-  },
-  {
-   "source": "t:倍率性能",
    "target": "t:能量密度",
-   "weight": 92
+   "weight": 66
   },
   {
    "source": "t:倍率性能",
@@ -3018,53 +3068,38 @@
   },
   {
    "source": "t:碳纤维/织物",
-   "target": "t:能量密度",
-   "weight": 66
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:柔性器件",
-   "weight": 102
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 43
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:石墨烯",
-   "weight": 102
+   "target": "t:非对称器件",
+   "weight": 57
   },
   {
    "source": "t:倍率性能",
-   "target": "t:循环稳定性",
-   "weight": 100
-  },
-  {
-   "source": "t:循环稳定性",
    "target": "t:能量密度",
-   "weight": 167
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 51
+   "weight": 93
   },
   {
    "source": "t:倍率性能",
-   "target": "t:柔性器件",
-   "weight": 52
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:能量密度",
-   "weight": 127
+   "target": "t:非对称器件",
+   "weight": 55
   },
   {
    "source": "t:氧化石墨烯 GO/rGO",
    "target": "t:石墨烯",
-   "weight": 147
+   "weight": 148
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 44
+  },
+  {
+   "source": "t:氧化石墨烯 GO/rGO",
+   "target": "t:能量密度",
+   "weight": 50
+  },
+  {
+   "source": "t:柔性器件",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 52
   },
   {
    "source": "t:倍率性能",
@@ -3072,79 +3107,84 @@
    "weight": 44
   },
   {
-   "source": "t:氧化石墨烯 GO/rGO",
+   "source": "t:循环稳定性",
+   "target": "t:石墨烯",
+   "weight": 103
+  },
+  {
+   "source": "t:循环稳定性",
    "target": "t:能量密度",
-   "weight": 49
+   "weight": 174
   },
   {
-   "source": "t:功率密度",
+   "source": "t:循环稳定性",
+   "target": "t:柔性器件",
+   "weight": 105
+  },
+  {
+   "source": "t:倍率性能",
    "target": "t:循环稳定性",
-   "weight": 125
+   "weight": 102
   },
   {
-   "source": "t:循环稳定性",
-   "target": "t:碳化",
-   "weight": 49
+   "source": "t:柔性器件",
+   "target": "t:能量密度",
+   "weight": 129
   },
   {
-   "source": "t:循环稳定性",
-   "target": "t:比电容",
-   "weight": 179
-  },
-  {
-   "source": "t:多孔碳",
-   "target": "t:循环稳定性",
-   "weight": 70
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:杂原子掺杂",
-   "weight": 51
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:碳纤维/织物",
-   "weight": 58
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:碳化",
-   "weight": 32
+   "source": "t:倍率性能",
+   "target": "t:柔性器件",
+   "weight": 53
   },
   {
    "source": "t:功率密度",
    "target": "t:比电容",
-   "weight": 143
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:多孔碳",
-   "weight": 56
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:杂原子掺杂",
-   "weight": 40
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:碳纤维/织物",
-   "weight": 51
+   "weight": 151
   },
   {
    "source": "t:比电容",
    "target": "t:碳化",
-   "weight": 70
+   "weight": 74
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:比电容",
+   "weight": 188
+  },
+  {
+   "source": "t:杂原子掺杂",
+   "target": "t:比电容",
+   "weight": 61
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:碳化",
+   "weight": 34
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:多孔碳",
+   "weight": 61
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:碳纤维/织物",
+   "weight": 51
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:循环稳定性",
+   "weight": 130
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:杂原子掺杂",
+   "weight": 41
   },
   {
    "source": "t:多孔碳",
    "target": "t:碳化",
-   "weight": 77
-  },
-  {
-   "source": "t:杂原子掺杂",
-   "target": "t:碳化",
-   "weight": 48
+   "weight": 80
   },
   {
    "source": "t:碳化",
@@ -3152,19 +3192,34 @@
    "weight": 25
   },
   {
-   "source": "t:杂原子掺杂",
-   "target": "t:比电容",
-   "weight": 56
+   "source": "t:循环稳定性",
+   "target": "t:碳化",
+   "weight": 52
   },
   {
-   "source": "t:多孔碳",
-   "target": "t:杂原子掺杂",
-   "weight": 83
+   "source": "t:杂原子掺杂",
+   "target": "t:碳化",
+   "weight": 51
   },
   {
    "source": "t:多孔碳",
    "target": "t:碳纤维/织物",
    "weight": 31
+  },
+  {
+   "source": "t:多孔碳",
+   "target": "t:循环稳定性",
+   "weight": 74
+  },
+  {
+   "source": "t:多孔碳",
+   "target": "t:杂原子掺杂",
+   "weight": 86
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:碳纤维/织物",
+   "weight": 59
   },
   {
    "source": "t:杂原子掺杂",
@@ -3173,18 +3228,38 @@
   },
   {
    "source": "t:循环稳定性",
-   "target": "t:水热/溶剂热",
-   "weight": 55
+   "target": "t:杂原子掺杂",
+   "weight": 53
   },
   {
-   "source": "t:循环稳定性",
-   "target": "t:泡沫碳",
-   "weight": 9
+   "source": "t:CVD 生长",
+   "target": "t:比电容",
+   "weight": 6
+  },
+  {
+   "source": "t:CVD 生长",
+   "target": "t:石墨烯",
+   "weight": 11
   },
   {
    "source": "t:CVD 生长",
    "target": "t:循环稳定性",
    "weight": 5
+  },
+  {
+   "source": "t:CVD 生长",
+   "target": "t:泡沫碳",
+   "weight": 5
+  },
+  {
+   "source": "t:比电容",
+   "target": "t:泡沫碳",
+   "weight": 16
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:水热/溶剂热",
+   "weight": 57
   },
   {
    "source": "t:水热/溶剂热",
@@ -3194,67 +3269,52 @@
   {
    "source": "t:泡沫碳",
    "target": "t:石墨烯",
-   "weight": 45
+   "weight": 46
   },
   {
-   "source": "t:比电容",
+   "source": "t:循环稳定性",
    "target": "t:泡沫碳",
-   "weight": 16
+   "weight": 9
   },
   {
-   "source": "t:CVD 生长",
-   "target": "t:泡沫碳",
-   "weight": 5
-  },
-  {
-   "source": "t:CVD 生长",
-   "target": "t:石墨烯",
-   "weight": 11
-  },
-  {
-   "source": "t:CVD 生长",
-   "target": "t:比电容",
-   "weight": 6
-  },
-  {
-   "source": "t:生物质碳",
+   "source": "t:杂原子掺杂",
    "target": "t:能量密度",
-   "weight": 30
+   "weight": 63
+  },
+  {
+   "source": "t:杂原子掺杂",
+   "target": "t:生物质碳",
+   "weight": 28
   },
   {
    "source": "t:多孔碳",
    "target": "t:生物质碳",
-   "weight": 42
+   "weight": 46
   },
   {
-   "source": "t:杂原子掺杂",
-   "target": "t:生物质碳",
-   "weight": 26
-  },
-  {
-   "source": "t:杂原子掺杂",
+   "source": "t:生物质碳",
    "target": "t:能量密度",
-   "weight": 59
+   "weight": 32
   },
   {
    "source": "t:柔性器件",
    "target": "t:碳纳米管 CNT",
-   "weight": 84
+   "weight": 86
   },
   {
    "source": "t:功率密度",
    "target": "t:能量密度",
-   "weight": 197
+   "weight": 206
   },
   {
    "source": "t:功率密度",
    "target": "t:石墨烯",
-   "weight": 77
+   "weight": 80
   },
   {
-   "source": "t:活性炭 AC",
-   "target": "t:碳纳米管 CNT",
-   "weight": 23
+   "source": "t:多孔碳",
+   "target": "t:活性炭 AC",
+   "weight": 25
   },
   {
    "source": "t:模板法",
@@ -3262,27 +3322,7 @@
    "weight": 8
   },
   {
-   "source": "t:多孔碳",
-   "target": "t:活性炭 AC",
-   "weight": 24
-  },
-  {
-   "source": "t:石墨烯",
-   "target": "t:碳纳米管 CNT",
-   "weight": 75
-  },
-  {
-   "source": "t:碳纳米管 CNT",
-   "target": "t:能量密度",
-   "weight": 62
-  },
-  {
-   "source": "t:模板法",
-   "target": "t:碳纳米管 CNT",
-   "weight": 11
-  },
-  {
-   "source": "t:多孔碳",
+   "source": "t:活性炭 AC",
    "target": "t:碳纳米管 CNT",
    "weight": 24
   },
@@ -3292,19 +3332,39 @@
    "weight": 26
   },
   {
-   "source": "t:模板法",
-   "target": "t:能量密度",
-   "weight": 24
+   "source": "t:石墨烯",
+   "target": "t:碳纳米管 CNT",
+   "weight": 78
   },
   {
    "source": "t:多孔碳",
    "target": "t:模板法",
-   "weight": 40
+   "weight": 41
+  },
+  {
+   "source": "t:多孔碳",
+   "target": "t:碳纳米管 CNT",
+   "weight": 25
+  },
+  {
+   "source": "t:模板法",
+   "target": "t:能量密度",
+   "weight": 25
+  },
+  {
+   "source": "t:碳纳米管 CNT",
+   "target": "t:能量密度",
+   "weight": 66
+  },
+  {
+   "source": "t:模板法",
+   "target": "t:碳纳米管 CNT",
+   "weight": 11
   },
   {
    "source": "t:循环稳定性",
    "target": "t:碳纳米管 CNT",
-   "weight": 55
+   "weight": 58
   },
   {
    "source": "t:倍率性能",
@@ -3314,37 +3374,37 @@
   {
    "source": "t:柔性器件",
    "target": "t:比电容",
-   "weight": 109
+   "weight": 112
   },
   {
    "source": "t:石墨烯",
    "target": "t:碳气凝胶",
-   "weight": 24
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:活性炭 AC",
-   "weight": 52
+   "weight": 25
   },
   {
    "source": "t:功率密度",
    "target": "t:活性炭 AC",
-   "weight": 46
+   "weight": 48
   },
   {
    "source": "t:循环稳定性",
-   "target": "t:非对称器件",
-   "weight": 97
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:非对称器件",
-   "weight": 97
+   "target": "t:活性炭 AC",
+   "weight": 55
   },
   {
    "source": "t:倍率性能",
    "target": "t:功率密度",
-   "weight": 62
+   "weight": 63
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:非对称器件",
+   "weight": 101
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:非对称器件",
+   "weight": 100
   },
   {
    "source": "t:循环稳定性",
@@ -3353,8 +3413,28 @@
   },
   {
    "source": "t:可穿戴",
+   "target": "t:石墨烯",
+   "weight": 37
+  },
+  {
+   "source": "t:可穿戴",
+   "target": "t:能量密度",
+   "weight": 56
+  },
+  {
+   "source": "t:可穿戴",
    "target": "t:柔性器件",
-   "weight": 85
+   "weight": 88
+  },
+  {
+   "source": "t:可穿戴",
+   "target": "t:非对称器件",
+   "weight": 19
+  },
+  {
+   "source": "t:可穿戴",
+   "target": "t:碳纳米管 CNT",
+   "weight": 28
   },
   {
    "source": "t:柔性器件",
@@ -3362,74 +3442,59 @@
    "weight": 75
   },
   {
-   "source": "t:可穿戴",
-   "target": "t:碳纳米管 CNT",
-   "weight": 27
-  },
-  {
    "source": "t:碳纳米管 CNT",
    "target": "t:非对称器件",
-   "weight": 41
-  },
-  {
-   "source": "t:可穿戴",
-   "target": "t:石墨烯",
-   "weight": 35
-  },
-  {
-   "source": "t:可穿戴",
-   "target": "t:非对称器件",
-   "weight": 19
-  },
-  {
-   "source": "t:可穿戴",
-   "target": "t:能量密度",
-   "weight": 54
+   "weight": 43
   },
   {
    "source": "t:化学活化",
    "target": "t:杂原子掺杂",
-   "weight": 6
+   "weight": 7
+  },
+  {
+   "source": "t:倍率性能",
+   "target": "t:化学活化",
+   "weight": 5
   },
   {
    "source": "t:倍率性能",
    "target": "t:杂原子掺杂",
-   "weight": 25
+   "weight": 26
   },
   {
    "source": "t:倍率性能",
    "target": "t:多孔碳",
-   "weight": 47
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:循环稳定性",
-   "weight": 36
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:柔性器件",
-   "weight": 77
-  },
-  {
-   "source": "t:比电容",
-   "target": "t:碳纳米管 CNT",
-   "weight": 70
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:碳纳米管 CNT",
-   "weight": 19
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:石墨烯",
-   "weight": 52
+   "weight": 49
   },
   {
    "source": "t:固态电解质",
    "target": "t:比电容",
-   "weight": 48
+   "weight": 50
+  },
+  {
+   "source": "t:比电容",
+   "target": "t:碳纳米管 CNT",
+   "weight": 73
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:石墨烯",
+   "weight": 53
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:循环稳定性",
+   "weight": 38
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:柔性器件",
+   "weight": 79
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:碳纳米管 CNT",
+   "weight": 21
   },
   {
    "source": "t:循环稳定性",
@@ -3437,14 +3502,14 @@
    "weight": 27
   },
   {
-   "source": "t:柔性器件",
+   "source": "t:碳纤维/织物",
    "target": "t:面电容",
-   "weight": 37
+   "weight": 20
   },
   {
    "source": "t:柔性器件",
-   "target": "t:碳纤维/织物",
-   "weight": 106
+   "target": "t:面电容",
+   "weight": 38
   },
   {
    "source": "t:倍率性能",
@@ -3452,44 +3517,54 @@
    "weight": 23
   },
   {
-   "source": "t:碳纤维/织物",
-   "target": "t:面电容",
-   "weight": 20
+   "source": "t:柔性器件",
+   "target": "t:碳纤维/织物",
+   "weight": 107
   },
   {
    "source": "t:可穿戴",
    "target": "t:固态电解质",
-   "weight": 22
+   "weight": 23
   },
   {
    "source": "t:模板法",
    "target": "t:比电容",
-   "weight": 29
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:柔性器件",
-   "weight": 71
+   "weight": 30
   },
   {
    "source": "t:功率密度",
    "target": "t:面电容",
-   "weight": 22
+   "weight": 23
   },
   {
    "source": "t:能量密度",
    "target": "t:面电容",
-   "weight": 43
+   "weight": 45
   },
   {
-   "source": "t:MOF 衍生碳",
-   "target": "t:非对称器件",
-   "weight": 5
+   "source": "t:功率密度",
+   "target": "t:柔性器件",
+   "weight": 72
   },
   {
    "source": "t:MOF 衍生碳",
    "target": "t:多孔碳",
    "weight": 6
+  },
+  {
+   "source": "t:MOF 衍生碳",
+   "target": "t:非对称器件",
+   "weight": 6
+  },
+  {
+   "source": "t:比电容",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 59
+  },
+  {
+   "source": "t:多孔碳",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 14
   },
   {
    "source": "t:多孔碳",
@@ -3498,18 +3573,18 @@
   },
   {
    "source": "t:比电容",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 58
-  },
-  {
-   "source": "t:多孔碳",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 14
+   "target": "t:面电容",
+   "weight": 16
   },
   {
    "source": "t:活性炭 AC",
    "target": "t:面电容",
    "weight": 8
+  },
+  {
+   "source": "t:非对称器件",
+   "target": "t:面电容",
+   "weight": 21
   },
   {
    "source": "t:碳纳米管 CNT",
@@ -3519,37 +3594,7 @@
   {
    "source": "t:功率密度",
    "target": "t:碳纳米管 CNT",
-   "weight": 39
-  },
-  {
-   "source": "t:非对称器件",
-   "target": "t:面电容",
-   "weight": 21
-  },
-  {
-   "source": "t:比电容",
-   "target": "t:面电容",
-   "weight": 15
-  },
-  {
-   "source": "t:氧化石墨烯 GO/rGO",
-   "target": "t:碳纳米管 CNT",
-   "weight": 23
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 30
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:泡沫碳",
-   "weight": 15
-  },
-  {
-   "source": "t:泡沫碳",
-   "target": "t:非对称器件",
-   "weight": 14
+   "weight": 42
   },
   {
    "source": "t:多孔碳",
@@ -3560,6 +3605,26 @@
    "source": "t:泡沫碳",
    "target": "t:能量密度",
    "weight": 11
+  },
+  {
+   "source": "t:柔性器件",
+   "target": "t:泡沫碳",
+   "weight": 15
+  },
+  {
+   "source": "t:泡沫碳",
+   "target": "t:非对称器件",
+   "weight": 14
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:氧化石墨烯 GO/rGO",
+   "weight": 31
+  },
+  {
+   "source": "t:氧化石墨烯 GO/rGO",
+   "target": "t:碳纳米管 CNT",
+   "weight": 24
   },
   {
    "source": "t:泡沫碳",
@@ -3579,7 +3644,7 @@
   {
    "source": "t:比电容",
    "target": "t:焊接/交联",
-   "weight": 5
+   "weight": 6
   },
   {
    "source": "t:焊接/交联",
@@ -3602,39 +3667,14 @@
    "weight": 23
   },
   {
-   "source": "t:化学活化",
-   "target": "t:循环稳定性",
-   "weight": 13
-  },
-  {
-   "source": "t:循环稳定性",
-   "target": "t:碳气凝胶",
-   "weight": 13
-  },
-  {
-   "source": "t:化学活化",
-   "target": "t:碳化",
-   "weight": 11
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:碳化",
-   "weight": 9
-  },
-  {
-   "source": "t:碳化",
-   "target": "t:碳气凝胶",
-   "weight": 13
-  },
-  {
    "source": "t:比电容",
    "target": "t:碳气凝胶",
    "weight": 21
   },
   {
-   "source": "t:化学活化",
-   "target": "t:碳气凝胶",
-   "weight": 5
+   "source": "t:固态电解质",
+   "target": "t:碳化",
+   "weight": 11
   },
   {
    "source": "t:固态电解质",
@@ -3644,37 +3684,47 @@
   {
    "source": "t:固态电解质",
    "target": "t:碳气凝胶",
+   "weight": 6
+  },
+  {
+   "source": "t:碳化",
+   "target": "t:碳气凝胶",
+   "weight": 14
+  },
+  {
+   "source": "t:化学活化",
+   "target": "t:碳化",
+   "weight": 12
+  },
+  {
+   "source": "t:循环稳定性",
+   "target": "t:碳气凝胶",
+   "weight": 13
+  },
+  {
+   "source": "t:化学活化",
+   "target": "t:循环稳定性",
+   "weight": 13
+  },
+  {
+   "source": "t:化学活化",
+   "target": "t:碳气凝胶",
    "weight": 5
   },
   {
    "source": "t:循环稳定性",
    "target": "t:生物质碳",
-   "weight": 19
+   "weight": 21
   },
   {
    "source": "t:循环稳定性",
    "target": "t:模板法",
-   "weight": 31
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:生物质碳",
-   "weight": 12
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:模板法",
-   "weight": 13
+   "weight": 32
   },
   {
    "source": "t:柔性器件",
    "target": "t:碳气凝胶",
    "weight": 6
-  },
-  {
-   "source": "t:模板法",
-   "target": "t:生物质碳",
-   "weight": 9
   },
   {
    "source": "t:生物质碳",
@@ -3687,9 +3737,24 @@
    "weight": 10
   },
   {
+   "source": "t:柔性器件",
+   "target": "t:生物质碳",
+   "weight": 13
+  },
+  {
+   "source": "t:柔性器件",
+   "target": "t:模板法",
+   "weight": 13
+  },
+  {
+   "source": "t:模板法",
+   "target": "t:生物质碳",
+   "weight": 9
+  },
+  {
    "source": "t:杂原子掺杂",
    "target": "t:非对称器件",
-   "weight": 28
+   "weight": 29
   },
   {
    "source": "t:模板法",
@@ -3700,11 +3765,6 @@
    "source": "t:多孔碳",
    "target": "t:自组装",
    "weight": 9
-  },
-  {
-   "source": "t:泡沫碳",
-   "target": "t:碳纳米管 CNT",
-   "weight": 7
   },
   {
    "source": "t:功率密度",
@@ -3717,14 +3777,19 @@
    "weight": 8
   },
   {
+   "source": "t:泡沫碳",
+   "target": "t:碳纳米管 CNT",
+   "weight": 7
+  },
+  {
    "source": "t:可穿戴",
    "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 9
+   "weight": 10
   },
   {
    "source": "t:碳气凝胶",
    "target": "t:碳纳米管 CNT",
-   "weight": 10
+   "weight": 11
   },
   {
    "source": "t:水热/溶剂热",
@@ -3734,27 +3799,27 @@
   {
    "source": "t:活性炭 AC",
    "target": "t:碳化",
-   "weight": 22
+   "weight": 24
   },
   {
    "source": "t:杂原子掺杂",
    "target": "t:活性炭 AC",
-   "weight": 20
+   "weight": 21
   },
   {
    "source": "t:水热/溶剂热",
    "target": "t:碳化",
-   "weight": 15
+   "weight": 16
   },
   {
    "source": "t:多孔碳",
    "target": "t:水热/溶剂热",
-   "weight": 23
+   "weight": 25
   },
   {
    "source": "t:倍率性能",
    "target": "t:水热/溶剂热",
-   "weight": 31
+   "weight": 32
   },
   {
    "source": "t:杂原子掺杂",
@@ -3764,12 +3829,12 @@
   {
    "source": "t:倍率性能",
    "target": "t:碳化",
-   "weight": 21
+   "weight": 23
   },
   {
    "source": "t:功率密度",
    "target": "t:可穿戴",
-   "weight": 33
+   "weight": 34
   },
   {
    "source": "t:杂原子掺杂",
@@ -3778,28 +3843,28 @@
   },
   {
    "source": "t:可穿戴",
+   "target": "t:碳纤维/织物",
+   "weight": 31
+  },
+  {
+   "source": "t:可穿戴",
    "target": "t:活性炭 AC",
    "weight": 12
   },
   {
-   "source": "t:可穿戴",
-   "target": "t:碳纤维/织物",
-   "weight": 30
-  },
-  {
    "source": "t:倍率性能",
    "target": "t:模板法",
-   "weight": 15
-  },
-  {
-   "source": "t:生物质碳",
-   "target": "t:碳化",
-   "weight": 30
+   "weight": 16
   },
   {
    "source": "t:模板法",
    "target": "t:碳化",
    "weight": 23
+  },
+  {
+   "source": "t:生物质碳",
+   "target": "t:碳化",
+   "weight": 32
   },
   {
    "source": "t:氧化石墨烯 GO/rGO",
@@ -3814,7 +3879,7 @@
   {
    "source": "t:固态电解质",
    "target": "t:氧化石墨烯 GO/rGO",
-   "weight": 15
+   "weight": 16
   },
   {
    "source": "t:倍率性能",
@@ -3822,19 +3887,19 @@
    "weight": 14
   },
   {
-   "source": "t:柔性器件",
-   "target": "t:碳化",
-   "weight": 19
-  },
-  {
    "source": "t:石墨烯",
    "target": "t:碳化",
-   "weight": 12
+   "weight": 13
   },
   {
    "source": "t:碳化",
    "target": "t:能量密度",
-   "weight": 50
+   "weight": 54
+  },
+  {
+   "source": "t:柔性器件",
+   "target": "t:碳化",
+   "weight": 21
   },
   {
    "source": "t:模板法",
@@ -3842,19 +3907,9 @@
    "weight": 8
   },
   {
-   "source": "t:柔性器件",
-   "target": "t:水热/溶剂热",
-   "weight": 23
-  },
-  {
    "source": "t:固态电解质",
    "target": "t:水热/溶剂热",
-   "weight": 14
-  },
-  {
-   "source": "t:水热/溶剂热",
-   "target": "t:能量密度",
-   "weight": 67
+   "weight": 15
   },
   {
    "source": "t:水热/溶剂热",
@@ -3862,9 +3917,14 @@
    "weight": 17
   },
   {
-   "source": "t:固态电解质",
+   "source": "t:水热/溶剂热",
    "target": "t:能量密度",
-   "weight": 43
+   "weight": 71
+  },
+  {
+   "source": "t:柔性器件",
+   "target": "t:水热/溶剂热",
+   "weight": 24
   },
   {
    "source": "t:固态电解质",
@@ -3872,49 +3932,34 @@
    "weight": 33
   },
   {
-   "source": "t:可穿戴",
-   "target": "t:循环稳定性",
-   "weight": 36
+   "source": "t:固态电解质",
+   "target": "t:能量密度",
+   "weight": 46
   },
   {
    "source": "t:可穿戴",
    "target": "t:比电容",
-   "weight": 28
+   "weight": 31
   },
   {
-   "source": "t:功率密度",
-   "target": "t:生物质碳",
-   "weight": 13
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:模板法",
-   "weight": 16
-  },
-  {
-   "source": "t:生物质碳",
-   "target": "t:非对称器件",
-   "weight": 6
+   "source": "t:可穿戴",
+   "target": "t:循环稳定性",
+   "weight": 38
   },
   {
    "source": "t:比电容",
    "target": "t:生物质碳",
-   "weight": 29
+   "weight": 33
   },
   {
-   "source": "t:生物质碳",
-   "target": "t:碳纤维/织物",
-   "weight": 7
-  },
-  {
-   "source": "t:碳化",
-   "target": "t:非对称器件",
-   "weight": 12
-  },
-  {
-   "source": "t:模板法",
-   "target": "t:非对称器件",
+   "source": "t:功率密度",
+   "target": "t:生物质碳",
    "weight": 14
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:模板法",
+   "weight": 17
   },
   {
    "source": "t:杂原子掺杂",
@@ -3922,9 +3967,29 @@
    "weight": 22
   },
   {
+   "source": "t:碳化",
+   "target": "t:非对称器件",
+   "weight": 13
+  },
+  {
+   "source": "t:生物质碳",
+   "target": "t:碳纤维/织物",
+   "weight": 7
+  },
+  {
    "source": "t:模板法",
    "target": "t:碳纤维/织物",
    "weight": 8
+  },
+  {
+   "source": "t:生物质碳",
+   "target": "t:非对称器件",
+   "weight": 7
+  },
+  {
+   "source": "t:模板法",
+   "target": "t:非对称器件",
+   "weight": 14
   },
   {
    "source": "t:固态电解质",
@@ -3932,29 +3997,29 @@
    "weight": 31
   },
   {
+   "source": "t:功率密度",
+   "target": "t:水热/溶剂热",
+   "weight": 49
+  },
+  {
+   "source": "t:水热/溶剂热",
+   "target": "t:非对称器件",
+   "weight": 58
+  },
+  {
    "source": "t:水热/溶剂热",
    "target": "t:碳纳米管 CNT",
    "weight": 16
   },
   {
-   "source": "t:功率密度",
-   "target": "t:水热/溶剂热",
-   "weight": 46
-  },
-  {
-   "source": "t:水热/溶剂热",
-   "target": "t:非对称器件",
-   "weight": 55
-  },
-  {
-   "source": "t:杂原子掺杂",
-   "target": "t:柔性器件",
-   "weight": 28
-  },
-  {
    "source": "t:微型超级电容器 MSC",
    "target": "t:柔性器件",
    "weight": 34
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:面电容",
+   "weight": 11
   },
   {
    "source": "t:微型超级电容器 MSC",
@@ -3967,14 +4032,9 @@
    "weight": 16
   },
   {
-   "source": "t:固态电解质",
-   "target": "t:面电容",
-   "weight": 11
-  },
-  {
-   "source": "t:柔性器件",
-   "target": "t:自组装",
-   "weight": 6
+   "source": "t:杂原子掺杂",
+   "target": "t:柔性器件",
+   "weight": 28
   },
   {
    "source": "t:杂原子掺杂",
@@ -3982,14 +4042,19 @@
    "weight": 13
   },
   {
+   "source": "t:柔性器件",
+   "target": "t:自组装",
+   "weight": 7
+  },
+  {
    "source": "t:模板法",
    "target": "t:水热/溶剂热",
-   "weight": 8
+   "weight": 9
   },
   {
    "source": "t:水热/溶剂热",
    "target": "t:碳气凝胶",
-   "weight": 5
+   "weight": 6
   },
   {
    "source": "t:杂原子掺杂",
@@ -4008,6 +4073,11 @@
   },
   {
    "source": "t:冷冻干燥/冰模板",
+   "target": "t:能量密度",
+   "weight": 11
+  },
+  {
+   "source": "t:冷冻干燥/冰模板",
    "target": "t:柔性器件",
    "weight": 8
   },
@@ -4017,29 +4087,24 @@
    "weight": 6
   },
   {
-   "source": "t:冷冻干燥/冰模板",
-   "target": "t:能量密度",
-   "weight": 11
-  },
-  {
-   "source": "t:功率密度",
-   "target": "t:固态电解质",
-   "weight": 24
-  },
-  {
    "source": "t:活性炭 AC",
    "target": "t:碳气凝胶",
-   "weight": 7
-  },
-  {
-   "source": "t:碳纤维/织物",
-   "target": "t:碳纳米管 CNT",
-   "weight": 16
+   "weight": 8
   },
   {
    "source": "t:碳气凝胶",
    "target": "t:碳纤维/织物",
-   "weight": 9
+   "weight": 10
+  },
+  {
+   "source": "t:碳纤维/织物",
+   "target": "t:碳纳米管 CNT",
+   "weight": 17
+  },
+  {
+   "source": "t:功率密度",
+   "target": "t:固态电解质",
+   "weight": 25
   },
   {
    "source": "t:氧化石墨烯 GO/rGO",
@@ -4054,7 +4119,7 @@
   {
    "source": "t:石墨烯",
    "target": "t:面电容",
-   "weight": 19
+   "weight": 21
   },
   {
    "source": "t:杂原子掺杂",
@@ -4069,12 +4134,7 @@
   {
    "source": "t:功率密度",
    "target": "t:碳气凝胶",
-   "weight": 5
-  },
-  {
-   "source": "t:碳气凝胶",
-   "target": "t:非对称器件",
-   "weight": 9
+   "weight": 6
   },
   {
    "source": "t:碳气凝胶",
@@ -4082,9 +4142,19 @@
    "weight": 12
   },
   {
+   "source": "t:碳气凝胶",
+   "target": "t:非对称器件",
+   "weight": 9
+  },
+  {
    "source": "t:生物质碳",
    "target": "t:石墨烯",
    "weight": 11
+  },
+  {
+   "source": "t:冷冻干燥/冰模板",
+   "target": "t:比电容",
+   "weight": 12
   },
   {
    "source": "t:冷冻干燥/冰模板",
@@ -4098,18 +4168,13 @@
   },
   {
    "source": "t:冷冻干燥/冰模板",
-   "target": "t:比电容",
-   "weight": 12
+   "target": "t:碳气凝胶",
+   "weight": 7
   },
   {
    "source": "t:倍率性能",
    "target": "t:冷冻干燥/冰模板",
    "weight": 5
-  },
-  {
-   "source": "t:冷冻干燥/冰模板",
-   "target": "t:碳气凝胶",
-   "weight": 7
   },
   {
    "source": "t:比电容",
@@ -4124,12 +4189,17 @@
   {
    "source": "t:杂原子掺杂",
    "target": "t:碳纳米管 CNT",
-   "weight": 15
+   "weight": 17
+  },
+  {
+   "source": "t:碳气凝胶",
+   "target": "t:自组装",
+   "weight": 5
   },
   {
    "source": "t:化学活化",
    "target": "t:生物质碳",
-   "weight": 9
+   "weight": 10
   },
   {
    "source": "t:氧化石墨烯 GO/rGO",
@@ -4147,11 +4217,6 @@
    "weight": 6
   },
   {
-   "source": "t:微型超级电容器 MSC",
-   "target": "t:碳纳米管 CNT",
-   "weight": 7
-  },
-  {
    "source": "t:功率密度",
    "target": "t:微型超级电容器 MSC",
    "weight": 9
@@ -4163,23 +4228,28 @@
   },
   {
    "source": "t:微型超级电容器 MSC",
-   "target": "t:非对称器件",
-   "weight": 9
-  },
-  {
-   "source": "t:固态电解质",
-   "target": "t:杂原子掺杂",
-   "weight": 12
-  },
-  {
-   "source": "t:微型超级电容器 MSC",
    "target": "t:能量密度",
    "weight": 18
   },
   {
-   "source": "t:碳化",
+   "source": "t:微型超级电容器 MSC",
+   "target": "t:非对称器件",
+   "weight": 9
+  },
+  {
+   "source": "t:微型超级电容器 MSC",
    "target": "t:碳纳米管 CNT",
    "weight": 7
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:杂原子掺杂",
+   "weight": 13
+  },
+  {
+   "source": "t:碳化",
+   "target": "t:碳纳米管 CNT",
+   "weight": 9
   },
   {
    "source": "t:微型超级电容器 MSC",
@@ -4187,14 +4257,19 @@
    "weight": 6
   },
   {
+   "source": "t:可穿戴",
+   "target": "t:面电容",
+   "weight": 17
+  },
+  {
+   "source": "t:能量密度",
+   "target": "t:自组装",
+   "weight": 5
+  },
+  {
    "source": "t:自组装",
    "target": "t:非对称器件",
    "weight": 6
-  },
-  {
-   "source": "t:可穿戴",
-   "target": "t:面电容",
-   "weight": 16
   },
   {
    "source": "t:固态电解质",
@@ -4209,7 +4284,12 @@
   {
    "source": "t:活性炭 AC",
    "target": "t:生物质碳",
-   "weight": 22
+   "weight": 25
+  },
+  {
+   "source": "t:固态电解质",
+   "target": "t:自组装",
+   "weight": 5
   },
   {
    "source": "t:可穿戴",
@@ -4219,15 +4299,15 @@
   {
    "source": "t:倍率性能",
    "target": "t:生物质碳",
-   "weight": 10
+   "weight": 12
   },
   {
-   "source": "t:柔性器件",
+   "source": "t:可穿戴",
    "target": "t:纤维状器件",
    "weight": 5
   },
   {
-   "source": "t:可穿戴",
+   "source": "t:柔性器件",
    "target": "t:纤维状器件",
    "weight": 5
   },
@@ -4294,7 +4374,7 @@
   {
    "source": "t:水热/溶剂热",
    "target": "t:生物质碳",
-   "weight": 10
+   "weight": 11
   },
   {
    "source": "t:功率密度",
@@ -4309,7 +4389,12 @@
   {
    "source": "t:化学活化",
    "target": "t:活性炭 AC",
-   "weight": 6
+   "weight": 7
+  },
+  {
+   "source": "t:MOF 衍生碳",
+   "target": "t:能量密度",
+   "weight": 5
   },
   {
    "source": "t:冷冻干燥/冰模板",
