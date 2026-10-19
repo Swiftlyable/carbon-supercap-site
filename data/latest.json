@@ -1,173 +1,167 @@
 [
  {
-  "id": "W7221343494",
-  "doi": "10.1016/j.est.2026.125047",
-  "title": "Interface-engineered hexagonal boron nitride modified PANI/MWCNTs nanocomposites for flexible symmetric supercapacitor in functionalized PVA/H2SO4 gel electrolyte",
-  "journal": "Journal of Energy Storage",
+  "id": "W7222842188",
+  "doi": "10.1021/acsanm.6c03703",
+  "title": "Internal−External Carbon Nanotube Network-Reinforced Ultrathin Birnessite-Type MnO2 Electrodes with Improved Mass Loading and Areal Energy Density",
+  "journal": "ACS Applied Nano Materials",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Jagdeep Singh",
-   "Santosh Kumar Tiwari",
-   "Gurpreet Singh Selopal",
-   "Amarjit Singh Dhaliwal"
+   "Shijin Zhu",
+   "Xiafan Zhan",
+   "Fangdie He",
+   "Meng Zhao",
+   "Xinyi Guo",
+   "Ruoxi Wang"
   ],
   "type": "article",
   "tags": [
    "碳纳米管 CNT",
-   "石墨烯",
-   "氧化石墨烯 GO/rGO",
-   "比电容",
+   "多孔碳",
    "能量密度",
-   "功率密度",
    "循环稳定性",
-   "柔性器件",
-   "可穿戴",
-   "固态电解质"
+   "面电容",
+   "非对称器件"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125047",
-  "zh_title": "界面工程六方氮化硼改性聚苯胺/多壁碳纳米管纳米复合材料，用于功能化 PVA/H2SO4 凝胶电解质中的柔性对称超级电容器",
+  "core_journal": false,
+  "url": "https://doi.org/10.1021/acsanm.6c03703",
+  "zh_title": "具有改进的质量负载和面能量密度的内部-外部碳纳米管网络增强超薄水钠锰矿型MnO2电极",
   "classic": false
  },
  {
-  "id": "W7221106248",
-  "doi": "10.1016/j.est.2026.124894",
-  "title": "Metal organic framework derived cobalt phosphide nitrogen-doped carbon coated by cobalt-manganese oxide nanoflakes and two-dimensional MXene based electrodes for energy-dense quasi-solid-state supercapacitors",
-  "journal": "Journal of Energy Storage",
+  "id": "W7222603557",
+  "doi": "10.3390/en19204894",
+  "title": "Mixed-Lignin Precursor Engineering for Hierarchically Porous Pseudo-Graphitic Carbon Toward High-Performance Supercapacitors",
+  "journal": "Energies",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Arti A. Jadhav",
-   "Amar M. Patil",
-   "황성연",
-   "Jongwoo Hong",
-   "Ganesh D. Jadhav",
-   "Suprimkumar D. Dhas"
-  ],
-  "type": "article",
-  "tags": [
-   "碳纳米管 CNT",
-   "MOF 衍生碳",
-   "碳化",
-   "杂原子掺杂",
-   "比电容",
-   "能量密度",
-   "循环稳定性",
-   "固态电解质"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.124894",
-  "zh_title": "钴锰氧化物纳米片涂覆的金属有机骨架衍生的磷化钴氮掺杂碳和用于能量密集准固态超级电容器的二维MXene基电极",
-  "classic": false
- },
- {
-  "id": "W7221129144",
-  "doi": "10.1016/j.est.2026.125036",
-  "title": "Synergistic effect of Se doping and hierarchical pore structure on enhancing the energy storage of biomass-derived carbon in supercapacitors",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Shijie Sun",
-   "Wang Hanbo",
-   "Wang Yan",
-   "Zhu Dongyu",
-   "Tian Yi",
-   "Yumei Tian"
+   "Chenhao Sun",
+   "Zhongyang Luo",
+   "Shurong Wang",
+   "Chunjiang Yu"
   ],
   "type": "article",
   "tags": [
    "多孔碳",
    "生物质碳",
-   "杂原子掺杂",
-   "比电容",
-   "能量密度"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125036",
-  "zh_title": "Se掺杂和分级孔结构对增强超级电容器生物质碳储能的协同作用",
-  "classic": false
- },
- {
-  "id": "W7221126691",
-  "doi": "10.1016/j.est.2026.125026",
-  "title": "Phytoremediation-inspired biomass-derived hierarchical porous carbon embedded with binary metal sulfide for hybrid supercapacitors",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Shijun Xing",
-   "Chen Chen",
-   "Junjie Yu",
-   "Chenxi Dai",
-   "Rui Yang",
-   "Yue Xu"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳",
-   "生物质碳",
-   "比电容"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125026",
-  "zh_title": "受植物修复启发的生物质衍生的嵌入二元金属硫化物的分层多孔碳用于混合超级电容器",
-  "classic": false
- },
- {
-  "id": "W7221129157",
-  "doi": "10.1016/j.jpowsour.2026.241669",
-  "title": "Construction of hierarchically porous carbon nanoflowers from wood via a ZnCl2 dissolution - regeneration route for enhanced lon transport and energy storage",
-  "journal": "Journal of Power Sources",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Jiaqi Zhang",
-   "Yiluo Yang",
-   "Yinying Long",
-   "Liqin Liu",
-   "Zilu Li",
-   "Ruoning Gao"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳",
    "碳化",
    "比电容",
    "能量密度",
-   "功率密度"
+   "循环稳定性"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.jpowsour.2026.241669",
-  "zh_title": "通过 ZnCl2 溶解-再生途径从木材中构建分层多孔碳纳米花，以增强离子传输和能量存储",
+  "core_journal": false,
+  "url": "https://doi.org/10.3390/en19204894",
+  "zh_title": "用于高性能超级电容器的分级多孔伪石墨碳的混合木质素前体工程",
   "classic": false
  },
  {
-  "id": "W7221087955",
-  "doi": "10.1002/est2.70547",
-  "title": "Sustainable Development of Interconnected Hierarchical Porous Carbon From Rice Panicle Waste: Synergistic KOH / CO 2 Dual‐Activation Strategy for Advanced Symmetric Supercapacitors",
-  "journal": "Energy Storage",
+  "id": "W7222678466",
+  "doi": "10.1002/ese3.70674",
+  "title": "Sustainable Conversion of Pomelo Peel Into Porous Activated Carbon With Hierarchical Nanoarchitectonics for High‐Performance Supercapacitors",
+  "journal": "Energy Science & Engineering",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Awitdrus Awitdrus",
-   "Alifia Andra Sakinah",
-   "Rakhmawati Farma",
-   "Iwantono Iwantono",
-   "Agustino Agustino"
+   "Umme Sadia Jahan Sinthia",
+   "Protity Saha",
+   "Syed Shaheen Shah",
+   "Abdulmajid Abdallah Mirghni",
+   "Md. Hasan Zahir",
+   "Bong‐Joong Kim"
   ],
-  "type": "review",
+  "type": "article",
   "tags": [
+   "活性炭 AC",
    "多孔碳",
+   "化学活化",
+   "碳化",
    "比电容",
    "能量密度",
    "功率密度",
    "循环稳定性"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1002/est2.70547",
-  "zh_title": "从稻穗废料中可持续开发互连多级多孔碳：先进对称超级电容器的协同KOH / CO 2 双激活策略",
+  "url": "https://doi.org/10.1002/ese3.70674",
+  "zh_title": "利用分层纳米结构将柚子皮可持续转化为多孔活性炭，用于高性能超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7221965166",
+  "doi": "10.1007/s10904-026-04556-7",
+  "title": "Facile Synthesis of NiO-In2O3 Composite with Improved Charge Storage Capability for High-Performance Asymmetric Supercapacitor Devices",
+  "journal": "Journal of Inorganic and Organometallic Polymers and Materials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Muhammad Sanaullah Shah",
+   "Umar Arif",
+   "Feng Jing",
+   "Fahim Ullah",
+   "Muhammad Zia Ullah Shah",
+   "Mohamed H. Mohamed"
+  ],
+  "type": "article",
+  "tags": [
+   "非对称器件"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s10904-026-04556-7",
+  "zh_title": "轻松合成具有改进的电荷存储能力的 NiO-In2O3 复合材料，用于高性能不对称超级电容器器件",
+  "classic": false
+ },
+ {
+  "id": "W7221753297",
+  "doi": "10.1016/j.est.2026.124999",
+  "title": "Lignin fast pyrolysis for energy storage: Phenolic-rich oil coproduction and supercapacitor carbon from activation of the residual char",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Penghui Li",
+   "Yuliang He",
+   "Shubin Wu",
+   "Ying Liu"
+  ],
+  "type": "article",
+  "tags": [
+   "活性炭 AC",
+   "多孔碳",
+   "碳纤维/织物",
+   "碳化",
+   "比电容",
+   "能量密度",
+   "倍率性能"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.124999",
+  "zh_title": "用于能量储存的木质素快速热解：富含酚类的油联产和来自残余炭活化的超级电容器碳",
+  "classic": false
+ },
+ {
+  "id": "W7221826539",
+  "doi": "10.1016/j.cej.2026.183126",
+  "title": "Defect-mediated sensitization of pitch-based carbon fibers for robust hierarchically porous electrodes in flexible fiber-shaped supercapacitors",
+  "journal": "Chemical Engineering Journal",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Yikai Yang",
+   "Xinrui Wang",
+   "Wei Jiang",
+   "Huaxing Li",
+   "Chao Zhou",
+   "Jie Chen"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纤维/织物",
+   "柔性器件",
+   "纤维状器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.cej.2026.183126",
+  "zh_title": "缺陷介导的沥青基碳纤维敏化，用于柔性纤维状超级电容器中坚固的分级多孔电极",
   "classic": false
  }
 ]
