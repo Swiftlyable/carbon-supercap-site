@@ -1,167 +1,145 @@
 [
  {
-  "id": "W7222842188",
-  "doi": "10.1021/acsanm.6c03703",
-  "title": "Internal−External Carbon Nanotube Network-Reinforced Ultrathin Birnessite-Type MnO2 Electrodes with Improved Mass Loading and Areal Energy Density",
-  "journal": "ACS Applied Nano Materials",
+  "id": "W7223445437",
+  "doi": "10.1007/s11581-026-07589-7",
+  "title": "Conductive SnS₂@MWCNT nanohybrids with enhanced charge transport toward high-performance energy storage devices",
+  "journal": "Ionics",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Shijin Zhu",
-   "Xiafan Zhan",
-   "Fangdie He",
-   "Meng Zhao",
-   "Xinyi Guo",
-   "Ruoxi Wang"
+   "Ragupathi R",
+   "M. Nagoor Meeran"
   ],
   "type": "article",
-  "tags": [
-   "碳纳米管 CNT",
-   "多孔碳",
-   "能量密度",
-   "循环稳定性",
-   "面电容",
-   "非对称器件"
-  ],
+  "tags": [],
   "core_journal": false,
-  "url": "https://doi.org/10.1021/acsanm.6c03703",
-  "zh_title": "具有改进的质量负载和面能量密度的内部-外部碳纳米管网络增强超薄水钠锰矿型MnO2电极",
+  "url": "https://doi.org/10.1007/s11581-026-07589-7",
+  "zh_title": "导电 SnS2@MWCNT 纳米混合物具有增强的电荷传输能力，可用于高性能储能设备",
   "classic": false
  },
  {
-  "id": "W7222603557",
-  "doi": "10.3390/en19204894",
-  "title": "Mixed-Lignin Precursor Engineering for Hierarchically Porous Pseudo-Graphitic Carbon Toward High-Performance Supercapacitors",
-  "journal": "Energies",
+  "id": "W7223462266",
+  "doi": "10.1007/s10008-026-06733-7",
+  "title": "Composite electrode fabricated by MnO2 interlayer-directed electropolymerization of polyaniline on laser-induced graphene for flexible supercapacitors",
+  "journal": "Journal of Solid State Electrochemistry",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Chenhao Sun",
-   "Zhongyang Luo",
-   "Shurong Wang",
-   "Chunjiang Yu"
+   "Haoran Chen",
+   "Delian Peng",
+   "Yu Cao",
+   "Wenhai Peng"
   ],
   "type": "article",
   "tags": [
-   "多孔碳",
-   "生物质碳",
-   "碳化",
-   "比电容",
-   "能量密度",
-   "循环稳定性"
+   "石墨烯",
+   "激光加工",
+   "柔性器件"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.3390/en19204894",
-  "zh_title": "用于高性能超级电容器的分级多孔伪石墨碳的混合木质素前体工程",
+  "url": "https://doi.org/10.1007/s10008-026-06733-7",
+  "zh_title": "激光诱导石墨烯上二氧化锰层间定向电聚合聚苯胺制备柔性超级电容器复合电极",
   "classic": false
  },
  {
-  "id": "W7222678466",
-  "doi": "10.1002/ese3.70674",
-  "title": "Sustainable Conversion of Pomelo Peel Into Porous Activated Carbon With Hierarchical Nanoarchitectonics for High‐Performance Supercapacitors",
-  "journal": "Energy Science & Engineering",
+  "id": "W7223472809",
+  "doi": "10.1007/s12046-026-03425-w",
+  "title": "An investigation into sustainable carbon aerogels derived from lignin and polyvinyl alcohol",
+  "journal": "Sadhana",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Umme Sadia Jahan Sinthia",
-   "Protity Saha",
-   "Syed Shaheen Shah",
-   "Abdulmajid Abdallah Mirghni",
-   "Md. Hasan Zahir",
-   "Bong‐Joong Kim"
+   "Veena Leela",
+   "Jibin Babu",
+   "Miguel Joseph",
+   "Jefin Joseph",
+   "Antony J. Kachirayil",
+   "Bony Thomas"
   ],
   "type": "article",
   "tags": [
-   "活性炭 AC",
-   "多孔碳",
-   "化学活化",
-   "碳化",
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "循环稳定性"
+   "碳气凝胶"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1002/ese3.70674",
-  "zh_title": "利用分层纳米结构将柚子皮可持续转化为多孔活性炭，用于高性能超级电容器",
+  "url": "https://doi.org/10.1007/s12046-026-03425-w",
+  "zh_title": "对源自木质素和聚乙烯醇的可持续碳气凝胶的研究",
   "classic": false
  },
  {
-  "id": "W7221965166",
-  "doi": "10.1007/s10904-026-04556-7",
-  "title": "Facile Synthesis of NiO-In2O3 Composite with Improved Charge Storage Capability for High-Performance Asymmetric Supercapacitor Devices",
-  "journal": "Journal of Inorganic and Organometallic Polymers and Materials",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Muhammad Sanaullah Shah",
-   "Umar Arif",
-   "Feng Jing",
-   "Fahim Ullah",
-   "Muhammad Zia Ullah Shah",
-   "Mohamed H. Mohamed"
-  ],
-  "type": "article",
-  "tags": [
-   "非对称器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s10904-026-04556-7",
-  "zh_title": "轻松合成具有改进的电荷存储能力的 NiO-In2O3 复合材料，用于高性能不对称超级电容器器件",
-  "classic": false
- },
- {
-  "id": "W7221753297",
-  "doi": "10.1016/j.est.2026.124999",
-  "title": "Lignin fast pyrolysis for energy storage: Phenolic-rich oil coproduction and supercapacitor carbon from activation of the residual char",
+  "id": "W7223295361",
+  "doi": "10.1016/j.est.2026.125220",
+  "title": "Solvent-free CVD synthesis of N-doped ZIF-8-derived porous carbon on copper dendrites for high-rate flexible supercapacitors",
   "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Penghui Li",
-   "Yuliang He",
-   "Shubin Wu",
-   "Ying Liu"
+   "Ramasamy Velmurugan",
+   "Jun-Yan Lin",
+   "Boyu Shen",
+   "Jing-Jie Lin",
+   "Man‐Ning Lu",
+   "Soorathep Kheawhom"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "柔性器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125220",
+  "zh_title": "无溶剂 CVD 合成铜枝晶上 N 掺杂 ZIF-8 衍生的多孔碳，用于高倍率柔性超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7223410189",
+  "doi": "10.1038/s41598-026-76732-1",
+  "title": "From hard carbon to activated carbon: influence of surface area and pore structure on the electrochemical performance of coconut rachis-derived supercapacitor electrodes",
+  "journal": "Scientific Reports",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Devu Bindhu",
+   "M V Gayathri",
+   "Anju Ramachandran",
+   "I. Jinchu",
+   "Rajan Jose",
+   "C.O. Sreekala"
   ],
   "type": "article",
   "tags": [
    "活性炭 AC",
-   "多孔碳",
-   "碳纤维/织物",
-   "碳化",
-   "比电容",
-   "能量密度",
-   "倍率性能"
+   "生物质碳",
+   "化学活化",
+   "比电容"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.124999",
-  "zh_title": "用于能量储存的木质素快速热解：富含酚类的油联产和来自残余炭活化的超级电容器碳",
+  "core_journal": false,
+  "url": "https://doi.org/10.1038/s41598-026-76732-1",
+  "zh_title": "从硬碳到活性炭：表面积和孔结构对椰轴超级电容器电极电化学性能的影响",
   "classic": false
  },
  {
-  "id": "W7221826539",
-  "doi": "10.1016/j.cej.2026.183126",
-  "title": "Defect-mediated sensitization of pitch-based carbon fibers for robust hierarchically porous electrodes in flexible fiber-shaped supercapacitors",
-  "journal": "Chemical Engineering Journal",
+  "id": "W7223333976",
+  "doi": "10.1007/s10876-026-03118-8",
+  "title": "Engineered CeO2-Embedded Polyethersulfone Flexible Thin Films as Robust Self-Standing Electrodes for Solid-State Supercapacitors",
+  "journal": "Journal of Cluster Science",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Yikai Yang",
-   "Xinrui Wang",
-   "Wei Jiang",
-   "Huaxing Li",
-   "Chao Zhou",
-   "Jie Chen"
+   "Amira Gaber",
+   "Basant G. EL-Mahdy",
+   "Selva Bilge",
+   "Yusuf Osman Donar",
+   "Meltem Çelık",
+   "Saad Gomaa Mohamed"
   ],
   "type": "article",
   "tags": [
-   "碳纤维/织物",
    "柔性器件",
-   "纤维状器件"
+   "固态电解质"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.cej.2026.183126",
-  "zh_title": "缺陷介导的沥青基碳纤维敏化，用于柔性纤维状超级电容器中坚固的分级多孔电极",
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s10876-026-03118-8",
+  "zh_title": "工程化 CeO2 嵌入聚醚砜柔性薄膜作为固态超级电容器的坚固自立电极",
   "classic": false
  }
 ]
