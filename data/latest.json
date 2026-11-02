@@ -1,145 +1,155 @@
 [
  {
-  "id": "W7223445437",
-  "doi": "10.1007/s11581-026-07589-7",
-  "title": "Conductive SnS₂@MWCNT nanohybrids with enhanced charge transport toward high-performance energy storage devices",
-  "journal": "Ionics",
+  "id": "W7225019806",
+  "doi": "10.1021/acs.langmuir.6c04169",
+  "title": "Bio-Assisted Self-Activation of Porous Carbon in the Presence of Endogenous Silica for High-Performance Supercapacitors",
+  "journal": "Langmuir",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Ragupathi R",
-   "M. Nagoor Meeran"
-  ],
-  "type": "article",
-  "tags": [],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s11581-026-07589-7",
-  "zh_title": "导电 SnS2@MWCNT 纳米混合物具有增强的电荷传输能力，可用于高性能储能设备",
-  "classic": false
- },
- {
-  "id": "W7223462266",
-  "doi": "10.1007/s10008-026-06733-7",
-  "title": "Composite electrode fabricated by MnO2 interlayer-directed electropolymerization of polyaniline on laser-induced graphene for flexible supercapacitors",
-  "journal": "Journal of Solid State Electrochemistry",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Haoran Chen",
-   "Delian Peng",
-   "Yu Cao",
-   "Wenhai Peng"
-  ],
-  "type": "article",
-  "tags": [
-   "石墨烯",
-   "激光加工",
-   "柔性器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s10008-026-06733-7",
-  "zh_title": "激光诱导石墨烯上二氧化锰层间定向电聚合聚苯胺制备柔性超级电容器复合电极",
-  "classic": false
- },
- {
-  "id": "W7223472809",
-  "doi": "10.1007/s12046-026-03425-w",
-  "title": "An investigation into sustainable carbon aerogels derived from lignin and polyvinyl alcohol",
-  "journal": "Sadhana",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Veena Leela",
-   "Jibin Babu",
-   "Miguel Joseph",
-   "Jefin Joseph",
-   "Antony J. Kachirayil",
-   "Bony Thomas"
-  ],
-  "type": "article",
-  "tags": [
-   "碳气凝胶"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s12046-026-03425-w",
-  "zh_title": "对源自木质素和聚乙烯醇的可持续碳气凝胶的研究",
-  "classic": false
- },
- {
-  "id": "W7223295361",
-  "doi": "10.1016/j.est.2026.125220",
-  "title": "Solvent-free CVD synthesis of N-doped ZIF-8-derived porous carbon on copper dendrites for high-rate flexible supercapacitors",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Ramasamy Velmurugan",
-   "Jun-Yan Lin",
-   "Boyu Shen",
-   "Jing-Jie Lin",
-   "Man‐Ning Lu",
-   "Soorathep Kheawhom"
+   "Jiyi Sun",
+   "Huanzhong Zeng",
+   "Runze Wang",
+   "Yuanyou Peng",
+   "Shengtao Niu",
+   "Hanzhe Zhang"
   ],
   "type": "article",
   "tags": [
    "多孔碳",
+   "模板法",
+   "碳化",
+   "杂原子掺杂",
+   "比电容",
+   "循环稳定性"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1021/acs.langmuir.6c04169",
+  "zh_title": "内源二氧化硅存在下多孔碳的生物辅助自激活用于高性能超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7225004269",
+  "doi": "10.1007/s10853-026-14008-9",
+  "title": "Controllable sulfur doping of ZIF-67-derived hollow NiCo-LDH for asymmetric supercapacitors with enhanced faradaic kinetics and high energy density",
+  "journal": "Journal of Materials Science",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Jiaxin Zhang",
+   "Yi Liang",
+   "Jun Zhang",
+   "Jingying Hou",
+   "Quge Tan",
+   "Xin Fan"
+  ],
+  "type": "article",
+  "tags": [
+   "杂原子掺杂",
+   "能量密度",
+   "非对称器件"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1007/s10853-026-14008-9",
+  "zh_title": "ZIF-67衍生的空心NiCo-LDH的可控硫掺杂，用于具有增强法拉第动力学和高能量密度的不对称超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7224788529",
+  "doi": "10.5281/zenodo.23795409",
+  "title": "Supercapacitors: Electrolyte materials and MXene based Flexible Supercapacitors",
+  "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Dattatraya Anarse",
+   "Ashok Sunatkari",
+   "Pandurang Ithape"
+  ],
+  "type": "article",
+  "tags": [
+   "石墨烯",
+   "碳纤维/织物",
+   "比电容",
+   "能量密度",
+   "功率密度",
    "柔性器件"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125220",
-  "zh_title": "无溶剂 CVD 合成铜枝晶上 N 掺杂 ZIF-8 衍生的多孔碳，用于高倍率柔性超级电容器",
+  "core_journal": false,
+  "url": "https://doi.org/10.5281/zenodo.23795409",
+  "zh_title": "超级电容器：电解质材料和基于 MXene 的柔性超级电容器",
   "classic": false
  },
  {
-  "id": "W7223410189",
-  "doi": "10.1038/s41598-026-76732-1",
-  "title": "From hard carbon to activated carbon: influence of surface area and pore structure on the electrochemical performance of coconut rachis-derived supercapacitor electrodes",
-  "journal": "Scientific Reports",
+  "id": "W7225006961",
+  "doi": "10.1002/anie.5410375",
+  "title": "Scalable Upcycling of Industrial Waste Polytetrafluoroethylene Into Porous Carbon Nanosheets by Zeolite Particle Templates for Capacitive Energy Storage",
+  "journal": "Angewandte Chemie International Edition",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Devu Bindhu",
-   "M V Gayathri",
-   "Anju Ramachandran",
-   "I. Jinchu",
-   "Rajan Jose",
-   "C.O. Sreekala"
+   "Keyang Li",
+   "Menggang Li",
+   "Yunfeng Feng",
+   "Peng Zhang",
+   "Chenhui Zhou",
+   "Zhuangzhuang He"
   ],
   "type": "article",
   "tags": [
-   "活性炭 AC",
-   "生物质碳",
-   "化学活化",
+   "多孔碳",
+   "模板法",
+   "碳化",
    "比电容"
   ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1038/s41598-026-76732-1",
-  "zh_title": "从硬碳到活性炭：表面积和孔结构对椰轴超级电容器电极电化学性能的影响",
+  "core_journal": true,
+  "url": "https://doi.org/10.1002/anie.5410375",
+  "zh_title": "通过沸石颗粒模板将工业废料聚四氟乙烯升级改造为多孔碳纳米片用于电容储能",
   "classic": false
  },
  {
-  "id": "W7223333976",
-  "doi": "10.1007/s10876-026-03118-8",
-  "title": "Engineered CeO2-Embedded Polyethersulfone Flexible Thin Films as Robust Self-Standing Electrodes for Solid-State Supercapacitors",
-  "journal": "Journal of Cluster Science",
+  "id": "W7224840993",
+  "doi": "10.1007/s42823-026-01144-0",
+  "title": "Nitrogen-doped hollow carbon spheres for electrochemical energy storage and conversion applications: a review",
+  "journal": "Carbon letters",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Amira Gaber",
-   "Basant G. EL-Mahdy",
-   "Selva Bilge",
-   "Yusuf Osman Donar",
-   "Meltem Çelık",
-   "Saad Gomaa Mohamed"
+   "R. Ranjithkumar",
+   "Rizwan Khan",
+   "Howon Choi",
+   "Ji Ho Youk"
+  ],
+  "type": "review",
+  "tags": [
+   "杂原子掺杂"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1007/s42823-026-01144-0",
+  "zh_title": "用于电化学储能和转换应用的氮掺杂空心碳球：综述",
+  "classic": false
+ },
+ {
+  "id": "W7224217558",
+  "doi": "10.1007/s10854-026-18672-0",
+  "title": "One-step low-temperature chemical activation and enhanced electrochemical performance of porous carbon materials from coal gasification slag",
+  "journal": "Journal of Materials Science Materials in Electronics",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Xiaohui Huang",
+   "Hehui Wang",
+   "Jian Wang",
+   "Zilong Dong"
   ],
   "type": "article",
   "tags": [
-   "柔性器件",
-   "固态电解质"
+   "多孔碳",
+   "化学活化"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1007/s10876-026-03118-8",
-  "zh_title": "工程化 CeO2 嵌入聚醚砜柔性薄膜作为固态超级电容器的坚固自立电极",
+  "url": "https://doi.org/10.1007/s10854-026-18672-0",
+  "zh_title": "煤气化渣多孔碳材料一步低温化学活化及电化学性能增强",
   "classic": false
  }
 ]

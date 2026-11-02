@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-10-26T09:44:04+00:00",
+ "last_updated": "2026-11-02T11:27:51+00:00",
  "papers": {
   "双电层电容 (EDLC)": [
    {
@@ -155,7 +155,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -219,7 +219,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -228,27 +228,27 @@
   "0D 点接触网络": [
    {
     "title": "MXene-Bonded Activated Carbon as a Flexible Electrode for High-Performance Supercapacitors",
-    "zh_title": null,
+    "zh_title": "MXene 粘合活性炭作为高性能超级电容器的柔性电极",
     "journal": "ACS Energy Letters",
     "year": 2018,
-    "cited_by_count": 534,
+    "cited_by_count": 536,
     "core_journal": true,
     "doi": "10.1021/acsenergylett.8b00718",
     "url": "https://doi.org/10.1021/acsenergylett.8b00718"
    },
    {
     "title": "Nitrogen‐Doped Porous Graphitic Carbon as an Excellent Electrode Material for Advanced Supercapacitors",
-    "zh_title": null,
+    "zh_title": "氮掺杂多孔石墨碳作为先进超级电容器的优异电极材料",
     "journal": "Chemistry - A European Journal",
     "year": 2013,
-    "cited_by_count": 441,
+    "cited_by_count": 442,
     "core_journal": true,
     "doi": "10.1002/chem.201303345",
     "url": "https://doi.org/10.1002/chem.201303345"
    },
    {
     "title": "One-step strategy to graphene/Ni(OH)2 composite hydrogels as advanced three-dimensional supercapacitor electrode materials",
-    "zh_title": "石墨烯/Ni(OH)2复合水凝胶作为先进三维超级电容器电极材料的一步策略",
+    "zh_title": null,
     "journal": "Nano Research",
     "year": 2012,
     "cited_by_count": 212,
@@ -283,7 +283,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -344,7 +344,7 @@
    },
    {
     "title": "One-Step Electrodeposited Nickel Cobalt Sulfide Nanosheet Arrays for High-Performance Asymmetric Supercapacitors",
-    "zh_title": null,
+    "zh_title": "用于高性能不对称超级电容器的一步电沉积镍钴硫化物纳米片阵列",
     "journal": "ACS Nano",
     "year": 2014,
     "cited_by_count": 756,
@@ -423,7 +423,7 @@
     "zh_title": null,
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2377,
+    "cited_by_count": 2384,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -443,7 +443,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1427,
+    "cited_by_count": 1428,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -475,7 +475,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3252,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -504,7 +504,7 @@
    },
    {
     "title": "Laser-Induced Graphene",
-    "zh_title": null,
+    "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
     "cited_by_count": 801,
@@ -536,7 +536,7 @@
    },
    {
     "title": "Biomass-Derived Sponge-like Carbonaceous Hydrogels and Aerogels for Supercapacitors",
-    "zh_title": null,
+    "zh_title": "用于超级电容器的生物质海绵状碳质水凝胶和气凝胶",
     "journal": "ACS Nano",
     "year": 2013,
     "cited_by_count": 630,
@@ -551,7 +551,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3252,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -580,10 +580,10 @@
   "静电纺丝": [
    {
     "title": "Electrospun MXene/carbon nanofibers as supercapacitor electrodes",
-    "zh_title": null,
+    "zh_title": "静电纺MXene/碳纳米纤维作为超级电容器电极",
     "journal": "Journal of Materials Chemistry A",
     "year": 2018,
-    "cited_by_count": 668,
+    "cited_by_count": 670,
     "core_journal": true,
     "doi": "10.1039/c8ta09810g",
     "url": "https://doi.org/10.1039/c8ta09810g"
@@ -600,7 +600,7 @@
    },
    {
     "title": "Electrospun Carbon Nanofibers with in Situ Encapsulated Co 3 O 4 Nanoparticles as Electrodes for High-Performance Supercapacitors",
-    "zh_title": "原位封装 Co 3 O 4 纳米粒子的电纺碳纳米纤维作为高性能超级电容器的电极",
+    "zh_title": null,
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2015,
     "cited_by_count": 230,
@@ -615,14 +615,14 @@
     "zh_title": "电池增材制造",
     "journal": "Advanced Functional Materials",
     "year": 2019,
-    "cited_by_count": 302,
+    "cited_by_count": 303,
     "core_journal": true,
     "doi": "10.1002/adfm.201906244",
     "url": "https://doi.org/10.1002/adfm.201906244"
    },
    {
     "title": "Three-Dimensional Printing of Polyaniline/Reduced Graphene Oxide Composite for High-Performance Planar Supercapacitor",
-    "zh_title": "用于高性能平面超级电容器的聚苯胺/还原氧化石墨烯复合材料的三维打印",
+    "zh_title": null,
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2018,
     "cited_by_count": 213,
@@ -644,7 +644,7 @@
   "焊接/交联": [
    {
     "title": "In situ self-assembly of mild chemical reduction graphene for three-dimensional architectures",
-    "zh_title": null,
+    "zh_title": "用于三维结构的温和化学还原石墨烯的原位自组装",
     "journal": "Nanoscale",
     "year": 2011,
     "cited_by_count": 715,
@@ -654,7 +654,7 @@
    },
    {
     "title": "Self-Assembled Three-Dimensional Graphene Macrostructures: Synthesis and Applications in Supercapacitors",
-    "zh_title": null,
+    "zh_title": "自组装三维石墨烯宏观结构：合成及其在超级电容器中的应用",
     "journal": "Accounts of Chemical Research",
     "year": 2015,
     "cited_by_count": 501,
@@ -664,7 +664,7 @@
    },
    {
     "title": "A self-healable and easily recyclable supramolecular hydrogel electrolyte for flexible supercapacitors",
-    "zh_title": "用于柔性超级电容器的可自修复且易于回收的超分子水凝胶电解质",
+    "zh_title": null,
     "journal": "Journal of Materials Chemistry A",
     "year": 2016,
     "cited_by_count": 273,
@@ -689,7 +689,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -721,7 +721,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3250,
+    "cited_by_count": 3252,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -753,7 +753,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1895,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -775,7 +775,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1895,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -785,7 +785,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -839,7 +839,7 @@
     "zh_title": null,
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2377,
+    "cited_by_count": 2384,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -849,7 +849,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1427,
+    "cited_by_count": 1428,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -891,7 +891,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1895,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -903,7 +903,7 @@
     "zh_title": null,
     "journal": "Nature Nanotechnology",
     "year": 2011,
-    "cited_by_count": 1461,
+    "cited_by_count": 1460,
     "core_journal": true,
     "doi": "10.1038/nnano.2011.110",
     "url": "https://doi.org/10.1038/nnano.2011.110"
@@ -920,10 +920,10 @@
    },
    {
     "title": "3D Printing of Additive-Free 2D Ti3C2Tx (MXene) Ink for Fabrication of Micro-Supercapacitors with Ultra-High Energy Densities",
-    "zh_title": null,
+    "zh_title": "用于制造超高能量密度微型超级电容器的无添加剂 2D Ti3C2TX (MXene) 墨水 3D 打印",
     "journal": "ACS Nano",
     "year": 2019,
-    "cited_by_count": 444,
+    "cited_by_count": 446,
     "core_journal": true,
     "doi": "10.1021/acsnano.9b07325",
     "url": "https://doi.org/10.1021/acsnano.9b07325"
@@ -935,14 +935,14 @@
     "zh_title": "基于碳气凝胶改性高性能碳纤维布的多功能结构超级电容器复合材料",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2013,
-    "cited_by_count": 293,
+    "cited_by_count": 294,
     "core_journal": true,
     "doi": "10.1021/am400947j",
     "url": "https://doi.org/10.1021/am400947j"
    },
    {
     "title": "(Ni,Co)Se2/NiCo‐LDH Core/Shell Structural Electrode with the Cactus‐Like (Ni,Co)Se2 Core for Asymmetric Supercapacitors",
-    "zh_title": "用于不对称超级电容器的具有仙人掌状 (Ni,Co)Se2 核的 (Ni,Co)Se2/NiCo-LDH 核/壳结构电极",
+    "zh_title": null,
     "journal": "Small",
     "year": 2018,
     "cited_by_count": 271,
@@ -967,7 +967,7 @@
     "zh_title": "高效制造无序石墨烯，提高离子可及性、离子电导率和密度，用于高性能紧凑电容储能",
     "journal": "Advanced Science",
     "year": 2024,
-    "cited_by_count": 15,
+    "cited_by_count": 16,
     "core_journal": true,
     "doi": "10.1002/advs.202405155",
     "url": "https://doi.org/10.1002/advs.202405155"
@@ -1031,7 +1031,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1698,
+    "cited_by_count": 1700,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -1063,7 +1063,7 @@
     "zh_title": null,
     "journal": "Nanoscale",
     "year": 2013,
-    "cited_by_count": 1185,
+    "cited_by_count": 1187,
     "core_journal": true,
     "doi": "10.1039/c3nr33560g",
     "url": "https://doi.org/10.1039/c3nr33560g"
@@ -1073,7 +1073,7 @@
     "zh_title": null,
     "journal": "Advanced Materials",
     "year": 2017,
-    "cited_by_count": 1163,
+    "cited_by_count": 1166,
     "core_journal": true,
     "doi": "10.1002/adma.201702678",
     "url": "https://doi.org/10.1002/adma.201702678"
@@ -1092,7 +1092,7 @@
   "极端环境适用": [
    {
     "title": "Laser-Induced Graphene",
-    "zh_title": null,
+    "zh_title": "激光诱导石墨烯",
     "journal": "Accounts of Chemical Research",
     "year": 2018,
     "cited_by_count": 801,
@@ -1102,7 +1102,7 @@
    },
    {
     "title": "Functionalized Graphene Hydrogel‐Based High‐Performance Supercapacitors",
-    "zh_title": null,
+    "zh_title": "基于功能化石墨烯水凝胶的高性能超级电容器",
     "journal": "Advanced Materials",
     "year": 2013,
     "cited_by_count": 634,
@@ -1112,10 +1112,10 @@
    },
    {
     "title": "Nitrogen‐Doped Porous Graphitic Carbon as an Excellent Electrode Material for Advanced Supercapacitors",
-    "zh_title": null,
+    "zh_title": "氮掺杂多孔石墨碳作为先进超级电容器的优异电极材料",
     "journal": "Chemistry - A European Journal",
     "year": 2013,
-    "cited_by_count": 441,
+    "cited_by_count": 442,
     "core_journal": true,
     "doi": "10.1002/chem.201303345",
     "url": "https://doi.org/10.1002/chem.201303345"
