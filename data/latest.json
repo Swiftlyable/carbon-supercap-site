@@ -1,155 +1,146 @@
 [
  {
-  "id": "W7225019806",
-  "doi": "10.1021/acs.langmuir.6c04169",
-  "title": "Bio-Assisted Self-Activation of Porous Carbon in the Presence of Endogenous Silica for High-Performance Supercapacitors",
-  "journal": "Langmuir",
+  "id": "W7225395040",
+  "doi": "10.1016/j.est.2026.125467",
+  "title": "Biomass-derived porous carbons for supercapacitors: A critical review of precursors, synthesis, performance and environmental sustainability",
+  "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Jiyi Sun",
-   "Huanzhong Zeng",
-   "Runze Wang",
-   "Yuanyou Peng",
-   "Shengtao Niu",
-   "Hanzhe Zhang"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳",
-   "模板法",
-   "碳化",
-   "杂原子掺杂",
-   "比电容",
-   "循环稳定性"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1021/acs.langmuir.6c04169",
-  "zh_title": "内源二氧化硅存在下多孔碳的生物辅助自激活用于高性能超级电容器",
-  "classic": false
- },
- {
-  "id": "W7225004269",
-  "doi": "10.1007/s10853-026-14008-9",
-  "title": "Controllable sulfur doping of ZIF-67-derived hollow NiCo-LDH for asymmetric supercapacitors with enhanced faradaic kinetics and high energy density",
-  "journal": "Journal of Materials Science",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Jiaxin Zhang",
-   "Yi Liang",
-   "Jun Zhang",
-   "Jingying Hou",
-   "Quge Tan",
-   "Xin Fan"
-  ],
-  "type": "article",
-  "tags": [
-   "杂原子掺杂",
-   "能量密度",
-   "非对称器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s10853-026-14008-9",
-  "zh_title": "ZIF-67衍生的空心NiCo-LDH的可控硫掺杂，用于具有增强法拉第动力学和高能量密度的不对称超级电容器",
-  "classic": false
- },
- {
-  "id": "W7224788529",
-  "doi": "10.5281/zenodo.23795409",
-  "title": "Supercapacitors: Electrolyte materials and MXene based Flexible Supercapacitors",
-  "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Dattatraya Anarse",
-   "Ashok Sunatkari",
-   "Pandurang Ithape"
-  ],
-  "type": "article",
-  "tags": [
-   "石墨烯",
-   "碳纤维/织物",
-   "比电容",
-   "能量密度",
-   "功率密度",
-   "柔性器件"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.5281/zenodo.23795409",
-  "zh_title": "超级电容器：电解质材料和基于 MXene 的柔性超级电容器",
-  "classic": false
- },
- {
-  "id": "W7225006961",
-  "doi": "10.1002/anie.5410375",
-  "title": "Scalable Upcycling of Industrial Waste Polytetrafluoroethylene Into Porous Carbon Nanosheets by Zeolite Particle Templates for Capacitive Energy Storage",
-  "journal": "Angewandte Chemie International Edition",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Keyang Li",
-   "Menggang Li",
-   "Yunfeng Feng",
-   "Peng Zhang",
-   "Chenhui Zhou",
-   "Zhuangzhuang He"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳",
-   "模板法",
-   "碳化",
-   "比电容"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1002/anie.5410375",
-  "zh_title": "通过沸石颗粒模板将工业废料聚四氟乙烯升级改造为多孔碳纳米片用于电容储能",
-  "classic": false
- },
- {
-  "id": "W7224840993",
-  "doi": "10.1007/s42823-026-01144-0",
-  "title": "Nitrogen-doped hollow carbon spheres for electrochemical energy storage and conversion applications: a review",
-  "journal": "Carbon letters",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "R. Ranjithkumar",
-   "Rizwan Khan",
-   "Howon Choi",
-   "Ji Ho Youk"
+   "Mei Jin",
+   "Chen Hao",
+   "Jizheng Tan",
+   "Xiaohong Wang"
   ],
   "type": "review",
   "tags": [
-   "杂原子掺杂"
+   "多孔碳",
+   "生物质碳"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1007/s42823-026-01144-0",
-  "zh_title": "用于电化学储能和转换应用的氮掺杂空心碳球：综述",
+  "url": "https://doi.org/10.1016/j.est.2026.125467",
+  "zh_title": "用于超级电容器的生物质衍生多孔碳：对前体、合成、性能和环境可持续性的严格审查",
   "classic": false
  },
  {
-  "id": "W7224217558",
-  "doi": "10.1007/s10854-026-18672-0",
-  "title": "One-step low-temperature chemical activation and enhanced electrochemical performance of porous carbon materials from coal gasification slag",
-  "journal": "Journal of Materials Science Materials in Electronics",
+  "id": "W7225397826",
+  "doi": "10.1016/j.est.2026.125492",
+  "title": "Valorization of anaerobic digestion biogas residue into hierarchical porous carbon electrodes for high-performance symmetric supercapacitors",
+  "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Xiaohui Huang",
-   "Hehui Wang",
-   "Jian Wang",
-   "Zilong Dong"
+   "Yifan Mou",
+   "Hang Yuan",
+   "Pengwei Ji",
+   "Penghui Zhuang",
+   "Hongguang Zhu"
   ],
   "type": "article",
   "tags": [
-   "多孔碳",
-   "化学活化"
+   "多孔碳"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125492",
+  "zh_title": "将厌氧消化沼渣转化为高性能对称超级电容器的分级多孔碳电极",
+  "classic": false
+ },
+ {
+  "id": "W7225414560",
+  "doi": "10.1016/j.est.2026.125350",
+  "title": "Hydrothermally synthesized MoO3/CoWO4 nanocomposite electrodes for high-performance asymmetric supercapacitors",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Sivakumar Prabakaran",
+   "Marimuthu Karunakaran",
+   "Kasinathan Kasirajan",
+   "S. Usha",
+   "Nagaraj Ganeshwari",
+   "P. Krishnaveni"
+  ],
+  "type": "article",
+  "tags": [
+   "水热/溶剂热",
+   "非对称器件"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125350",
+  "zh_title": "用于高性能非对称超级电容器的水热合成MoO3/CoWO4纳米复合电极",
+  "classic": false
+ },
+ {
+  "id": "W7225417721",
+  "doi": "10.1016/j.est.2026.125367",
+  "title": "Auditable thermal descriptors for machine-learning-assisted supercapacitor electrode design: A critical review and framework for sustainable energy storage",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Alper Bingol",
+   "H. Kaya",
+   "Mücahit Soylu",
+   "Sikiru Oluwarotimi Ismail"
+  ],
+  "type": "review",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125367",
+  "zh_title": "用于机器学习辅助超级电容器电极设计的可审核热描述符：可持续能源存储的严格审查和框架",
+  "classic": false
+ },
+ {
+  "id": "W7225388225",
+  "doi": "10.1007/s43938-026-00161-9",
+  "title": "Interface-regulated charge transport in V2O5-CNT-hydroxylated graphene nanocomposite for high-performance aqueous supercapacitors",
+  "journal": "Discover Chemical Engineering",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Miranda Mengwi Ndipingwi",
+   "Gwibakazi Abena Feleni",
+   "Meleskow Cox",
+   "Luyanda Mabuza",
+   "Chinwe Oluchi Ikpo",
+   "Xinwen Peng"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT",
+   "石墨烯",
+   "水热/溶剂热",
+   "比电容",
+   "非对称器件"
   ],
   "core_journal": false,
-  "url": "https://doi.org/10.1007/s10854-026-18672-0",
-  "zh_title": "煤气化渣多孔碳材料一步低温化学活化及电化学性能增强",
+  "url": "https://doi.org/10.1007/s43938-026-00161-9",
+  "zh_title": "用于高性能水性超级电容器的 V2O5-CNT-羟基化石墨烯纳米复合材料中的界面调节电荷传输",
+  "classic": false
+ },
+ {
+  "id": "W7225337806",
+  "doi": "10.1016/j.cej.2026.183899",
+  "title": "Three-dimensional Ni2P/Ti3C2Tx carbon aerogel and functional hydrogel electrolyte for high-energy quasi-solid-state hybrid supercapacitors",
+  "journal": "Chemical Engineering Journal",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Wenjing Zhang",
+   "Abdukaiyum Abdurashid",
+   "Tursun Abdiryim",
+   "Ruxangul Jamal",
+   "Kaiyuan Zheng",
+   "Ahmat Ali"
+  ],
+  "type": "article",
+  "tags": [
+   "碳气凝胶",
+   "固态电解质"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.cej.2026.183899",
+  "zh_title": "用于高能准固态混合超级电容器的三维Ni2P/Ti3C2TX碳气凝胶和功能水凝胶电解质",
   "classic": false
  }
 ]
