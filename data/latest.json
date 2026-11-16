@@ -1,146 +1,155 @@
 [
  {
-  "id": "W7225395040",
-  "doi": "10.1016/j.est.2026.125467",
-  "title": "Biomass-derived porous carbons for supercapacitors: A critical review of precursors, synthesis, performance and environmental sustainability",
-  "journal": "Journal of Energy Storage",
+  "id": "W7229457701",
+  "doi": "10.1021/acsami.6c19857",
+  "title": "Synergistic Molecular-Nano Engineering Enabling Ultralong-Cycling and High-Capacity Lithium Storage of Covalent Organic Frameworks",
+  "journal": "ACS Applied Materials & Interfaces",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Mei Jin",
-   "Chen Hao",
-   "Jizheng Tan",
-   "Xiaohong Wang"
-  ],
-  "type": "review",
-  "tags": [
-   "多孔碳",
-   "生物质碳"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125467",
-  "zh_title": "用于超级电容器的生物质衍生多孔碳：对前体、合成、性能和环境可持续性的严格审查",
-  "classic": false
- },
- {
-  "id": "W7225397826",
-  "doi": "10.1016/j.est.2026.125492",
-  "title": "Valorization of anaerobic digestion biogas residue into hierarchical porous carbon electrodes for high-performance symmetric supercapacitors",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Yifan Mou",
-   "Hang Yuan",
-   "Pengwei Ji",
-   "Penghui Zhuang",
-   "Hongguang Zhu"
-  ],
-  "type": "article",
-  "tags": [
-   "多孔碳"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125492",
-  "zh_title": "将厌氧消化沼渣转化为高性能对称超级电容器的分级多孔碳电极",
-  "classic": false
- },
- {
-  "id": "W7225414560",
-  "doi": "10.1016/j.est.2026.125350",
-  "title": "Hydrothermally synthesized MoO3/CoWO4 nanocomposite electrodes for high-performance asymmetric supercapacitors",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Sivakumar Prabakaran",
-   "Marimuthu Karunakaran",
-   "Kasinathan Kasirajan",
-   "S. Usha",
-   "Nagaraj Ganeshwari",
-   "P. Krishnaveni"
-  ],
-  "type": "article",
-  "tags": [
-   "水热/溶剂热",
-   "非对称器件"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125350",
-  "zh_title": "用于高性能非对称超级电容器的水热合成MoO3/CoWO4纳米复合电极",
-  "classic": false
- },
- {
-  "id": "W7225417721",
-  "doi": "10.1016/j.est.2026.125367",
-  "title": "Auditable thermal descriptors for machine-learning-assisted supercapacitor electrode design: A critical review and framework for sustainable energy storage",
-  "journal": "Journal of Energy Storage",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Alper Bingol",
-   "H. Kaya",
-   "Mücahit Soylu",
-   "Sikiru Oluwarotimi Ismail"
-  ],
-  "type": "review",
-  "tags": [],
-  "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125367",
-  "zh_title": "用于机器学习辅助超级电容器电极设计的可审核热描述符：可持续能源存储的严格审查和框架",
-  "classic": false
- },
- {
-  "id": "W7225388225",
-  "doi": "10.1007/s43938-026-00161-9",
-  "title": "Interface-regulated charge transport in V2O5-CNT-hydroxylated graphene nanocomposite for high-performance aqueous supercapacitors",
-  "journal": "Discover Chemical Engineering",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Miranda Mengwi Ndipingwi",
-   "Gwibakazi Abena Feleni",
-   "Meleskow Cox",
-   "Luyanda Mabuza",
-   "Chinwe Oluchi Ikpo",
-   "Xinwen Peng"
+   "Peilin Guo",
+   "Derong Luo",
+   "Feng Liu",
+   "Xuan Wang",
+   "Hui Wang",
+   "Bing Ding"
   ],
   "type": "article",
   "tags": [
    "碳纳米管 CNT",
-   "石墨烯",
-   "水热/溶剂热",
-   "比电容",
-   "非对称器件"
+   "能量密度",
+   "功率密度"
   ],
-  "core_journal": false,
-  "url": "https://doi.org/10.1007/s43938-026-00161-9",
-  "zh_title": "用于高性能水性超级电容器的 V2O5-CNT-羟基化石墨烯纳米复合材料中的界面调节电荷传输",
+  "core_journal": true,
+  "url": "https://doi.org/10.1021/acsami.6c19857",
+  "zh_title": "协同分子-纳米工程实现共价有机框架的超长循环和高容量锂存储",
   "classic": false
  },
  {
-  "id": "W7225337806",
-  "doi": "10.1016/j.cej.2026.183899",
-  "title": "Three-dimensional Ni2P/Ti3C2Tx carbon aerogel and functional hydrogel electrolyte for high-energy quasi-solid-state hybrid supercapacitors",
-  "journal": "Chemical Engineering Journal",
+  "id": "W7228923555",
+  "doi": "10.1002/smtd.71214",
+  "title": "Hierarchical Heterostructure Engineering for High‐Performance Supercapacitors With Extended Bifunctional Electrocatalytic Activity",
+  "journal": "Small Methods",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Wenjing Zhang",
-   "Abdukaiyum Abdurashid",
-   "Tursun Abdiryim",
-   "Ruxangul Jamal",
-   "Kaiyuan Zheng",
-   "Ahmat Ali"
+   "Murugesan Prasanna",
+   "Sankaiya Asaithambi",
+   "Ramadoss Maniganadan",
+   "Ramar Rajamanikandan",
+   "Palanisamy Rajkumar"
   ],
   "type": "article",
   "tags": [
-   "碳气凝胶",
-   "固态电解质"
+   "活性炭 AC",
+   "水热/溶剂热",
+   "比电容",
+   "能量密度",
+   "功率密度",
+   "循环稳定性",
+   "非对称器件"
   ],
   "core_journal": true,
-  "url": "https://doi.org/10.1016/j.cej.2026.183899",
-  "zh_title": "用于高能准固态混合超级电容器的三维Ni2P/Ti3C2TX碳气凝胶和功能水凝胶电解质",
+  "url": "https://doi.org/10.1002/smtd.71214",
+  "zh_title": "具有扩展双功能电催化活性的高性能超级电容器的分层异质结构工程",
+  "classic": false
+ },
+ {
+  "id": "W7225989439",
+  "doi": "10.1177/14644207261506694",
+  "title": "In-situ hydrothermal synthesis of a bifunctional composite material multiwalled carbon nanotubes/cobalt phosphate for heavy-metal ion removal and supercapacitor electrode",
+  "journal": "Proceedings of the Institution of Mechanical Engineers Part L Journal of Materials Design and Applications",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Xuejiao Ju",
+   "Wansong Zhang",
+   "Ping Yin",
+   "Yuzhong Niu",
+   "Yanbin Xu"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT",
+   "水热/溶剂热"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1177/14644207261506694",
+  "zh_title": "原位水热合成多壁碳纳米管/磷酸钴双功能复合材料去除重金属离子及超级电容器电极",
+  "classic": false
+ },
+ {
+  "id": "W7226003095",
+  "doi": "10.3390/nano16221463",
+  "title": "Acidity-Controlled Reduction Level and Porous Architecture of Graphene Hydrogels via Zn-Induced Interfacial Gelation",
+  "journal": "Nanomaterials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Jihan Kim",
+   "Changwook Dong",
+   "Seoyoon Kweon",
+   "Jaeyeon Choi",
+   "Joonwon Lim"
+  ],
+  "type": "article",
+  "tags": [
+   "石墨烯",
+   "氧化石墨烯 GO/rGO",
+   "自组装",
+   "比电容",
+   "倍率性能",
+   "循环稳定性"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.3390/nano16221463",
+  "zh_title": "通过锌诱导界面凝胶化控制酸度控制的石墨烯水凝胶还原水平和多孔结构",
+  "classic": false
+ },
+ {
+  "id": "W7226038637",
+  "doi": "10.71267/mencom.8191",
+  "title": "Control of the morphology of a poly[Ni(salen)] coating on multi-walled carbon nanotubes/Ti by varying ion irradiation of the substrate",
+  "journal": "Mendeleev Communications",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Petr Mikailovich Korusenko",
+   "Egor V. Knyazev",
+   "Denis V. Lezov",
+   "Anatoliy A. Vereshchagin",
+   "Oleg V. Levin",
+   "Alexandr Stepanovich Vinogradov"
+  ],
+  "type": "article",
+  "tags": [
+   "碳纳米管 CNT"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.71267/mencom.8191",
+  "zh_title": "通过改变基材的离子辐照控制多壁碳纳米管/Ti上的聚[Ni(salen)]涂层的形貌",
+  "classic": false
+ },
+ {
+  "id": "W7225851781",
+  "doi": "10.1016/j.est.2026.125631",
+  "title": "Robust carbon-Ni network in-situ derived from spent methane decomposition catalyst as substrate for CoNi-layered double hydroxides enabling high-performance supercapacitors",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Wencheng Yang",
+   "Yuanxin Cao",
+   "Ying Li",
+   "Jingying Li",
+   "Huiyong Chen",
+   "Jianbo Zhang"
+  ],
+  "type": "article",
+  "tags": [],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125631",
+  "zh_title": "由废甲烷分解催化剂原位衍生的坚固的碳-镍网络作为 CoNi 层状双氢氧化物的基材，可实现高性能超级电容器",
   "classic": false
  }
 ]
