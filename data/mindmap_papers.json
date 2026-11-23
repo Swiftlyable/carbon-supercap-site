@@ -1,5 +1,5 @@
 {
- "last_updated": "2026-11-16T13:06:35+00:00",
+ "last_updated": "2026-11-23T12:00:13+00:00",
  "papers": {
   "双电层电容 (EDLC)": [
    {
@@ -27,7 +27,7 @@
     "zh_title": null,
     "journal": "Energy & Environmental Science",
     "year": 2013,
-    "cited_by_count": 1051,
+    "cited_by_count": 1096,
     "core_journal": true,
     "doi": "10.1039/c3ee40509e",
     "url": "https://doi.org/10.1039/c3ee40509e"
@@ -49,7 +49,7 @@
     "zh_title": null,
     "journal": "Nano Letters",
     "year": 2013,
-    "cited_by_count": 1343,
+    "cited_by_count": 1373,
     "core_journal": true,
     "doi": "10.1021/nl400378j",
     "url": "https://doi.org/10.1021/nl400378j"
@@ -59,7 +59,7 @@
     "zh_title": null,
     "journal": "Nano Letters",
     "year": 2014,
-    "cited_by_count": 1111,
+    "cited_by_count": 1127,
     "core_journal": true,
     "doi": "10.1021/nl404199v",
     "url": "https://doi.org/10.1021/nl404199v"
@@ -81,7 +81,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -91,7 +91,7 @@
     "zh_title": null,
     "journal": "Energy & Environmental Science",
     "year": 2013,
-    "cited_by_count": 1051,
+    "cited_by_count": 1096,
     "core_journal": true,
     "doi": "10.1039/c3ee40509e",
     "url": "https://doi.org/10.1039/c3ee40509e"
@@ -113,7 +113,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -123,7 +123,7 @@
     "zh_title": null,
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1522,
+    "cited_by_count": 1585,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -135,7 +135,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -155,7 +155,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -219,7 +219,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -228,10 +228,10 @@
   "0D 点接触网络": [
    {
     "title": "MXene-Bonded Activated Carbon as a Flexible Electrode for High-Performance Supercapacitors",
-    "zh_title": null,
+    "zh_title": "MXene 粘合活性炭作为高性能超级电容器的柔性电极",
     "journal": "ACS Energy Letters",
     "year": 2018,
-    "cited_by_count": 538,
+    "cited_by_count": 545,
     "core_journal": true,
     "doi": "10.1021/acsenergylett.8b00718",
     "url": "https://doi.org/10.1021/acsenergylett.8b00718"
@@ -241,17 +241,17 @@
     "zh_title": "氮掺杂多孔石墨碳作为先进超级电容器的优异电极材料",
     "journal": "Chemistry - A European Journal",
     "year": 2013,
-    "cited_by_count": 443,
+    "cited_by_count": 449,
     "core_journal": true,
     "doi": "10.1002/chem.201303345",
     "url": "https://doi.org/10.1002/chem.201303345"
    },
    {
     "title": "One-step strategy to graphene/Ni(OH)2 composite hydrogels as advanced three-dimensional supercapacitor electrode materials",
-    "zh_title": null,
+    "zh_title": "石墨烯/Ni(OH)2复合水凝胶作为先进三维超级电容器电极材料的一步策略",
     "journal": "Nano Research",
     "year": 2012,
-    "cited_by_count": 217,
+    "cited_by_count": 222,
     "core_journal": true,
     "doi": "10.1007/s12274-012-0284-4",
     "url": "https://doi.org/10.1007/s12274-012-0284-4"
@@ -263,7 +263,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -283,7 +283,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -337,7 +337,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 1125,
+    "cited_by_count": 1173,
     "core_journal": true,
     "doi": "10.1021/nn4000836",
     "url": "https://doi.org/10.1021/nn4000836"
@@ -347,7 +347,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2014,
-    "cited_by_count": 757,
+    "cited_by_count": 771,
     "core_journal": true,
     "doi": "10.1021/nn503814y",
     "url": "https://doi.org/10.1021/nn503814y"
@@ -375,14 +375,14 @@
     "url": "https://doi.org/10.1002/adma.201304137"
    },
    {
-    "title": "Hierarchical Porous Nitrogen-Doped Carbon Nanosheets Derived from Silk for Ultrahigh-Capacity Battery Anodes and Supercapacitors",
+    "title": "3D carbon based nanostructures for advanced supercapacitors",
     "zh_title": null,
-    "journal": "ACS Nano",
-    "year": 2015,
-    "cited_by_count": 1530,
+    "journal": "Energy & Environmental Science",
+    "year": 2013,
+    "cited_by_count": 1584,
     "core_journal": true,
-    "doi": "10.1021/nn506394r",
-    "url": "https://doi.org/10.1021/nn506394r"
+    "doi": "10.1039/c2ee23284g",
+    "url": "https://doi.org/10.1039/c2ee23284g"
    }
   ],
   "抑制 2D 堆叠": [
@@ -423,7 +423,7 @@
     "zh_title": null,
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2404,
+    "cited_by_count": 2482,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -433,7 +433,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 1125,
+    "cited_by_count": 1173,
     "core_journal": true,
     "doi": "10.1021/nn4000836",
     "url": "https://doi.org/10.1021/nn4000836"
@@ -443,7 +443,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1436,
+    "cited_by_count": 1488,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -475,7 +475,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3275,
+    "cited_by_count": 3430,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -487,7 +487,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1598,
+    "cited_by_count": 1651,
     "core_journal": true,
     "doi": "10.1021/nn300097q",
     "url": "https://doi.org/10.1021/nn300097q"
@@ -497,7 +497,7 @@
     "zh_title": null,
     "journal": "Small",
     "year": 2011,
-    "cited_by_count": 1070,
+    "cited_by_count": 1121,
     "core_journal": true,
     "doi": "10.1002/smll.201100990",
     "url": "https://doi.org/10.1002/smll.201100990"
@@ -507,7 +507,7 @@
     "zh_title": null,
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 813,
+    "cited_by_count": 838,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"
@@ -519,7 +519,7 @@
     "zh_title": null,
     "journal": "Accounts of Chemical Research",
     "year": 2012,
-    "cited_by_count": 1522,
+    "cited_by_count": 1585,
     "core_journal": true,
     "doi": "10.1021/ar200306b",
     "url": "https://doi.org/10.1021/ar200306b"
@@ -529,7 +529,7 @@
     "zh_title": null,
     "journal": "Small",
     "year": 2011,
-    "cited_by_count": 1070,
+    "cited_by_count": 1121,
     "core_journal": true,
     "doi": "10.1002/smll.201100990",
     "url": "https://doi.org/10.1002/smll.201100990"
@@ -539,7 +539,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2013,
-    "cited_by_count": 629,
+    "cited_by_count": 650,
     "core_journal": true,
     "doi": "10.1021/nn400566d",
     "url": "https://doi.org/10.1021/nn400566d"
@@ -551,7 +551,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3275,
+    "cited_by_count": 3430,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -561,7 +561,7 @@
     "zh_title": null,
     "journal": "Science",
     "year": 2013,
-    "cited_by_count": 1845,
+    "cited_by_count": 1902,
     "core_journal": true,
     "doi": "10.1126/science.1239089",
     "url": "https://doi.org/10.1126/science.1239089"
@@ -571,7 +571,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1598,
+    "cited_by_count": 1651,
     "core_journal": true,
     "doi": "10.1021/nn300097q",
     "url": "https://doi.org/10.1021/nn300097q"
@@ -582,8 +582,8 @@
     "title": "Electrospun MXene/carbon nanofibers as supercapacitor electrodes",
     "zh_title": null,
     "journal": "Journal of Materials Chemistry A",
-    "year": 2018,
-    "cited_by_count": 666,
+    "year": 2019,
+    "cited_by_count": 681,
     "core_journal": true,
     "doi": "10.1039/c8ta09810g",
     "url": "https://doi.org/10.1039/c8ta09810g"
@@ -593,17 +593,17 @@
     "zh_title": "基于高纯度电纺聚苯胺和聚苯胺-碳纳米管纳米纤维的超级电容器电极",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2016,
-    "cited_by_count": 298,
+    "cited_by_count": 306,
     "core_journal": true,
     "doi": "10.1021/acsami.6b03463",
     "url": "https://doi.org/10.1021/acsami.6b03463"
    },
    {
     "title": "Electrospun Carbon Nanofibers with in Situ Encapsulated Co 3 O 4 Nanoparticles as Electrodes for High-Performance Supercapacitors",
-    "zh_title": null,
+    "zh_title": "原位封装 Co 3 O 4 纳米粒子的电纺碳纳米纤维作为高性能超级电容器的电极",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2015,
-    "cited_by_count": 232,
+    "cited_by_count": 238,
     "core_journal": true,
     "doi": "10.1021/acsami.5b02787",
     "url": "https://doi.org/10.1021/acsami.5b02787"
@@ -615,27 +615,27 @@
     "zh_title": "电池增材制造",
     "journal": "Advanced Functional Materials",
     "year": 2019,
-    "cited_by_count": 312,
+    "cited_by_count": 322,
     "core_journal": true,
     "doi": "10.1002/adfm.201906244",
     "url": "https://doi.org/10.1002/adfm.201906244"
    },
    {
     "title": "Three-Dimensional Printing of Polyaniline/Reduced Graphene Oxide Composite for High-Performance Planar Supercapacitor",
-    "zh_title": null,
+    "zh_title": "用于高性能平面超级电容器的聚苯胺/还原氧化石墨烯复合材料的三维打印",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2018,
-    "cited_by_count": 214,
+    "cited_by_count": 221,
     "core_journal": true,
     "doi": "10.1021/acsami.7b19635",
     "url": "https://doi.org/10.1021/acsami.7b19635"
    },
    {
     "title": "Printing Porous Carbon Aerogels for Low Temperature Supercapacitors",
-    "zh_title": null,
+    "zh_title": "打印用于低温超级电容器的多孔碳气凝胶",
     "journal": "Nano Letters",
     "year": 2021,
-    "cited_by_count": 175,
+    "cited_by_count": 177,
     "core_journal": true,
     "doi": "10.1021/acs.nanolett.0c04780",
     "url": "https://doi.org/10.1021/acs.nanolett.0c04780"
@@ -647,17 +647,17 @@
     "zh_title": null,
     "journal": "Nanoscale",
     "year": 2011,
-    "cited_by_count": 720,
+    "cited_by_count": 757,
     "core_journal": true,
     "doi": "10.1039/c1nr10355e",
     "url": "https://doi.org/10.1039/c1nr10355e"
    },
    {
     "title": "Self-Assembled Three-Dimensional Graphene Macrostructures: Synthesis and Applications in Supercapacitors",
-    "zh_title": null,
+    "zh_title": "自组装三维石墨烯宏观结构：合成及其在超级电容器中的应用",
     "journal": "Accounts of Chemical Research",
     "year": 2015,
-    "cited_by_count": 508,
+    "cited_by_count": 520,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.5b00117",
     "url": "https://doi.org/10.1021/acs.accounts.5b00117"
@@ -667,7 +667,7 @@
     "zh_title": "用于柔性超级电容器的可自修复且易于回收的超分子水凝胶电解质",
     "journal": "Journal of Materials Chemistry A",
     "year": 2016,
-    "cited_by_count": 277,
+    "cited_by_count": 283,
     "core_journal": true,
     "doi": "10.1039/c6ta01441k",
     "url": "https://doi.org/10.1039/c6ta01441k"
@@ -689,7 +689,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -699,7 +699,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1530,
+    "cited_by_count": 1554,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -721,7 +721,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2010,
-    "cited_by_count": 3275,
+    "cited_by_count": 3430,
     "core_journal": true,
     "doi": "10.1021/nn101187z",
     "url": "https://doi.org/10.1021/nn101187z"
@@ -731,7 +731,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -743,7 +743,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2011,
-    "cited_by_count": 2001,
+    "cited_by_count": 2069,
     "core_journal": true,
     "doi": "10.1002/adfm.201100058",
     "url": "https://doi.org/10.1002/adfm.201100058"
@@ -753,7 +753,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1922,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -763,7 +763,7 @@
     "zh_title": null,
     "journal": "Advanced Materials",
     "year": 2014,
-    "cited_by_count": 1436,
+    "cited_by_count": 1467,
     "core_journal": true,
     "doi": "10.1002/adma.201404140",
     "url": "https://doi.org/10.1002/adma.201404140"
@@ -775,7 +775,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1922,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -785,7 +785,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -795,7 +795,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1598,
+    "cited_by_count": 1651,
     "core_journal": true,
     "doi": "10.1021/nn300097q",
     "url": "https://doi.org/10.1021/nn300097q"
@@ -839,7 +839,7 @@
     "zh_title": null,
     "journal": "Nature Materials",
     "year": 2016,
-    "cited_by_count": 2404,
+    "cited_by_count": 2482,
     "core_journal": true,
     "doi": "10.1038/nmat4766",
     "url": "https://doi.org/10.1038/nmat4766"
@@ -849,7 +849,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1436,
+    "cited_by_count": 1488,
     "core_journal": true,
     "doi": "10.1021/nn304833s",
     "url": "https://doi.org/10.1021/nn304833s"
@@ -859,7 +859,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2012,
-    "cited_by_count": 870,
+    "cited_by_count": 898,
     "core_journal": true,
     "doi": "10.1002/adfm.201102796",
     "url": "https://doi.org/10.1002/adfm.201102796"
@@ -891,7 +891,7 @@
     "zh_title": null,
     "journal": "Advanced Functional Materials",
     "year": 2017,
-    "cited_by_count": 1893,
+    "cited_by_count": 1922,
     "core_journal": true,
     "doi": "10.1002/adfm.201701264",
     "url": "https://doi.org/10.1002/adfm.201701264"
@@ -903,7 +903,7 @@
     "zh_title": null,
     "journal": "Nature Nanotechnology",
     "year": 2011,
-    "cited_by_count": 1470,
+    "cited_by_count": 1560,
     "core_journal": true,
     "doi": "10.1038/nnano.2011.110",
     "url": "https://doi.org/10.1038/nnano.2011.110"
@@ -913,7 +913,7 @@
     "zh_title": null,
     "journal": "Science",
     "year": 2010,
-    "cited_by_count": 1337,
+    "cited_by_count": 1412,
     "core_journal": true,
     "doi": "10.1126/science.1184126",
     "url": "https://doi.org/10.1126/science.1184126"
@@ -923,7 +923,7 @@
     "zh_title": "用于制造超高能量密度微型超级电容器的无添加剂 2D Ti3C2TX (MXene) 墨水 3D 打印",
     "journal": "ACS Nano",
     "year": 2019,
-    "cited_by_count": 450,
+    "cited_by_count": 465,
     "core_journal": true,
     "doi": "10.1021/acsnano.9b07325",
     "url": "https://doi.org/10.1021/acsnano.9b07325"
@@ -935,27 +935,27 @@
     "zh_title": "基于碳气凝胶改性高性能碳纤维布的多功能结构超级电容器复合材料",
     "journal": "ACS Applied Materials & Interfaces",
     "year": 2013,
-    "cited_by_count": 295,
+    "cited_by_count": 310,
     "core_journal": true,
     "doi": "10.1021/am400947j",
     "url": "https://doi.org/10.1021/am400947j"
    },
    {
     "title": "(Ni,Co)Se2/NiCo‐LDH Core/Shell Structural Electrode with the Cactus‐Like (Ni,Co)Se2 Core for Asymmetric Supercapacitors",
-    "zh_title": null,
+    "zh_title": "用于不对称超级电容器的具有仙人掌状 (Ni,Co)Se2 核的 (Ni,Co)Se2/NiCo-LDH 核/壳结构电极",
     "journal": "Small",
     "year": 2018,
-    "cited_by_count": 272,
+    "cited_by_count": 281,
     "core_journal": true,
     "doi": "10.1002/smll.201803895",
     "url": "https://doi.org/10.1002/smll.201803895"
    },
    {
     "title": "3D Structural Strengthening Urchin‐Like Cu(OH) 2 ‐Based Symmetric Supercapacitors with Adjustable Capacitance",
-    "zh_title": null,
+    "zh_title": "具有可调电容的 3D 结构强化类海胆 Cu(OH) 2 对称超级电容器",
     "journal": "Advanced Functional Materials",
     "year": 2019,
-    "cited_by_count": 135,
+    "cited_by_count": 137,
     "core_journal": true,
     "doi": "10.1002/adfm.201903588",
     "url": "https://doi.org/10.1002/adfm.201903588"
@@ -967,7 +967,7 @@
     "zh_title": "高效制造无序石墨烯，提高离子可及性、离子电导率和密度，用于高性能紧凑电容储能",
     "journal": "Advanced Science",
     "year": 2024,
-    "cited_by_count": 18,
+    "cited_by_count": 20,
     "core_journal": true,
     "doi": "10.1002/advs.202405155",
     "url": "https://doi.org/10.1002/advs.202405155"
@@ -1009,7 +1009,7 @@
     "zh_title": "用于先进超级电容器的 MXene 电极的进展和新兴架构",
     "journal": "Batteries & Supercaps",
     "year": 2026,
-    "cited_by_count": 3,
+    "cited_by_count": 4,
     "core_journal": true,
     "doi": "10.1002/batt.70291",
     "url": "https://doi.org/10.1002/batt.70291"
@@ -1031,7 +1031,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2012,
-    "cited_by_count": 1702,
+    "cited_by_count": 1760,
     "core_journal": true,
     "doi": "10.1021/nn302147s",
     "url": "https://doi.org/10.1021/nn302147s"
@@ -1041,7 +1041,7 @@
     "zh_title": null,
     "journal": "ACS Nano",
     "year": 2015,
-    "cited_by_count": 1530,
+    "cited_by_count": 1554,
     "core_journal": true,
     "doi": "10.1021/nn506394r",
     "url": "https://doi.org/10.1021/nn506394r"
@@ -1051,7 +1051,7 @@
     "zh_title": null,
     "journal": "Nano Energy",
     "year": 2015,
-    "cited_by_count": 1233,
+    "cited_by_count": 1252,
     "core_journal": true,
     "doi": "10.1016/j.nanoen.2015.10.038",
     "url": "https://doi.org/10.1016/j.nanoen.2015.10.038"
@@ -1063,7 +1063,7 @@
     "zh_title": null,
     "journal": "Nanoscale",
     "year": 2013,
-    "cited_by_count": 1199,
+    "cited_by_count": 1286,
     "core_journal": true,
     "doi": "10.1039/c3nr33560g",
     "url": "https://doi.org/10.1039/c3nr33560g"
@@ -1073,7 +1073,7 @@
     "zh_title": null,
     "journal": "Advanced Materials",
     "year": 2017,
-    "cited_by_count": 1190,
+    "cited_by_count": 1236,
     "core_journal": true,
     "doi": "10.1002/adma.201702678",
     "url": "https://doi.org/10.1002/adma.201702678"
@@ -1083,7 +1083,7 @@
     "zh_title": null,
     "journal": "Advanced Materials",
     "year": 2013,
-    "cited_by_count": 1097,
+    "cited_by_count": 1129,
     "core_journal": true,
     "doi": "10.1002/adma.201300132",
     "url": "https://doi.org/10.1002/adma.201300132"
@@ -1095,7 +1095,7 @@
     "zh_title": null,
     "journal": "Accounts of Chemical Research",
     "year": 2018,
-    "cited_by_count": 813,
+    "cited_by_count": 838,
     "core_journal": true,
     "doi": "10.1021/acs.accounts.8b00084",
     "url": "https://doi.org/10.1021/acs.accounts.8b00084"
@@ -1105,7 +1105,7 @@
     "zh_title": null,
     "journal": "Advanced Materials",
     "year": 2013,
-    "cited_by_count": 639,
+    "cited_by_count": 661,
     "core_journal": true,
     "doi": "10.1002/adma.201301928",
     "url": "https://doi.org/10.1002/adma.201301928"
@@ -1115,7 +1115,7 @@
     "zh_title": "氮掺杂多孔石墨碳作为先进超级电容器的优异电极材料",
     "journal": "Chemistry - A European Journal",
     "year": 2013,
-    "cited_by_count": 443,
+    "cited_by_count": 449,
     "core_journal": true,
     "doi": "10.1002/chem.201303345",
     "url": "https://doi.org/10.1002/chem.201303345"

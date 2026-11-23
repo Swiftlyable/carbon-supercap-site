@@ -1,155 +1,156 @@
 [
  {
-  "id": "W7229457701",
-  "doi": "10.1021/acsami.6c19857",
-  "title": "Synergistic Molecular-Nano Engineering Enabling Ultralong-Cycling and High-Capacity Lithium Storage of Covalent Organic Frameworks",
-  "journal": "ACS Applied Materials & Interfaces",
+  "id": "W7237076991",
+  "doi": "10.1016/j.nxmate.2026.103947",
+  "title": "Awakening a ‘sleeping’ mineral: Conversion of a redox-inactive triplite to redox-active hausmannite for advanced energy storage",
+  "journal": "Next Materials",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Peilin Guo",
-   "Derong Luo",
-   "Feng Liu",
-   "Xuan Wang",
-   "Hui Wang",
-   "Bing Ding"
-  ],
-  "type": "article",
-  "tags": [
-   "碳纳米管 CNT",
-   "能量密度",
-   "功率密度"
-  ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1021/acsami.6c19857",
-  "zh_title": "协同分子-纳米工程实现共价有机框架的超长循环和高容量锂存储",
-  "classic": false
- },
- {
-  "id": "W7228923555",
-  "doi": "10.1002/smtd.71214",
-  "title": "Hierarchical Heterostructure Engineering for High‐Performance Supercapacitors With Extended Bifunctional Electrocatalytic Activity",
-  "journal": "Small Methods",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Murugesan Prasanna",
-   "Sankaiya Asaithambi",
-   "Ramadoss Maniganadan",
-   "Ramar Rajamanikandan",
-   "Palanisamy Rajkumar"
+   "Bokome Shaku",
+   "Thapelo P. Mofokeng",
+   "Aderemi Bashiru Haruna",
+   "Manoko  Stephanie Maubane-Nkadimeng",
+   "Neil John Coville",
+   "Roy Forbes"
   ],
   "type": "article",
   "tags": [
    "活性炭 AC",
    "水热/溶剂热",
-   "比电容",
-   "能量密度",
-   "功率密度",
+   "杂原子掺杂",
    "循环稳定性",
    "非对称器件"
   ],
-  "core_journal": true,
-  "url": "https://doi.org/10.1002/smtd.71214",
-  "zh_title": "具有扩展双功能电催化活性的高性能超级电容器的分层异质结构工程",
-  "classic": false
- },
- {
-  "id": "W7225989439",
-  "doi": "10.1177/14644207261506694",
-  "title": "In-situ hydrothermal synthesis of a bifunctional composite material multiwalled carbon nanotubes/cobalt phosphate for heavy-metal ion removal and supercapacitor electrode",
-  "journal": "Proceedings of the Institution of Mechanical Engineers Part L Journal of Materials Design and Applications",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Xuejiao Ju",
-   "Wansong Zhang",
-   "Ping Yin",
-   "Yuzhong Niu",
-   "Yanbin Xu"
-  ],
-  "type": "article",
-  "tags": [
-   "碳纳米管 CNT",
-   "水热/溶剂热"
-  ],
   "core_journal": false,
-  "url": "https://doi.org/10.1177/14644207261506694",
-  "zh_title": "原位水热合成多壁碳纳米管/磷酸钴双功能复合材料去除重金属离子及超级电容器电极",
+  "url": "https://doi.org/10.1016/j.nxmate.2026.103947",
+  "zh_title": "唤醒“沉睡”矿物：将氧化还原不活跃的三重石转化为氧化还原活跃的黑锰矿，以实现先进的能量存储",
   "classic": false
  },
  {
-  "id": "W7226003095",
-  "doi": "10.3390/nano16221463",
-  "title": "Acidity-Controlled Reduction Level and Porous Architecture of Graphene Hydrogels via Zn-Induced Interfacial Gelation",
-  "journal": "Nanomaterials",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Jihan Kim",
-   "Changwook Dong",
-   "Seoyoon Kweon",
-   "Jaeyeon Choi",
-   "Joonwon Lim"
-  ],
-  "type": "article",
-  "tags": [
-   "石墨烯",
-   "氧化石墨烯 GO/rGO",
-   "自组装",
-   "比电容",
-   "倍率性能",
-   "循环稳定性"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.3390/nano16221463",
-  "zh_title": "通过锌诱导界面凝胶化控制酸度控制的石墨烯水凝胶还原水平和多孔结构",
-  "classic": false
- },
- {
-  "id": "W7226038637",
-  "doi": "10.71267/mencom.8191",
-  "title": "Control of the morphology of a poly[Ni(salen)] coating on multi-walled carbon nanotubes/Ti by varying ion irradiation of the substrate",
-  "journal": "Mendeleev Communications",
-  "year": 2026,
-  "cited_by_count": 0,
-  "authors": [
-   "Petr Mikailovich Korusenko",
-   "Egor V. Knyazev",
-   "Denis V. Lezov",
-   "Anatoliy A. Vereshchagin",
-   "Oleg V. Levin",
-   "Alexandr Stepanovich Vinogradov"
-  ],
-  "type": "article",
-  "tags": [
-   "碳纳米管 CNT"
-  ],
-  "core_journal": false,
-  "url": "https://doi.org/10.71267/mencom.8191",
-  "zh_title": "通过改变基材的离子辐照控制多壁碳纳米管/Ti上的聚[Ni(salen)]涂层的形貌",
-  "classic": false
- },
- {
-  "id": "W7225851781",
-  "doi": "10.1016/j.est.2026.125631",
-  "title": "Robust carbon-Ni network in-situ derived from spent methane decomposition catalyst as substrate for CoNi-layered double hydroxides enabling high-performance supercapacitors",
+  "id": "W7237110966",
+  "doi": "10.1016/j.est.2026.125844",
+  "title": "Nitrogen-doped carbon layer-engineered phenolic-resin-derived carbon microspheres with homojunction characteristics for high-performance supercapacitors",
   "journal": "Journal of Energy Storage",
   "year": 2026,
   "cited_by_count": 0,
   "authors": [
-   "Wencheng Yang",
-   "Yuanxin Cao",
-   "Ying Li",
-   "Jingying Li",
-   "Huiyong Chen",
-   "Jianbo Zhang"
+   "Ji Cai‐Rang",
+   "Zha‐Xi Wan‐Me",
+   "Cuo Zhuo-Me",
+   "Zhe-Feng",
+   "Ming-Dan Yao",
+   "Yu-Long Xie"
   ],
   "type": "article",
-  "tags": [],
+  "tags": [
+   "杂原子掺杂"
+  ],
   "core_journal": true,
-  "url": "https://doi.org/10.1016/j.est.2026.125631",
-  "zh_title": "由废甲烷分解催化剂原位衍生的坚固的碳-镍网络作为 CoNi 层状双氢氧化物的基材，可实现高性能超级电容器",
+  "url": "https://doi.org/10.1016/j.est.2026.125844",
+  "zh_title": "用于高性能超级电容器的具有同质结特性的氮掺杂碳层工程酚醛树脂衍生碳微球",
+  "classic": false
+ },
+ {
+  "id": "W7237132855",
+  "doi": "10.3389/frcrb.2026.2030527",
+  "title": "Banana peel-derived hierarchical porous carbon for high-performance supercapacitors",
+  "journal": "Frontiers in Carbon",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "B. Nagarjuna Reddy",
+   "B. Prasanna Lakshmi",
+   "B. Rajesh Kumar",
+   "S. Lakshmikantha Reddy",
+   "J. Maheswar Reddy",
+   "P. R. Sekhar Reddy"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "碳化",
+   "比电容",
+   "循环稳定性"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.3389/frcrb.2026.2030527",
+  "zh_title": "用于高性能超级电容器的香蕉皮衍生的分级多孔碳",
+  "classic": false
+ },
+ {
+  "id": "W7237082226",
+  "doi": "10.1016/j.diamond.2026.114422",
+  "title": "Precursor-dependent nitrogen doping in bamboo-derived activated carbon enabling ultrahigh surface area for durable supercapacitors",
+  "journal": "Diamond and Related Materials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Hamed Pourzolfaghar",
+   "Chenhui Han",
+   "Zufar Amaanaturraafi",
+   "Yuan-Yao Li"
+  ],
+  "type": "article",
+  "tags": [
+   "活性炭 AC",
+   "杂原子掺杂"
+  ],
+  "core_journal": false,
+  "url": "https://doi.org/10.1016/j.diamond.2026.114422",
+  "zh_title": "竹源活性炭中前体依赖性氮掺杂可为耐用超级电容器提供超高表面积",
+  "classic": false
+ },
+ {
+  "id": "W7236709244",
+  "doi": "10.1016/j.est.2026.125875",
+  "title": "Sustainable valorization of waste pomelo peel and human hair into N/O/S co-doped porous carbon via sequential pre‑carbonization for high-performance supercapacitors",
+  "journal": "Journal of Energy Storage",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Hengnuo Li",
+   "Lianfei Xu",
+   "Haoyue Song",
+   "Yang Li",
+   "Guihuan Li",
+   "Fei Sun"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "碳化"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1016/j.est.2026.125875",
+  "zh_title": "通过顺序预碳化将废柚皮和人发可持续增值为 N/O/S 共掺杂多孔碳，用于高性能超级电容器",
+  "classic": false
+ },
+ {
+  "id": "W7236034013",
+  "doi": "10.1007/s42114-026-02039-4",
+  "title": "Polyether-engineering of lignin enables hierarchical porous carbons for high-performance supercapacitors and enhanced holocellulose saccharification",
+  "journal": "Advanced Composites and Hybrid Materials",
+  "year": 2026,
+  "cited_by_count": 0,
+  "authors": [
+   "Peng Teng",
+   "Guojie Song",
+   "Zhangkang Li",
+   "Yukai Qiao",
+   "Yangjie Zheng",
+   "Na Zhong"
+  ],
+  "type": "article",
+  "tags": [
+   "多孔碳",
+   "碳化",
+   "比电容",
+   "能量密度"
+  ],
+  "core_journal": true,
+  "url": "https://doi.org/10.1007/s42114-026-02039-4",
+  "zh_title": "木质素的聚醚工程可实现分层多孔碳，用于高性能超级电容器和增强的全纤维素糖化",
   "classic": false
  }
 ]
